@@ -1,0 +1,296 @@
+/* G.aranT.iert A.uto-MAP++: Vice-Palette, Glas über Aurora, Werkstatt-Beschlag. Farben nur über tokens.css. */
+@font-face {
+  font-family: "Fraunces Werkstatt";
+  src: url("../assets/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces Werkstatt";
+  src: url("../assets/fonts/fraunces-latin-ext-wght-normal.woff2") format("woff2");
+  font-weight: 100 900; font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root {
+  color-scheme: dark;
+  --vc-kappe: linear-gradient(100deg, var(--vc-verlauf-blau), var(--vc-verlauf-indigo) 20%, var(--vc-verlauf-violett) 40%, var(--vc-verlauf-magenta) 60%, var(--vc-verlauf-koralle) 80%, var(--vc-verlauf-orange));
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background: var(--vc-grund-nacht); color: var(--vc-text-haupt);
+  font: 400 1rem/1.55 var(--vc-schrift-text);
+  overflow-x: hidden;
+}
+a { color: var(--vc-akzent-himmel); }
+:focus-visible { outline: 2px solid var(--vc-akzent-himmel); outline-offset: 2px; }
+h1, h2, .schild { font-family: var(--vc-schrift-schild); font-weight: 600; }
+[hidden] { display: none !important; }
+
+/* Aurora: drei weiche Flecken fest hinter allem */
+.aurora { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.aurora i { position: absolute; border-radius: 50%; filter: blur(70px); }
+.aurora .a1 { width: 55vw; height: 70vh; left: -10vw; top: -20vh; background: var(--vc-aurora-eins); }
+.aurora .a2 { width: 50vw; height: 75vh; right: -12vw; top: 10vh; background: var(--vc-aurora-zwei); }
+.aurora .a3 { width: 60vw; height: 55vh; left: 20vw; bottom: -25vh; background: var(--vc-aurora-drei); }
+@media (prefers-reduced-motion: no-preference) {
+  .aurora .a1 { animation: drift 34s ease-in-out infinite alternate; }
+  .aurora .a2 { animation: drift 40s ease-in-out infinite alternate-reverse; }
+}
+@keyframes drift { to { transform: translate(4vw, -3vh) scale(1.06); } }
+
+/* Platte: Glas, Kappe im Logo-Verlauf, Beschlag mit vier Schrauben, Schatten nach links unten */
+.platte {
+  position: relative; border-radius: var(--vc-radius-platte);
+  background: var(--vc-grund-flaeche); border: 1px solid var(--vc-glas-rand);
+  box-shadow: var(--vc-schatten-platte);
+  padding: 22px 22px 18px;
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .platte { background: var(--vc-glas-platte); -webkit-backdrop-filter: blur(14px) saturate(140%); backdrop-filter: blur(14px) saturate(140%); }
+}
+.platte::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+  background: var(--vc-kappe) top / 100% 4px no-repeat;
+}
+.platte::after {
+  content: ""; position: absolute; inset: 7px; border: 1px solid var(--vc-glas-rand); pointer-events: none;
+  background:
+    var(--schraube-1) left 3px top 3px / 9px 9px no-repeat,
+    var(--schraube-2) right 3px top 3px / 9px 9px no-repeat,
+    var(--schraube-3) left 3px bottom 3px / 9px 9px no-repeat,
+    var(--schraube-4) right 3px bottom 3px / 9px 9px no-repeat;
+  transition: border-color .15s ease;
+}
+.platte:hover::after, .platte:focus-within::after { border-color: var(--vc-verlauf-koralle); }
+.platte.leuchtet {
+  box-shadow: var(--vc-schatten-platte), -22px -16px 46px 2px rgba(216, 52, 187, .5), 24px -4px 46px 2px rgba(60, 95, 206, .5), 2px 28px 46px 0 rgba(253, 147, 75, .4);
+}
+.platte h2 { margin: 0 0 10px; font-size: 1.12rem; color: var(--vc-akzent-sonne); }
+
+/* Grundaufbau */
+.seite-kopf, .buehne, .seite-fuss, .startfehler { position: relative; z-index: 1; }
+.seite-kopf { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin: 14px 16px 0; padding: 16px 22px 14px; }
+.marke { flex: 1 1 300px; min-width: 0; }
+.marke p { margin: 4px 0 0; font-size: .85rem; color: var(--vc-text-leise); }
+.logo { margin: 0; font-size: clamp(1.15rem, 3.2vw, 1.7rem); line-height: 1.2; letter-spacing: .14em; color: var(--vc-text-haupt); font-weight: 560; overflow-wrap: anywhere; }
+.logo b { font-weight: 700; color: var(--vc-akzent-sonne); text-shadow: 0 0 14px rgba(252, 181, 74, .45); }
+.logo i { font-style: normal; color: var(--vc-text-leise); }
+.logo em { font-style: normal; font-weight: 700; background: var(--vc-kappe); -webkit-background-clip: text; background-clip: text; color: var(--vc-verlauf-koralle); }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) { .logo em { color: transparent; filter: brightness(1.35) saturate(1.1); } }
+.kopf-steuer { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.startfehler { margin: 16px; color: var(--vc-verlauf-koralle); }
+
+.buehne { display: grid; gap: 18px; margin: 16px; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); align-items: start; }
+.karte-rahmen { padding: 12px; height: calc(100vh - 150px); min-height: 440px; position: sticky; top: 16px; }
+#karte { width: 100%; height: 100%; border-radius: 3px; background: var(--vc-karte-wasser); }
+.karte-knopf { position: absolute; right: 24px; top: 24px; z-index: 600; }
+.seitenleiste, .tabfeld { display: grid; gap: 18px; min-width: 0; }
+@media (max-width: 860px) {
+  .buehne { grid-template-columns: minmax(0, 1fr); }
+  .karte-rahmen { height: 64vh; min-height: 340px; position: relative; top: 0; }
+}
+
+/* Spoiler-Schalter: grün = spoilerfrei, rot = nicht spoilerfrei. Zustand steht auch als Text und Zeichen da. */
+.spoiler {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  font: 800 .82rem/1 var(--vc-schrift-text); letter-spacing: .08em;
+  padding: 9px 14px; border-radius: var(--vc-radius-knopf); border: 2px solid var(--vc-signal-tinte);
+  background: var(--vc-signal-rot); color: var(--vc-signal-tinte);
+  box-shadow: var(--vc-schatten-klein), 0 0 18px rgba(255, 89, 100, .55);
+}
+.spoiler.frei { background: var(--vc-signal-gruen); box-shadow: var(--vc-schatten-klein), 0 0 18px rgba(53, 208, 127, .5); }
+.spoiler-zeichen { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; background: var(--vc-signal-tinte); color: var(--vc-signal-rot); font-weight: 900; font-size: .8rem; }
+.spoiler.frei .spoiler-zeichen { color: var(--vc-signal-gruen); }
+
+/* Reiter */
+.tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 14px 16px 12px; }
+.tabs [role="tab"] {
+  font: 600 .88rem/1.2 var(--vc-schrift-text); color: var(--vc-text-leise); cursor: pointer;
+  background: var(--vc-glas-gurt); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); padding: 8px 4px;
+}
+.tabs [role="tab"][aria-selected="true"] { background: var(--vc-glas-knopf); color: #fff; border-color: transparent; box-shadow: var(--vc-schatten-klein); }
+
+/* Bedienelemente */
+.knopf, select, .chip, input, textarea { font: inherit; color: var(--vc-text-haupt); border-radius: var(--vc-radius-knopf); }
+.knopf { border: 0; background: var(--vc-glas-knopf); color: #fff; font-weight: 600; font-size: .92rem; padding: 7px 13px; cursor: pointer; box-shadow: var(--vc-schatten-klein); }
+.knopf.leise { background: var(--vc-glas-gurt); color: var(--vc-text-haupt); border: 1px solid var(--vc-glas-rand); font-weight: 500; }
+.knopf.rund { width: 36px; height: 36px; padding: 0; font-size: 1.15rem; line-height: 1; }
+select, input[type="text"], input[type="number"], textarea { background: var(--vc-grund-flaeche); border: 1px solid var(--vc-glas-rand); padding: 6px 8px; max-width: 100%; }
+select { box-shadow: var(--vc-schatten-klein); }
+textarea { width: 100%; resize: vertical; }
+
+.uebersicht { display: grid; gap: 8px; }
+.uebersicht .leise-text { margin: 2px 0 0; }
+.gurt { display: flex; align-items: center; gap: 10px; padding: 7px 10px; border-radius: var(--vc-radius-schild); background: var(--vc-glas-gurt); border-top: 2px solid var(--vc-glas-rand); }
+.zahl { font-family: var(--vc-schrift-schild); font-weight: 600; color: var(--vc-verlauf-orange); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.balken { flex: 1; height: 6px; border-radius: 3px; background: var(--vc-grund-flaeche); overflow: hidden; }
+.balken i { display: block; height: 100%; background: linear-gradient(90deg, var(--vc-verlauf-magenta), var(--vc-verlauf-koralle), var(--vc-verlauf-orange), var(--vc-akzent-sonne)); transition: width .3s ease; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; padding: 0; }
+.chip { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; background: var(--vc-glas-gurt); border: 1px solid var(--vc-glas-rand); padding: 4px 9px; font-size: .88rem; box-shadow: var(--vc-schatten-klein); }
+.chip[aria-pressed="true"] { border-color: var(--ort, var(--vc-akzent-himmel)); background: rgba(28, 0, 44, .85); box-shadow: var(--vc-schatten-klein), 0 0 10px var(--ort, transparent); }
+.chip[aria-pressed="true"]::before { content: "✓"; font-weight: 700; color: var(--ort, var(--vc-akzent-himmel)); }
+.chip .farbe { width: 10px; height: 10px; border-radius: 2px; background: var(--ort); box-shadow: 0 0 8px var(--ort); }
+.county-chip .name { color: var(--ort); }
+.chip .anzahl { color: var(--vc-text-leise); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.unterkopf { margin: 14px 0 6px; font: 700 .74rem/1.55 var(--vc-schrift-text); letter-spacing: .07em; text-transform: uppercase; color: var(--vc-text-leise); }
+.leise-text { color: var(--vc-text-leise); font-size: .85rem; margin: 6px 0 0; }
+.einzug { margin: 0 0 4px 28px; }
+.reihe { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.ziel-name { font-family: var(--vc-schrift-schild); font-weight: 600; margin: 0; color: var(--vc-text-haupt); }
+.ziel-abstand { color: var(--vc-akzent-tuerkis); margin: 4px 0 0; }
+
+/* 100-%-Liste */
+.zeile { padding: 10px 0; border-top: 1px solid var(--vc-glas-rand); }
+.zeile-kopf { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.zeile-name { font-weight: 600; }
+.zeile-zahl { color: var(--vc-verlauf-orange); font-variant-numeric: tabular-nums; white-space: nowrap; font-size: .9rem; }
+.zeile.erfuellt .zeile-name, .zeile.erfuellt .zeile-zahl { color: var(--vc-akzent-tuerkis); }
+.stepper { display: flex; gap: 6px; align-items: center; margin-top: 8px; }
+.stepper input { width: 110px; text-align: right; font-variant-numeric: tabular-nums; }
+.zeile > .knopf { margin-top: 8px; }
+
+/* Missionen */
+.kapitel { border-top: 1px solid var(--vc-glas-rand); padding: 8px 0; }
+.kapitel summary { display: flex; gap: 10px; align-items: baseline; cursor: pointer; list-style: none; }
+.kapitel summary::-webkit-details-marker { display: none; }
+.kapitel summary::before { content: "▸"; color: var(--vc-text-leise); }
+.kapitel[open] summary::before { content: "▾"; }
+.kapitel summary .schild { color: var(--vc-akzent-sonne); white-space: nowrap; }
+.kapitel-name { flex: 1; min-width: 0; }
+.missionen { list-style: none; margin: 8px 0 0; padding: 0; }
+.missionen label { display: flex; gap: 10px; align-items: center; padding: 4px 0; cursor: pointer; }
+.missionen input { width: 18px; height: 18px; accent-color: var(--vc-akzent-tuerkis); flex: none; }
+.missionen .fertig span:first-of-type { color: var(--vc-akzent-tuerkis); }
+.schildchen { font: 600 11px/1.55 var(--vc-schrift-text); letter-spacing: .6px; text-transform: uppercase; padding: 0 6px; border: 1px solid var(--vc-verlauf-koralle); border-radius: var(--vc-radius-schild); color: var(--vc-verlauf-koralle); }
+
+.provider { list-style: none; margin: 0; padding: 0; font-size: .9rem; }
+.provider li { padding: 4px 0; }
+.provider .an { color: var(--vc-akzent-tuerkis); }
+.provider .aus { color: var(--vc-text-leise); }
+.seite-fuss { margin: 0 16px 20px; font-size: .8rem; color: var(--vc-text-leise); text-align: center; }
+
+/* Die Karte: Geländebild, Gitter, Namen */
+.gitterlinie { stroke: var(--vc-karte-gitter); }
+.gitter-marke { font: 600 12px/20px var(--vc-schrift-text); color: var(--vc-text-leise); text-align: center; }
+
+/* Ortsnamen: welche erscheinen, entscheidet js/karte.js nach Zoomstufe und Platz (.verdeckt) */
+.ortsname { width: 0 !important; height: 0 !important; overflow: visible; }
+.ortsname span {
+  position: absolute; transform: translate(-50%, -50%); white-space: nowrap; pointer-events: none;
+  color: var(--vc-text-haupt); font: 600 12px/1.15 var(--vc-schrift-text);
+  text-shadow: 0 0 2px var(--vc-grund-nacht), 0 0 4px var(--vc-grund-nacht), 1px 1px 0 var(--vc-grund-nacht), -1px -1px 0 var(--vc-grund-nacht), 1px -1px 0 var(--vc-grund-nacht), -1px 1px 0 var(--vc-grund-nacht);
+}
+.ortsname span.verdeckt { visibility: hidden; }
+.on-county span { font: 700 14px/1.1 var(--vc-schrift-schild); letter-spacing: .14em; text-transform: uppercase; color: var(--vc-akzent-sonne); }
+.on-stadt span { font: 700 13px/1.15 var(--vc-schrift-schild); color: #fff; }
+.on-viertel span, .on-insel span, .on-gebiet span { font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--vc-text-leise); }
+.on-gewaesser span { font: italic 600 11.5px/1.15 var(--vc-schrift-schild); color: var(--vc-akzent-himmel); }
+.on-poi span { font-size: 10.5px; font-weight: 500; color: var(--vc-akzent-rosa); }
+#karte[data-stufe="2"] .on-stadt span { font-size: 15px; }
+#karte[data-stufe="3"] .on-county span, #karte[data-stufe="4"] .on-county span { font-size: 20px; opacity: .85; }
+#karte[data-stufe="3"] .on-stadt span, #karte[data-stufe="4"] .on-stadt span { font-size: 17px; }
+#karte[data-stufe="3"] .ortsname span, #karte[data-stufe="4"] .ortsname span { font-size: 12.5px; }
+
+/* Suche oben links auf der Karte */
+.suche { position: absolute; left: 24px; top: 24px; z-index: 600; width: min(340px, calc(100% - 170px)); }
+.suche input {
+  width: 100%; padding: 9px 12px 9px 34px; font-size: .95rem; border-radius: var(--vc-radius-knopf);
+  background: rgba(28, 0, 44, .88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9b6dc' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21'/%3E%3C/svg%3E") 10px center / 16px no-repeat;
+  border: 1px solid var(--vc-glas-rand); box-shadow: var(--vc-schatten-klein);
+}
+.suche input:focus { border-color: var(--vc-akzent-himmel); }
+.suche ul {
+  list-style: none; margin: 6px 0 0; padding: 4px; max-height: 50vh; overflow: auto;
+  background: var(--vc-grund-flaeche); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-platte);
+}
+.suche li { display: grid; gap: 1px; padding: 6px 9px; border-radius: 3px; cursor: pointer; }
+.suche li[aria-selected="true"], .suche li:hover { background: var(--vc-glas-knopf); }
+.suche li.leer { cursor: default; color: var(--vc-text-leise); background: none; }
+.treffer-name { font-weight: 600; }
+.treffer-zusatz { font-size: .78rem; color: var(--vc-text-leise); }
+.suche li[aria-selected="true"] .treffer-zusatz, .suche li:hover .treffer-zusatz { color: #fff; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.such-ring { width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--vc-akzent-neon); box-shadow: 0 0 16px var(--vc-akzent-neon), inset 0 0 10px var(--vc-akzent-neon); }
+@media (prefers-reduced-motion: no-preference) { .such-ring { animation: puls 1.2s ease-in-out infinite alternate; } }
+@keyframes puls { to { transform: scale(1.25); opacity: .6; } }
+
+/* Legende unten rechts */
+.legende { position: absolute; right: 24px; bottom: 24px; z-index: 1001; font-size: .82rem; background: rgba(28, 0, 44, .9); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-klein); }
+.legende summary { cursor: pointer; padding: 6px 11px; font-weight: 600; }
+.legende ul { list-style: none; margin: 0; padding: 2px 11px 9px; display: grid; gap: 4px; }
+.legende li { display: flex; align-items: center; gap: 8px; }
+.legende i { width: 18px; height: 12px; border-radius: 2px; border: 1px solid rgba(255, 255, 255, .25); flex: none; }
+.f-wasser { background: var(--vc-karte-wasser); }
+.f-sumpf { background: radial-gradient(circle, var(--vc-karte-sumpf) 1.4px, transparent 1.8px) 0 0 / 6px 5px, var(--vc-karte-gruen); }
+.f-wald { background: var(--vc-karte-wald); }
+.f-gruen { background: var(--vc-karte-gruen); }
+.f-felder { background: var(--vc-karte-felder); }
+.f-stadt { background: var(--vc-karte-stadt); }
+.f-sand { background: var(--vc-karte-sand); }
+.f-gebaeude { background: linear-gradient(var(--vc-karte-gebaeude), var(--vc-karte-gebaeude)) 50% 50% / 60% 60% no-repeat, var(--vc-karte-stadt); }
+.f-strasse { background: linear-gradient(var(--vc-karte-strasse), var(--vc-karte-strasse)) 0 50% / 100% 3px no-repeat, var(--vc-karte-stadt); }
+.f-autobahn { background: linear-gradient(var(--vc-karte-autobahn), var(--vc-karte-autobahn)) 0 50% / 100% 5px no-repeat, var(--vc-karte-stadt); }
+
+/* Leaflet im Vice-Look */
+.leaflet-container { background: var(--vc-karte-wasser); font: inherit; }
+.leaflet-bottom.leaflet-left { margin-bottom: 8px; margin-left: 8px; }
+.leaflet-control-zoom a { background: var(--vc-grund-flaeche) !important; color: var(--vc-text-haupt) !important; border-color: var(--vc-glas-rand) !important; }
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: var(--vc-grund-flaeche); color: var(--vc-text-haupt); border: 1px solid var(--vc-glas-rand); box-shadow: var(--vc-schatten-platte); }
+.leaflet-popup-content { margin: 12px 14px; font-size: .9rem; line-height: 1.5; }
+.leaflet-container a.leaflet-popup-close-button { color: var(--vc-text-leise); }
+.popup p { margin: 4px 0; }
+.popup label { display: block; margin: 8px 0 2px; font-size: .8rem; color: var(--vc-text-leise); }
+.popup select, .popup input { width: 100%; }
+.popup-titel { display: block; color: var(--vc-akzent-sonne); font-size: 1.02rem; }
+
+.pin {
+  width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+  background: var(--ort); box-shadow: -2px 3px 6px rgba(0, 0, 0, .6), 0 0 10px var(--ort); border: 2px solid var(--vc-grund-nacht);
+}
+.pin b { transform: rotate(45deg); font: 700 11px/1 var(--vc-schrift-text); color: var(--vc-grund-nacht); }
+.pin.eigen { border-radius: 50%; }
+.pin.gefunden { background: var(--vc-grund-flaeche); border-color: var(--vc-akzent-tuerkis); box-shadow: -2px 3px 6px rgba(0, 0, 0, .6); }
+.pin.gefunden b { color: var(--vc-akzent-tuerkis); }
+.pin.ziel { outline: 2px solid var(--vc-akzent-neon); outline-offset: 3px; }
+.ich { width: 16px; height: 16px; border-radius: 50%; background: var(--vc-akzent-himmel); border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(126, 181, 222, .35), 0 0 16px var(--vc-akzent-himmel); }
+
+/* Herausgezoomt: Pins kleiner, damit die Karte lesbar bleibt */
+#karte[data-stufe="0"] .pin { transform: rotate(-45deg) scale(.72); box-shadow: -2px 3px 5px rgba(0, 0, 0, .6); }
+#karte[data-stufe="1"] .pin { transform: rotate(-45deg) scale(.86); }
+
+/* Community-Orte: Name beim Darüberfahren, Quellenangabe in der Karte */
+.leaflet-tooltip.punkt-name { background: var(--vc-grund-flaeche); color: var(--vc-text-haupt); border: 1px solid var(--vc-glas-rand); box-shadow: var(--vc-schatten-klein); font: 600 12px/1.3 var(--vc-schrift-text); }
+.leaflet-tooltip.punkt-name::before { border-top-color: var(--vc-glas-rand); }
+/* Bündel naher Community-Orte: Farbe des häufigsten Countys, Zahl in der Mitte */
+.buendel {
+  display: grid; place-items: center; width: 100%; height: 100%; border-radius: 50%; cursor: pointer;
+  background: color-mix(in oklab, var(--ort) 28%, var(--vc-grund-nacht)); border: 1.5px solid var(--ort); color: var(--vc-text-haupt);
+  font: 700 11px/1 var(--vc-schrift-text); box-shadow: 0 0 10px color-mix(in oklab, var(--ort) 45%, transparent), var(--vc-schatten-klein);
+  transition: transform .15s ease;
+}
+.buendel:hover { transform: scale(1.12); }
+
+.leaflet-control-attribution { background: rgba(28, 0, 44, .8) !important; color: var(--vc-text-leise) !important; font-size: 10.5px; border-radius: 3px; margin: 0 0 4px 8px !important; }
+.leaflet-control-attribution a { color: var(--vc-akzent-himmel) !important; }
+.popup .quelle a { color: var(--vc-akzent-himmel); }
+
+/* Straßennamen entlang der Straße, erst ab mittlerem Zoom */
+.strassenname { width: 0 !important; height: 0 !important; overflow: visible; }
+.strassenname span {
+  position: absolute; transform: translate(-50%, -50%) rotate(var(--winkel, 0deg)); white-space: nowrap; pointer-events: none;
+  font: italic 600 11px/1 var(--vc-schrift-text); letter-spacing: .03em; color: #fff3df;
+  text-shadow: 0 0 2px var(--vc-grund-nacht), 0 0 4px var(--vc-grund-nacht), 1px 1px 0 var(--vc-grund-nacht), -1px -1px 0 var(--vc-grund-nacht);
+}
+#karte[data-stufe="0"] .strassenname, #karte[data-stufe="1"] .strassenname, #karte[data-stufe="2"] .strassenname { display: none; }
+#karte[data-stufe="4"] .strassenname span { font-size: 13px; }
+.strassenname span.verdeckt { visibility: hidden; }
+/* Straßennamen auf der Kurve: Schriftgröße setzt js/karte.js in Karteneinheiten, der Rand wächst mit (em) */
+.strassenpfade text {
+  font-family: var(--vc-schrift-text); font-style: italic; font-weight: 600; letter-spacing: .03em;
+  fill: #fff3df; stroke: var(--vc-grund-nacht); stroke-width: .28em; stroke-linejoin: round; stroke-opacity: .9; paint-order: stroke;
+}
+.strassenpfade .zu-lang, .strassenpfade .verdeckt, #karte[data-stufe="0"] .strassenpfade, #karte[data-stufe="1"] .strassenpfade, #karte[data-stufe="2"] .strassenpfade { visibility: hidden; }
+

@@ -1,0 +1,10836 @@
+{
+ "quelle": "GTA VI Landmarks Data (CC BY 4.0), https://map.gtadb.org, gtadb.org and contributors",
+ "lizenz": "https://creativecommons.org/licenses/by/4.0/",
+ "aenderungen": "Nur benannte Orte übernommen, abgerissene und nie gebaute weggelassen, Koordinaten auf diese Karte umgerechnet, in vier Kategorien sortiert.",
+ "stand": "2026-11-19",
+ "umrechnung": {
+  "u": [
+   0.10450190598856364,
+   0.0010603243730257918,
+   1107.1682624654775
+  ],
+  "v": [
+   0.0026478251753128327,
+   -0.1032222218179043,
+   1109.3858260366758
+  ],
+  "passpunkte": 28,
+  "mittlerer_fehler": 18
+ },
+ "verfeinert": {
+  "u": [
+   0.10192134069436622,
+   0.0000025643289404968794,
+   1095.4277826269415
+  ],
+  "v": [
+   0.00020953057358670703,
+   -0.10192893553895029,
+   1096.6743171636147
+  ],
+  "guete": "Wasserkante zu 96.3 % deckungsgleich"
+ },
+ "orte": [
+  {
+   "id": "g-l1",
+   "kat": "g-laden",
+   "name": "Vice Regal",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1239.1,
+   "y": 811.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l13",
+   "kat": "g-laden",
+   "name": "Albany Hotel",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1295.7,
+   "y": 912.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l16",
+   "kat": "g-laden",
+   "name": "Y Vice City",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [
+    "safehouse",
+    "enterable",
+    "hotel"
+   ],
+   "x": 1295,
+   "y": 934.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l17",
+   "kat": "g-laden",
+   "name": "Crystal",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1297.8,
+   "y": 958.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l18",
+   "kat": "g-laden",
+   "name": "Sachem",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1294.5,
+   "y": 966.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l20",
+   "kat": "g-laden",
+   "name": "The Atoll",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1294.1,
+   "y": 980.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l22",
+   "kat": "g-laden",
+   "name": "Bayfront Heights",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1302.3,
+   "y": 991.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l25",
+   "kat": "g-laden",
+   "name": "Dominion Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1300.1,
+   "y": 1004.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l32",
+   "kat": "g-laden",
+   "name": "Hotel Dixon",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1296.6,
+   "y": 1022,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l35",
+   "kat": "g-laden",
+   "name": "Paramour Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1295.5,
+   "y": 1028,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l36",
+   "kat": "g-laden",
+   "name": "Ocean View Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable",
+    "hotel"
+   ],
+   "x": 1295.1,
+   "y": 1032,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l39",
+   "kat": "g-laden",
+   "name": "Seven Seas Seafood",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1293.3,
+   "y": 1037,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l40",
+   "kat": "g-laden",
+   "name": "Boardwalk",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable",
+    "hotel"
+   ],
+   "x": 1293.1,
+   "y": 1039.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l41",
+   "kat": "g-laden",
+   "name": "Hotel Neptune",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1292.6,
+   "y": 1042,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l42",
+   "kat": "g-laden",
+   "name": "Parsons Hotel?",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "unsicher": true,
+   "x": 1292.4,
+   "y": 1043.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l45",
+   "kat": "g-laden",
+   "name": "Seashell Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1292.2,
+   "y": 1051.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l47",
+   "kat": "g-laden",
+   "name": "Cortez Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1291.9,
+   "y": 1055.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l48",
+   "kat": "g-laden",
+   "name": "Bobby Hurricane’s",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "retail"
+   ],
+   "x": 1291.5,
+   "y": 1056.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l49",
+   "kat": "g-laden",
+   "name": "Atlantis Hotel",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1291.3,
+   "y": 1057.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l50",
+   "kat": "g-gebaeude",
+   "name": "Seahorse",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1291.2,
+   "y": 1059.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l51",
+   "kat": "g-laden",
+   "name": "Cordelia",
+   "lage": "Shore Dr, Ocean Beach, Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1290.9,
+   "y": 1060.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l85",
+   "kat": "g-gebaeude",
+   "name": "Vice Museum of Art",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1278.1,
+   "y": 946.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l86",
+   "kat": "g-laden",
+   "name": "Fence",
+   "lage": "Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1277.7,
+   "y": 936.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l87",
+   "kat": "g-gebaeude",
+   "name": "Firefly Plaza",
+   "lage": "Vice Beach",
+   "art": [],
+   "x": 1269.5,
+   "y": 927.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l101",
+   "kat": "g-gebaeude",
+   "name": "Vice Beach Welcome Mural",
+   "lage": "Vice Beach",
+   "art": [],
+   "x": 1239,
+   "y": 917.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l104",
+   "kat": "g-laden",
+   "name": "Effluvia",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "drinks",
+    "closed",
+    "enterable",
+    "leisure"
+   ],
+   "x": 1247.5,
+   "y": 960.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l120",
+   "kat": "g-verkehr",
+   "name": "Vice Beach Marina",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "marina",
+    "transportation"
+   ],
+   "x": 1233.7,
+   "y": 1108.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l127",
+   "kat": "g-laden",
+   "name": "Tennis Stadium",
+   "lage": "Catalan Key",
+   "art": [
+    "tennis",
+    "enterable",
+    "leisure"
+   ],
+   "x": 1063.9,
+   "y": 1286.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l130",
+   "kat": "g-gebaeude",
+   "name": "Pegassi Residences South Tower",
+   "lage": "Tequesta Retreat, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "unsicher": true,
+   "x": 1100.4,
+   "y": 1206.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l131",
+   "kat": "g-gebaeude",
+   "name": "Pegassi Residences North Tower",
+   "lage": "Tequesta Retreat, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "unsicher": true,
+   "x": 1095.6,
+   "y": 1194.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l151",
+   "kat": "g-gebaeude",
+   "name": "Redwood Suites",
+   "lage": "Rialto Islands",
+   "art": [
+    "residential"
+   ],
+   "x": 1097.8,
+   "y": 973.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l160",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Waning Sands",
+   "art": [],
+   "x": 1090.8,
+   "y": 666.4,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l161",
+   "kat": "g-verkehr",
+   "name": "Arrow Gas Station",
+   "lage": "Waning Sands",
+   "art": [
+    "gas",
+    "enterable",
+    "retail"
+   ],
+   "x": 1064.5,
+   "y": 668.4,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l163",
+   "kat": "g-laden",
+   "name": "Evergreen Mall",
+   "lage": "Waning Sands",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1061.5,
+   "y": 683.6,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l164",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Leonard County",
+   "art": [
+    "utilities"
+   ],
+   "x": 998.8,
+   "y": 769.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l165",
+   "kat": "g-verkehr",
+   "name": "Arrow Gas Station",
+   "lage": "Belville",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 1016.7,
+   "y": 807,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l166",
+   "kat": "g-verkehr",
+   "name": "Parking Lot",
+   "lage": "Belville",
+   "art": [
+    "transportation"
+   ],
+   "x": 1015.2,
+   "y": 808.6,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l168",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Vice Decor District, Vice City",
+   "art": [],
+   "unsicher": true,
+   "x": 1099.7,
+   "y": 869.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l174",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "unsicher": true,
+   "x": 1045.4,
+   "y": 956.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l175",
+   "kat": "g-laden",
+   "name": "Archez",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1046.5,
+   "y": 921.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l178",
+   "kat": "g-gebaeude",
+   "name": "Crescent",
+   "lage": "Bayside, Vice City",
+   "art": [],
+   "x": 1056.1,
+   "y": 966.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l179",
+   "kat": "g-gebaeude",
+   "name": "Archipelago (N)",
+   "lage": "Bayside, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "x": 1047.8,
+   "y": 980.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l182",
+   "kat": "g-gebaeude",
+   "name": "Gemini Tower",
+   "lage": "Delphino Cir, Bayside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1065.6,
+   "y": 1000.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l185",
+   "kat": "g-laden",
+   "name": "The Sumerian",
+   "lage": "Delphino Cir, Bayside, Vice City",
+   "art": [
+    "hotel"
+   ],
+   "x": 1066.1,
+   "y": 1010.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l186",
+   "kat": "g-freizeit",
+   "name": "Galina Ballet Opera House",
+   "lage": "Catalan Blvd, Bayside, Vice City",
+   "art": [
+    "leisure"
+   ],
+   "x": 1043.7,
+   "y": 1022.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l187",
+   "kat": "g-freizeit",
+   "name": "Sahara Arena",
+   "lage": "Catalan Blvd, Shoreline, Vice City",
+   "art": [
+    "enterable",
+    "leisure"
+   ],
+   "x": 1064.6,
+   "y": 1052.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l188",
+   "kat": "g-laden",
+   "name": "The Celtica Hotel?",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [
+    "hotel"
+   ],
+   "unsicher": true,
+   "x": 1044.5,
+   "y": 1042,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l190",
+   "kat": "g-laden",
+   "name": "NINE1NINE",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "nightclub",
+    "enterable",
+    "leisure"
+   ],
+   "x": 1027,
+   "y": 1048.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l192",
+   "kat": "g-gebaeude",
+   "name": "Venture Apts North",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "x": 960.3,
+   "y": 1023.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l193",
+   "kat": "g-gebaeude",
+   "name": "Venture Apts South",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "x": 961.3,
+   "y": 1031.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l195",
+   "kat": "g-laden",
+   "name": "Lou’s",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "restaurant"
+   ],
+   "x": 963,
+   "y": 1003.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l196",
+   "kat": "g-freizeit",
+   "name": "Fleeca Field",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "leisure"
+   ],
+   "x": 931.8,
+   "y": 990.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l197",
+   "kat": "g-verkehr",
+   "name": "Fleeca Field Metro Station",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "metro",
+    "enterable",
+    "transportation"
+   ],
+   "x": 939.3,
+   "y": 976.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l199",
+   "kat": "g-gebaeude",
+   "name": "Rockridge Neighborhood Service Center",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "government"
+   ],
+   "x": 955.5,
+   "y": 1020.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l200",
+   "kat": "g-gebaeude",
+   "name": "Navaro Shipping Terminal",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 952.7,
+   "y": 1037.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l205",
+   "kat": "g-gebaeude",
+   "name": "Arcadia Towers (N)",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "residential"
+   ],
+   "x": 1038.2,
+   "y": 1084,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l208",
+   "kat": "g-gebaeude",
+   "name": "Megamundo",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1048,
+   "y": 1126.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l212",
+   "kat": "g-gebaeude",
+   "name": "El Gabeto Center",
+   "lage": "Little Cuba, Vice City",
+   "art": [
+    "public"
+   ],
+   "x": 980.1,
+   "y": 1100.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l216",
+   "kat": "g-verkehr",
+   "name": "Autograph Hangar 2",
+   "lage": "Vice City International Airport",
+   "art": [
+    "transportation"
+   ],
+   "x": 839.8,
+   "y": 1105.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l218",
+   "kat": "g-verkehr",
+   "name": "VCIA Metro Mover Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "metromover",
+    "enterable",
+    "transportation"
+   ],
+   "x": 936.9,
+   "y": 1126,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l221",
+   "kat": "g-gebaeude",
+   "name": "Heath Tower",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable",
+    "office"
+   ],
+   "x": 1013.4,
+   "y": 1141.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l222",
+   "kat": "g-gebaeude",
+   "name": "Piker Financial Center",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [
+    "enterable",
+    "office"
+   ],
+   "x": 1045.4,
+   "y": 1145,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l223",
+   "kat": "g-gebaeude",
+   "name": "Gico? Huxley Hotels",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable",
+    "residential"
+   ],
+   "x": 1038.3,
+   "y": 1154.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l224",
+   "kat": "g-gebaeude",
+   "name": "ShoreFront",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable",
+    "office"
+   ],
+   "x": 1055.3,
+   "y": 1147,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l229",
+   "kat": "g-gebaeude",
+   "name": "Vice Tower?",
+   "lage": "Tequesta, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "unsicher": true,
+   "x": 1019.7,
+   "y": 1196.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l232",
+   "kat": "g-gebaeude",
+   "name": "Sahara HQ",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 1014.9,
+   "y": 1212.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l240",
+   "kat": "g-gebaeude",
+   "name": "Grand Majestic",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 986.9,
+   "y": 1230.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l241",
+   "kat": "g-gebaeude",
+   "name": "International Online Unlimited",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 995.6,
+   "y": 1237.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l255",
+   "kat": "g-verkehr",
+   "name": "\"Stiltsville Bridge\"",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1029.6,
+   "y": 1427.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l256",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Power Station (N)",
+   "lage": "Peregrine Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 935.5,
+   "y": 1450.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l257",
+   "kat": "g-freizeit",
+   "name": "Beacon",
+   "lage": "Hamlet",
+   "art": [
+    "leisure"
+   ],
+   "x": 829.1,
+   "y": 1448.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l258",
+   "kat": "g-laden",
+   "name": "Rattlers",
+   "lage": "Hamlet",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 835.9,
+   "y": 1435.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l259",
+   "kat": "g-laden",
+   "name": "Te Invito",
+   "lage": "Hamlet",
+   "art": [
+    "enterable",
+    "restaurant"
+   ],
+   "x": 833.5,
+   "y": 1456.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l260",
+   "kat": "g-verkehr",
+   "name": "LTD Gas Station",
+   "lage": "Hamlet",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "x": 833.7,
+   "y": 1464.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l262",
+   "kat": "g-gebaeude",
+   "name": "Hamlet Water Tower",
+   "lage": "Hamlet",
+   "art": [
+    "utilities"
+   ],
+   "x": 793.4,
+   "y": 1412,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l263",
+   "kat": "g-gebaeude",
+   "name": "Sewage Treatment Plant",
+   "lage": "Hamlet",
+   "art": [
+    "utilities"
+   ],
+   "x": 773.9,
+   "y": 1378.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l264",
+   "kat": "g-gebaeude",
+   "name": "Radio Mast",
+   "lage": "Bluegrass",
+   "art": [
+    "utilities"
+   ],
+   "x": 836.3,
+   "y": 1335.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l265",
+   "kat": "g-freizeit",
+   "name": "Sunrise RV Park",
+   "lage": "Mariana County",
+   "art": [],
+   "unsicher": true,
+   "x": 741.1,
+   "y": 1554.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l266",
+   "kat": "g-gebaeude",
+   "name": "Jason’s House",
+   "lage": "Key Lento",
+   "art": [
+    "safehouse",
+    "enterable",
+    "residential"
+   ],
+   "x": 855.5,
+   "y": 1660.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l269",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Route 1, Key Lento",
+   "art": [
+    "utilities"
+   ],
+   "x": 749.8,
+   "y": 1789.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l273",
+   "kat": "g-gebaeude",
+   "name": "Air Force Radar Station",
+   "lage": "Maroon Key",
+   "art": [
+    "government"
+   ],
+   "unsicher": true,
+   "x": 655.9,
+   "y": 1789.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l274",
+   "kat": "g-laden",
+   "name": "Blimp",
+   "lage": "Maroon Key",
+   "art": [
+    "blimp"
+   ],
+   "x": 643.6,
+   "y": 1791.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l276",
+   "kat": "g-gebaeude",
+   "name": "Radio Tower",
+   "lage": "Mariana County",
+   "art": [
+    "government"
+   ],
+   "x": 454.9,
+   "y": 1788.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l277",
+   "kat": "g-gebaeude",
+   "name": "Guard Booth",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 442.8,
+   "y": 1805,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l278",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 615.9,
+   "y": 906.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l279",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Kelly County",
+   "art": [
+    "utilities"
+   ],
+   "x": 614.2,
+   "y": 894,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l280",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Kelly County",
+   "art": [
+    "utilities"
+   ],
+   "x": 575.5,
+   "y": 931.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l281",
+   "kat": "g-laden",
+   "name": "Gellhorn International Raceway",
+   "lage": "Port Gellhorn",
+   "art": [
+    "racetrack",
+    "leisure"
+   ],
+   "x": 409.2,
+   "y": 858.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l295",
+   "kat": "g-laden",
+   "name": "Red Raccoon Diner",
+   "lage": "Port Gellhorn",
+   "art": [
+    "restaurant"
+   ],
+   "x": 435.3,
+   "y": 775.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l298",
+   "kat": "g-laden",
+   "name": "Pawn & Gun",
+   "lage": "Port Gellhorn",
+   "art": [
+    "guns",
+    "enterable",
+    "retail"
+   ],
+   "x": 448.2,
+   "y": 752.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l301",
+   "kat": "g-gebaeude",
+   "name": "Radio Tower",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "x": 434.3,
+   "y": 734.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l302",
+   "kat": "g-gebaeude",
+   "name": "Port Gellhorn Smokestack",
+   "lage": "Port Gellhorn",
+   "art": [
+    "industrial"
+   ],
+   "x": 448,
+   "y": 747.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l305",
+   "kat": "g-gebaeude",
+   "name": "Radio Mast",
+   "lage": "Kelly County",
+   "art": [
+    "utilities"
+   ],
+   "x": 573.6,
+   "y": 750.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l306",
+   "kat": "g-laden",
+   "name": "Taco Bomb",
+   "lage": "Historic Route 628, Kelly County",
+   "art": [
+    "restaurant"
+   ],
+   "x": 560.3,
+   "y": 738.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l307",
+   "kat": "g-freizeit",
+   "name": "Starlet Motel Sign",
+   "lage": "Kelly County",
+   "art": [
+    "landmark"
+   ],
+   "unsicher": true,
+   "x": 553.9,
+   "y": 737.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l309",
+   "kat": "g-laden",
+   "name": "Easy Inn Motel",
+   "lage": "Moonstone Hwy, Port Gellhorn",
+   "art": [
+    "hotel"
+   ],
+   "x": 473.1,
+   "y": 649.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l310",
+   "kat": "g-laden",
+   "name": "Hank’s Waffles",
+   "lage": "Port Gellhorn",
+   "art": [
+    "food",
+    "enterable",
+    "restaurant"
+   ],
+   "x": 464.8,
+   "y": 634.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l311",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "unsicher": true,
+   "x": 457.4,
+   "y": 631.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l312",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 490.8,
+   "y": 604.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l314",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "x": 445.4,
+   "y": 631.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l315",
+   "kat": "g-laden",
+   "name": "Schlott Construction",
+   "lage": "Port Gellhorn",
+   "art": [
+    "retail"
+   ],
+   "x": 463,
+   "y": 640.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l316",
+   "kat": "g-laden",
+   "name": "Car Wash",
+   "lage": "Port Gellhorn",
+   "art": [
+    "carwash",
+    "retail"
+   ],
+   "x": 461.2,
+   "y": 649,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l317",
+   "kat": "g-verkehr",
+   "name": "Bocamar Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 409.6,
+   "y": 630.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l322",
+   "kat": "g-gebaeude",
+   "name": "Dry Dock",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 305.4,
+   "y": 620.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l323",
+   "kat": "g-gebaeude",
+   "name": "Container Crane (1)",
+   "lage": "Port Gellhorn",
+   "art": [
+    "industrial"
+   ],
+   "x": 286,
+   "y": 613.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l324",
+   "kat": "g-laden",
+   "name": "Hotel Valetta",
+   "lage": "Vice Beach",
+   "art": [
+    "hotel"
+   ],
+   "x": 1278.5,
+   "y": 932.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l325",
+   "kat": "g-laden",
+   "name": "The Rusty Anchor",
+   "lage": "Key Lento",
+   "art": [
+    "bar",
+    "enterable",
+    "leisure"
+   ],
+   "x": 863.9,
+   "y": 1632,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l326",
+   "kat": "g-verkehr",
+   "name": "Brian’s Boat Works & Marina",
+   "lage": "Key Lento",
+   "art": [
+    "marina",
+    "enterable",
+    "transportation"
+   ],
+   "x": 835,
+   "y": 1693.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l328",
+   "kat": "g-freizeit",
+   "name": "Key Lento Marina Club",
+   "lage": "Key Lento",
+   "art": [
+    "leisure"
+   ],
+   "x": 832.2,
+   "y": 1685.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l332",
+   "kat": "g-laden",
+   "name": "Wonder Whale",
+   "lage": "Key Lento",
+   "art": [
+    "retail"
+   ],
+   "x": 796.2,
+   "y": 1750.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l336",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Key Lento",
+   "art": [
+    "utilities"
+   ],
+   "x": 886.9,
+   "y": 1669.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l341",
+   "kat": "g-laden",
+   "name": "24/7 Supermarket",
+   "lage": "Key Lento",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 893.7,
+   "y": 1640,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l345",
+   "kat": "g-verkehr",
+   "name": "VCIA Control Tower",
+   "lage": "Vice City International Airport",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "x": 853.6,
+   "y": 1175.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l346",
+   "kat": "g-freizeit",
+   "name": "Three Toe Lake",
+   "lage": "Vice City",
+   "art": [
+    "natural"
+   ],
+   "x": 694.3,
+   "y": 1132.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l354",
+   "kat": "g-verkehr",
+   "name": "Mile Zero Air Station",
+   "lage": "Goose Key",
+   "art": [
+    "airbase",
+    "government"
+   ],
+   "x": 386.4,
+   "y": 1747.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l357",
+   "kat": "g-laden",
+   "name": "Mexican Restaurant",
+   "lage": "Hamlet",
+   "art": [
+    "restaurant"
+   ],
+   "x": 834.7,
+   "y": 1448.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l360",
+   "kat": "g-laden",
+   "name": "Sara’s Unisex Salon",
+   "lage": "Hamlet",
+   "art": [
+    "hair",
+    "enterable",
+    "retail"
+   ],
+   "x": 835.1,
+   "y": 1444.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l363",
+   "kat": "g-laden",
+   "name": "Burger Shot",
+   "lage": "Hamlet",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 835.4,
+   "y": 1440.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l364",
+   "kat": "g-laden",
+   "name": "Vinylism",
+   "lage": "Hamlet",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 835.6,
+   "y": 1439.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l370",
+   "kat": "g-laden",
+   "name": "Kurt’s Barber Shop",
+   "lage": "Route 61, Hamlet",
+   "art": [
+    "hair",
+    "enterable",
+    "retail"
+   ],
+   "x": 833.2,
+   "y": 1458.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l373",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1316.4,
+   "y": 1104,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l374",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1315.9,
+   "y": 1094.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l375",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1313.1,
+   "y": 1079.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l376",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1315.4,
+   "y": 1061.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l377",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1316.6,
+   "y": 1048.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l378",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1318.1,
+   "y": 1035.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l379",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1319.6,
+   "y": 1020.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l380",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1321.6,
+   "y": 1007.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l381",
+   "kat": "g-freizeit",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1323,
+   "y": 995.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l383",
+   "kat": "g-gebaeude",
+   "name": "Pegassi Residences West Tower",
+   "lage": "Tequesta Retreat, Vice City",
+   "art": [
+    "residential"
+   ],
+   "unsicher": true,
+   "x": 1079.8,
+   "y": 1188.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l393",
+   "kat": "g-laden",
+   "name": "Bite House",
+   "lage": "Watson Bay",
+   "art": [
+    "enterable",
+    "restaurant"
+   ],
+   "x": 559.8,
+   "y": 1441.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l399",
+   "kat": "g-gebaeude",
+   "name": "Sugar Mill",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 788,
+   "y": 754.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l400",
+   "kat": "g-gebaeude",
+   "name": "Silo",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 822.1,
+   "y": 701.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l401",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 791.6,
+   "y": 716,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l403",
+   "kat": "g-gebaeude",
+   "name": "W. Blanco’s Cuban Foods",
+   "lage": "Ambrosia",
+   "art": [],
+   "x": 816.1,
+   "y": 660.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l406",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Ambrosia",
+   "art": [
+    "gas",
+    "enterable",
+    "retail"
+   ],
+   "x": 820.4,
+   "y": 670.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l408",
+   "kat": "g-laden",
+   "name": "Jeudy’s Food Depot",
+   "lage": "La Perle, Vice City",
+   "art": [
+    "supermarket",
+    "enterable",
+    "retail"
+   ],
+   "x": 1002.3,
+   "y": 940.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l409",
+   "kat": "g-laden",
+   "name": "Conch King",
+   "lage": "La Perle, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1001.2,
+   "y": 939.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l419",
+   "kat": "g-laden",
+   "name": "Simon’s Tires",
+   "lage": "La Perle, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 981.4,
+   "y": 976.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l422",
+   "kat": "g-verkehr",
+   "name": "Rivo Bridge",
+   "lage": "Rialto Islands",
+   "art": [
+    "transportation"
+   ],
+   "x": 1084.6,
+   "y": 987.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l431",
+   "kat": "g-gebaeude",
+   "name": "Leaf Links Golf Club?",
+   "lage": "Leaf Links, Vice Beach",
+   "art": [],
+   "unsicher": true,
+   "x": 1168,
+   "y": 862.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l432",
+   "kat": "g-verkehr",
+   "name": "Port Vice City Tunnel",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 1124.4,
+   "y": 1071.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l437",
+   "kat": "g-freizeit",
+   "name": "Palaestra Tower",
+   "lage": "Catalan Blvd, Bayside, Vice City",
+   "art": [
+    "landmark"
+   ],
+   "x": 1049.3,
+   "y": 1027.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l438",
+   "kat": "g-laden",
+   "name": "Dock Ring",
+   "lage": "Shoreline, Vice City",
+   "art": [
+    "ferriswheel",
+    "leisure"
+   ],
+   "x": 1098.8,
+   "y": 1082.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l440",
+   "kat": "g-freizeit",
+   "name": "V-Rock Café",
+   "lage": "Shoreline, Vice City",
+   "art": [
+    "leisure"
+   ],
+   "x": 1085.8,
+   "y": 1098,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l441",
+   "kat": "g-verkehr",
+   "name": "Vice City Arts Center Metro Station",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "metromover",
+    "enterable",
+    "transportation"
+   ],
+   "x": 1038.6,
+   "y": 1018.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l445",
+   "kat": "g-freizeit",
+   "name": "Presidential Bunker",
+   "lage": "Leonard County",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 1116.5,
+   "y": 558.4,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l447",
+   "kat": "g-freizeit",
+   "name": "Underwater Research Station",
+   "lage": "Mariana County",
+   "art": [
+    "events"
+   ],
+   "x": 891.7,
+   "y": 1775.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l449",
+   "kat": "g-gebaeude",
+   "name": "What’s Cooking",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1028.8,
+   "y": 967.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l456",
+   "kat": "g-freizeit",
+   "name": "Vice City Sign",
+   "lage": "Vice City International Airport",
+   "art": [
+    "landmark"
+   ],
+   "x": 711.1,
+   "y": 1142.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l465",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1070.7,
+   "y": 826.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l470",
+   "kat": "g-gebaeude",
+   "name": "Lombank",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1275,
+   "y": 964.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l472",
+   "kat": "g-gebaeude",
+   "name": "Waste Transfer Services",
+   "lage": "Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 855.8,
+   "y": 827.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l477",
+   "kat": "g-gebaeude",
+   "name": "Allied Air Hangar",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 876.7,
+   "y": 1150.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l478",
+   "kat": "g-gebaeude",
+   "name": "Glamour Clothing",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1050.9,
+   "y": 923.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l485",
+   "kat": "g-gebaeude",
+   "name": "Goliath?",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "industrial"
+   ],
+   "unsicher": true,
+   "x": 1043.3,
+   "y": 931.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l486",
+   "kat": "g-freizeit",
+   "name": "Panos Plaza",
+   "lage": "Bayside, Vice City",
+   "art": [
+    "leisure"
+   ],
+   "x": 1070.7,
+   "y": 1026.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l490",
+   "kat": "g-gebaeude",
+   "name": "Going Spare",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1030.4,
+   "y": 946.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l491",
+   "kat": "g-gebaeude",
+   "name": "Shunters",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1028,
+   "y": 950.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l493",
+   "kat": "g-gebaeude",
+   "name": "Kirkwood Distribution",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1027,
+   "y": 956.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l501",
+   "kat": "g-gebaeude",
+   "name": "Lombank",
+   "lage": "Tequesta, Vice City",
+   "art": [
+    "office"
+   ],
+   "x": 981.8,
+   "y": 1247.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l504",
+   "kat": "g-gebaeude",
+   "name": "\"House B\"",
+   "lage": "Key Lento",
+   "art": [
+    "residential"
+   ],
+   "x": 858.8,
+   "y": 1660.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l505",
+   "kat": "g-gebaeude",
+   "name": "\"House C\"",
+   "lage": "Key Lento",
+   "art": [
+    "residential"
+   ],
+   "x": 859,
+   "y": 1656.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l506",
+   "kat": "g-gebaeude",
+   "name": "\"House D\"",
+   "lage": "Key Lento",
+   "art": [],
+   "unsicher": true,
+   "x": 860.9,
+   "y": 1654.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l511",
+   "kat": "g-freizeit",
+   "name": "Hoodwinks Bar",
+   "lage": "Salton, Vice City",
+   "art": [
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 1029.7,
+   "y": 976.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l512",
+   "kat": "g-laden",
+   "name": "Thrillbilly Mud Club",
+   "lage": "Route 32, Kelly County",
+   "art": [
+    "racetrack",
+    "leisure"
+   ],
+   "x": 687.1,
+   "y": 611,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l513",
+   "kat": "g-gebaeude",
+   "name": "Radio Mast",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 558.2,
+   "y": 761.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l524",
+   "kat": "g-gebaeude",
+   "name": "Buckme",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [],
+   "x": 1048,
+   "y": 1112.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l527",
+   "kat": "g-gebaeude",
+   "name": "Prison",
+   "lage": "Kelly County",
+   "art": [
+    "jail",
+    "government"
+   ],
+   "x": 580.1,
+   "y": 909,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l528",
+   "kat": "g-freizeit",
+   "name": "\"Mount Waffles\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 559,
+   "y": 526.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l529",
+   "kat": "g-freizeit",
+   "name": "\"Mount Mountain\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 639.2,
+   "y": 554.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l530",
+   "kat": "g-freizeit",
+   "name": "Mount Kalaga",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 745.8,
+   "y": 446.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l532",
+   "kat": "g-freizeit",
+   "name": "\"Easy Hill\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 515.3,
+   "y": 691.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l533",
+   "kat": "g-laden",
+   "name": "Leaf Links Golf Club",
+   "lage": "Vice-Dale County",
+   "art": [
+    "golf",
+    "leisure"
+   ],
+   "x": 1154.3,
+   "y": 843.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l535",
+   "kat": "g-gebaeude",
+   "name": "Refinery?",
+   "lage": "Port Gellhorn",
+   "art": [
+    "industrial"
+   ],
+   "unsicher": true,
+   "x": 329.3,
+   "y": 562.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l536",
+   "kat": "g-gebaeude",
+   "name": "Factory?",
+   "lage": "Port Gellhorn",
+   "art": [
+    "industrial"
+   ],
+   "unsicher": true,
+   "x": 366.5,
+   "y": 587.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l538",
+   "kat": "g-verkehr",
+   "name": "Port Gellhorn Train Station",
+   "lage": "Port Gellhorn",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "x": 422.4,
+   "y": 726.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l539",
+   "kat": "g-gebaeude",
+   "name": "Vice City Pawn",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "fence",
+    "enterable"
+   ],
+   "x": 1028.2,
+   "y": 978,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l540",
+   "kat": "g-verkehr",
+   "name": "Tequesta Retreat Bridge",
+   "lage": "Tequesta Retreat, Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 1048.6,
+   "y": 1208.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l544",
+   "kat": "g-gebaeude",
+   "name": "Watson Bay Water Tower",
+   "lage": "Watson Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 589.8,
+   "y": 1429.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l549",
+   "kat": "g-freizeit",
+   "name": "Evergreen Mall Sign",
+   "lage": "Waning Sands",
+   "art": [
+    "landmark"
+   ],
+   "x": 1038.8,
+   "y": 681.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l551",
+   "kat": "g-gebaeude",
+   "name": "J.C. Anglin United States Courthouse",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "government"
+   ],
+   "x": 1025.2,
+   "y": 1017.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l553",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 1024.2,
+   "y": 980,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l556",
+   "kat": "g-laden",
+   "name": "The Vault",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "nightclub",
+    "enterable",
+    "leisure"
+   ],
+   "x": 1016.5,
+   "y": 1049.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l564",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Rialto Islands",
+   "art": [
+    "transportation"
+   ],
+   "x": 1220.4,
+   "y": 950.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l565",
+   "kat": "g-laden",
+   "name": "X Hotel",
+   "lage": "Vice City",
+   "art": [
+    "enterable",
+    "hotel"
+   ],
+   "x": 916.7,
+   "y": 1147.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l569",
+   "kat": "g-laden",
+   "name": "Clarissa Hotel",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable",
+    "hotel"
+   ],
+   "x": 1067.7,
+   "y": 1147.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l582",
+   "kat": "g-gebaeude",
+   "name": "Parking Garage",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1022.7,
+   "y": 1085.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l590",
+   "kat": "g-laden",
+   "name": "Ambrosia Raceway Park",
+   "lage": "Ambrosia",
+   "art": [
+    "racetrack",
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 791.9,
+   "y": 622.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l591",
+   "kat": "g-verkehr",
+   "name": "Ambrosia Station",
+   "lage": "Ambrosia",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 862.5,
+   "y": 717.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l596",
+   "kat": "g-gebaeude",
+   "name": "Repair & Salvage",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 411.1,
+   "y": 716,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l597",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 369.1,
+   "y": 651.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l602",
+   "kat": "g-verkehr",
+   "name": "Vice Pass",
+   "lage": "Rialto Islands",
+   "art": [
+    "transportation"
+   ],
+   "x": 1107.1,
+   "y": 981.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l608",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "x": 963,
+   "y": 995.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l611",
+   "kat": "g-laden",
+   "name": "Kington Hotel",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "events",
+    "hotel"
+   ],
+   "x": 1290.1,
+   "y": 1030.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l613",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable",
+    "transportation"
+   ],
+   "x": 1024.2,
+   "y": 995.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l625",
+   "kat": "g-gebaeude",
+   "name": "Grassrivers Visitor Center",
+   "lage": "Mariana County",
+   "art": [
+    "enterable"
+   ],
+   "x": 823.2,
+   "y": 1580.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l629",
+   "kat": "g-laden",
+   "name": "Delights",
+   "lage": "Interstate 404, Port Gellhorn",
+   "art": [
+    "stripclub",
+    "enterable",
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 447.2,
+   "y": 729.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l630",
+   "kat": "g-gebaeude",
+   "name": "Tequesta Retreat Park",
+   "lage": "Tequesta Retreat, Vice City",
+   "art": [
+    "public"
+   ],
+   "x": 1059.5,
+   "y": 1229.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l631",
+   "kat": "g-freizeit",
+   "name": "Spaceship House",
+   "lage": "Leonida",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 521.3,
+   "y": 398,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l634",
+   "kat": "g-freizeit",
+   "name": "Vice River",
+   "lage": "Vice City",
+   "art": [
+    "natural"
+   ],
+   "x": 966.4,
+   "y": 1119.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l635",
+   "kat": "g-gebaeude",
+   "name": "Transformer Station",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "x": 434.7,
+   "y": 737.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l644",
+   "kat": "g-laden",
+   "name": "The Amalfi",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "restaurant"
+   ],
+   "x": 1302.3,
+   "y": 994.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l651",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1005.6,
+   "y": 1486.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l652",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 1026.6,
+   "y": 1268.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l653",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1113.5,
+   "y": 1305.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l654",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1179.9,
+   "y": 1196.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l655",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Kelly County",
+   "art": [
+    "transportation"
+   ],
+   "x": 577.7,
+   "y": 574.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l657",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Ambrosia",
+   "art": [
+    "utilities"
+   ],
+   "x": 795.4,
+   "y": 663.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l671",
+   "kat": "g-gebaeude",
+   "name": "Shoreline Market",
+   "lage": "Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1066.5,
+   "y": 1080.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l672",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Capri",
+   "art": [],
+   "x": 398.5,
+   "y": 1016.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l677",
+   "kat": "g-laden",
+   "name": "Cipher Mall",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 957.1,
+   "y": 1016.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l685",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "unsicher": true,
+   "x": 1005.4,
+   "y": 1075.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l687",
+   "kat": "g-laden",
+   "name": "Chariot Empire Suites",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [
+    "hotel"
+   ],
+   "x": 1047,
+   "y": 1106.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l688",
+   "kat": "g-gebaeude",
+   "name": "Main Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 792.5,
+   "y": 1385.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l689",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #9",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1202.4,
+   "y": 1121.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l690",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #8",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1212,
+   "y": 1129.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l691",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #7",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1222,
+   "y": 1138.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l692",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #6",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1233,
+   "y": 1147.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l693",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #5",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1246.9,
+   "y": 1158.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l694",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #4",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1234.4,
+   "y": 1172.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l695",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #3",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1223.8,
+   "y": 1175.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l696",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #2",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1208.4,
+   "y": 1178.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l697",
+   "kat": "g-gebaeude",
+   "name": "Container Crane #1",
+   "lage": "Port Vice City",
+   "art": [
+    "industrial"
+   ],
+   "x": 1192,
+   "y": 1181.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l702",
+   "kat": "g-gebaeude",
+   "name": "Status Auto Resort",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1039.8,
+   "y": 947.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l704",
+   "kat": "g-gebaeude",
+   "name": "Judith’s?",
+   "lage": "Vice City",
+   "art": [],
+   "unsicher": true,
+   "x": 913.3,
+   "y": 1145.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l706",
+   "kat": "g-gebaeude",
+   "name": "Arcadia Towers (S)",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "residential"
+   ],
+   "x": 1032.2,
+   "y": 1088.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l707",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 436.8,
+   "y": 549.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l708",
+   "kat": "g-verkehr",
+   "name": "Autograph Hangar 1",
+   "lage": "Vice City International Airport",
+   "art": [
+    "transportation"
+   ],
+   "x": 830,
+   "y": 1103.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l710",
+   "kat": "g-gebaeude",
+   "name": "Break Inn",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [],
+   "x": 1046.9,
+   "y": 1064.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l714",
+   "kat": "g-freizeit",
+   "name": "Tennis Court",
+   "lage": "Rialto Islands",
+   "art": [
+    "leisure"
+   ],
+   "x": 1108.8,
+   "y": 977.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l720",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "metromover",
+    "enterable",
+    "transportation"
+   ],
+   "x": 1042.5,
+   "y": 1097,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l733",
+   "kat": "g-gebaeude",
+   "name": "Goliath",
+   "lage": "Mariana County",
+   "art": [
+    "industrial"
+   ],
+   "x": 720.2,
+   "y": 1198.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l734",
+   "kat": "g-freizeit",
+   "name": "Submerged Tank",
+   "lage": "Vice-Dale County",
+   "art": [
+    "events",
+    "landmark"
+   ],
+   "x": 1356.2,
+   "y": 883.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l744",
+   "kat": "g-gebaeude",
+   "name": "Archipelago (S)",
+   "lage": "Bayside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1051.7,
+   "y": 981.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l745",
+   "kat": "g-gebaeude",
+   "name": "Calle Creativa",
+   "lage": "Little Cuba, Vice City",
+   "art": [],
+   "x": 976.8,
+   "y": 1085.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l746",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Catalan Blvd, Downtown, Vice City",
+   "art": [
+    "metromover",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1054.2,
+   "y": 1121,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l747",
+   "kat": "g-gebaeude",
+   "name": "Temple Park",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 997.4,
+   "y": 1182.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l748",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "natural"
+   ],
+   "x": 992.4,
+   "y": 1032.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l761",
+   "kat": "g-gebaeude",
+   "name": "Donovan Roeder Jr. Community Center",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 881.2,
+   "y": 1642.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l802",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Kelly County",
+   "art": [
+    "transportation"
+   ],
+   "x": 547.6,
+   "y": 558.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l803",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "unsicher": true,
+   "x": 417.1,
+   "y": 723.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l804",
+   "kat": "g-gebaeude",
+   "name": "Water Tank",
+   "lage": "Port Gellhorn",
+   "art": [
+    "industrial"
+   ],
+   "x": 413.1,
+   "y": 705.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l805",
+   "kat": "g-freizeit",
+   "name": "Soccer Field",
+   "lage": "Port Gellhorn",
+   "art": [
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 397.2,
+   "y": 723,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l810",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 424.8,
+   "y": 840.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l811",
+   "kat": "g-gebaeude",
+   "name": "Repair & Salvage",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 415.2,
+   "y": 714.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l820",
+   "kat": "g-gebaeude",
+   "name": "Guardhouse",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 445.1,
+   "y": 831.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l824",
+   "kat": "g-gebaeude",
+   "name": "Shoreline Park?",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "public"
+   ],
+   "unsicher": true,
+   "x": 1062.4,
+   "y": 1112.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l825",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Key Lento",
+   "art": [
+    "transportation"
+   ],
+   "x": 861.8,
+   "y": 1582.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l826",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Key Lento",
+   "art": [
+    "transportation"
+   ],
+   "x": 912.9,
+   "y": 1620.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l827",
+   "kat": "g-gebaeude",
+   "name": "Control Tower",
+   "lage": "Mariana County",
+   "art": [
+    "government"
+   ],
+   "x": 415.8,
+   "y": 1758.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l828",
+   "kat": "g-gebaeude",
+   "name": "Radar Tower",
+   "lage": "Mariana County",
+   "art": [
+    "government"
+   ],
+   "x": 412.4,
+   "y": 1746.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l829",
+   "kat": "g-gebaeude",
+   "name": "Hangar",
+   "lage": "Mariana County",
+   "art": [
+    "government"
+   ],
+   "x": 420.4,
+   "y": 1742.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l830",
+   "kat": "g-gebaeude",
+   "name": "Weather Radar",
+   "lage": "Mariana County",
+   "art": [
+    "utilities"
+   ],
+   "x": 410.2,
+   "y": 1739.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l832",
+   "kat": "g-gebaeude",
+   "name": "Ambrosia Police Department",
+   "lage": "Ambrosia",
+   "art": [
+    "police",
+    "government"
+   ],
+   "x": 806.1,
+   "y": 661.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l843",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1132.4,
+   "y": 792.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l844",
+   "kat": "g-freizeit",
+   "name": "Domed Hills",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 636.9,
+   "y": 458,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l875",
+   "kat": "g-gebaeude",
+   "name": "Hamilton Private Health Clinic",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 891.6,
+   "y": 1627.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l879",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Power Station (S)",
+   "lage": "Peregrine Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 935.6,
+   "y": 1457.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l880",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Power Station (1)",
+   "lage": "Peregrine Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 943.6,
+   "y": 1473.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l881",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Power Station (2)",
+   "lage": "Peregrine Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 943.4,
+   "y": 1476.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l882",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Power Station (3)",
+   "lage": "Peregrine Bay",
+   "art": [
+    "utilities"
+   ],
+   "x": 943.4,
+   "y": 1481.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l883",
+   "kat": "g-freizeit",
+   "name": "Sculpture",
+   "lage": "Shoreline, Vice City",
+   "art": [
+    "landmark"
+   ],
+   "unsicher": true,
+   "x": 1064.8,
+   "y": 1131.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l885",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Balsero, Vice City",
+   "art": [],
+   "x": 865.7,
+   "y": 1006.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l886",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Ambrosia",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 814,
+   "y": 600.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l887",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Ambrosia",
+   "art": [],
+   "x": 833.8,
+   "y": 584.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l888",
+   "kat": "g-gebaeude",
+   "name": "Radio Tower",
+   "lage": "Ambrosia",
+   "art": [
+    "utilities"
+   ],
+   "unsicher": true,
+   "x": 885.8,
+   "y": 760.2,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l893",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1293.4,
+   "y": 946.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l902",
+   "kat": "g-freizeit",
+   "name": "Outdoor Movie Screen?",
+   "lage": "Watson Bay",
+   "art": [
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 609.1,
+   "y": 1447,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l905",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 642.7,
+   "y": 339.4,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l906",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Leonida",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 653.4,
+   "y": 342.3,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l907",
+   "kat": "g-gebaeude",
+   "name": "Vice City Hall",
+   "lage": "Peacock Bay, Vice City",
+   "art": [
+    "government"
+   ],
+   "x": 998.3,
+   "y": 1320.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l909",
+   "kat": "g-gebaeude",
+   "name": "Empty Lot",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1031.4,
+   "y": 998.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l913",
+   "kat": "g-gebaeude",
+   "name": "Limit HQ",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1005,
+   "y": 1111.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l914",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (1)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 798.6,
+   "y": 1374.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l915",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (2)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 815.3,
+   "y": 1377.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l916",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (3)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 829.2,
+   "y": 1385.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l917",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (4)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 824.4,
+   "y": 1393,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l918",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (5)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 797.6,
+   "y": 1394.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l919",
+   "kat": "g-gebaeude",
+   "name": "Prison Tower (6)",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "government"
+   ],
+   "x": 788.3,
+   "y": 1384.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l921",
+   "kat": "g-gebaeude",
+   "name": "Office Building",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "office"
+   ],
+   "x": 812.3,
+   "y": 691.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l922",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 814.8,
+   "y": 709.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l926",
+   "kat": "g-freizeit",
+   "name": "Football Stadium?",
+   "lage": "Ambrosia",
+   "art": [
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 770.5,
+   "y": 649,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l943",
+   "kat": "g-laden",
+   "name": "Mason’s Shrimp Shack",
+   "lage": "Port Gellhorn",
+   "art": [
+    "restaurant"
+   ],
+   "unsicher": true,
+   "x": 429.4,
+   "y": 654,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l945",
+   "kat": "g-gebaeude",
+   "name": "Pier",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 422.7,
+   "y": 743,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l946",
+   "kat": "g-gebaeude",
+   "name": "Pier",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 418.7,
+   "y": 747.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l947",
+   "kat": "g-gebaeude",
+   "name": "Juice Fruit Sign",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 426.4,
+   "y": 723.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l955",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 447.2,
+   "y": 775,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l959",
+   "kat": "g-freizeit",
+   "name": "Welcome to Port Gellhorn Sign",
+   "lage": "Port Gellhorn",
+   "art": [
+    "landmark"
+   ],
+   "x": 454,
+   "y": 804.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l960",
+   "kat": "g-laden",
+   "name": "Wasteland Off-Road",
+   "lage": "Port Gellhorn",
+   "art": [
+    "modshop"
+   ],
+   "x": 455.8,
+   "y": 664.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l977",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 987.4,
+   "y": 1051.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l982",
+   "kat": "g-laden",
+   "name": "Cafe Carraway",
+   "lage": "SW 4th Ave, Tequesta, Vice City",
+   "art": [
+    "events",
+    "restaurant"
+   ],
+   "x": 1004.6,
+   "y": 1206,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l990",
+   "kat": "g-freizeit",
+   "name": "Canal",
+   "lage": "Port Gellhorn",
+   "art": [
+    "natural"
+   ],
+   "x": 397.3,
+   "y": 705.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l996",
+   "kat": "g-freizeit",
+   "name": "MacAlister Gold Mine",
+   "lage": "Leonida",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 676,
+   "y": 388.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1000",
+   "kat": "g-freizeit",
+   "name": "Lake Leonida",
+   "lage": "Leonard County",
+   "art": [
+    "natural"
+   ],
+   "x": 894.1,
+   "y": 613.9,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1007",
+   "kat": "g-freizeit",
+   "name": "\"Mariana Island\"",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 351.5,
+   "y": 1493.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1009",
+   "kat": "g-gebaeude",
+   "name": "Pawn Shop",
+   "lage": "Salton, Vice City",
+   "art": [
+    "fence",
+    "enterable"
+   ],
+   "x": 947.8,
+   "y": 1158.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1015",
+   "kat": "g-freizeit",
+   "name": "Muscle Sands",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1301.5,
+   "y": 1057.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1017",
+   "kat": "g-gebaeude",
+   "name": "\"Yellow House\"",
+   "lage": "Key Lento",
+   "art": [
+    "residential"
+   ],
+   "x": 869.3,
+   "y": 1653.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1018",
+   "kat": "g-gebaeude",
+   "name": "\"Blue House\"",
+   "lage": "Key Lento",
+   "art": [
+    "residential"
+   ],
+   "x": 870.2,
+   "y": 1652.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1019",
+   "kat": "g-gebaeude",
+   "name": "\"White House\"",
+   "lage": "Key Lento",
+   "art": [
+    "residential"
+   ],
+   "x": 870.9,
+   "y": 1651.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1025",
+   "kat": "g-gebaeude",
+   "name": "Parking Garage",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1243.5,
+   "y": 972.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1030",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1032.7,
+   "y": 1097.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1039",
+   "kat": "g-freizeit",
+   "name": "Wonder Whale?",
+   "lage": "Route 1, Key Lento",
+   "art": [
+    "landmark"
+   ],
+   "unsicher": true,
+   "x": 795.7,
+   "y": 1752.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1042",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Key Lento",
+   "art": [
+    "utilities"
+   ],
+   "x": 902.7,
+   "y": 1626.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1043",
+   "kat": "g-gebaeude",
+   "name": "Wholesale Furniture Outlet",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 936.6,
+   "y": 1262.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1049",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 815.8,
+   "y": 739.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1050",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 810.1,
+   "y": 739.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1051",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 803.4,
+   "y": 742.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1052",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 821.6,
+   "y": 705.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1053",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 824.5,
+   "y": 709.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1054",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 786.9,
+   "y": 737.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1060",
+   "kat": "g-gebaeude",
+   "name": "Cospace",
+   "lage": "Bayside, Vice City",
+   "art": [],
+   "x": 1044.2,
+   "y": 1013.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1061",
+   "kat": "g-verkehr",
+   "name": "Catalan Boulevard Bridge",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 1044.6,
+   "y": 1165.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1062",
+   "kat": "g-gebaeude",
+   "name": "Trailer Park",
+   "lage": "Port Gellhorn",
+   "art": [
+    "residential"
+   ],
+   "x": 404.3,
+   "y": 691.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1063",
+   "kat": "g-freizeit",
+   "name": "Underwater Ruins",
+   "lage": "Vice-Dale County",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 1149.4,
+   "y": 1366.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1064",
+   "kat": "g-freizeit",
+   "name": "Capri City Jackals Stadium",
+   "lage": "Capri",
+   "art": [
+    "leisure"
+   ],
+   "x": 442.2,
+   "y": 1116.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1065",
+   "kat": "g-freizeit",
+   "name": "Sugar Fields",
+   "lage": "Ambrosia",
+   "art": [],
+   "unsicher": true,
+   "x": 892.8,
+   "y": 745.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1068",
+   "kat": "g-freizeit",
+   "name": "Bobcat Key",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 434.6,
+   "y": 1251,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1069",
+   "kat": "g-freizeit",
+   "name": "\"Corkscrew Hill\"",
+   "lage": "Port Gellhorn",
+   "art": [
+    "natural"
+   ],
+   "x": 485.2,
+   "y": 870.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1074",
+   "kat": "g-laden",
+   "name": "Phil’s Ammu-Nation",
+   "lage": "Leonida",
+   "art": [
+    "guns",
+    "enterable",
+    "retail"
+   ],
+   "x": 910.7,
+   "y": 1347.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1086",
+   "kat": "g-gebaeude",
+   "name": "Container Crane (2)",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 293.4,
+   "y": 619.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1087",
+   "kat": "g-gebaeude",
+   "name": "Container Crane (3)",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 314.8,
+   "y": 627,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1091",
+   "kat": "g-laden",
+   "name": "Ammu-Nation?",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "guns",
+    "enterable",
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 968.9,
+   "y": 1031.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1092",
+   "kat": "g-verkehr",
+   "name": "Bus Parking Lot",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 934.8,
+   "y": 1163.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1098",
+   "kat": "g-laden",
+   "name": "Bite",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "restaurant"
+   ],
+   "x": 955.1,
+   "y": 1016.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1099",
+   "kat": "g-laden",
+   "name": "Bump & Grind",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 954.9,
+   "y": 1015.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1100",
+   "kat": "g-laden",
+   "name": "Harmon & Fenix",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 955.7,
+   "y": 1014.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1101",
+   "kat": "g-laden",
+   "name": "Core Software",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 956.9,
+   "y": 1014.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1102",
+   "kat": "g-laden",
+   "name": "ShoreFront",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 958.1,
+   "y": 1014.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1108",
+   "kat": "g-laden",
+   "name": "Marco Wholesale Footwear",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1047.6,
+   "y": 922.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1112",
+   "kat": "g-gebaeude",
+   "name": "Guard Booth",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [],
+   "x": 813.9,
+   "y": 698.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1113",
+   "kat": "g-verkehr",
+   "name": "Autograph Flight Support Building",
+   "lage": "Vice City International Airport",
+   "art": [
+    "transportation"
+   ],
+   "x": 848.2,
+   "y": 1107.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1119",
+   "kat": "g-gebaeude",
+   "name": "Radio Tower",
+   "lage": "Port Gellhorn",
+   "art": [
+    "utilities"
+   ],
+   "x": 442.6,
+   "y": 748.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1127",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 430.7,
+   "y": 589.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1129",
+   "kat": "g-gebaeude",
+   "name": "Main Gate",
+   "lage": "Prison, Hamlet",
+   "art": [
+    "jail",
+    "closed",
+    "government"
+   ],
+   "x": 822,
+   "y": 1394.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1139",
+   "kat": "g-gebaeude",
+   "name": "Sandeep Plaza",
+   "lage": "Thompson Ave, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1276,
+   "y": 958.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1159",
+   "kat": "g-gebaeude",
+   "name": "Pool",
+   "lage": "Starlet Motel, Kelly County",
+   "art": [],
+   "unsicher": true,
+   "x": 554.2,
+   "y": 742.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1188",
+   "kat": "g-verkehr",
+   "name": "Gas Station",
+   "lage": "Mariana County",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 679.5,
+   "y": 1339.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1203",
+   "kat": "g-gebaeude",
+   "name": "Water Tower?",
+   "lage": "Mariana County",
+   "art": [],
+   "unsicher": true,
+   "x": 434.4,
+   "y": 1746.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1235",
+   "kat": "g-gebaeude",
+   "name": "Lake Bonner",
+   "lage": "Waning Sands",
+   "art": [],
+   "x": 1100.3,
+   "y": 738.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1240",
+   "kat": "g-gebaeude",
+   "name": "Whiz",
+   "lage": "Hamlet",
+   "art": [],
+   "x": 868.7,
+   "y": 1431.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1257",
+   "kat": "g-verkehr",
+   "name": "Tequesta Station",
+   "lage": "Tequesta, Vice City",
+   "art": [
+    "enterable",
+    "transportation"
+   ],
+   "x": 1003.8,
+   "y": 1220.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1275",
+   "kat": "g-gebaeude",
+   "name": "Autograph",
+   "lage": "Vice City International Airport",
+   "art": [
+    "enterable"
+   ],
+   "x": 822.1,
+   "y": 1104.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1289",
+   "kat": "g-gebaeude",
+   "name": "Runway",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 803.9,
+   "y": 1123.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1290",
+   "kat": "g-gebaeude",
+   "name": "Runway",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 804.8,
+   "y": 1202.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1293",
+   "kat": "g-gebaeude",
+   "name": "Vice Beach Police Department",
+   "lage": "Shorefront Ave, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable",
+    "government"
+   ],
+   "x": 1247.8,
+   "y": 1056.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1303",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Hamlet",
+   "art": [],
+   "x": 835,
+   "y": 1431.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1309",
+   "kat": "g-gebaeude",
+   "name": "Golf Carts",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 414.3,
+   "y": 844,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1310",
+   "kat": "g-freizeit",
+   "name": "Canal",
+   "lage": "Leonard County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 1038.6,
+   "y": 700.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1311",
+   "kat": "g-freizeit",
+   "name": "Canal",
+   "lage": "Vice Beach",
+   "art": [
+    "natural"
+   ],
+   "x": 1262.1,
+   "y": 938.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1312",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice Beach",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1219.1,
+   "y": 809.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1313",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice Beach",
+   "art": [
+    "transportation"
+   ],
+   "x": 1203,
+   "y": 847.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1315",
+   "kat": "g-gebaeude",
+   "name": "Marbles",
+   "lage": "Key Lento",
+   "art": [
+    "enterable"
+   ],
+   "x": 890.7,
+   "y": 1640.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1316",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 944.2,
+   "y": 1557.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1320",
+   "kat": "g-laden",
+   "name": "Liquor Store",
+   "lage": "Miramar Dr, Crosstown, Vice City",
+   "art": [
+    "liquor",
+    "enterable"
+   ],
+   "x": 1028.3,
+   "y": 973.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1322",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Leaf Links, Vice Beach",
+   "art": [
+    "natural"
+   ],
+   "x": 1167.7,
+   "y": 836.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1328",
+   "kat": "g-verkehr",
+   "name": "Boat Ramp",
+   "lage": "Ambrosia",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 835.1,
+   "y": 579.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1336",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Ambrosia",
+   "art": [
+    "transportation"
+   ],
+   "x": 844.2,
+   "y": 703.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1337",
+   "kat": "g-gebaeude",
+   "name": "Intersection",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 861.4,
+   "y": 1662.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1338",
+   "kat": "g-freizeit",
+   "name": "Baseball Field?",
+   "lage": "Ambrosia",
+   "art": [
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 758.2,
+   "y": 670.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1339",
+   "kat": "g-verkehr",
+   "name": "Star Island Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1164.4,
+   "y": 1077.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1340",
+   "kat": "g-freizeit",
+   "name": "\"Maple Syrup Hill\"",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 555.5,
+   "y": 451.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1341",
+   "kat": "g-freizeit",
+   "name": "Manifest Canyon",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 586.8,
+   "y": 573.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1344",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 793.7,
+   "y": 1380.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1345",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 796.4,
+   "y": 1382.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1346",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 805.6,
+   "y": 1376,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1347",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 801.1,
+   "y": 1384,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1350",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 682.1,
+   "y": 589.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1353",
+   "kat": "g-laden",
+   "name": "Banner Hotel & Spa",
+   "lage": "Vice City",
+   "art": [
+    "hotel"
+   ],
+   "x": 922.8,
+   "y": 1179.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1354",
+   "kat": "g-gebaeude",
+   "name": "Parking Garage",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1009.5,
+   "y": 1015.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1356",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Leonida",
+   "art": [
+    "natural"
+   ],
+   "x": 821.7,
+   "y": 536.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1357",
+   "kat": "g-gebaeude",
+   "name": "Fuzzard Drain Canal",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 886.1,
+   "y": 1366.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1362",
+   "kat": "g-freizeit",
+   "name": "Lighthouse",
+   "lage": "Catalan Key",
+   "art": [
+    "landmark"
+   ],
+   "x": 1054.8,
+   "y": 1387.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1366",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1303.9,
+   "y": 944.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1369",
+   "kat": "g-laden",
+   "name": "Euroform Automotive",
+   "lage": "Little Cuba, Vice City",
+   "art": [
+    "modshop",
+    "enterable"
+   ],
+   "x": 977.7,
+   "y": 1109.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1373",
+   "kat": "g-gebaeude",
+   "name": "P?",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [],
+   "unsicher": true,
+   "x": 1241.5,
+   "y": 911.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1377",
+   "kat": "g-freizeit",
+   "name": "Piano",
+   "lage": "Vice-Dale County",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 1106.7,
+   "y": 937.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1378",
+   "kat": "g-gebaeude",
+   "name": "162°S",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1067.8,
+   "y": 904.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1379",
+   "kat": "g-gebaeude",
+   "name": "Bohemia",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1057.7,
+   "y": 919.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1381",
+   "kat": "g-gebaeude",
+   "name": "Chip’s Body Shop",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 792.1,
+   "y": 1754.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1382",
+   "kat": "g-laden",
+   "name": "Peewees",
+   "lage": "Southside, Vice City",
+   "art": [
+    "fastfood",
+    "enterable",
+    "restaurant"
+   ],
+   "x": 927,
+   "y": 1338.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1383",
+   "kat": "g-gebaeude",
+   "name": "Gellhorn Roadhouse",
+   "lage": "Port Gellhorn",
+   "art": [
+    "enterable"
+   ],
+   "x": 455.7,
+   "y": 696.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1385",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 801,
+   "y": 1389.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1391",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Ambrosia",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 663.5,
+   "y": 680.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1406",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 805.8,
+   "y": 516.4,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1407",
+   "kat": "g-verkehr",
+   "name": "\"Escher Bridge\"",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 817.2,
+   "y": 522.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1408",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "x": 668.9,
+   "y": 1430.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1409",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Watson Bay",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 632.7,
+   "y": 1420.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1412",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1285.6,
+   "y": 931.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1413",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1284.8,
+   "y": 950.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1414",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Vice Beach",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1285.9,
+   "y": 938.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1415",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1272,
+   "y": 1058,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1416",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Catalan Blvd, Shoreline, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1054,
+   "y": 1043.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1417",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 960.3,
+   "y": 1020.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1418",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 956.7,
+   "y": 1024.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1419",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1059,
+   "y": 914.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1421",
+   "kat": "g-gebaeude",
+   "name": "Brian’s Marina Workshop",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 835.2,
+   "y": 1699.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1427",
+   "kat": "g-gebaeude",
+   "name": "Boat Ramp",
+   "lage": "Abismo Key",
+   "art": [],
+   "x": 595.5,
+   "y": 1827.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1429",
+   "kat": "g-freizeit",
+   "name": "Gellhorn Roadhouse Sign",
+   "lage": "Port Gellhorn",
+   "art": [
+    "landmark"
+   ],
+   "x": 454.6,
+   "y": 695.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1432",
+   "kat": "g-verkehr",
+   "name": "Parking Lot",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 444.8,
+   "y": 794.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1442",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 806.1,
+   "y": 721.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1458",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "x": 776.9,
+   "y": 1472.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1461",
+   "kat": "g-freizeit",
+   "name": "\"Vake Island\"",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 727.9,
+   "y": 1904,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1469",
+   "kat": "g-laden",
+   "name": "Tennis Court",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "tennis",
+    "leisure"
+   ],
+   "x": 1248.6,
+   "y": 1105.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1470",
+   "kat": "g-freizeit",
+   "name": "Pool",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "leisure"
+   ],
+   "x": 1248.9,
+   "y": 1115.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1472",
+   "kat": "g-gebaeude",
+   "name": "National Coast Guard",
+   "lage": "Vice-Dale County",
+   "art": [
+    "enterable"
+   ],
+   "x": 1207,
+   "y": 1099.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1480",
+   "kat": "g-gebaeude",
+   "name": "Tunnel Entrance",
+   "lage": "Port Vice City",
+   "art": [],
+   "x": 1147.5,
+   "y": 1163,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1482",
+   "kat": "g-laden",
+   "name": "Electric Fang Tattoo",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "tattoos",
+    "enterable",
+    "retail"
+   ],
+   "x": 1056.8,
+   "y": 909.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1488",
+   "kat": "g-laden",
+   "name": "Stock 305",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "clothes",
+    "enterable",
+    "retail"
+   ],
+   "x": 1061.9,
+   "y": 916.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1491",
+   "kat": "g-gebaeude",
+   "name": "PTT YOUNGIN$ Illegal Goods Store",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 920.7,
+   "y": 1282.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1495",
+   "kat": "g-gebaeude",
+   "name": "Paradise Garage",
+   "lage": "Watson Bay",
+   "art": [
+    "enterable"
+   ],
+   "x": 678.8,
+   "y": 1342.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1500",
+   "kat": "g-freizeit",
+   "name": "Catalan Bay",
+   "lage": "Vice-Dale County",
+   "art": [
+    "natural"
+   ],
+   "x": 1152.1,
+   "y": 1111,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1506",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Rialto Cswy, Bayside, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1064.1,
+   "y": 995.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1507",
+   "kat": "g-freizeit",
+   "name": "Fake Tunnel Mural",
+   "lage": "Vice Decor District, Vice City",
+   "art": [
+    "events"
+   ],
+   "unsicher": true,
+   "x": 1074.8,
+   "y": 876.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1522",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 792.3,
+   "y": 711.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1523",
+   "kat": "g-gebaeude",
+   "name": "Tank",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [
+    "industrial"
+   ],
+   "x": 796.4,
+   "y": 709.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1526",
+   "kat": "g-gebaeude",
+   "name": "Warehouse",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [],
+   "x": 790.4,
+   "y": 731.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1531",
+   "kat": "g-gebaeude",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 779.3,
+   "y": 349.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1536",
+   "kat": "g-laden",
+   "name": "Arrow Gas Station",
+   "lage": "Route 1, Key Lento",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 876.5,
+   "y": 1628.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1540",
+   "kat": "g-gebaeude",
+   "name": "Big House",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1032.9,
+   "y": 1023.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1541",
+   "kat": "g-verkehr",
+   "name": "Gas Station",
+   "lage": "Port Gellhorn",
+   "art": [
+    "gas",
+    "enterable"
+   ],
+   "x": 449.3,
+   "y": 736.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1542",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Kelly County",
+   "art": [
+    "airport"
+   ],
+   "x": 661.7,
+   "y": 529.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1544",
+   "kat": "g-gebaeude",
+   "name": "Turn 16",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 499.1,
+   "y": 872.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1545",
+   "kat": "g-gebaeude",
+   "name": "Turn 18",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 517.1,
+   "y": 829.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1546",
+   "kat": "g-gebaeude",
+   "name": "Turn 20",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 471.8,
+   "y": 869.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1547",
+   "kat": "g-gebaeude",
+   "name": "Turn 32",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 408.1,
+   "y": 983.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1548",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Capri",
+   "art": [
+    "transportation"
+   ],
+   "x": 472.2,
+   "y": 1056.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1550",
+   "kat": "g-freizeit",
+   "name": "\"Mount Leonida\"",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 834.4,
+   "y": 454.3,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1551",
+   "kat": "g-freizeit",
+   "name": "Tortoise Lake",
+   "lage": "Capri",
+   "art": [
+    "natural"
+   ],
+   "x": 432.1,
+   "y": 1060.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1553",
+   "kat": "g-freizeit",
+   "name": "Emerald Springs",
+   "lage": "",
+   "art": [
+    "natural"
+   ],
+   "x": 685.8,
+   "y": 934.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1554",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Port Gellhorn",
+   "art": [
+    "airport"
+   ],
+   "x": 347.8,
+   "y": 763.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1555",
+   "kat": "g-laden",
+   "name": "Hobbs Milford",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1244.5,
+   "y": 917.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1556",
+   "kat": "g-freizeit",
+   "name": "Gulf of Leonida",
+   "lage": "",
+   "art": [
+    "natural"
+   ],
+   "x": 93.3,
+   "y": 970.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1557",
+   "kat": "g-freizeit",
+   "name": "Atlantic Ocean",
+   "lage": "",
+   "art": [
+    "natural"
+   ],
+   "x": 1416.2,
+   "y": 974.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1558",
+   "kat": "g-freizeit",
+   "name": "Leonida Straits",
+   "lage": "",
+   "art": [
+    "natural"
+   ],
+   "x": 829.5,
+   "y": 1911.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1559",
+   "kat": "g-gebaeude",
+   "name": "\"Dudz Island\"",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 482.2,
+   "y": 1592.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1560",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Lummox County",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 727.8,
+   "y": 298.5,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1561",
+   "kat": "g-verkehr",
+   "name": "Henry J Edwards Airport",
+   "lage": "Watson Bay",
+   "art": [
+    "airport"
+   ],
+   "x": 492.9,
+   "y": 1347.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1562",
+   "kat": "g-verkehr",
+   "name": "Southpoint Airfield",
+   "lage": "Mariana County",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 812.5,
+   "y": 1546.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1563",
+   "kat": "g-gebaeude",
+   "name": "Dawson Dam",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 802.1,
+   "y": 400.5,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1565",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Leonard County",
+   "art": [
+    "airport"
+   ],
+   "unsicher": true,
+   "x": 935.1,
+   "y": 756,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1566",
+   "kat": "g-verkehr",
+   "name": "Sundown Private Airfield",
+   "lage": "Sundown, Waning Sands",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "x": 1012.1,
+   "y": 652.1,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1568",
+   "kat": "g-verkehr",
+   "name": "Airfield",
+   "lage": "Mariana County",
+   "art": [
+    "airport",
+    "transportation"
+   ],
+   "x": 676.9,
+   "y": 1393.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1570",
+   "kat": "g-freizeit",
+   "name": "Boone Speedway",
+   "lage": "Hamlet",
+   "art": [
+    "leisure"
+   ],
+   "x": 780.3,
+   "y": 1440.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1571",
+   "kat": "g-gebaeude",
+   "name": "Church",
+   "lage": "Hamlet",
+   "art": [],
+   "x": 806,
+   "y": 1422.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1587",
+   "kat": "g-gebaeude",
+   "name": "Hospital",
+   "lage": "Southside, Vice City",
+   "art": [
+    "hospital",
+    "public"
+   ],
+   "x": 920.5,
+   "y": 1329.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1589",
+   "kat": "g-verkehr",
+   "name": "Gas Station",
+   "lage": "Southside, Vice City",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "x": 924.9,
+   "y": 1319.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1590",
+   "kat": "g-gebaeude",
+   "name": "Strip Mall",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 926,
+   "y": 1308.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1596",
+   "kat": "g-gebaeude",
+   "name": "Juicy Joes",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 895.3,
+   "y": 1326.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1598",
+   "kat": "g-laden",
+   "name": "Gator Plaza",
+   "lage": "Southside, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 909,
+   "y": 1345.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1599",
+   "kat": "g-gebaeude",
+   "name": "Marlin Motors",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 929.1,
+   "y": 1274.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1601",
+   "kat": "g-gebaeude",
+   "name": "WLC Community Centre",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 881.5,
+   "y": 1300.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1603",
+   "kat": "g-verkehr",
+   "name": "Railyard",
+   "lage": "Balsero, Vice City",
+   "art": [
+    "industrial",
+    "transportation"
+   ],
+   "x": 871.2,
+   "y": 1024.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1604",
+   "kat": "g-gebaeude",
+   "name": "Vice City Casino Racetrack",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "unsicher": true,
+   "x": 1078.9,
+   "y": 792.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1605",
+   "kat": "g-gebaeude",
+   "name": "Schlott Construction",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "closed",
+    "enterable"
+   ],
+   "x": 889.4,
+   "y": 1305.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1608",
+   "kat": "g-laden",
+   "name": "Motorcycle Customs Shop?",
+   "lage": "Southside, Vice City",
+   "art": [
+    "bikeshop",
+    "enterable",
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 885,
+   "y": 1311.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1609",
+   "kat": "g-gebaeude",
+   "name": "Mattress Madness",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [],
+   "x": 887.8,
+   "y": 1321.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1610",
+   "kat": "g-gebaeude",
+   "name": "Vapid Dealership",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 892.9,
+   "y": 1334.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1612",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Capri",
+   "art": [
+    "gas",
+    "supermarket",
+    "enterable",
+    "retail"
+   ],
+   "x": 460,
+   "y": 1173.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1615",
+   "kat": "g-freizeit",
+   "name": "Welcome Sign",
+   "lage": "Capri",
+   "art": [
+    "landmark"
+   ],
+   "x": 436.4,
+   "y": 1130.1,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1619",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Capri",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "x": 429.7,
+   "y": 1116.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1622",
+   "kat": "g-gebaeude",
+   "name": "Spender’s",
+   "lage": "Southside, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 897.3,
+   "y": 1349.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1625",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 968.8,
+   "y": 1126.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1646",
+   "kat": "g-gebaeude",
+   "name": "Vice City Shopping Plaza",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1052.2,
+   "y": 934.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1654",
+   "kat": "g-verkehr",
+   "name": "Parking Garage",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 997.3,
+   "y": 1151.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1655",
+   "kat": "g-gebaeude",
+   "name": "Redford Gallery",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1058,
+   "y": 909.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1656",
+   "kat": "g-gebaeude",
+   "name": "Avis",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1055.1,
+   "y": 906.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1660",
+   "kat": "g-gebaeude",
+   "name": "Lârss & Elbö",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1059.9,
+   "y": 906.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1668",
+   "kat": "g-gebaeude",
+   "name": "84",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1054.6,
+   "y": 917.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1669",
+   "kat": "g-gebaeude",
+   "name": "Bean Machine",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1053.5,
+   "y": 929.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1670",
+   "kat": "g-gebaeude",
+   "name": "247 Supermarket",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1051.8,
+   "y": 929.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1671",
+   "kat": "g-gebaeude",
+   "name": "Al Dentes",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1055.5,
+   "y": 931.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1672",
+   "kat": "g-gebaeude",
+   "name": "Allure Resort Services",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1049.9,
+   "y": 933.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1673",
+   "kat": "g-gebaeude",
+   "name": "Orion K?",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "unsicher": true,
+   "x": 1048.7,
+   "y": 935.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1696",
+   "kat": "g-gebaeude",
+   "name": "Shoreline Market",
+   "lage": "Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1075,
+   "y": 1108,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1698",
+   "kat": "g-gebaeude",
+   "name": "Downtown Metro Station",
+   "lage": "NE 5th St, Downtown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1031.6,
+   "y": 1060.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1709",
+   "kat": "g-gebaeude",
+   "name": "The Hub Gallery",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1056.1,
+   "y": 909,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1724",
+   "kat": "g-gebaeude",
+   "name": "Deadzombie",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1052.7,
+   "y": 921,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1725",
+   "kat": "g-gebaeude",
+   "name": "Evoke",
+   "lage": "Stockyard, Vice City",
+   "art": [],
+   "x": 1052.1,
+   "y": 922.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1726",
+   "kat": "g-gebaeude",
+   "name": "Footbridge",
+   "lage": "Capri",
+   "art": [
+    "utilities"
+   ],
+   "x": 432.8,
+   "y": 1110.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1734",
+   "kat": "g-gebaeude",
+   "name": "Water Tank",
+   "lage": "Capri",
+   "art": [
+    "industrial"
+   ],
+   "x": 440.6,
+   "y": 1099.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1735",
+   "kat": "g-gebaeude",
+   "name": "Water Tower",
+   "lage": "Capri",
+   "art": [
+    "utilities"
+   ],
+   "x": 449.2,
+   "y": 1098.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1742",
+   "kat": "g-freizeit",
+   "name": "Park",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 933.2,
+   "y": 1299.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1743",
+   "kat": "g-gebaeude",
+   "name": "Church",
+   "lage": "SW 4th St, Salton, Vice City",
+   "art": [],
+   "x": 954.9,
+   "y": 1197.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1745",
+   "kat": "g-laden",
+   "name": "Chacey’s",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "enterable",
+    "restaurant"
+   ],
+   "x": 915.7,
+   "y": 1352.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1746",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower Lot",
+   "lage": "Southside, Vice City",
+   "art": [
+    "utilities"
+   ],
+   "x": 902.2,
+   "y": 1328.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1750",
+   "kat": "g-gebaeude",
+   "name": "Church",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 899.5,
+   "y": 1298.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1751",
+   "kat": "g-verkehr",
+   "name": "Lock",
+   "lage": "Peregrine Bay",
+   "art": [
+    "transportation"
+   ],
+   "x": 869.4,
+   "y": 1482.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1752",
+   "kat": "g-verkehr",
+   "name": "Lock",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 890,
+   "y": 1358.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1753",
+   "kat": "g-verkehr",
+   "name": "Lock",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 916.5,
+   "y": 1271.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1756",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "x": 440.5,
+   "y": 1182.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1781",
+   "kat": "g-laden",
+   "name": "Vice Vinyl",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1056.6,
+   "y": 926.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1786",
+   "kat": "g-laden",
+   "name": "Fleeca",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1249.1,
+   "y": 913.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1789",
+   "kat": "g-laden",
+   "name": "Eye & Dry",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "retail"
+   ],
+   "x": 1247.8,
+   "y": 917.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1790",
+   "kat": "g-laden",
+   "name": "Diamond Dawgs",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1249.5,
+   "y": 917.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1797",
+   "kat": "g-gebaeude",
+   "name": "Glazin’ Glory",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1245.6,
+   "y": 912.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1817",
+   "kat": "g-freizeit",
+   "name": "Sandbars",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 152.1,
+   "y": 767.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1825",
+   "kat": "g-gebaeude",
+   "name": "Corsair Key",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 967.6,
+   "y": 1558.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1826",
+   "kat": "g-gebaeude",
+   "name": "Train Tunnel",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 588.2,
+   "y": 587,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1829",
+   "kat": "g-freizeit",
+   "name": "Casino",
+   "lage": "Buckskin",
+   "art": [
+    "leisure"
+   ],
+   "x": 668.9,
+   "y": 1011.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1831",
+   "kat": "g-gebaeude",
+   "name": "Dam?",
+   "lage": "Lummox County",
+   "art": [],
+   "unsicher": true,
+   "x": 952.9,
+   "y": 386,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1846",
+   "kat": "g-gebaeude",
+   "name": "Turn 34",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 385,
+   "y": 940.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1847",
+   "kat": "g-gebaeude",
+   "name": "Turn 2",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "unsicher": true,
+   "x": 371.7,
+   "y": 882.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1848",
+   "kat": "g-gebaeude",
+   "name": "\"Ambrosia Hill\"",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 743.8,
+   "y": 522.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1849",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 527.1,
+   "y": 471.3,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1850",
+   "kat": "g-gebaeude",
+   "name": "\"Bridge Ridge\"",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 669.2,
+   "y": 692,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1851",
+   "kat": "g-freizeit",
+   "name": "\"Lollipop Ridge\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 655.6,
+   "y": 767.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1852",
+   "kat": "g-freizeit",
+   "name": "\"Thrillbilly Hill\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 724,
+   "y": 620.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1859",
+   "kat": "g-gebaeude",
+   "name": "Turn 27",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 439.3,
+   "y": 982.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1860",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 766.6,
+   "y": 1313.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1861",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 868.5,
+   "y": 1288.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1862",
+   "kat": "g-gebaeude",
+   "name": "Public Restrooms",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "public"
+   ],
+   "x": 1303.4,
+   "y": 950.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1863",
+   "kat": "g-verkehr",
+   "name": "Drawbridge",
+   "lage": "Capri",
+   "art": [
+    "transportation"
+   ],
+   "x": 368.6,
+   "y": 1036.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1867",
+   "kat": "g-gebaeude",
+   "name": "Catalyst Realty",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [],
+   "x": 1242.8,
+   "y": 917,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1868",
+   "kat": "g-gebaeude",
+   "name": "Lulu",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [],
+   "x": 1241.4,
+   "y": 916.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1869",
+   "kat": "g-laden",
+   "name": "Ajax Gym",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [
+    "gym",
+    "enterable"
+   ],
+   "x": 1240.2,
+   "y": 917,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1870",
+   "kat": "g-laden",
+   "name": "Papasco’s",
+   "lage": "Vickery Dr, Vice Beach",
+   "art": [
+    "retail"
+   ],
+   "x": 1247.8,
+   "y": 919.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1871",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1187.8,
+   "y": 767.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1872",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Rialto Cswy, Bayside, Vice City",
+   "art": [
+    "bus",
+    "transportation"
+   ],
+   "x": 1052.8,
+   "y": 992.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1874",
+   "kat": "g-gebaeude",
+   "name": "Public Restrooms",
+   "lage": "Gloriana Key",
+   "art": [],
+   "x": 1159.6,
+   "y": 1308.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1875",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Rialto Islands",
+   "art": [],
+   "x": 1139.4,
+   "y": 972.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1876",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Rialto Islands",
+   "art": [],
+   "x": 1163,
+   "y": 965.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1878",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Capri",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 430.5,
+   "y": 1043.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1886",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Gloriana Key",
+   "art": [],
+   "x": 1153.6,
+   "y": 1306.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1892",
+   "kat": "g-gebaeude",
+   "name": "Breakwater",
+   "lage": "Capri",
+   "art": [],
+   "unsicher": true,
+   "x": 388.8,
+   "y": 1125.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l1915",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Waning Sands",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1092.7,
+   "y": 696.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l1916",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Millport",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1026.1,
+   "y": 462.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1917",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Redhill",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 702,
+   "y": 354.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1919",
+   "kat": "g-gebaeude",
+   "name": "Turn 31",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 401.2,
+   "y": 913,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1920",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 864.2,
+   "y": 317.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1922",
+   "kat": "g-freizeit",
+   "name": "\"Carousell Hill\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 519.5,
+   "y": 828.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1926",
+   "kat": "g-gebaeude",
+   "name": "\"Kelly Hill\"",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 529.8,
+   "y": 791.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1927",
+   "kat": "g-freizeit",
+   "name": "\"Starlet Hill\"",
+   "lage": "Kelly County",
+   "art": [
+    "natural"
+   ],
+   "x": 513.5,
+   "y": 733.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1928",
+   "kat": "g-gebaeude",
+   "name": "River",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 672.2,
+   "y": 732.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l1932",
+   "kat": "g-laden",
+   "name": "Perkins Deli",
+   "lage": "Catalan Blvd, Crosstown, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1057.7,
+   "y": 938.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1933",
+   "kat": "g-laden",
+   "name": "Josefina",
+   "lage": "Crosstown, Catalan Blvd, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1058.4,
+   "y": 937.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1934",
+   "kat": "g-laden",
+   "name": "Bruiser? Skate Shop",
+   "lage": "Catalan Blvd, Crosstown, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1058.9,
+   "y": 936.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l1947",
+   "kat": "g-verkehr",
+   "name": "Railyard",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 741.7,
+   "y": 320.7,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l1984",
+   "kat": "g-gebaeude",
+   "name": "Port",
+   "lage": "Millport",
+   "art": [
+    "industrial"
+   ],
+   "unsicher": true,
+   "x": 1017.8,
+   "y": 385.5,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2000",
+   "kat": "g-gebaeude",
+   "name": "\"Mount Lummox\"",
+   "lage": "Moreau",
+   "art": [],
+   "x": 700.8,
+   "y": 304.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2026",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "enterable"
+   ],
+   "x": 1096.3,
+   "y": 1275.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2027",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1103.9,
+   "y": 1275.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2028",
+   "kat": "g-verkehr",
+   "name": "Train Station?",
+   "lage": "Belville",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 1058.3,
+   "y": 790.2,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2029",
+   "kat": "g-verkehr",
+   "name": "Train Station?",
+   "lage": "Vice-Dale County",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 850.8,
+   "y": 944.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2030",
+   "kat": "g-freizeit",
+   "name": "Vice City Casino",
+   "lage": "Vice-Dale County",
+   "art": [
+    "enterable",
+    "leisure"
+   ],
+   "x": 1077.8,
+   "y": 779.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2031",
+   "kat": "g-gebaeude",
+   "name": "Broadcast Tower",
+   "lage": "Leonard County",
+   "art": [
+    "utilities"
+   ],
+   "x": 962.8,
+   "y": 690.1,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2032",
+   "kat": "g-gebaeude",
+   "name": "Crys",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 1056,
+   "y": 778.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2033",
+   "kat": "g-freizeit",
+   "name": "Riquezas Keys",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 271.6,
+   "y": 1647.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2034",
+   "kat": "g-gebaeude",
+   "name": "Parlor WO13?",
+   "lage": "SW 4th St, Vice Beach",
+   "art": [],
+   "unsicher": true,
+   "x": 1251.1,
+   "y": 917.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2035",
+   "kat": "g-gebaeude",
+   "name": "The Anderson",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1270,
+   "y": 1096.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2036",
+   "kat": "g-gebaeude",
+   "name": "Palometa Seafood Restaurant",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1264.6,
+   "y": 1092.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2100",
+   "kat": "g-laden",
+   "name": "Bite",
+   "lage": "Hamlet",
+   "art": [
+    "restaurant"
+   ],
+   "x": 868.8,
+   "y": 1426.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2104",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Lummox County",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 547.6,
+   "y": 392.7,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2150",
+   "kat": "g-laden",
+   "name": "Fleeca",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1268.1,
+   "y": 1092.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2151",
+   "kat": "g-laden",
+   "name": "Frills & Fancy",
+   "lage": "Shorefront Ave, Ocean Beach, Vice Beach",
+   "art": [
+    "retail"
+   ],
+   "x": 1258.6,
+   "y": 1041.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2155",
+   "kat": "g-gebaeude",
+   "name": "Lombank",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1264.6,
+   "y": 1095.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2161",
+   "kat": "g-gebaeude",
+   "name": "Pharmacy",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1244.7,
+   "y": 1048.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2165",
+   "kat": "g-gebaeude",
+   "name": "Bean Machine",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1261.8,
+   "y": 1049.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2173",
+   "kat": "g-gebaeude",
+   "name": "Electrical",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1267.9,
+   "y": 1022.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2181",
+   "kat": "g-gebaeude",
+   "name": "Void",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1255.5,
+   "y": 972.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2183",
+   "kat": "g-gebaeude",
+   "name": "Ocean Beach Pharmacy",
+   "lage": "Thompson Ave, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1274.9,
+   "y": 966.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2187",
+   "kat": "g-gebaeude",
+   "name": "Train Tunnel",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 685.1,
+   "y": 653.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2188",
+   "kat": "g-gebaeude",
+   "name": "Juxta Gallery",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1254.8,
+   "y": 967.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2189",
+   "kat": "g-gebaeude",
+   "name": "Lickety Split",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1254.9,
+   "y": 969,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2193",
+   "kat": "g-gebaeude",
+   "name": "Pharaoh",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1277.3,
+   "y": 959.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2195",
+   "kat": "g-gebaeude",
+   "name": "Electrotoke",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1275.6,
+   "y": 969.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2198",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 812.7,
+   "y": 923.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2210",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1095.4,
+   "y": 1261,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2211",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed",
+    "enterable"
+   ],
+   "x": 1105.9,
+   "y": 1261.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2212",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed",
+    "enterable"
+   ],
+   "x": 1114.7,
+   "y": 1264.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2213",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1112.8,
+   "y": 1262.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2215",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1110.5,
+   "y": 1270,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2216",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed",
+    "enterable"
+   ],
+   "x": 1092.1,
+   "y": 1269.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2217",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1113.3,
+   "y": 1281.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2219",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1097.6,
+   "y": 1280.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2220",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [],
+   "x": 1113.2,
+   "y": 1266.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2224",
+   "kat": "g-gebaeude",
+   "name": "Vice City Oceanarium",
+   "lage": "Catalan Key",
+   "art": [
+    "closed"
+   ],
+   "x": 1111.9,
+   "y": 1277.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2229",
+   "kat": "g-gebaeude",
+   "name": "Oceanside Style",
+   "lage": "Thompson Ave, Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1275.6,
+   "y": 959.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2230",
+   "kat": "g-gebaeude",
+   "name": "Luna",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1255.3,
+   "y": 970.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2233",
+   "kat": "g-gebaeude",
+   "name": "City Picnic Market",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1275.7,
+   "y": 972,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2244",
+   "kat": "g-gebaeude",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 1051,
+   "y": 522.9,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2245",
+   "kat": "g-verkehr",
+   "name": "Gas Station",
+   "lage": "Kelly County",
+   "art": [
+    "gas",
+    "retail"
+   ],
+   "x": 554.1,
+   "y": 984.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2262",
+   "kat": "g-gebaeude",
+   "name": "Lifeguard Tower",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [],
+   "x": 1264.6,
+   "y": 828.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2263",
+   "kat": "g-gebaeude",
+   "name": "Lifeguard Tower",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [],
+   "x": 1248,
+   "y": 807.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2264",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Stockyard, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1051.9,
+   "y": 907.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2265",
+   "kat": "g-laden",
+   "name": "Fufu",
+   "lage": "Vice Decor District, Vice City",
+   "art": [
+    "retail"
+   ],
+   "x": 1061.9,
+   "y": 867.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2276",
+   "kat": "g-gebaeude",
+   "name": "Car Park",
+   "lage": "SW 7th Ave, Salton, Vice City",
+   "art": [],
+   "x": 952.7,
+   "y": 1209.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2291",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1013.1,
+   "y": 1111,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2292",
+   "kat": "g-gebaeude",
+   "name": "Excavator Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1002.4,
+   "y": 1121.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2301",
+   "kat": "g-gebaeude",
+   "name": "Café Coyote",
+   "lage": "Little Cuba, Vice City",
+   "art": [],
+   "x": 971.5,
+   "y": 1097.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2311",
+   "kat": "g-gebaeude",
+   "name": "DJB Shipyard",
+   "lage": "Westbrook Dr, Salton, Vice City",
+   "art": [],
+   "x": 942.1,
+   "y": 1080.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2313",
+   "kat": "g-gebaeude",
+   "name": "City of Vice Fire Rescue Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "government"
+   ],
+   "x": 938.1,
+   "y": 1085.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2324",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1017.3,
+   "y": 1107.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2326",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1007.9,
+   "y": 1123.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2337",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1013.4,
+   "y": 1095.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2351",
+   "kat": "g-gebaeude",
+   "name": "Partytown USA",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 957.5,
+   "y": 1166,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2355",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1031.3,
+   "y": 1055.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2356",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1031.2,
+   "y": 1040.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2360",
+   "kat": "g-laden",
+   "name": "Mami’s Grocery Market",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "supermarket",
+    "enterable",
+    "retail"
+   ],
+   "x": 923.7,
+   "y": 1310.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2361",
+   "kat": "g-laden",
+   "name": "A1 Fashions",
+   "lage": "El Joven Blvd, Southside, Vice City",
+   "art": [
+    "clothes",
+    "enterable",
+    "retail"
+   ],
+   "x": 924.2,
+   "y": 1309.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2375",
+   "kat": "g-laden",
+   "name": "Rideout Customs",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1007.2,
+   "y": 997.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2376",
+   "kat": "g-gebaeude",
+   "name": "The Flamingrill",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1010.9,
+   "y": 998.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2377",
+   "kat": "g-gebaeude",
+   "name": "Carnicero",
+   "lage": "Crosstown, Vice City",
+   "art": [],
+   "x": 1011.1,
+   "y": 1001.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2400",
+   "kat": "g-laden",
+   "name": "Vetiver Minimarket",
+   "lage": "La Perle, Vice City",
+   "art": [
+    "supermarket",
+    "enterable",
+    "retail"
+   ],
+   "x": 992.8,
+   "y": 943.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2420",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1250.3,
+   "y": 1064.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2423",
+   "kat": "g-gebaeude",
+   "name": "Banner Parking Garage",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 925.3,
+   "y": 1167,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2424",
+   "kat": "g-gebaeude",
+   "name": "Gas Station",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 934.6,
+   "y": 1164.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2425",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 915,
+   "y": 1170.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2428",
+   "kat": "g-gebaeude",
+   "name": "G. Hanson",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 933.5,
+   "y": 1198,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2431",
+   "kat": "g-gebaeude",
+   "name": "Hangars",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 804.5,
+   "y": 1225.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2433",
+   "kat": "g-gebaeude",
+   "name": "Service Gate",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 902.2,
+   "y": 1254.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2436",
+   "kat": "g-gebaeude",
+   "name": "Electric Substation",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "unsicher": true,
+   "x": 903.4,
+   "y": 1251.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2444",
+   "kat": "g-laden",
+   "name": "Gator’s Piano Bar?",
+   "lage": "Vice City",
+   "art": [
+    "bar",
+    "leisure"
+   ],
+   "unsicher": true,
+   "x": 912.6,
+   "y": 1148,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2445",
+   "kat": "g-gebaeude",
+   "name": "X Hotel Parking Lot",
+   "lage": "Vice City",
+   "art": [],
+   "x": 918.4,
+   "y": 1143.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2446",
+   "kat": "g-verkehr",
+   "name": "Covered Parking Lot",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 925.8,
+   "y": 1138.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2451",
+   "kat": "g-gebaeude",
+   "name": "Cash For Scrap Scrapyard",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 894.8,
+   "y": 1292.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2452",
+   "kat": "g-gebaeude",
+   "name": "Gator Plaza Sign",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 896.4,
+   "y": 1359.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2453",
+   "kat": "g-gebaeude",
+   "name": "Apollo Aggregates",
+   "lage": "Peregrine Bay",
+   "art": [],
+   "x": 908.1,
+   "y": 1389.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2454",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Balsero, Vice City",
+   "art": [],
+   "x": 901.4,
+   "y": 1026.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2467",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 551.5,
+   "y": 632,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2471",
+   "kat": "g-laden",
+   "name": "Break Inn",
+   "lage": "Salton, Vice City",
+   "art": [
+    "hotel"
+   ],
+   "x": 899.5,
+   "y": 1093.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2473",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 951.9,
+   "y": 1090.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2478",
+   "kat": "g-gebaeude",
+   "name": "Complete Tools",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 448.5,
+   "y": 709.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2483",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 829,
+   "y": 551.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2485",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Millport, Lummox County",
+   "art": [],
+   "x": 1036.5,
+   "y": 442.7,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2487",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 794.6,
+   "y": 1559.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2488",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 898.5,
+   "y": 476.4,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2489",
+   "kat": "g-gebaeude",
+   "name": "Kalaga Reservoir",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 799.7,
+   "y": 411,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2490",
+   "kat": "g-freizeit",
+   "name": "Lake Tallaloko",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 920.3,
+   "y": 370.3,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2492",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Tequesta, Vice City",
+   "art": [
+    "enterable",
+    "transportation"
+   ],
+   "x": 1012.6,
+   "y": 1181.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2494",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 755.2,
+   "y": 355.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2495",
+   "kat": "g-gebaeude",
+   "name": "Bus Loop?",
+   "lage": "Bayside, Vice City",
+   "art": [],
+   "unsicher": true,
+   "x": 1035.7,
+   "y": 1020.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2497",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 806,
+   "y": 454.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2498",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Redhill",
+   "art": [],
+   "x": 725.5,
+   "y": 355.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2501",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1045.1,
+   "y": 1097.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2503",
+   "kat": "g-freizeit",
+   "name": "Lake",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 763.8,
+   "y": 1262.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2506",
+   "kat": "g-gebaeude",
+   "name": "Go Postal",
+   "lage": "Rockridge, Vice City",
+   "art": [],
+   "x": 965.1,
+   "y": 1034.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2507",
+   "kat": "g-freizeit",
+   "name": "\"Welcome to Hamlet\" Sign",
+   "lage": "Hamlet",
+   "art": [
+    "landmark"
+   ],
+   "x": 869,
+   "y": 1423.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2517",
+   "kat": "g-laden",
+   "name": "R",
+   "lage": "Vice Decor District, Vice City",
+   "art": [
+    "enterable",
+    "retail"
+   ],
+   "x": 1062.2,
+   "y": 870.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2518",
+   "kat": "g-gebaeude",
+   "name": "Infinity Tower",
+   "lage": "Vice Decor District, Vice City",
+   "art": [],
+   "x": 1056.1,
+   "y": 872.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2525",
+   "kat": "g-verkehr",
+   "name": "Marina",
+   "lage": "Peacock Bay, Vice City",
+   "art": [
+    "marina"
+   ],
+   "x": 1001.3,
+   "y": 1336.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2537",
+   "kat": "g-gebaeude",
+   "name": "Alpha",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1271,
+   "y": 1112.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2541",
+   "kat": "g-gebaeude",
+   "name": "Ride & Glide",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 915.8,
+   "y": 1086,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2552",
+   "kat": "g-gebaeude",
+   "name": "Electric Substation",
+   "lage": "Vice City International Airport",
+   "art": [],
+   "x": 896.4,
+   "y": 1116.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2553",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 905.6,
+   "y": 1106.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2558",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 931.1,
+   "y": 1107.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2559",
+   "kat": "g-gebaeude",
+   "name": "Gas Station",
+   "lage": "Salton, Vice City",
+   "art": [],
+   "x": 936.6,
+   "y": 1103,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2565",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Vice City",
+   "art": [],
+   "x": 990.3,
+   "y": 1091.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2573",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1050.8,
+   "y": 1095.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2574",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1050,
+   "y": 1084.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2575",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1043.9,
+   "y": 1085.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2584",
+   "kat": "g-gebaeude",
+   "name": "Go Postal Office",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1241.3,
+   "y": 973.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2585",
+   "kat": "g-gebaeude",
+   "name": "Ficroth Capital Garage",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 1013.5,
+   "y": 1220.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2591",
+   "kat": "g-verkehr",
+   "name": "Bus Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "transportation"
+   ],
+   "unsicher": true,
+   "x": 945.4,
+   "y": 1112,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2598",
+   "kat": "g-freizeit",
+   "name": "Overkeel",
+   "lage": "Lummox County",
+   "art": [
+    "landmark"
+   ],
+   "unsicher": true,
+   "x": 975.7,
+   "y": 319.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2599",
+   "kat": "g-gebaeude",
+   "name": "Adelphila? Jewelry",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1275.2,
+   "y": 1112.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2603",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Capri",
+   "art": [
+    "utilities"
+   ],
+   "x": 392.4,
+   "y": 1047.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2604",
+   "kat": "g-gebaeude",
+   "name": "Cell Tower",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "utilities"
+   ],
+   "x": 930,
+   "y": 1263,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2606",
+   "kat": "g-freizeit",
+   "name": "\"Welcome to Hamlet\" Sign",
+   "lage": "Hamlet",
+   "art": [
+    "landmark"
+   ],
+   "x": 863.1,
+   "y": 1423.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2607",
+   "kat": "g-gebaeude",
+   "name": "Hamlet Platinum(?) Plaza",
+   "lage": "Hamlet",
+   "art": [
+    "enterable"
+   ],
+   "x": 866.3,
+   "y": 1426.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2608",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1254.9,
+   "y": 1050.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2609",
+   "kat": "g-gebaeude",
+   "name": "Binco",
+   "lage": "Hamlet",
+   "art": [
+    "closed"
+   ],
+   "unsicher": true,
+   "x": 868.7,
+   "y": 1432.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2611",
+   "kat": "g-gebaeude",
+   "name": "Mio",
+   "lage": "Hamlet",
+   "art": [],
+   "unsicher": true,
+   "x": 868.7,
+   "y": 1427.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2612",
+   "kat": "g-gebaeude",
+   "name": "Fleeca",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "enterable"
+   ],
+   "unsicher": true,
+   "x": 868.7,
+   "y": 1430,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2613",
+   "kat": "g-gebaeude",
+   "name": "Cash...",
+   "lage": "Hamlet",
+   "art": [],
+   "unsicher": true,
+   "x": 867.6,
+   "y": 1433.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2615",
+   "kat": "g-laden",
+   "name": "Paperclips",
+   "lage": "Hamlet",
+   "art": [
+    "retail"
+   ],
+   "unsicher": true,
+   "x": 868.7,
+   "y": 1428.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2616",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Peregrine Bay",
+   "art": [],
+   "x": 929.4,
+   "y": 1370.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2620",
+   "kat": "g-freizeit",
+   "name": "Bocamar Bay",
+   "lage": "Port Gellhorn",
+   "art": [
+    "natural"
+   ],
+   "x": 388.3,
+   "y": 638.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2624",
+   "kat": "g-gebaeude",
+   "name": "Third Eye",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1241,
+   "y": 971.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2628",
+   "kat": "g-gebaeude",
+   "name": "Y Vice City",
+   "lage": "Washington Beach, Vice Beach",
+   "art": [],
+   "x": 1301.8,
+   "y": 931.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2640",
+   "kat": "g-gebaeude",
+   "name": "Paño Rojo",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1264.9,
+   "y": 1006.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2643",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Ambrosia",
+   "art": [
+    "transportation"
+   ],
+   "x": 873.7,
+   "y": 716.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2644",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Leonard County",
+   "art": [
+    "transportation"
+   ],
+   "x": 970.2,
+   "y": 623.1,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2645",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 473.9,
+   "y": 598.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2646",
+   "kat": "g-verkehr",
+   "name": "Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 831.3,
+   "y": 452.5,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2647",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 712,
+   "y": 386.2,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2649",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 518.9,
+   "y": 423.5,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2650",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 568.9,
+   "y": 382,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2651",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 612.9,
+   "y": 362.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2652",
+   "kat": "g-verkehr",
+   "name": "Train Tunnel",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 672.5,
+   "y": 334.4,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2653",
+   "kat": "g-freizeit",
+   "name": "Saint Attaway Islands",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 773.7,
+   "y": 228.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2654",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Lummox County",
+   "art": [
+    "transportation"
+   ],
+   "x": 830.7,
+   "y": 347.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2655",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Leonida",
+   "art": [
+    "transportation"
+   ],
+   "x": 837.5,
+   "y": 557.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2656",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 862.8,
+   "y": 458.5,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2657",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 451.4,
+   "y": 585.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2658",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 405.6,
+   "y": 581.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2659",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Port Gellhorn",
+   "art": [
+    "transportation"
+   ],
+   "x": 460.5,
+   "y": 600.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2660",
+   "kat": "g-freizeit",
+   "name": "River",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 975.2,
+   "y": 400.5,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2661",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Kelly County",
+   "art": [
+    "transportation"
+   ],
+   "x": 582.2,
+   "y": 632.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2662",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Kelly County",
+   "art": [
+    "transportation"
+   ],
+   "x": 560.1,
+   "y": 658.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2663",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Kelly County",
+   "art": [
+    "transportation"
+   ],
+   "x": 635,
+   "y": 721.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2664",
+   "kat": "g-gebaeude",
+   "name": "Turn 6B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "unsicher": true,
+   "x": 414.9,
+   "y": 904,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2668",
+   "kat": "g-gebaeude",
+   "name": "Turn 5",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 468.8,
+   "y": 817.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2670",
+   "kat": "g-gebaeude",
+   "name": "Turn 6",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 482,
+   "y": 814.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2671",
+   "kat": "g-gebaeude",
+   "name": "Turn 10",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 526.6,
+   "y": 846.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2672",
+   "kat": "g-gebaeude",
+   "name": "Turn 11",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 528,
+   "y": 859.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2673",
+   "kat": "g-gebaeude",
+   "name": "Turn 12",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 520.7,
+   "y": 869.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2674",
+   "kat": "g-gebaeude",
+   "name": "Turn 13",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 524.7,
+   "y": 879.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2675",
+   "kat": "g-gebaeude",
+   "name": "Turn 14",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 506,
+   "y": 881.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2676",
+   "kat": "g-gebaeude",
+   "name": "Turn 15",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 496.1,
+   "y": 885.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2677",
+   "kat": "g-gebaeude",
+   "name": "Turn ?",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "unsicher": true,
+   "x": 454.4,
+   "y": 835.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2678",
+   "kat": "g-gebaeude",
+   "name": "Turn 7",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 498.8,
+   "y": 816.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2679",
+   "kat": "g-gebaeude",
+   "name": "Turn 3",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 422.1,
+   "y": 890,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2680",
+   "kat": "g-gebaeude",
+   "name": "Turn 4",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 447.2,
+   "y": 844.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2681",
+   "kat": "g-gebaeude",
+   "name": "Turn 41",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 419.6,
+   "y": 835.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2682",
+   "kat": "g-gebaeude",
+   "name": "Turn 42",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 426,
+   "y": 849.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2683",
+   "kat": "g-gebaeude",
+   "name": "Turn 1",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 395.6,
+   "y": 885.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2684",
+   "kat": "g-gebaeude",
+   "name": "Turn 22",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 461.6,
+   "y": 891.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2685",
+   "kat": "g-gebaeude",
+   "name": "Turn 37",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 360.7,
+   "y": 891.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2686",
+   "kat": "g-gebaeude",
+   "name": "Turn 38",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 364.3,
+   "y": 879.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2687",
+   "kat": "g-gebaeude",
+   "name": "Turn 39",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 375.4,
+   "y": 870,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2688",
+   "kat": "g-gebaeude",
+   "name": "Turn 40",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 385.7,
+   "y": 871.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2689",
+   "kat": "g-gebaeude",
+   "name": "Turn 4B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 440.8,
+   "y": 870.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2690",
+   "kat": "g-gebaeude",
+   "name": "Turn 4C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 445.2,
+   "y": 854,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2691",
+   "kat": "g-gebaeude",
+   "name": "Turn 25",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 453.9,
+   "y": 965.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2692",
+   "kat": "g-gebaeude",
+   "name": "Turn 26",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 447.5,
+   "y": 970.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2693",
+   "kat": "g-gebaeude",
+   "name": "Turn 28",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 426.5,
+   "y": 979.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2694",
+   "kat": "g-gebaeude",
+   "name": "Turn 29",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 421.6,
+   "y": 970.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2695",
+   "kat": "g-gebaeude",
+   "name": "Turn 30",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 417.3,
+   "y": 967.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2696",
+   "kat": "g-gebaeude",
+   "name": "Turn 33",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 381.8,
+   "y": 958.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2697",
+   "kat": "g-gebaeude",
+   "name": "Turn 35",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 373,
+   "y": 922.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2698",
+   "kat": "g-gebaeude",
+   "name": "Turn 36",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 355.6,
+   "y": 912.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2699",
+   "kat": "g-gebaeude",
+   "name": "Turn ?",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "unsicher": true,
+   "x": 382.9,
+   "y": 878.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2700",
+   "kat": "g-gebaeude",
+   "name": "Turn ?",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "unsicher": true,
+   "x": 378.8,
+   "y": 896.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2701",
+   "kat": "g-gebaeude",
+   "name": "Turn 5B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 443.7,
+   "y": 909.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2702",
+   "kat": "g-gebaeude",
+   "name": "Turn 8C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 440.3,
+   "y": 951.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2703",
+   "kat": "g-gebaeude",
+   "name": "Turn 9C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 424.6,
+   "y": 956.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2704",
+   "kat": "g-gebaeude",
+   "name": "Turn 10C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 420.9,
+   "y": 950.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2705",
+   "kat": "g-gebaeude",
+   "name": "Turn 11C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 415.8,
+   "y": 944.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2706",
+   "kat": "g-gebaeude",
+   "name": "Turn 23",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 457.9,
+   "y": 919.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2707",
+   "kat": "g-gebaeude",
+   "name": "Turn 24",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 459.4,
+   "y": 940.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2708",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 812,
+   "y": 1392.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2709",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 805.8,
+   "y": 1392.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2710",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 806.5,
+   "y": 1380.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2711",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 812.4,
+   "y": 1381,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2712",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 816.9,
+   "y": 1388.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2713",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 816.4,
+   "y": 1383.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2714",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 821.2,
+   "y": 1384.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2715",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 824.7,
+   "y": 1387.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2716",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 806.5,
+   "y": 1387,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2717",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 812.5,
+   "y": 1387.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2718",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 808.3,
+   "y": 1388.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2719",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 809.7,
+   "y": 1387.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2720",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 811.1,
+   "y": 1388.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2721",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 801.2,
+   "y": 1378.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2723",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 796.6,
+   "y": 1392.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2724",
+   "kat": "g-gebaeude",
+   "name": "Prison Building",
+   "lage": "Hamlet",
+   "art": [
+    "closed",
+    "government"
+   ],
+   "x": 806.6,
+   "y": 1384.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2731",
+   "kat": "g-gebaeude",
+   "name": "Vercetti Estate",
+   "lage": "Starfish Island",
+   "art": [],
+   "x": 1187.8,
+   "y": 1029.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2732",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Waning Sands",
+   "art": [
+    "transportation"
+   ],
+   "x": 1125.7,
+   "y": 684,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2733",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Waning Sands",
+   "art": [
+    "transportation"
+   ],
+   "x": 1117.4,
+   "y": 665.2,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2734",
+   "kat": "g-gebaeude",
+   "name": "Turn 8",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 522.7,
+   "y": 816.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2735",
+   "kat": "g-gebaeude",
+   "name": "Turn 9",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 530.3,
+   "y": 825.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2737",
+   "kat": "g-verkehr",
+   "name": "Train Bridge",
+   "lage": "Ambrosia",
+   "art": [
+    "transportation"
+   ],
+   "x": 843.9,
+   "y": 718.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2738",
+   "kat": "g-gebaeude",
+   "name": "Guard Booth",
+   "lage": "Allied Crystal, Ambrosia",
+   "art": [],
+   "x": 824.5,
+   "y": 724.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2739",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 807.1,
+   "y": 981.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2740",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 964,
+   "y": 916,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2743",
+   "kat": "g-gebaeude",
+   "name": "Fruitshots",
+   "lage": "Huevo St, Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1293.5,
+   "y": 1050.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2744",
+   "kat": "g-gebaeude",
+   "name": "The Grain of Truth",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1047.6,
+   "y": 1131.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2745",
+   "kat": "g-gebaeude",
+   "name": "Diangelo",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1041.9,
+   "y": 1131.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2747",
+   "kat": "g-gebaeude",
+   "name": "Little Gems Jewellery",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 968.6,
+   "y": 1030.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2755",
+   "kat": "g-gebaeude",
+   "name": "Berth",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 319.5,
+   "y": 897.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2757",
+   "kat": "g-laden",
+   "name": "Zeke’s Gadgets",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "electronics",
+    "closed",
+    "enterable",
+    "retail"
+   ],
+   "x": 978.6,
+   "y": 994.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2758",
+   "kat": "g-gebaeude",
+   "name": "Video Forever",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "closed"
+   ],
+   "x": 978.9,
+   "y": 994.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2759",
+   "kat": "g-gebaeude",
+   "name": "Joyeria Empenos",
+   "lage": "Rockridge, Vice City",
+   "art": [],
+   "x": 978.4,
+   "y": 993.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2760",
+   "kat": "g-gebaeude",
+   "name": "Vice City Hospital",
+   "lage": "Rockridge, Vice City",
+   "art": [
+    "hospital",
+    "public"
+   ],
+   "unsicher": true,
+   "x": 988.7,
+   "y": 1003.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2761",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1121.7,
+   "y": 1252.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2762",
+   "kat": "g-freizeit",
+   "name": "Tennis Court",
+   "lage": "Catalan Key",
+   "art": [
+    "leisure"
+   ],
+   "x": 1069.4,
+   "y": 1304.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2763",
+   "kat": "g-freizeit",
+   "name": "Tennis Court",
+   "lage": "Catalan Key",
+   "art": [
+    "leisure"
+   ],
+   "x": 1053.8,
+   "y": 1296.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2764",
+   "kat": "g-freizeit",
+   "name": "Tennis Court",
+   "lage": "Catalan Key",
+   "art": [
+    "leisure"
+   ],
+   "x": 1056.6,
+   "y": 1302.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2781",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Buckskin",
+   "art": [],
+   "x": 674.2,
+   "y": 1001,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2784",
+   "kat": "g-gebaeude",
+   "name": "Interchange",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 492.4,
+   "y": 1034.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2785",
+   "kat": "g-gebaeude",
+   "name": "Fire Station",
+   "lage": "La Perle",
+   "art": [],
+   "x": 1015.7,
+   "y": 919.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2805",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 720.7,
+   "y": 574.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2814",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1042.1,
+   "y": 1120.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2816",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 800.3,
+   "y": 403.4,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2824",
+   "kat": "g-gebaeude",
+   "name": "El Rincón Notorio",
+   "lage": "Little Cuba, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 976.5,
+   "y": 1094.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2852",
+   "kat": "g-gebaeude",
+   "name": "Crude Islands",
+   "lage": "Kelly County",
+   "art": [],
+   "unsicher": true,
+   "x": 231.5,
+   "y": 850.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2881",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 778.2,
+   "y": 794.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2882",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 787.3,
+   "y": 796.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2883",
+   "kat": "g-gebaeude",
+   "name": "Tunnel",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 597.8,
+   "y": 559.2,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2888",
+   "kat": "g-gebaeude",
+   "name": "Tunnel",
+   "lage": "Port Gellhorn International Raceway",
+   "art": [],
+   "x": 530.2,
+   "y": 831.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2890",
+   "kat": "g-freizeit",
+   "name": "Cove",
+   "lage": "Bobcat Key",
+   "art": [
+    "natural"
+   ],
+   "x": 442.3,
+   "y": 1348,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2891",
+   "kat": "g-verkehr",
+   "name": "Marina",
+   "lage": "Mariana County",
+   "art": [
+    "transportation"
+   ],
+   "x": 833.7,
+   "y": 1571.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2894",
+   "kat": "g-laden",
+   "name": "Tamarro",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "vendor"
+   ],
+   "x": 1315.8,
+   "y": 1100.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2895",
+   "kat": "g-gebaeude",
+   "name": "Turn 17",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 501.1,
+   "y": 863,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2896",
+   "kat": "g-gebaeude",
+   "name": "Turn 21",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 474.9,
+   "y": 875.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2897",
+   "kat": "g-gebaeude",
+   "name": "Turn 19",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 508.3,
+   "y": 843.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2898",
+   "kat": "g-gebaeude",
+   "name": "Turn 33B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 369.3,
+   "y": 936.5,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2899",
+   "kat": "g-gebaeude",
+   "name": "Cave",
+   "lage": "Emerald Springs",
+   "art": [],
+   "x": 633.6,
+   "y": 822.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2904",
+   "kat": "g-gebaeude",
+   "name": "Copyshop",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1048.7,
+   "y": 1131.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2905",
+   "kat": "g-gebaeude",
+   "name": "The Captain’s Cabins",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 873.9,
+   "y": 1634,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2911",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "metro",
+    "enterable"
+   ],
+   "x": 1008.8,
+   "y": 1138.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2936",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 845.3,
+   "y": 1677.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2937",
+   "kat": "g-gebaeude",
+   "name": "Footbridge",
+   "lage": "Lummox County",
+   "art": [],
+   "unsicher": true,
+   "x": 805.4,
+   "y": 486.8,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2939",
+   "kat": "g-gebaeude",
+   "name": "Footbridge",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 801.6,
+   "y": 480.2,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2941",
+   "kat": "g-freizeit",
+   "name": "Waterfall",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 803.6,
+   "y": 483.3,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l2942",
+   "kat": "g-gebaeude",
+   "name": "Lighthouse",
+   "lage": "Lummox County",
+   "art": [],
+   "unsicher": true,
+   "x": 689,
+   "y": 216.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l2972",
+   "kat": "g-gebaeude",
+   "name": "Nirvana Spa",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 1045,
+   "y": 939.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2973",
+   "kat": "g-gebaeude",
+   "name": "Royals",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "enterable"
+   ],
+   "x": 1254.1,
+   "y": 964.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2975",
+   "kat": "g-freizeit",
+   "name": "\"La Perle River\"",
+   "lage": "Leonida",
+   "art": [
+    "natural"
+   ],
+   "x": 979.5,
+   "y": 928.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2976",
+   "kat": "g-gebaeude",
+   "name": "River",
+   "lage": "Leonida",
+   "art": [],
+   "x": 592.6,
+   "y": 1075.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l2977",
+   "kat": "g-gebaeude",
+   "name": "Canal",
+   "lage": "Leonida",
+   "art": [],
+   "x": 654,
+   "y": 1145,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l2996",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 588.8,
+   "y": 1377.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2997",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 637.2,
+   "y": 1345.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2998",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 692.2,
+   "y": 1420.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l2999",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Leonida",
+   "art": [],
+   "x": 744.8,
+   "y": 1413.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3000",
+   "kat": "g-gebaeude",
+   "name": "Port VC Tunnel",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1129.7,
+   "y": 1105.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3001",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Leonida",
+   "art": [],
+   "x": 772.3,
+   "y": 1339.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3002",
+   "kat": "g-gebaeude",
+   "name": "Peewees",
+   "lage": "Rockridge, Vice City",
+   "art": [],
+   "x": 959,
+   "y": 1043.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3018",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1007.8,
+   "y": 1055.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3019",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1013.3,
+   "y": 1102.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3020",
+   "kat": "g-gebaeude",
+   "name": "Grandstands",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 384.8,
+   "y": 895.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3021",
+   "kat": "g-gebaeude",
+   "name": "Grandstands",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 405.2,
+   "y": 903.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3023",
+   "kat": "g-gebaeude",
+   "name": "Covered Grandstands",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 405.5,
+   "y": 880.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3042",
+   "kat": "g-verkehr",
+   "name": "Bridge",
+   "lage": "Leonard County",
+   "art": [
+    "transportation"
+   ],
+   "x": 1097,
+   "y": 579.3,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3046",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 908.7,
+   "y": 1355.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3078",
+   "kat": "g-gebaeude",
+   "name": "Farmacia",
+   "lage": "Little Cuba, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 972.3,
+   "y": 1100.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3079",
+   "kat": "g-laden",
+   "name": "Little Cuba Souvenir Shop",
+   "lage": "Little Cuba, Vice City",
+   "art": [
+    "enterable"
+   ],
+   "x": 971.6,
+   "y": 1094.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3081",
+   "kat": "g-gebaeude",
+   "name": "Riverbank",
+   "lage": "Little Cuba, Vice City",
+   "art": [],
+   "x": 973.5,
+   "y": 1109,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3093",
+   "kat": "g-verkehr",
+   "name": "Xero Gas Station",
+   "lage": "Waning Sands",
+   "art": [
+    "gas",
+    "enterable"
+   ],
+   "x": 1112.9,
+   "y": 686.9,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3094",
+   "kat": "g-laden",
+   "name": "Billie Bob’s",
+   "lage": "Waning Sands",
+   "art": [
+    "restaurant"
+   ],
+   "x": 1108.8,
+   "y": 672.6,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3099",
+   "kat": "g-gebaeude",
+   "name": "Gas Station",
+   "lage": "Vice Decor District, Vice City",
+   "art": [],
+   "x": 1093,
+   "y": 872.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3102",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 982.7,
+   "y": 1147.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3103",
+   "kat": "g-gebaeude",
+   "name": "Lake",
+   "lage": "Belville",
+   "art": [],
+   "unsicher": true,
+   "x": 937.7,
+   "y": 833.5,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3104",
+   "kat": "g-gebaeude",
+   "name": "Leonard County Sheriff’s Office",
+   "lage": "Belville",
+   "art": [],
+   "unsicher": true,
+   "x": 935.6,
+   "y": 837.6,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3106",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Little Cuba",
+   "art": [
+    "bus"
+   ],
+   "x": 975.8,
+   "y": 1100.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3107",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Westbrook Dr, Salton, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 936.4,
+   "y": 1076.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3108",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Vice Decor District, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1089.4,
+   "y": 878,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3109",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Vice Decor District, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1084.2,
+   "y": 892.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3110",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Catalan Blvd, Crosstown",
+   "art": [
+    "bus"
+   ],
+   "x": 1039.7,
+   "y": 997.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3111",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Admiral Cswy, Ferry Island",
+   "art": [
+    "bus"
+   ],
+   "x": 1166.8,
+   "y": 1091.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3112",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "bus"
+   ],
+   "x": 1273.7,
+   "y": 943.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3113",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Cicada Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 910.2,
+   "y": 1331.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3114",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Cicada Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 916.1,
+   "y": 1332.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3116",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 914,
+   "y": 1278.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3117",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 908.5,
+   "y": 1285.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3118",
+   "kat": "g-gebaeude",
+   "name": "Waning Sands Police Department",
+   "lage": "Waning Sands",
+   "art": [
+    "police",
+    "enterable",
+    "government"
+   ],
+   "x": 1110.1,
+   "y": 677.9,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3119",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Mirimar Dr, Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1029.7,
+   "y": 970.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3120",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Mirimar Dr, Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1037.1,
+   "y": 976.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3121",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1038.5,
+   "y": 1024.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3122",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1048.7,
+   "y": 929.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3123",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1046.7,
+   "y": 935.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3124",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Mirimar Dr, Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1031.7,
+   "y": 974.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3125",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Catalan Blvd, Crosstown, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1041.7,
+   "y": 1001.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3128",
+   "kat": "g-gebaeude",
+   "name": "Interchange",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1097.9,
+   "y": 824.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3129",
+   "kat": "g-gebaeude",
+   "name": "Park",
+   "lage": "Little Cuba, Vice City",
+   "art": [],
+   "x": 971.6,
+   "y": 1092.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3133",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 904.9,
+   "y": 1291.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3135",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1210.4,
+   "y": 825.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3145",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Peacock Bay, Vice City",
+   "art": [
+    "metro",
+    "enterable"
+   ],
+   "x": 967.7,
+   "y": 1249.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3146",
+   "kat": "g-verkehr",
+   "name": "VCIA Train Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "train",
+    "enterable"
+   ],
+   "x": 941.9,
+   "y": 1119.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3147",
+   "kat": "g-verkehr",
+   "name": "VCIA Metro Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "metro",
+    "enterable"
+   ],
+   "x": 939.4,
+   "y": 1120.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3148",
+   "kat": "g-verkehr",
+   "name": "Metro Mover Station",
+   "lage": "Salton, Vice City",
+   "art": [
+    "metromover"
+   ],
+   "x": 854.2,
+   "y": 1078.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3149",
+   "kat": "g-verkehr",
+   "name": "Train Station",
+   "lage": "Draper Island",
+   "art": [
+    "train",
+    "transportation"
+   ],
+   "x": 343.4,
+   "y": 573.9,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3166",
+   "kat": "g-laden",
+   "name": "Gas Station",
+   "lage": "Southside, Vice City",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 922.2,
+   "y": 1317.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3189",
+   "kat": "g-laden",
+   "name": "Tennis Court",
+   "lage": "Y Vice Beach, Washington Beach, Vice Beach",
+   "art": [
+    "tennis",
+    "leisure"
+   ],
+   "x": 1292.6,
+   "y": 933.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3196",
+   "kat": "g-gebaeude",
+   "name": "Bus Stop",
+   "lage": "Catalan Blvd, Shoreline, Vice Beach",
+   "art": [],
+   "x": 1054.1,
+   "y": 1067.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3205",
+   "kat": "g-verkehr",
+   "name": "Metro Station",
+   "lage": "Crosstown, Vice City",
+   "art": [
+    "metromover",
+    "transportation"
+   ],
+   "x": 1029.8,
+   "y": 995,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3208",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 1030.9,
+   "y": 1171.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3213",
+   "kat": "g-gebaeude",
+   "name": "Parking Lot",
+   "lage": "Tequesta, Vice City",
+   "art": [],
+   "x": 1001.1,
+   "y": 1218.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3214",
+   "kat": "g-gebaeude",
+   "name": "Construction Site",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 517,
+   "y": 701.6,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3215",
+   "kat": "g-gebaeude",
+   "name": "Roasters Coffee Cafe",
+   "lage": "Downtown, Vice City",
+   "art": [],
+   "x": 1043.8,
+   "y": 1146.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3217",
+   "kat": "g-gebaeude",
+   "name": "Fenestra Plaza",
+   "lage": "Tequesta, Vice City",
+   "art": [
+    "public"
+   ],
+   "x": 1032.9,
+   "y": 1186.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3219",
+   "kat": "g-gebaeude",
+   "name": "Gate Building",
+   "lage": "Prison, Hamlet",
+   "art": [],
+   "x": 823.9,
+   "y": 1382.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3228",
+   "kat": "g-laden",
+   "name": "Mammacita’s",
+   "lage": "Downtown, Vice City",
+   "art": [
+    "food",
+    "enterable"
+   ],
+   "x": 1042.9,
+   "y": 1144.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3239",
+   "kat": "g-gebaeude",
+   "name": "Billie Bob’s",
+   "lage": "Vice-Dale County",
+   "art": [],
+   "x": 1067,
+   "y": 810.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3240",
+   "kat": "g-gebaeude",
+   "name": "August Hill Farm",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 1057.3,
+   "y": 838.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3245",
+   "kat": "g-verkehr",
+   "name": "Docks",
+   "lage": "Balsero, Vice City",
+   "art": [
+    "transportation"
+   ],
+   "x": 899.4,
+   "y": 1021.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3246",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Tequesta",
+   "art": [
+    "bus"
+   ],
+   "x": 1031.3,
+   "y": 1184.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3252",
+   "kat": "g-gebaeude",
+   "name": "Hamlet Police Department?",
+   "lage": "Route 61, Hamlet",
+   "art": [],
+   "unsicher": true,
+   "x": 828.6,
+   "y": 1456.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3264",
+   "kat": "g-freizeit",
+   "name": "Peninsula",
+   "lage": "Yorktown",
+   "art": [
+    "natural"
+   ],
+   "unsicher": true,
+   "x": 517.7,
+   "y": 395.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3269",
+   "kat": "g-gebaeude",
+   "name": "Brian’s Marina Boat Racks",
+   "lage": "Key Lento",
+   "art": [],
+   "x": 840.4,
+   "y": 1695.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3281",
+   "kat": "g-laden",
+   "name": "Conch King",
+   "lage": "La Perle, Vice City",
+   "art": [
+    "restaurant"
+   ],
+   "x": 999.3,
+   "y": 938,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3283",
+   "kat": "g-verkehr",
+   "name": "Arrow Gas Station",
+   "lage": "Route 1, Key Lento",
+   "art": [
+    "gas"
+   ],
+   "x": 879.3,
+   "y": 1627.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3287",
+   "kat": "g-laden",
+   "name": "Gas Station",
+   "lage": "Waning Sands",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 1064.6,
+   "y": 664.5,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3288",
+   "kat": "g-laden",
+   "name": "Arrow Gas Station",
+   "lage": "Belville",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 1012.6,
+   "y": 808,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3289",
+   "kat": "g-laden",
+   "name": "Xero Gas Station",
+   "lage": "Capri",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 428.1,
+   "y": 1114.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3298",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "SW 4th St, Tequesta",
+   "art": [
+    "bus"
+   ],
+   "x": 989.4,
+   "y": 1205.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3299",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Calderone Ave, Southside, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 916.9,
+   "y": 1279.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3304",
+   "kat": "g-laden",
+   "name": "Xero Gas Station",
+   "lage": "Ambrosia",
+   "art": [
+    "supermarket",
+    "enterable"
+   ],
+   "x": 821.7,
+   "y": 668.4,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3305",
+   "kat": "g-freizeit",
+   "name": "\"Mount Redhill\"",
+   "lage": "Lummox County",
+   "art": [
+    "natural"
+   ],
+   "x": 787.6,
+   "y": 376.3,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3312",
+   "kat": "g-verkehr",
+   "name": "Bus Stop",
+   "lage": "Thompson Ave, Ocean Beach, Vice City",
+   "art": [
+    "bus"
+   ],
+   "x": 1272.9,
+   "y": 956.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3331",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 744.2,
+   "y": 338.8,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3332",
+   "kat": "g-gebaeude",
+   "name": "Train Bridge",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 1003,
+   "y": 877.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3344",
+   "kat": "g-gebaeude",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1320.2,
+   "y": 959,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3345",
+   "kat": "g-gebaeude",
+   "name": "Lifeguard Tower",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1320.5,
+   "y": 943.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3352",
+   "kat": "g-laden",
+   "name": "Beach Volleyball",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [
+    "volleyball"
+   ],
+   "x": 1301.7,
+   "y": 1062.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3355",
+   "kat": "g-gebaeude",
+   "name": "Turn 7B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 392.2,
+   "y": 908.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3356",
+   "kat": "g-gebaeude",
+   "name": "Turn 8B",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 367.1,
+   "y": 891.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3357",
+   "kat": "g-gebaeude",
+   "name": "Turn 6C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 441.8,
+   "y": 914.7,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3358",
+   "kat": "g-gebaeude",
+   "name": "Turn 7C",
+   "lage": "Gellhorn International Raceway",
+   "art": [],
+   "x": 443.2,
+   "y": 919.8,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3389",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Grassrivers",
+   "art": [],
+   "x": 783.9,
+   "y": 1614.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3390",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Peregrine Bay",
+   "art": [],
+   "x": 949.9,
+   "y": 1505.2,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3396",
+   "kat": "g-laden",
+   "name": "The Old Mill Barber Shop",
+   "lage": "Millport",
+   "art": [
+    "hair",
+    "enterable",
+    "retail"
+   ],
+   "x": 984.2,
+   "y": 435.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3397",
+   "kat": "g-laden",
+   "name": "Trotman’s Super Market",
+   "lage": "Millport",
+   "art": [
+    "supermarket",
+    "enterable",
+    "retail"
+   ],
+   "x": 985.8,
+   "y": 435,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3398",
+   "kat": "g-laden",
+   "name": "Jacob’s Tavern Bar",
+   "lage": "Millport",
+   "art": [
+    "bar",
+    "enterable",
+    "leisure"
+   ],
+   "x": 987.5,
+   "y": 435,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3399",
+   "kat": "g-laden",
+   "name": "Reynold’s Pharmacy",
+   "lage": "Millport",
+   "art": [
+    "pharmacy",
+    "enterable",
+    "retail"
+   ],
+   "x": 989.4,
+   "y": 435.2,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3400",
+   "kat": "g-gebaeude",
+   "name": "Gator Plaza Sign",
+   "lage": "Southside, Vice City",
+   "art": [],
+   "x": 901.2,
+   "y": 1331.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3401",
+   "kat": "g-gebaeude",
+   "name": "Bridge",
+   "lage": "Leonida",
+   "art": [],
+   "x": 1052.9,
+   "y": 1392.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3402",
+   "kat": "g-laden",
+   "name": "Tennis Courts",
+   "lage": "Port Vice City",
+   "art": [
+    "tennis"
+   ],
+   "x": 1144.8,
+   "y": 1149,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3408",
+   "kat": "g-gebaeude",
+   "name": "Ricardo’s Tires",
+   "lage": "La Perle, Vice City",
+   "art": [],
+   "x": 993.6,
+   "y": 962.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3411",
+   "kat": "g-gebaeude",
+   "name": "RES TRADE PAINT",
+   "lage": "La Perle, Vice City",
+   "art": [],
+   "x": 997.3,
+   "y": 966.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3416",
+   "kat": "g-gebaeude",
+   "name": "The Atoll Bar & Grill",
+   "lage": "Ocean Beach, Vice Beach",
+   "art": [],
+   "x": 1308.8,
+   "y": 979.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3434",
+   "kat": "g-gebaeude",
+   "name": "Wild Hog Point",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 324.6,
+   "y": 761.1,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3435",
+   "kat": "g-gebaeude",
+   "name": "Partridge Bay",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 875.2,
+   "y": 186.1,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3436",
+   "kat": "g-gebaeude",
+   "name": "Okchiloha Bay",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 634.7,
+   "y": 203.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3437",
+   "kat": "g-gebaeude",
+   "name": "Millport Basin",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 1075.1,
+   "y": 399.4,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3438",
+   "kat": "g-gebaeude",
+   "name": "San Malo Bay",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 506.1,
+   "y": 371.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3439",
+   "kat": "g-gebaeude",
+   "name": "Permit Keys",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 507,
+   "y": 1743.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3440",
+   "kat": "g-gebaeude",
+   "name": "Tola Bay",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 457.6,
+   "y": 1223.3,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3441",
+   "kat": "g-gebaeude",
+   "name": "Big Pine",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 551.9,
+   "y": 1268.8,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3442",
+   "kat": "g-gebaeude",
+   "name": "Nehrling River",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 464.2,
+   "y": 1140.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3443",
+   "kat": "g-gebaeude",
+   "name": "Bobcat Bight",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 357.6,
+   "y": 1229.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3444",
+   "kat": "g-gebaeude",
+   "name": "Capri Sound",
+   "lage": "Leonida",
+   "art": [],
+   "x": 344.6,
+   "y": 996.6,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3445",
+   "kat": "g-gebaeude",
+   "name": "Borrachero Sound",
+   "lage": "Kelly County",
+   "art": [],
+   "x": 291.9,
+   "y": 838.3,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3446",
+   "kat": "g-gebaeude",
+   "name": "Wetman Bay",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 648.9,
+   "y": 1582,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3447",
+   "kat": "g-gebaeude",
+   "name": "Gullet Marsh",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 720.4,
+   "y": 1462.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3448",
+   "kat": "g-gebaeude",
+   "name": "Pelican River",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 716.6,
+   "y": 1410.4,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3450",
+   "kat": "g-gebaeude",
+   "name": "Gambit Bay",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 812.1,
+   "y": 1629.9,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3451",
+   "kat": "g-gebaeude",
+   "name": "Shoeless Keys",
+   "lage": "Mariana County",
+   "art": [],
+   "x": 849.4,
+   "y": 1591.5,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3658",
+   "kat": "g-gebaeude",
+   "name": "Gellhorn Drive-In Theatre",
+   "lage": "Port Gellhorn",
+   "art": [],
+   "x": 425.8,
+   "y": 690,
+   "county": "kelly"
+  },
+  {
+   "id": "g-l3744",
+   "kat": "g-gebaeude",
+   "name": "Effete",
+   "lage": "Decor District, Vice City",
+   "art": [],
+   "x": 1056.1,
+   "y": 874.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "g-l3748",
+   "kat": "g-freizeit",
+   "name": "Cottonmouth Lake",
+   "lage": "Mariana County",
+   "art": [
+    "natural"
+   ],
+   "x": 740.7,
+   "y": 1584,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3749",
+   "kat": "g-gebaeude",
+   "name": "Sharktooth Island",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 1111.3,
+   "y": 557.5,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3750",
+   "kat": "g-gebaeude",
+   "name": "Peregrine Bay",
+   "lage": "Leonida",
+   "art": [],
+   "x": 973.1,
+   "y": 1513.7,
+   "county": "mariana"
+  },
+  {
+   "id": "g-l3751",
+   "kat": "g-gebaeude",
+   "name": "Leith River",
+   "lage": "Leonard County",
+   "art": [],
+   "x": 1121.7,
+   "y": 674.7,
+   "county": "leonard"
+  },
+  {
+   "id": "g-l3752",
+   "kat": "g-gebaeude",
+   "name": "Moreau River",
+   "lage": "Lummox County",
+   "art": [],
+   "x": 828.5,
+   "y": 256.6,
+   "county": "lummox"
+  },
+  {
+   "id": "g-l3754",
+   "kat": "g-gebaeude",
+   "name": "The Monument of Leonidan Supremacy",
+   "lage": "Leonida",
+   "art": [],
+   "x": 498.1,
+   "y": 530.5,
+   "county": "kelly"
+  }
+ ]
+}

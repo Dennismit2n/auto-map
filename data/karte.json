@@ -1,0 +1,1058 @@
+{
+ "hinweis": "Eigene Zeichnung nach der offiziellen Leonida-Karte. Einheiten: x nach rechts, y nach unten. Erzeugt von tools/karte/karte-bauen.mjs.",
+ "breite": 1452,
+ "hoehe": 2026,
+ "meter_je_einheit": 9.81,
+ "gitter": {
+  "x0": 158,
+  "dx": 162.5,
+  "y0": 119,
+  "dy": 162.7,
+  "spalten": 9,
+  "zeilen": "ABCDEFGHIJKLM"
+ },
+ "countys": [
+  {
+   "id": "lummox",
+   "name": "Lummox County",
+   "farbe": "--vc-ort-kalaga"
+  },
+  {
+   "id": "kelly",
+   "name": "Kelly County",
+   "farbe": "--vc-ort-gellhorn"
+  },
+  {
+   "id": "leonard",
+   "name": "Leonard County",
+   "farbe": "--vc-ort-ambrosia"
+  },
+  {
+   "id": "vicedale",
+   "name": "Vice-Dale County",
+   "farbe": "--vc-ort-vicecity"
+  },
+  {
+   "id": "mariana",
+   "name": "Mariana County",
+   "farbe": "--vc-ort-keys"
+  }
+ ],
+ "gelaende": {
+  "bild": "assets/karte/gelaende.webp",
+  "x0": 0.04,
+  "y0": 0.27,
+  "x1": 1451.84,
+  "y1": 2025.88
+ },
+ "labels": [
+  {
+   "text": "Lummox County",
+   "typ": "county",
+   "x": 723,
+   "y": 373,
+   "county": "lummox"
+  },
+  {
+   "text": "Leonard County",
+   "typ": "county",
+   "x": 1039,
+   "y": 713,
+   "county": "leonard"
+  },
+  {
+   "text": "Kelly County",
+   "typ": "county",
+   "x": 608,
+   "y": 791,
+   "county": "kelly"
+  },
+  {
+   "text": "Vice-Dale County",
+   "typ": "county",
+   "x": 1075,
+   "y": 1172,
+   "county": "vicedale"
+  },
+  {
+   "text": "Mariana County",
+   "typ": "county",
+   "x": 590,
+   "y": 1505,
+   "county": "mariana"
+  },
+  {
+   "text": "Bonanza",
+   "typ": "stadt",
+   "x": 698,
+   "y": 247,
+   "county": "lummox"
+  },
+  {
+   "text": "Grayson",
+   "typ": "stadt",
+   "x": 540,
+   "y": 411,
+   "county": "lummox"
+  },
+  {
+   "text": "Millport",
+   "typ": "stadt",
+   "x": 976,
+   "y": 437,
+   "county": "lummox"
+  },
+  {
+   "text": "Waning Sands",
+   "typ": "stadt",
+   "x": 1102,
+   "y": 636,
+   "county": "leonard"
+  },
+  {
+   "text": "Ambrosia",
+   "typ": "stadt",
+   "x": 814,
+   "y": 708,
+   "county": "kelly"
+  },
+  {
+   "text": "Port Gellhorn",
+   "typ": "stadt",
+   "x": 422,
+   "y": 709,
+   "county": "kelly"
+  },
+  {
+   "text": "Belville",
+   "typ": "stadt",
+   "x": 974,
+   "y": 791,
+   "county": "leonard"
+  },
+  {
+   "text": "Vice Beach",
+   "typ": "stadt",
+   "x": 1278,
+   "y": 992,
+   "county": "vicedale"
+  },
+  {
+   "text": "Vice City",
+   "typ": "stadt",
+   "x": 993,
+   "y": 1057,
+   "county": "vicedale"
+  },
+  {
+   "text": "Capri",
+   "typ": "stadt",
+   "x": 395,
+   "y": 1073,
+   "county": "mariana"
+  },
+  {
+   "text": "VCIA",
+   "typ": "stadt",
+   "x": 830,
+   "y": 1164,
+   "county": "vicedale"
+  },
+  {
+   "text": "Grassrivers",
+   "typ": "stadt",
+   "x": 650,
+   "y": 1362,
+   "county": "mariana"
+  },
+  {
+   "text": "Hamlet",
+   "typ": "stadt",
+   "x": 822,
+   "y": 1411,
+   "county": "vicedale"
+  },
+  {
+   "text": "Watson Bay",
+   "typ": "stadt",
+   "x": 620,
+   "y": 1449,
+   "county": "mariana"
+  },
+  {
+   "text": "Key Lento",
+   "typ": "stadt",
+   "x": 834,
+   "y": 1725,
+   "county": "mariana"
+  },
+  {
+   "text": "Southwind",
+   "typ": "stadt",
+   "x": 457,
+   "y": 1772,
+   "county": "mariana"
+  },
+  {
+   "text": "Partridge Bay",
+   "typ": "gewaesser",
+   "x": 932,
+   "y": 194,
+   "county": "lummox"
+  },
+  {
+   "text": "Okchiloha Bay",
+   "typ": "gewaesser",
+   "x": 641,
+   "y": 220,
+   "county": "lummox"
+  },
+  {
+   "text": "Moreau River",
+   "typ": "gewaesser",
+   "x": 823,
+   "y": 257,
+   "county": "lummox"
+  },
+  {
+   "text": "Lake Tallaloko",
+   "typ": "gewaesser",
+   "x": 932,
+   "y": 383,
+   "county": "lummox"
+  },
+  {
+   "text": "San Malo Bay",
+   "typ": "gewaesser",
+   "x": 464,
+   "y": 403,
+   "county": "lummox"
+  },
+  {
+   "text": "Millport Basin",
+   "typ": "gewaesser",
+   "x": 1104,
+   "y": 431,
+   "county": "lummox"
+  },
+  {
+   "text": "Lake Leonida",
+   "typ": "gewaesser",
+   "x": 891,
+   "y": 616,
+   "county": "leonard"
+  },
+  {
+   "text": "Draper Bay",
+   "typ": "gewaesser",
+   "x": 341,
+   "y": 680,
+   "county": "kelly"
+  },
+  {
+   "text": "Borrachero Sound",
+   "typ": "gewaesser",
+   "x": 298,
+   "y": 822,
+   "county": "kelly"
+  },
+  {
+   "text": "Capri Sound",
+   "typ": "gewaesser",
+   "x": 284,
+   "y": 1028,
+   "county": "mariana"
+  },
+  {
+   "text": "Fortune Lake",
+   "typ": "gewaesser",
+   "x": 433,
+   "y": 1055,
+   "county": "mariana"
+  },
+  {
+   "text": "Nehrling River",
+   "typ": "gewaesser",
+   "x": 540,
+   "y": 1130,
+   "county": "mariana"
+  },
+  {
+   "text": "Three Toe Lake",
+   "typ": "gewaesser",
+   "x": 694,
+   "y": 1134,
+   "county": "vicedale"
+  },
+  {
+   "text": "Catalan Bay",
+   "typ": "gewaesser",
+   "x": 1245,
+   "y": 1181,
+   "county": "vicedale"
+  },
+  {
+   "text": "Bobcat Bight",
+   "typ": "gewaesser",
+   "x": 378,
+   "y": 1212,
+   "county": "mariana"
+  },
+  {
+   "text": "Tola Bay",
+   "typ": "gewaesser",
+   "x": 486,
+   "y": 1288,
+   "county": "mariana"
+  },
+  {
+   "text": "Gulf of Leonida",
+   "typ": "gewaesser",
+   "x": 148,
+   "y": 1311,
+   "county": "mariana"
+  },
+  {
+   "text": "Peregrine Bay",
+   "typ": "gewaesser",
+   "x": 952,
+   "y": 1519,
+   "county": "mariana"
+  },
+  {
+   "text": "Leonida Bay",
+   "typ": "gewaesser",
+   "x": 533,
+   "y": 1571,
+   "county": "mariana"
+  },
+  {
+   "text": "Cottonmouth Lake",
+   "typ": "gewaesser",
+   "x": 736,
+   "y": 1583,
+   "county": "mariana"
+  },
+  {
+   "text": "Gambit Bay",
+   "typ": "gewaesser",
+   "x": 824,
+   "y": 1627,
+   "county": "mariana"
+  },
+  {
+   "text": "Leonida Straits",
+   "typ": "gewaesser",
+   "x": 412,
+   "y": 1949,
+   "county": "mariana"
+  },
+  {
+   "text": "Hyde Island",
+   "typ": "insel",
+   "x": 844,
+   "y": 191,
+   "county": "lummox"
+  },
+  {
+   "text": "Saint Attaway Islands",
+   "typ": "insel",
+   "x": 772,
+   "y": 226,
+   "county": "lummox"
+  },
+  {
+   "text": "Frampton Islands",
+   "typ": "insel",
+   "x": 952,
+   "y": 258,
+   "county": "lummox"
+  },
+  {
+   "text": "Featherstone Islands",
+   "typ": "insel",
+   "x": 540,
+   "y": 280,
+   "county": "lummox"
+  },
+  {
+   "text": "Moreau",
+   "typ": "gebiet",
+   "x": 752,
+   "y": 299,
+   "county": "lummox"
+  },
+  {
+   "text": "East Lummox County",
+   "typ": "gebiet",
+   "x": 942,
+   "y": 324,
+   "county": "lummox"
+  },
+  {
+   "text": "Mount Kalaga National Park",
+   "typ": "gebiet",
+   "x": 725,
+   "y": 429,
+   "county": "lummox"
+  },
+  {
+   "text": "South West Lummox County",
+   "typ": "gebiet",
+   "x": 546,
+   "y": 458,
+   "county": "lummox"
+  },
+  {
+   "text": "Little Hardin Island",
+   "typ": "insel",
+   "x": 1157,
+   "y": 476,
+   "county": "leonard"
+  },
+  {
+   "text": "North Leonard County",
+   "typ": "gebiet",
+   "x": 881,
+   "y": 485,
+   "county": "leonard"
+  },
+  {
+   "text": "Zephyr Islands",
+   "typ": "insel",
+   "x": 336,
+   "y": 491,
+   "county": "lummox"
+  },
+  {
+   "text": "Richard Barebone State Park",
+   "typ": "gebiet",
+   "x": 1064,
+   "y": 512,
+   "county": "leonard"
+  },
+  {
+   "text": "North Kelly County",
+   "typ": "gebiet",
+   "x": 716,
+   "y": 543,
+   "county": "kelly"
+  },
+  {
+   "text": "Manifest Canyon",
+   "typ": "gebiet",
+   "x": 554,
+   "y": 575,
+   "county": "kelly"
+  },
+  {
+   "text": "Draper Island",
+   "typ": "insel",
+   "x": 330,
+   "y": 586,
+   "county": "kelly"
+  },
+  {
+   "text": "Vinewood Beach",
+   "typ": "gebiet",
+   "x": 1180,
+   "y": 662,
+   "county": "leonard"
+  },
+  {
+   "text": "Frogswater",
+   "typ": "gebiet",
+   "x": 638,
+   "y": 679,
+   "county": "kelly"
+  },
+  {
+   "text": "Wild Hog Point",
+   "typ": "gebiet",
+   "x": 331,
+   "y": 778,
+   "county": "kelly"
+  },
+  {
+   "text": "Sandbars",
+   "typ": "insel",
+   "x": 168,
+   "y": 811,
+   "county": "kelly"
+  },
+  {
+   "text": "Leaf Links",
+   "typ": "viertel",
+   "x": 1157,
+   "y": 838,
+   "county": "vicedale"
+  },
+  {
+   "text": "Emerald Springs",
+   "typ": "gebiet",
+   "x": 664,
+   "y": 844,
+   "county": "kelly"
+  },
+  {
+   "text": "South Leonard County",
+   "typ": "gebiet",
+   "x": 894,
+   "y": 871,
+   "county": "leonard"
+  },
+  {
+   "text": "Decor District",
+   "typ": "viertel",
+   "x": 1082,
+   "y": 871,
+   "county": "vicedale"
+  },
+  {
+   "text": "Washington Island",
+   "typ": "insel",
+   "x": 1243,
+   "y": 871,
+   "county": "vicedale"
+  },
+  {
+   "text": "Crude Islands",
+   "typ": "insel",
+   "x": 240,
+   "y": 879,
+   "county": "kelly"
+  },
+  {
+   "text": "Penmarch Isle",
+   "typ": "insel",
+   "x": 1195,
+   "y": 892,
+   "county": "vicedale"
+  },
+  {
+   "text": "Washington Beach",
+   "typ": "viertel",
+   "x": 1298,
+   "y": 896,
+   "county": "vicedale"
+  },
+  {
+   "text": "Gellhorn",
+   "typ": "viertel",
+   "x": 496,
+   "y": 901,
+   "county": "kelly"
+  },
+  {
+   "text": "Stockyard",
+   "typ": "viertel",
+   "x": 1077,
+   "y": 906,
+   "county": "vicedale"
+  },
+  {
+   "text": "Oldby Island",
+   "typ": "insel",
+   "x": 1253,
+   "y": 923,
+   "county": "vicedale"
+  },
+  {
+   "text": "La Perle",
+   "typ": "viertel",
+   "x": 1009,
+   "y": 938,
+   "county": "vicedale"
+  },
+  {
+   "text": "Rialto Islands",
+   "typ": "insel",
+   "x": 1144,
+   "y": 944,
+   "county": "vicedale"
+  },
+  {
+   "text": "Bayside",
+   "typ": "viertel",
+   "x": 1069,
+   "y": 954,
+   "county": "vicedale"
+  },
+  {
+   "text": "Buckskin Swamp",
+   "typ": "gebiet",
+   "x": 696,
+   "y": 956,
+   "county": "kelly"
+  },
+  {
+   "text": "Casanova Island",
+   "typ": "insel",
+   "x": 1190,
+   "y": 956,
+   "county": "vicedale"
+  },
+  {
+   "text": "Catalan Island",
+   "typ": "insel",
+   "x": 1115,
+   "y": 975,
+   "county": "vicedale"
+  },
+  {
+   "text": "Vespucci Island",
+   "typ": "insel",
+   "x": 1157,
+   "y": 980,
+   "county": "vicedale"
+  },
+  {
+   "text": "Crosstown",
+   "typ": "viertel",
+   "x": 1037,
+   "y": 1007,
+   "county": "vicedale"
+  },
+  {
+   "text": "Salton Memorial Island",
+   "typ": "insel",
+   "x": 1170,
+   "y": 1008,
+   "county": "vicedale"
+  },
+  {
+   "text": "Rockridge",
+   "typ": "viertel",
+   "x": 966,
+   "y": 1009,
+   "county": "vicedale"
+  },
+  {
+   "text": "Balsero",
+   "typ": "viertel",
+   "x": 862,
+   "y": 1014,
+   "county": "vicedale"
+  },
+  {
+   "text": "South Kelly County",
+   "typ": "gebiet",
+   "x": 561,
+   "y": 1026,
+   "county": "kelly"
+  },
+  {
+   "text": "Starfish Island",
+   "typ": "insel",
+   "x": 1174,
+   "y": 1044,
+   "county": "vicedale"
+  },
+  {
+   "text": "Ocean Beach",
+   "typ": "viertel",
+   "x": 1293,
+   "y": 1063,
+   "county": "vicedale"
+  },
+  {
+   "text": "Little Cuba",
+   "typ": "viertel",
+   "x": 978,
+   "y": 1084,
+   "county": "vicedale"
+  },
+  {
+   "text": "Waxman Island",
+   "typ": "insel",
+   "x": 1151,
+   "y": 1084,
+   "county": "vicedale"
+  },
+  {
+   "text": "Downtown",
+   "typ": "viertel",
+   "x": 1043,
+   "y": 1089,
+   "county": "vicedale"
+  },
+  {
+   "text": "West Vice-Dale County",
+   "typ": "gebiet",
+   "x": 657,
+   "y": 1090,
+   "county": "vicedale"
+  },
+  {
+   "text": "Salton",
+   "typ": "viertel",
+   "x": 917,
+   "y": 1102,
+   "county": "vicedale"
+  },
+  {
+   "text": "Belpoint",
+   "typ": "insel",
+   "x": 219,
+   "y": 1119,
+   "county": "mariana"
+  },
+  {
+   "text": "Port Vice City",
+   "typ": "viertel",
+   "x": 1205,
+   "y": 1135,
+   "county": "vicedale"
+  },
+  {
+   "text": "Breakwater Quarry",
+   "typ": "gebiet",
+   "x": 623,
+   "y": 1191,
+   "county": "mariana"
+  },
+  {
+   "text": "Tequesta Retreat",
+   "typ": "viertel",
+   "x": 1085,
+   "y": 1211,
+   "county": "vicedale"
+  },
+  {
+   "text": "Tequesta",
+   "typ": "viertel",
+   "x": 999,
+   "y": 1217,
+   "county": "vicedale"
+  },
+  {
+   "text": "Dalton Island",
+   "typ": "insel",
+   "x": 1298,
+   "y": 1217,
+   "county": "vicedale"
+  },
+  {
+   "text": "Big Pine",
+   "typ": "gebiet",
+   "x": 560,
+   "y": 1276,
+   "county": "mariana"
+  },
+  {
+   "text": "Gloriana Key",
+   "typ": "insel",
+   "x": 1192,
+   "y": 1282,
+   "county": "vicedale"
+  },
+  {
+   "text": "Bluegrass",
+   "typ": "viertel",
+   "x": 822,
+   "y": 1298,
+   "county": "vicedale"
+  },
+  {
+   "text": "Peacock Bay",
+   "typ": "viertel",
+   "x": 985,
+   "y": 1312,
+   "county": "vicedale"
+  },
+  {
+   "text": "Bobcat Key",
+   "typ": "insel",
+   "x": 459,
+   "y": 1317,
+   "county": "mariana"
+  },
+  {
+   "text": "Catalan Key",
+   "typ": "insel",
+   "x": 1085,
+   "y": 1318,
+   "county": "vicedale"
+  },
+  {
+   "text": "Southside",
+   "typ": "viertel",
+   "x": 922,
+   "y": 1334,
+   "county": "vicedale"
+  },
+  {
+   "text": "South Vice-Dale",
+   "typ": "gebiet",
+   "x": 912,
+   "y": 1394,
+   "county": "vicedale"
+  },
+  {
+   "text": "Pelican Valley",
+   "typ": "gebiet",
+   "x": 761,
+   "y": 1510,
+   "county": "mariana"
+  },
+  {
+   "text": "Corsair Key",
+   "typ": "insel",
+   "x": 1002,
+   "y": 1524,
+   "county": "mariana"
+  },
+  {
+   "text": "Shoeless Keys",
+   "typ": "insel",
+   "x": 892,
+   "y": 1566,
+   "county": "mariana"
+  },
+  {
+   "text": "Riquezas Keys",
+   "typ": "insel",
+   "x": 286,
+   "y": 1719,
+   "county": "mariana"
+  },
+  {
+   "text": "Permit Keys",
+   "typ": "insel",
+   "x": 514,
+   "y": 1749,
+   "county": "mariana"
+  },
+  {
+   "text": "Goose Key",
+   "typ": "insel",
+   "x": 380,
+   "y": 1755,
+   "county": "mariana"
+  },
+  {
+   "text": "Maroon Key",
+   "typ": "insel",
+   "x": 649,
+   "y": 1784,
+   "county": "mariana"
+  },
+  {
+   "text": "Abismo Key",
+   "typ": "insel",
+   "x": 649,
+   "y": 1854,
+   "county": "mariana"
+  },
+  {
+   "text": "MacAlister Gold Mine",
+   "typ": "poi",
+   "x": 681,
+   "y": 306,
+   "county": "lummox"
+  },
+  {
+   "text": "Tallaloko Lakeside Resort",
+   "typ": "poi",
+   "x": 889,
+   "y": 337,
+   "county": "lummox"
+  },
+  {
+   "text": "Mount Hailes Country Club",
+   "typ": "poi",
+   "x": 985,
+   "y": 528,
+   "county": "leonard"
+  },
+  {
+   "text": "Father Scrumpy’s Red Apple Orchard",
+   "typ": "poi",
+   "x": 491,
+   "y": 566,
+   "county": "kelly"
+  },
+  {
+   "text": "Ambrosia Raceway Park",
+   "typ": "poi",
+   "x": 790,
+   "y": 599,
+   "county": "kelly"
+  },
+  {
+   "text": "Thrillbilly Mud Club",
+   "typ": "poi",
+   "x": 696,
+   "y": 616,
+   "county": "kelly"
+  },
+  {
+   "text": "Sabal Palms",
+   "typ": "poi",
+   "x": 1046,
+   "y": 635,
+   "county": "leonard"
+  },
+  {
+   "text": "Ambrosia Rodeo Association",
+   "typ": "poi",
+   "x": 771,
+   "y": 651,
+   "county": "kelly"
+  },
+  {
+   "text": "Evergreen Mall of Waning Sands",
+   "typ": "poi",
+   "x": 1073,
+   "y": 683,
+   "county": "leonard"
+  },
+  {
+   "text": "Allied Crystal",
+   "typ": "poi",
+   "x": 803,
+   "y": 743,
+   "county": "kelly"
+  },
+  {
+   "text": "Wild Hog Airfield",
+   "typ": "poi",
+   "x": 361,
+   "y": 751,
+   "county": "kelly"
+  },
+  {
+   "text": "Howe Dairy",
+   "typ": "poi",
+   "x": 628,
+   "y": 751,
+   "county": "kelly"
+  },
+  {
+   "text": "Chateau Cellerica",
+   "typ": "poi",
+   "x": 936,
+   "y": 759,
+   "county": "leonard"
+  },
+  {
+   "text": "Tucker Citrus Farms",
+   "typ": "poi",
+   "x": 688,
+   "y": 762,
+   "county": "kelly"
+  },
+  {
+   "text": "Cellerica",
+   "typ": "poi",
+   "x": 966,
+   "y": 815,
+   "county": "leonard"
+  },
+  {
+   "text": "Gellhorn Raceway",
+   "typ": "poi",
+   "x": 415,
+   "y": 876,
+   "county": "kelly"
+  },
+  {
+   "text": "Leonida State Prison",
+   "typ": "poi",
+   "x": 574,
+   "y": 929,
+   "county": "kelly"
+  },
+  {
+   "text": "Fleeca Field",
+   "typ": "poi",
+   "x": 940,
+   "y": 987,
+   "county": "vicedale"
+  },
+  {
+   "text": "Isha-Wocka Flea Market",
+   "typ": "poi",
+   "x": 816,
+   "y": 1017,
+   "county": "vicedale"
+  },
+  {
+   "text": "Sahara Arena",
+   "typ": "poi",
+   "x": 1075,
+   "y": 1048,
+   "county": "vicedale"
+  },
+  {
+   "text": "Vice City International Airport",
+   "typ": "poi",
+   "x": 830,
+   "y": 1180,
+   "county": "vicedale"
+  },
+  {
+   "text": "Vice City Oceanarium",
+   "typ": "poi",
+   "x": 1101,
+   "y": 1257,
+   "county": "vicedale"
+  },
+  {
+   "text": "Sahara Network Data Center",
+   "typ": "poi",
+   "x": 664,
+   "y": 1273,
+   "county": "mariana"
+  },
+  {
+   "text": "Courtland Park",
+   "typ": "poi",
+   "x": 1062,
+   "y": 1287,
+   "county": "vicedale"
+  },
+  {
+   "text": "Henry J Edwards Airport",
+   "typ": "poi",
+   "x": 514,
+   "y": 1352,
+   "county": "mariana"
+  },
+  {
+   "text": "Peacock Estates",
+   "typ": "poi",
+   "x": 978,
+   "y": 1356,
+   "county": "vicedale"
+  },
+  {
+   "text": "Hamlet Correctional Institution",
+   "typ": "poi",
+   "x": 807,
+   "y": 1383,
+   "county": "vicedale"
+  },
+  {
+   "text": "Paradise RV Park",
+   "typ": "poi",
+   "x": 682,
+   "y": 1398,
+   "county": "mariana"
+  },
+  {
+   "text": "Boone Speedway",
+   "typ": "poi",
+   "x": 803,
+   "y": 1438,
+   "county": "vicedale"
+  },
+  {
+   "text": "Mile Zero Air Station",
+   "typ": "poi",
+   "x": 378,
+   "y": 1805,
+   "county": "mariana"
+  }
+ ]
+}

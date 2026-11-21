@@ -1,0 +1,2961 @@
+{
+ "quellen": [
+  {
+   "name": "gta.wiki, List of Street Names",
+   "link": "https://gta.wiki/w/List_of_Street_Names",
+   "lizenz": "CC BY-NC-SA 3.0",
+   "lizenz_link": "https://creativecommons.org/licenses/by-nc-sa/3.0/"
+  },
+  {
+   "name": "GTA VI Landmarks Data, gtadb.org and contributors",
+   "link": "https://map.gtadb.org",
+   "lizenz": "CC BY 4.0",
+   "lizenz_link": "https://creativecommons.org/licenses/by/4.0/"
+  }
+ ],
+ "aenderungen": "Lage und Richtung aus den Adressen der gtadb-Gebäude berechnet; ohne passende Gebäude nur das Gebiet. Diese Liste steht, wie die Vorlage von gta.wiki, unter CC BY-NC-SA 3.0.",
+ "strassen": [
+  {
+   "id": "s-bayside-drive",
+   "name": "Bayside Drive",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-calderone-avenue",
+   "name": "Calderone Avenue",
+   "quelle": "gtawiki",
+   "x": 908.2,
+   "y": 1289,
+   "winkel": -49,
+   "laenge": 76,
+   "gebaeude": 16,
+   "county": "vicedale",
+   "pfad": [
+    [
+     895,
+     1367.3
+    ],
+    [
+     893.8,
+     1361.4
+    ],
+    [
+     892.6,
+     1355.6
+    ],
+    [
+     891.5,
+     1349.9
+    ],
+    [
+     890.4,
+     1344.2
+    ],
+    [
+     889.3,
+     1338.5
+    ],
+    [
+     888,
+     1332.9
+    ],
+    [
+     886.4,
+     1327.4
+    ],
+    [
+     885,
+     1321.9
+    ],
+    [
+     883.7,
+     1316.4
+    ],
+    [
+     882.8,
+     1311.1
+    ],
+    [
+     883.7,
+     1306
+    ],
+    [
+     886.4,
+     1301.1
+    ],
+    [
+     890.4,
+     1297
+    ],
+    [
+     895.3,
+     1293.8
+    ],
+    [
+     900.5,
+     1290.8
+    ],
+    [
+     905.6,
+     1287.9
+    ],
+    [
+     910.1,
+     1284.2
+    ],
+    [
+     914,
+     1279.8
+    ],
+    [
+     917.7,
+     1275.2
+    ],
+    [
+     919.6,
+     1272.9
+    ]
+   ]
+  },
+  {
+   "id": "s-catalan-boulevard",
+   "name": "Catalan Boulevard",
+   "quelle": "gtawiki",
+   "x": 1048.5,
+   "y": 1068,
+   "winkel": 89,
+   "laenge": 148,
+   "gebaeude": 21,
+   "county": "vicedale",
+   "weitere": [
+    {
+     "x": 1062.9,
+     "y": 930.5,
+     "winkel": -62,
+     "laenge": 52,
+     "gebaeude": 6,
+     "pfad": [
+      [
+       1040.4,
+       1007.7
+      ],
+      [
+       1040.1,
+       1001.9
+      ],
+      [
+       1039.8,
+       996
+      ],
+      [
+       1040,
+       990.1
+      ],
+      [
+       1041.1,
+       984.4
+      ],
+      [
+       1043.9,
+       979.4
+      ],
+      [
+       1047.6,
+       974.9
+      ],
+      [
+       1050.1,
+       970
+      ],
+      [
+       1050.9,
+       964.3
+      ],
+      [
+       1051.5,
+       958.6
+      ],
+      [
+       1052.7,
+       953
+      ],
+      [
+       1054.3,
+       947.5
+      ],
+      [
+       1056.5,
+       942.2
+      ],
+      [
+       1059.2,
+       937.1
+      ],
+      [
+       1062.1,
+       931.9
+      ],
+      [
+       1064.9,
+       926.8
+      ],
+      [
+       1067.6,
+       921.8
+      ],
+      [
+       1070.4,
+       916.8
+      ],
+      [
+       1073.1,
+       911.6
+      ],
+      [
+       1075.9,
+       906.7
+      ],
+      [
+       1078.8,
+       901.8
+      ]
+     ]
+    }
+   ],
+   "pfad": [
+    [
+     1050.5,
+     1168.7
+    ],
+    [
+     1050.5,
+     1162.7
+    ],
+    [
+     1050.4,
+     1156.7
+    ],
+    [
+     1050.4,
+     1150.7
+    ],
+    [
+     1050.4,
+     1144.7
+    ],
+    [
+     1050.3,
+     1138.7
+    ],
+    [
+     1050.3,
+     1132.7
+    ],
+    [
+     1050.2,
+     1126.7
+    ],
+    [
+     1050.2,
+     1120.7
+    ],
+    [
+     1050.1,
+     1114.7
+    ],
+    [
+     1049.6,
+     1108.8
+    ],
+    [
+     1048.3,
+     1103.2
+    ],
+    [
+     1046.9,
+     1097.5
+    ],
+    [
+     1046.2,
+     1091.8
+    ],
+    [
+     1045.9,
+     1085.8
+    ],
+    [
+     1046.1,
+     1079.9
+    ],
+    [
+     1047.2,
+     1074.3
+    ],
+    [
+     1049.1,
+     1068.9
+    ],
+    [
+     1050.9,
+     1063.4
+    ],
+    [
+     1053,
+     1057.8
+    ],
+    [
+     1055.1,
+     1052.2
+    ],
+    [
+     1057.3,
+     1046.6
+    ],
+    [
+     1059.4,
+     1041
+    ],
+    [
+     1061.6,
+     1035.4
+    ],
+    [
+     1063.7,
+     1029.8
+    ],
+    [
+     1064.8,
+     1027
+    ]
+   ]
+  },
+  {
+   "id": "s-cicada-avenue",
+   "name": "Cicada Avenue",
+   "quelle": "gtawiki",
+   "x": 913.2,
+   "y": 1331.8,
+   "winkel": 10,
+   "laenge": 6,
+   "gebaeude": 2,
+   "county": "vicedale",
+   "pfad": [
+    [
+     850.2,
+     1329.2
+    ],
+    [
+     856.2,
+     1329.2
+    ],
+    [
+     862.2,
+     1329.2
+    ],
+    [
+     868.2,
+     1329.2
+    ],
+    [
+     874.2,
+     1329.2
+    ],
+    [
+     880.2,
+     1329.2
+    ],
+    [
+     886.2,
+     1329.2
+    ],
+    [
+     892.1,
+     1329.2
+    ],
+    [
+     897.9,
+     1329.5
+    ],
+    [
+     903.7,
+     1330.5
+    ],
+    [
+     909.4,
+     1331.7
+    ],
+    [
+     915.2,
+     1332.7
+    ],
+    [
+     921,
+     1333.6
+    ],
+    [
+     926.8,
+     1334.3
+    ],
+    [
+     932.8,
+     1334.9
+    ],
+    [
+     938.7,
+     1335.6
+    ],
+    [
+     944.7,
+     1336.3
+    ],
+    [
+     950.6,
+     1337.1
+    ],
+    [
+     956.6,
+     1337.8
+    ],
+    [
+     962.5,
+     1338.5
+    ],
+    [
+     965.5,
+     1338.8
+    ]
+   ]
+  },
+  {
+   "id": "s-delphino-circle",
+   "name": "Delphino Circle",
+   "quelle": "gtawiki",
+   "x": 1065.9,
+   "y": 1005.5,
+   "winkel": 87,
+   "laenge": 10,
+   "gebaeude": 2,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1024.7,
+     944.3
+    ],
+    [
+     1028.6,
+     948.9
+    ],
+    [
+     1032.5,
+     953.5
+    ],
+    [
+     1036.3,
+     958.1
+    ],
+    [
+     1040.2,
+     962.7
+    ],
+    [
+     1044,
+     967.3
+    ],
+    [
+     1047.9,
+     971.8
+    ],
+    [
+     1051.8,
+     976.3
+    ],
+    [
+     1055.1,
+     981
+    ],
+    [
+     1057.3,
+     986.2
+    ],
+    [
+     1058.4,
+     991.9
+    ],
+    [
+     1058.1,
+     997.7
+    ],
+    [
+     1056.7,
+     1003.2
+    ],
+    [
+     1054.1,
+     1008.3
+    ],
+    [
+     1050.7,
+     1013.1
+    ],
+    [
+     1047.3,
+     1018.1
+    ],
+    [
+     1044,
+     1023.1
+    ],
+    [
+     1040.6,
+     1028
+    ],
+    [
+     1037.3,
+     1033
+    ],
+    [
+     1033.9,
+     1038
+    ],
+    [
+     1030.6,
+     1042.9
+    ]
+   ]
+  },
+  {
+   "id": "s-el-joven-boulevard",
+   "name": "El Joven Boulevard",
+   "quelle": "gtawiki",
+   "x": 928.6,
+   "y": 1309.6,
+   "winkel": -86,
+   "laenge": 79,
+   "gebaeude": 13,
+   "county": "vicedale",
+   "pfad": [
+    [
+     911,
+     1357
+    ],
+    [
+     916.3,
+     1354.8
+    ],
+    [
+     921.1,
+     1352
+    ],
+    [
+     925.1,
+     1348.2
+    ],
+    [
+     928,
+     1343.4
+    ],
+    [
+     929.5,
+     1338
+    ],
+    [
+     929.9,
+     1332.3
+    ],
+    [
+     929.9,
+     1326.8
+    ],
+    [
+     929.3,
+     1321.1
+    ],
+    [
+     929,
+     1315.3
+    ],
+    [
+     928.8,
+     1309.5
+    ],
+    [
+     928.3,
+     1303.8
+    ],
+    [
+     927.9,
+     1298
+    ],
+    [
+     927.5,
+     1292.2
+    ],
+    [
+     926.8,
+     1286.5
+    ],
+    [
+     925.8,
+     1280.8
+    ],
+    [
+     924.7,
+     1275.2
+    ],
+    [
+     924.5,
+     1269.4
+    ],
+    [
+     925.4,
+     1263.7
+    ],
+    [
+     926.9,
+     1258.1
+    ],
+    [
+     928.9,
+     1252.5
+    ]
+   ]
+  },
+  {
+   "id": "s-emary-avenue",
+   "name": "Emary Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-mirimar-drive",
+   "name": "Mirimar Drive",
+   "quelle": "gtawiki",
+   "x": 1032.9,
+   "y": 973.8,
+   "winkel": 39,
+   "laenge": 10,
+   "gebaeude": 3,
+   "county": "vicedale",
+   "pfad": [
+    [
+     989.2,
+     942.2
+    ],
+    [
+     994.1,
+     945.8
+    ],
+    [
+     998.9,
+     949.3
+    ],
+    [
+     1003.7,
+     952.9
+    ],
+    [
+     1008.6,
+     956.5
+    ],
+    [
+     1013.4,
+     960
+    ],
+    [
+     1018.1,
+     963.6
+    ],
+    [
+     1022.9,
+     967
+    ],
+    [
+     1027.7,
+     970.2
+    ],
+    [
+     1032.3,
+     973.8
+    ],
+    [
+     1036.4,
+     978.1
+    ],
+    [
+     1040.4,
+     982.4
+    ],
+    [
+     1043.5,
+     987.2
+    ],
+    [
+     1044.6,
+     992.6
+    ],
+    [
+     1044,
+     998.3
+    ],
+    [
+     1042.6,
+     1004.1
+    ],
+    [
+     1041.2,
+     1009.9
+    ],
+    [
+     1039.9,
+     1015.7
+    ],
+    [
+     1038.6,
+     1021.6
+    ],
+    [
+     1037.2,
+     1027.4
+    ],
+    [
+     1035.9,
+     1033.3
+    ]
+   ]
+  },
+  {
+   "id": "s-ne-3rd-avenue",
+   "name": "NE 3rd Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-ne-4th-avenue",
+   "name": "NE 4th Avenue",
+   "quelle": "gtawiki",
+   "x": 1035.1,
+   "y": 954.3,
+   "winkel": -38,
+   "laenge": 32,
+   "gebaeude": 4,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1009.7,
+     1007.3
+    ],
+    [
+     1011.8,
+     1001.7
+    ],
+    [
+     1013.9,
+     996.1
+    ],
+    [
+     1016,
+     990.4
+    ],
+    [
+     1018.1,
+     984.8
+    ],
+    [
+     1020,
+     979.2
+    ],
+    [
+     1022.1,
+     973.8
+    ],
+    [
+     1024.7,
+     968.7
+    ],
+    [
+     1028,
+     963.8
+    ],
+    [
+     1031.8,
+     959.2
+    ],
+    [
+     1035.8,
+     954.7
+    ],
+    [
+     1040,
+     950.5
+    ],
+    [
+     1044.5,
+     946.6
+    ],
+    [
+     1049.7,
+     944.3
+    ],
+    [
+     1055.2,
+     944.3
+    ],
+    [
+     1060.9,
+     946
+    ],
+    [
+     1066.6,
+     947.9
+    ],
+    [
+     1072.2,
+     949.8
+    ],
+    [
+     1077.9,
+     951.7
+    ],
+    [
+     1083.6,
+     953.6
+    ],
+    [
+     1089.3,
+     955.4
+    ]
+   ]
+  },
+  {
+   "id": "s-ne-3rd-street",
+   "name": "NE 3rd Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-ne-9th-street",
+   "name": "NE 9th Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-nw-3rd-avenue",
+   "name": "NW 3rd Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-nw-3rd-street",
+   "name": "NW 3rd Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-nw-4th-avenue",
+   "name": "NW 4th Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-ne-13th-street",
+   "name": "NE 13th Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-nw-16th-street",
+   "name": "NW 16th Street",
+   "quelle": "gtawiki",
+   "x": 921,
+   "y": 1038.1,
+   "winkel": -39,
+   "laenge": 10,
+   "gebaeude": 3,
+   "county": "vicedale",
+   "pfad": [
+    [
+     855,
+     1045.6
+    ],
+    [
+     861,
+     1044.9
+    ],
+    [
+     866.9,
+     1044.2
+    ],
+    [
+     872.9,
+     1043.5
+    ],
+    [
+     878.8,
+     1042.8
+    ],
+    [
+     884.8,
+     1042.2
+    ],
+    [
+     890.7,
+     1041.6
+    ],
+    [
+     896.5,
+     1041.1
+    ],
+    [
+     902.3,
+     1040.7
+    ],
+    [
+     908.2,
+     1040.3
+    ],
+    [
+     914.1,
+     1039.7
+    ],
+    [
+     919.9,
+     1039.1
+    ],
+    [
+     925.5,
+     1037.9
+    ],
+    [
+     930.8,
+     1035.8
+    ],
+    [
+     936.2,
+     1033.5
+    ],
+    [
+     941.6,
+     1031.2
+    ],
+    [
+     947,
+     1028.7
+    ],
+    [
+     952.5,
+     1026.1
+    ],
+    [
+     957.9,
+     1023.5
+    ],
+    [
+     963.3,
+     1021
+    ],
+    [
+     966,
+     1019.7
+    ]
+   ]
+  },
+  {
+   "id": "s-rialto-causeway",
+   "name": "Rialto Causeway",
+   "quelle": "gtawiki",
+   "x": 1058.4,
+   "y": 993.9,
+   "winkel": 14,
+   "laenge": 12,
+   "gebaeude": 2,
+   "county": "vicedale",
+   "pfad": [
+    [
+     979.8,
+     989
+    ],
+    [
+     985.7,
+     989.9
+    ],
+    [
+     991.7,
+     990.8
+    ],
+    [
+     997.6,
+     991.7
+    ],
+    [
+     1003.4,
+     992.7
+    ],
+    [
+     1009.1,
+     993.5
+    ],
+    [
+     1014.9,
+     993.4
+    ],
+    [
+     1020.8,
+     993
+    ],
+    [
+     1026.7,
+     992.9
+    ],
+    [
+     1032.5,
+     993
+    ],
+    [
+     1038.4,
+     993.3
+    ],
+    [
+     1044.3,
+     993.7
+    ],
+    [
+     1050.2,
+     993.8
+    ],
+    [
+     1056,
+     993.6
+    ],
+    [
+     1061.8,
+     993.1
+    ],
+    [
+     1067.6,
+     992.1
+    ],
+    [
+     1073.2,
+     990.7
+    ],
+    [
+     1079,
+     989.2
+    ],
+    [
+     1084.7,
+     987.5
+    ],
+    [
+     1090.5,
+     985.9
+    ],
+    [
+     1096.3,
+     984.3
+    ]
+   ]
+  },
+  {
+   "id": "s-se-4th-street",
+   "name": "SE 4th Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-shoreline-drive",
+   "name": "Shoreline Drive",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-south-vice-avenue",
+   "name": "South Vice Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-sw-3rd-avenue",
+   "name": "SW 3rd Avenue",
+   "quelle": "gtawiki",
+   "x": 908,
+   "y": 1309.1,
+   "winkel": 30,
+   "laenge": 31,
+   "gebaeude": 13,
+   "county": "vicedale",
+   "pfad": [
+    [
+     845.2,
+     1296.8
+    ],
+    [
+     851.2,
+     1296.8
+    ],
+    [
+     857.2,
+     1296.8
+    ],
+    [
+     863.2,
+     1296.8
+    ],
+    [
+     869.2,
+     1296.8
+    ],
+    [
+     875.1,
+     1296.6
+    ],
+    [
+     881,
+     1296.6
+    ],
+    [
+     886.5,
+     1298
+    ],
+    [
+     891.5,
+     1300.9
+    ],
+    [
+     896.4,
+     1304.4
+    ],
+    [
+     901.2,
+     1307.8
+    ],
+    [
+     906.1,
+     1310.9
+    ],
+    [
+     911.1,
+     1314
+    ],
+    [
+     916,
+     1317.2
+    ],
+    [
+     921,
+     1319.8
+    ],
+    [
+     926.3,
+     1321.8
+    ],
+    [
+     931.8,
+     1324
+    ],
+    [
+     937.3,
+     1326.4
+    ],
+    [
+     942.8,
+     1328.8
+    ],
+    [
+     948.3,
+     1331.2
+    ],
+    [
+     951,
+     1332.4
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-4th-avenue",
+   "name": "SW 4th Avenue",
+   "quelle": "gtawiki",
+   "x": 993.7,
+   "y": 1201.9,
+   "winkel": 21,
+   "laenge": 23,
+   "gebaeude": 2,
+   "county": "vicedale",
+   "pfad": [
+    [
+     983.2,
+     1204.8
+    ],
+    [
+     988.7,
+     1206.8
+    ],
+    [
+     994.1,
+     1208.7
+    ],
+    [
+     999.6,
+     1210.7
+    ],
+    [
+     1005,
+     1212.8
+    ],
+    [
+     1010.6,
+     1214.5
+    ],
+    [
+     1016,
+     1216.3
+    ],
+    [
+     1021.5,
+     1218.3
+    ],
+    [
+     1026.8,
+     1220.5
+    ],
+    [
+     1031.3,
+     1223.8
+    ],
+    [
+     1034.1,
+     1228.5
+    ],
+    [
+     1034.8,
+     1234.1
+    ],
+    [
+     1033.8,
+     1239.7
+    ],
+    [
+     1031.1,
+     1244.6
+    ],
+    [
+     1027.1,
+     1248.6
+    ],
+    [
+     1022,
+     1250.8
+    ],
+    [
+     1016.5,
+     1250.8
+    ],
+    [
+     1011.1,
+     1249.3
+    ],
+    [
+     1006,
+     1247.2
+    ],
+    [
+     1000.8,
+     1245.1
+    ],
+    [
+     995.6,
+     1242.6
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-6th-avenue",
+   "name": "SW 6th Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-sw-7th-avenue",
+   "name": "SW 7th Avenue",
+   "quelle": "gtawiki",
+   "x": 950.5,
+   "y": 1212.7,
+   "winkel": -81,
+   "laenge": 16,
+   "gebaeude": 9,
+   "county": "vicedale",
+   "pfad": [
+    [
+     937,
+     1163.7
+    ],
+    [
+     937.9,
+     1169.7
+    ],
+    [
+     938.8,
+     1175.6
+    ],
+    [
+     939.7,
+     1181.5
+    ],
+    [
+     940.6,
+     1187.5
+    ],
+    [
+     941.5,
+     1193.4
+    ],
+    [
+     942.4,
+     1199.3
+    ],
+    [
+     943.4,
+     1205.2
+    ],
+    [
+     944.6,
+     1210.9
+    ],
+    [
+     945.4,
+     1216.4
+    ],
+    [
+     945.2,
+     1222
+    ],
+    [
+     945.2,
+     1227.8
+    ],
+    [
+     945.8,
+     1233.6
+    ],
+    [
+     946.6,
+     1239.5
+    ],
+    [
+     947.2,
+     1245.4
+    ],
+    [
+     947.8,
+     1251.4
+    ],
+    [
+     948.4,
+     1257.4
+    ],
+    [
+     949,
+     1263.3
+    ],
+    [
+     949.6,
+     1269.3
+    ],
+    [
+     950.2,
+     1275.3
+    ],
+    [
+     950.8,
+     1281.3
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-8th-avenue",
+   "name": "SW 8th Avenue",
+   "quelle": "gtawiki",
+   "x": 957.1,
+   "y": 1213.5,
+   "winkel": -78,
+   "laenge": 22,
+   "gebaeude": 3,
+   "county": "vicedale",
+   "pfad": [
+    [
+     943.3,
+     1257.5
+    ],
+    [
+     945.5,
+     1251.9
+    ],
+    [
+     947.8,
+     1246.3
+    ],
+    [
+     950.1,
+     1240.9
+    ],
+    [
+     952.2,
+     1235.6
+    ],
+    [
+     954.2,
+     1230.2
+    ],
+    [
+     956.3,
+     1224.8
+    ],
+    [
+     958.1,
+     1219.4
+    ],
+    [
+     959.4,
+     1213.7
+    ],
+    [
+     960.8,
+     1208.1
+    ],
+    [
+     962.4,
+     1202.6
+    ],
+    [
+     964.2,
+     1197.2
+    ],
+    [
+     965.6,
+     1191.7
+    ],
+    [
+     967.2,
+     1186.3
+    ],
+    [
+     969.1,
+     1181
+    ],
+    [
+     970.5,
+     1175.5
+    ],
+    [
+     972,
+     1170
+    ],
+    [
+     973.7,
+     1164.3
+    ],
+    [
+     975.5,
+     1158.6
+    ],
+    [
+     977.2,
+     1152.9
+    ],
+    [
+     978.1,
+     1150
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-9th-avenue",
+   "name": "SW 9th Avenue",
+   "quelle": "gtawiki",
+   "x": 956.4,
+   "y": 1295.9,
+   "winkel": -69,
+   "laenge": 65,
+   "gebaeude": 15,
+   "county": "vicedale",
+   "pfad": [
+    [
+     928.8,
+     1361.3
+    ],
+    [
+     932,
+     1356.3
+    ],
+    [
+     935.3,
+     1351.2
+    ],
+    [
+     938.4,
+     1346.2
+    ],
+    [
+     941.7,
+     1341.2
+    ],
+    [
+     945.3,
+     1336.7
+    ],
+    [
+     948.9,
+     1332.2
+    ],
+    [
+     951.2,
+     1327.1
+    ],
+    [
+     951.8,
+     1321.4
+    ],
+    [
+     952.1,
+     1315.5
+    ],
+    [
+     952.3,
+     1309.8
+    ],
+    [
+     952.8,
+     1304
+    ],
+    [
+     954.5,
+     1298.5
+    ],
+    [
+     956.8,
+     1293.2
+    ],
+    [
+     959.1,
+     1287.9
+    ],
+    [
+     961.4,
+     1282.7
+    ],
+    [
+     963.8,
+     1277.4
+    ],
+    [
+     966.1,
+     1272.1
+    ],
+    [
+     968.6,
+     1266.6
+    ],
+    [
+     971.1,
+     1261.2
+    ],
+    [
+     972.3,
+     1258.5
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-10th-avenue",
+   "name": "SW 10th Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-sw-4th-street",
+   "name": "SW 4th Street",
+   "quelle": "gtawiki",
+   "x": 1247.7,
+   "y": 915.7,
+   "winkel": 7,
+   "laenge": 16,
+   "gebaeude": 15,
+   "county": "vicedale",
+   "weitere": [
+    {
+     "x": 969.9,
+     "y": 1198.3,
+     "winkel": 17,
+     "laenge": 36,
+     "gebaeude": 6,
+     "pfad": [
+      [
+       955.8,
+       1151.6
+      ],
+      [
+       952,
+       1156.2
+      ],
+      [
+       948.2,
+       1160.9
+      ],
+      [
+       944.4,
+       1165.5
+      ],
+      [
+       940.6,
+       1170.1
+      ],
+      [
+       936.6,
+       1174
+      ],
+      [
+       933.4,
+       1178
+      ],
+      [
+       932.2,
+       1183.2
+      ],
+      [
+       933.3,
+       1188
+      ],
+      [
+       937.3,
+       1190.6
+      ],
+      [
+       942.8,
+       1191.8
+      ],
+      [
+       948.5,
+       1192.8
+      ],
+      [
+       954.1,
+       1194.2
+      ],
+      [
+       959.5,
+       1196
+      ],
+      [
+       965,
+       1197.9
+      ],
+      [
+       970.6,
+       1199.8
+      ],
+      [
+       976.2,
+       1201.7
+      ],
+      [
+       981.9,
+       1203.6
+      ],
+      [
+       987.6,
+       1205.5
+      ],
+      [
+       993.3,
+       1207.5
+      ],
+      [
+       996.1,
+       1208.4
+      ]
+     ]
+    }
+   ],
+   "pfad": [
+    [
+     1181.9,
+     889.6
+    ],
+    [
+     1187,
+     892.7
+    ],
+    [
+     1192.2,
+     895.7
+    ],
+    [
+     1197.2,
+     898.6
+    ],
+    [
+     1201.9,
+     901.8
+    ],
+    [
+     1206.1,
+     905.6
+    ],
+    [
+     1210.6,
+     909.3
+    ],
+    [
+     1215.5,
+     911.9
+    ],
+    [
+     1221.1,
+     913.2
+    ],
+    [
+     1226.9,
+     913.9
+    ],
+    [
+     1232.7,
+     914
+    ],
+    [
+     1238.5,
+     914
+    ],
+    [
+     1244.3,
+     914.2
+    ],
+    [
+     1250.1,
+     914.8
+    ],
+    [
+     1255.9,
+     915.7
+    ],
+    [
+     1261.8,
+     916.1
+    ],
+    [
+     1267.8,
+     916.2
+    ],
+    [
+     1273.8,
+     916.2
+    ],
+    [
+     1279.8,
+     916.2
+    ],
+    [
+     1285.8,
+     916.2
+    ],
+    [
+     1291.8,
+     916.2
+    ]
+   ]
+  },
+  {
+   "id": "s-sw-19th-street",
+   "name": "SW 19th Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice-Dale County",
+   "county": "vicedale",
+   "x": 1075,
+   "y": 1172
+  },
+  {
+   "id": "s-vickery-drive",
+   "name": "Vickery Drive",
+   "quelle": "gtawiki",
+   "x": 1246.4,
+   "y": 922.9,
+   "winkel": -22,
+   "laenge": 7,
+   "gebaeude": 3,
+   "county": "vicedale"
+  },
+  {
+   "id": "s-westbrook-drive",
+   "name": "Westbrook Drive",
+   "quelle": "gtawiki",
+   "x": 938.6,
+   "y": 1063.8,
+   "winkel": 72,
+   "laenge": 110,
+   "gebaeude": 14,
+   "county": "vicedale",
+   "pfad": [
+    [
+     898.9,
+     1092
+    ],
+    [
+     903.9,
+     1088.6
+    ],
+    [
+     908.8,
+     1085.2
+    ],
+    [
+     913.8,
+     1081.8
+    ],
+    [
+     918.7,
+     1078.4
+    ],
+    [
+     923.7,
+     1075
+    ],
+    [
+     928.6,
+     1071.7
+    ],
+    [
+     933.3,
+     1068.5
+    ],
+    [
+     936.2,
+     1064.4
+    ],
+    [
+     936.8,
+     1059
+    ],
+    [
+     936.8,
+     1053.2
+    ],
+    [
+     936.4,
+     1047.5
+    ],
+    [
+     934.9,
+     1042.1
+    ],
+    [
+     932.1,
+     1037.1
+    ],
+    [
+     928.6,
+     1032.4
+    ],
+    [
+     925,
+     1027.8
+    ],
+    [
+     921.3,
+     1023.1
+    ],
+    [
+     917.6,
+     1018.4
+    ],
+    [
+     913.9,
+     1013.6
+    ],
+    [
+     910.2,
+     1008.9
+    ],
+    [
+     908.3,
+     1006.5
+    ]
+   ]
+  },
+  {
+   "id": "s-admiral-causeway",
+   "name": "Admiral Causeway",
+   "quelle": "gtawiki",
+   "x": 1166.8,
+   "y": 1091.6,
+   "winkel": 0,
+   "laenge": 0,
+   "gebaeude": 1,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1114.6,
+     1077.3
+    ],
+    [
+     1120.4,
+     1078.7
+    ],
+    [
+     1126.3,
+     1080.1
+    ],
+    [
+     1132.1,
+     1081.5
+    ],
+    [
+     1137.9,
+     1082.9
+    ],
+    [
+     1143.8,
+     1084.3
+    ],
+    [
+     1149.6,
+     1085.7
+    ],
+    [
+     1155.4,
+     1087.1
+    ],
+    [
+     1161.3,
+     1088.5
+    ],
+    [
+     1166.9,
+     1090
+    ],
+    [
+     1172.6,
+     1091.3
+    ],
+    [
+     1178.2,
+     1092.6
+    ],
+    [
+     1184,
+     1093.9
+    ],
+    [
+     1189.8,
+     1095.3
+    ],
+    [
+     1195.6,
+     1096.6
+    ],
+    [
+     1201.5,
+     1098
+    ],
+    [
+     1207.3,
+     1099.4
+    ],
+    [
+     1213.2,
+     1100.8
+    ],
+    [
+     1219,
+     1102.1
+    ],
+    [
+     1224.8,
+     1103.5
+    ],
+    [
+     1230.7,
+     1104.9
+    ]
+   ]
+  },
+  {
+   "id": "s-atlantic-avenue",
+   "name": "Atlantic Avenue",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice Beach",
+   "county": "vicedale",
+   "x": 1278,
+   "y": 992
+  },
+  {
+   "id": "s-cabeca-street",
+   "name": "Cabeça Street",
+   "quelle": "gtawiki",
+   "x": 1249.9,
+   "y": 977.8,
+   "winkel": 5,
+   "laenge": 3,
+   "gebaeude": 2,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1198.2,
+     976.2
+    ],
+    [
+     1204.2,
+     976.2
+    ],
+    [
+     1210.2,
+     976.2
+    ],
+    [
+     1216.2,
+     976.2
+    ],
+    [
+     1222.2,
+     976.2
+    ],
+    [
+     1228.2,
+     976.1
+    ],
+    [
+     1234,
+     975.9
+    ],
+    [
+     1239.8,
+     975.5
+    ],
+    [
+     1245.7,
+     974.7
+    ],
+    [
+     1251.5,
+     973.9
+    ],
+    [
+     1257.3,
+     973.1
+    ],
+    [
+     1263.1,
+     972.2
+    ],
+    [
+     1268.8,
+     971.3
+    ],
+    [
+     1274.7,
+     970.7
+    ],
+    [
+     1280.4,
+     970.7
+    ],
+    [
+     1286.3,
+     970.8
+    ],
+    [
+     1292.2,
+     970.8
+    ],
+    [
+     1298.2,
+     970.8
+    ],
+    [
+     1304.2,
+     970.8
+    ],
+    [
+     1310.2,
+     970.8
+    ],
+    [
+     1313.2,
+     970.8
+    ]
+   ]
+  },
+  {
+   "id": "s-grape-street",
+   "name": "Grape Street",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice Beach",
+   "county": "vicedale",
+   "x": 1278,
+   "y": 992
+  },
+  {
+   "id": "s-harborside-avenue",
+   "name": "Harborside Avenue",
+   "quelle": "gtawiki",
+   "x": 1228.6,
+   "y": 992.3,
+   "winkel": 81,
+   "laenge": 23,
+   "gebaeude": 3,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1232.8,
+     919.5
+    ],
+    [
+     1233.4,
+     925.4
+    ],
+    [
+     1234.1,
+     931.4
+    ],
+    [
+     1234.8,
+     937.3
+    ],
+    [
+     1235.5,
+     943.3
+    ],
+    [
+     1236.2,
+     949.3
+    ],
+    [
+     1236.8,
+     955.2
+    ],
+    [
+     1237.4,
+     961.1
+    ],
+    [
+     1238.2,
+     966.9
+    ],
+    [
+     1238.8,
+     972.7
+    ],
+    [
+     1238.8,
+     978.7
+    ],
+    [
+     1238.4,
+     984.5
+    ],
+    [
+     1238.1,
+     990.4
+    ],
+    [
+     1237.8,
+     996.3
+    ],
+    [
+     1237.5,
+     1002.3
+    ],
+    [
+     1237.3,
+     1008.3
+    ],
+    [
+     1237,
+     1014.3
+    ],
+    [
+     1236.7,
+     1020.3
+    ],
+    [
+     1236.4,
+     1026.3
+    ],
+    [
+     1236.2,
+     1032.3
+    ],
+    [
+     1236,
+     1035.3
+    ]
+   ]
+  },
+  {
+   "id": "s-huevo-street",
+   "name": "Huevo Street",
+   "quelle": "gtawiki",
+   "x": 1293.5,
+   "y": 1050.8,
+   "winkel": 0,
+   "laenge": 0,
+   "gebaeude": 1,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1202.2,
+     1056.5
+    ],
+    [
+     1208.1,
+     1055.6
+    ],
+    [
+     1214,
+     1054.6
+    ],
+    [
+     1219.9,
+     1053.6
+    ],
+    [
+     1225.8,
+     1052.7
+    ],
+    [
+     1231.6,
+     1051.7
+    ],
+    [
+     1237.4,
+     1050.7
+    ],
+    [
+     1243.1,
+     1049.7
+    ],
+    [
+     1248.8,
+     1048.5
+    ],
+    [
+     1254.4,
+     1047
+    ],
+    [
+     1260.1,
+     1045.8
+    ],
+    [
+     1265.9,
+     1045.6
+    ],
+    [
+     1271.8,
+     1045.7
+    ],
+    [
+     1277.6,
+     1046.3
+    ],
+    [
+     1283.4,
+     1047.1
+    ],
+    [
+     1289.2,
+     1048.1
+    ],
+    [
+     1295,
+     1049.3
+    ],
+    [
+     1300.9,
+     1050.5
+    ],
+    [
+     1306.8,
+     1051.6
+    ],
+    [
+     1312.7,
+     1052.7
+    ],
+    [
+     1318.5,
+     1053.8
+    ]
+   ]
+  },
+  {
+   "id": "s-seaview-boulevard",
+   "name": "Seaview Boulevard",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice Beach",
+   "county": "vicedale",
+   "x": 1278,
+   "y": 992
+  },
+  {
+   "id": "s-shore-court",
+   "name": "Shore Court",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Vice Beach",
+   "county": "vicedale",
+   "x": 1278,
+   "y": 992
+  },
+  {
+   "id": "s-shore-drive",
+   "name": "Shore Drive",
+   "quelle": "gtawiki",
+   "x": 1293.4,
+   "y": 1051.5,
+   "winkel": -85,
+   "laenge": 95,
+   "gebaeude": 33,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1287.1,
+     1111.6
+    ],
+    [
+     1287.8,
+     1105.7
+    ],
+    [
+     1288.4,
+     1099.7
+    ],
+    [
+     1289.1,
+     1093.7
+    ],
+    [
+     1289.8,
+     1087.8
+    ],
+    [
+     1290.5,
+     1081.8
+    ],
+    [
+     1291.2,
+     1075.9
+    ],
+    [
+     1291.8,
+     1069.9
+    ],
+    [
+     1292.5,
+     1063.9
+    ],
+    [
+     1293.3,
+     1058
+    ],
+    [
+     1294,
+     1052.2
+    ],
+    [
+     1294.6,
+     1046.2
+    ],
+    [
+     1295.2,
+     1040.3
+    ],
+    [
+     1295.9,
+     1034.3
+    ],
+    [
+     1296.6,
+     1028.3
+    ],
+    [
+     1297.3,
+     1022.4
+    ],
+    [
+     1297.9,
+     1016.4
+    ],
+    [
+     1298.6,
+     1010.5
+    ],
+    [
+     1299.3,
+     1004.5
+    ],
+    [
+     1300,
+     998.5
+    ],
+    [
+     1300.3,
+     995.5
+    ]
+   ]
+  },
+  {
+   "id": "s-shorefront-avenue",
+   "name": "Shorefront Avenue",
+   "quelle": "gtawiki",
+   "x": 1255.5,
+   "y": 1051.5,
+   "winkel": -61,
+   "laenge": 18,
+   "gebaeude": 3,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1251.2,
+     1091.2
+    ],
+    [
+     1251.7,
+     1085.4
+    ],
+    [
+     1252,
+     1079.5
+    ],
+    [
+     1252.2,
+     1073.7
+    ],
+    [
+     1252.7,
+     1067.9
+    ],
+    [
+     1253.5,
+     1062.1
+    ],
+    [
+     1254.8,
+     1056.4
+    ],
+    [
+     1256.6,
+     1050.9
+    ],
+    [
+     1258.3,
+     1045.4
+    ],
+    [
+     1259.6,
+     1039.9
+    ],
+    [
+     1260.1,
+     1034.1
+    ],
+    [
+     1260.2,
+     1028.1
+    ],
+    [
+     1260.2,
+     1022.2
+    ],
+    [
+     1260.3,
+     1016.2
+    ],
+    [
+     1260.6,
+     1010.2
+    ],
+    [
+     1260.9,
+     1004.4
+    ],
+    [
+     1260.8,
+     998.5
+    ],
+    [
+     1260.8,
+     992.5
+    ],
+    [
+     1260.9,
+     986.5
+    ],
+    [
+     1261.1,
+     980.6
+    ],
+    [
+     1261.3,
+     974.7
+    ]
+   ]
+  },
+  {
+   "id": "s-thompson-avenue",
+   "name": "Thompson Avenue",
+   "quelle": "gtawiki",
+   "x": 1273.4,
+   "y": 986.2,
+   "winkel": -86,
+   "laenge": 50,
+   "gebaeude": 16,
+   "county": "vicedale",
+   "pfad": [
+    [
+     1269.2,
+     1057.6
+    ],
+    [
+     1269.6,
+     1051.7
+    ],
+    [
+     1269.9,
+     1045.8
+    ],
+    [
+     1270,
+     1039.9
+    ],
+    [
+     1270.3,
+     1034
+    ],
+    [
+     1270.9,
+     1028.2
+    ],
+    [
+     1271.8,
+     1022.4
+    ],
+    [
+     1272.6,
+     1016.6
+    ],
+    [
+     1273.1,
+     1010.8
+    ],
+    [
+     1273.6,
+     1004.9
+    ],
+    [
+     1274,
+     999
+    ],
+    [
+     1274.1,
+     993
+    ],
+    [
+     1273.8,
+     987.1
+    ],
+    [
+     1273.4,
+     981.2
+    ],
+    [
+     1273,
+     975.3
+    ],
+    [
+     1272.3,
+     969.5
+    ],
+    [
+     1272,
+     963.6
+    ],
+    [
+     1272.3,
+     957.8
+    ],
+    [
+     1272.6,
+     951.9
+    ],
+    [
+     1272.3,
+     946.1
+    ],
+    [
+     1271.8,
+     940.2
+    ]
+   ]
+  },
+  {
+   "id": "s-flamingo-parkway",
+   "name": "Flamingo Parkway",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Leonard County",
+   "county": "leonard",
+   "x": 1039,
+   "y": 713
+  },
+  {
+   "id": "s-peach-palm-drive",
+   "name": "Peach Palm Drive",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Mariana County",
+   "county": "mariana",
+   "x": 590,
+   "y": 1505
+  },
+  {
+   "id": "s-terrapin-road",
+   "name": "Terrapin Road",
+   "quelle": "gtawiki",
+   "ungefaehr": true,
+   "gebiet": "Mariana County",
+   "county": "mariana",
+   "x": 590,
+   "y": 1505
+  },
+  {
+   "id": "s-forest-route-88",
+   "name": "Forest Route 88",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-historic-u-s-route-628",
+   "name": "Historic U.S. Route 628",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-interstate-97",
+   "name": "Interstate 97",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-interstate-297",
+   "name": "Interstate 297",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-interstate-397",
+   "name": "Interstate 397",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-interstate-404",
+   "name": "Interstate 404",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-kelly-county-road-62",
+   "name": "Kelly County Road 62",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": "kelly"
+  },
+  {
+   "id": "s-kelly-county-road-110",
+   "name": "Kelly County Road 110",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": "kelly"
+  },
+  {
+   "id": "s-leonard-county-road-62",
+   "name": "Leonard County Road 62",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": "leonard"
+  },
+  {
+   "id": "s-leonard-county-road-561",
+   "name": "Leonard County Road 561",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": "leonard"
+  },
+  {
+   "id": "s-leonida-state-route-1a",
+   "name": "Leonida State Route 1A",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-7",
+   "name": "Leonida State Route 7",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-9",
+   "name": "Leonida State Route 9",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-10",
+   "name": "Leonida State Route 10",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-25",
+   "name": "Leonida State Route 25",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-32",
+   "name": "Leonida State Route 32",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-41",
+   "name": "Leonida State Route 41",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-61",
+   "name": "Leonida State Route 61",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-91",
+   "name": "Leonida State Route 91",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-leonida-state-route-120",
+   "name": "Leonida State Route 120",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-1",
+   "name": "U.S. Route 1",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-2",
+   "name": "U.S. Route 2",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-3",
+   "name": "U.S. Route 3",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-5",
+   "name": "U.S. Route 5",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-35",
+   "name": "U.S. Route 35",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-50",
+   "name": "U.S. Route 50",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-70",
+   "name": "U.S. Route 70",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-82",
+   "name": "U.S. Route 82",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-u-s-route-183",
+   "name": "U.S. Route 183",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": null
+  },
+  {
+   "id": "s-vice-dale-county-road-561",
+   "name": "Vice-Dale County Road 561",
+   "quelle": "gtawiki",
+   "fern": true,
+   "ungefaehr": true,
+   "gebiet": null,
+   "county": "vicedale"
+  }
+ ]
+}

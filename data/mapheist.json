@@ -1,0 +1,1248 @@
+{
+ "quelle": "Data: mapheist.com (CC BY 4.0), https://mapheist.com/en/data/",
+ "lizenz": "https://creativecommons.org/licenses/by/4.0/",
+ "stand": "2026-11-17",
+ "aenderungen": "Nur Einträge mit Lage übernommen, auf diese Karte umgerechnet.",
+ "arten": {
+  "place": "Ort",
+  "venue": "Lokal",
+  "frame": "Trailer-Szene",
+  "character": "Figur",
+  "vehicle": "Fahrzeug"
+ },
+ "orte": [
+  {
+   "id": "m-vice-city-01",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Vice City sign",
+   "lage": "Vorbild: NW 67th Ave by the end of the Miami airport runways, FL 33122",
+   "lage_en": "Real-world model: NW 67th Ave by the end of the Miami airport runways, FL 33122",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/vice-city-01/",
+   "x": 711,
+   "y": 1138.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-w-south-beach",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The W South Beach hotel",
+   "lage": "Vorbild: W South Beach, 2201 Collins Avenue, Miami Beach",
+   "lage_en": "Real-world model: W South Beach, 2201 Collins Avenue, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-w-south-beach/",
+   "x": 1301,
+   "y": 935.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-vice-city-03",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Hotel Valetta",
+   "lage": "Vorbild: The Gates Hotel South Beach, 2360 Collins Ave, Miami Beach",
+   "lage_en": "Real-world model: The Gates Hotel South Beach, 2360 Collins Ave, Miami Beach",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/vice-city-03/",
+   "x": 1279,
+   "y": 935,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-vice-city-05",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Vice Beach",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/vice-city-05/",
+   "x": 1308.8,
+   "y": 1043.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-leonida-keys-02",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Old Florida",
+   "lage": "Vorbild: Rain Barrel Village and Betsy the Lobster, 86700 Overseas Highway, Islamorada, FL 33036",
+   "lage_en": "Real-world model: Rain Barrel Village and Betsy the Lobster, 86700 Overseas Highway, Islamorada, FL 33036",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/leonida-keys-02/",
+   "x": 800.6,
+   "y": 1748.5,
+   "county": "mariana"
+  },
+  {
+   "id": "m-leonida-keys-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Underwater",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/leonida-keys-04/",
+   "x": 877.9,
+   "y": 1714.3,
+   "county": "mariana"
+  },
+  {
+   "id": "m-leonida-keys-05",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Sandbar party",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/leonida-keys-05/",
+   "x": 776.9,
+   "y": 1740.4,
+   "county": "mariana"
+  },
+  {
+   "id": "m-port-gellhorn-01",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Starlet Motel",
+   "lage": "Vorbild: Dixie Motel, 551666 Kings Road (US-1), Hilliard, FL 32046",
+   "lage_en": "Real-world model: Dixie Motel, 551666 Kings Road (US-1), Hilliard, FL 32046",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/port-gellhorn-01/",
+   "x": 547.6,
+   "y": 738.3,
+   "county": "kelly"
+  },
+  {
+   "id": "m-port-gellhorn-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Delights Cabaret",
+   "lage": "Vorbild: Bambi’s Dollhouse, 2915 US-98 BUS, Panama City, FL 32401",
+   "lage_en": "Real-world model: Bambi’s Dollhouse, 2915 US-98 BUS, Panama City, FL 32401",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/port-gellhorn-04/",
+   "x": 448,
+   "y": 728.2,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-hanks-waffles",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Hank’s Waffles",
+   "lage": "Vorbild: Waffle Shoppe, 536 Richard Jackson Blvd, Panama City Beach, FL 32407 (now Mr. Maine’s Pizzeria)",
+   "lage_en": "Real-world model: Waffle Shoppe, 536 Richard Jackson Blvd, Panama City Beach, FL 32407 (now Mr. Maine’s Pizzeria)",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-hanks-waffles/",
+   "x": 435.5,
+   "y": 749.8,
+   "county": "kelly"
+  },
+  {
+   "id": "m-ambrosia-01",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Final Chapter MC",
+   "lage": "Vorbild: 543 E Sugarland Hwy, Clewiston, FL 33440",
+   "lage_en": "Real-world model: 543 E Sugarland Hwy, Clewiston, FL 33440",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/ambrosia-01/",
+   "x": 814.1,
+   "y": 661.7,
+   "county": "kelly"
+  },
+  {
+   "id": "m-ambrosia-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The view over Ambrosia",
+   "lage": "Vorbild: The cane fields and the U.S. Sugar refinery by Clewiston, Florida",
+   "lage_en": "Real-world model: The cane fields and the U.S. Sugar refinery by Clewiston, Florida",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/ambrosia-04/",
+   "x": 898.7,
+   "y": 726.3,
+   "county": "leonard"
+  },
+  {
+   "id": "m-grassrivers-01",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Alligator hunt",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/grassrivers-01/",
+   "x": 741.9,
+   "y": 1551.2,
+   "county": "mariana"
+  },
+  {
+   "id": "m-grassrivers-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Swamp chase",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/grassrivers-04/",
+   "x": 700.8,
+   "y": 1516.4,
+   "county": "mariana"
+  },
+  {
+   "id": "m-mount-kalaga-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Mount Kalaga National Park",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/mount-kalaga-04/",
+   "x": 613.2,
+   "y": 510,
+   "county": "lummox"
+  },
+  {
+   "id": "m-mount-kalaga-06",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Kayak and train",
+   "lage": "Vorbild: Hillman Bridge, 3646 205th Ln, Live Oak, FL 32060",
+   "lage_en": "Real-world model: Hillman Bridge, 3646 205th Ln, Live Oak, FL 32060",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/mount-kalaga-06/",
+   "x": 632.2,
+   "y": 336,
+   "county": "lummox"
+  },
+  {
+   "id": "m-place-e11even",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "NINE1NINE",
+   "lage": "Vorbild: E11EVEN, 29 NE 11th Street, Miami, FL 33132",
+   "lage_en": "Real-world model: E11EVEN, 29 NE 11th Street, Miami, FL 33132",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "press",
+   "link": "https://mapheist.com/en/case/place-e11even/",
+   "x": 1022,
+   "y": 1048.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-kaseya",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Sahara Arena",
+   "lage": "Vorbild: Kaseya Center, 601 Biscayne Blvd, Miami, FL 33132",
+   "lage_en": "Real-world model: Kaseya Center, 601 Biscayne Blvd, Miami, FL 33132",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-kaseya/",
+   "x": 1067,
+   "y": 1052.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-little-haiti",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "La Perle",
+   "lage": "Vorbild: Little Haiti, Miami, Florida",
+   "lage_en": "Real-world model: Little Haiti, Miami, Florida",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-little-haiti/",
+   "x": 966.6,
+   "y": 979.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-vice-city-04",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Two men from La Perle",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "frame"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/vice-city-04/",
+   "x": 988,
+   "y": 961.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-caribbean-club",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Rusty Anchor",
+   "lage": "Vorbild: Caribbean Club, 104080 Overseas Highway, Key Largo, FL 33037",
+   "lage_en": "Real-world model: Caribbean Club, 104080 Overseas Highway, Key Largo, FL 33037",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-caribbean-club/",
+   "x": 864.3,
+   "y": 1631.5,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-seven-mile",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Seven Mile Bridge",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-seven-mile/",
+   "x": 711.7,
+   "y": 1809,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-everglades-city",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Watson Bay",
+   "lage": "Vorbild: Everglades City, Florida",
+   "lage_en": "Real-world model: Everglades City, Florida",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-everglades-city/",
+   "x": 576.6,
+   "y": 1435.7,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-shark-valley",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Shark Valley",
+   "lage": "Vorbild: Shark Valley Visitor Center, 36000 SW 8th St, Miami, FL 33194",
+   "lage_en": "Real-world model: Shark Valley Visitor Center, 36000 SW 8th St, Miami, FL 33194",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-shark-valley/",
+   "x": 745.1,
+   "y": 1588.7,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-us-sugar",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Allied Crystal",
+   "lage": "Vorbild: U.S. Sugar, South W C Owen Avenue, Clewiston, FL 33440",
+   "lage_en": "Real-world model: U.S. Sugar, South W C Owen Avenue, Clewiston, FL 33440",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-us-sugar/",
+   "x": 795.4,
+   "y": 712.5,
+   "county": "kelly"
+  },
+  {
+   "id": "m-veh-squalo",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Shitzu Squalo",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "vehicle"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/veh-squalo/",
+   "spoiler": true,
+   "x": 1085.7,
+   "y": 1082.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-veh-ganado",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Vapid Ganado retro build",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "vehicle"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/veh-ganado/",
+   "x": 856.4,
+   "y": 1659.4,
+   "county": "mariana"
+  },
+  {
+   "id": "m-veh-enduro",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Dinka Enduro",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "vehicle"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/veh-enduro/",
+   "x": 853.4,
+   "y": 1662.2,
+   "county": "mariana"
+  },
+  {
+   "id": "m-veh-crest-kayak",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Crest kayak",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "vehicle"
+   ],
+   "sicherheit": "official",
+   "link": "https://mapheist.com/en/case/veh-crest-kayak/",
+   "x": 850.4,
+   "y": 1658.4,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-venetian-causeway",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Venetian Causeway",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-venetian-causeway/",
+   "x": 1152.1,
+   "y": 968.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-venetian-toll",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Venetian Causeway toll plaza",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-venetian-toll/",
+   "x": 1106.3,
+   "y": 980.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-broward-jail",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Leonida Penitentiary",
+   "lage": "Vorbild: New River Correctional Institution, Raiford, Florida (by design)",
+   "lage_en": "Real-world model: New River Correctional Institution, Raiford, Florida (by design)",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-broward-jail/",
+   "x": 807.2,
+   "y": 1384.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-sandbar",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The boat anchorage off Monument Island",
+   "lage": "Vorbild: Monument Island, Biscayne Bay, Miami Beach",
+   "lage_en": "Real-world model: Monument Island, Biscayne Bay, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-sandbar/",
+   "x": 1203.4,
+   "y": 1011.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-us1-homestead",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The road with the Angstipan billboard",
+   "lage": "Vorbild: Prototype not found; the pin sits provisionally north of Vice City, where Broward is",
+   "lage_en": "Real-world model: Prototype not found; the pin sits provisionally north of Vice City, where Broward is",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-us1-homestead/",
+   "x": 1086.9,
+   "y": 787.4,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-tresor-tower",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Trésor tower at the Fontainebleau",
+   "lage": "Vorbild: Trésor Tower, 4401 Collins Avenue, Miami Beach",
+   "lage_en": "Real-world model: Trésor Tower, 4401 Collins Avenue, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-tresor-tower/",
+   "x": 1287,
+   "y": 899.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-wynwood",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Stockyard",
+   "lage": "Vorbild: Wynwood, Miami",
+   "lage_en": "Real-world model: Wynwood, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-wynwood/",
+   "x": 1053.3,
+   "y": 918.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-wynwood-ways",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Wynwood Ways crossing",
+   "lage": "Vorbild: NW 2nd Avenue at NW 25th Street, Wynwood, Miami",
+   "lage_en": "Real-world model: NW 2nd Avenue at NW 25th Street, Wynwood, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-wynwood-ways/",
+   "x": 1052,
+   "y": 924.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-gellhorn-pawn",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Pawn & Gun shop",
+   "lage": "Vorbild: 6232 E Hwy 98, Panama City, FL 32404",
+   "lage_en": "Real-world model: 6232 E Hwy 98, Panama City, FL 32404",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-gellhorn-pawn/",
+   "x": 454.6,
+   "y": 766.8,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-gellhorn-watkins",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Watkins Auto Parts",
+   "lage": "Vorbild: 2533 E Hwy 98, Panama City, FL 32401",
+   "lage_en": "Real-world model: 2533 E Hwy 98, Panama City, FL 32401",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-gellhorn-watkins/",
+   "x": 427.5,
+   "y": 735.3,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-keys-pier",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The dock and the tiki bar",
+   "lage": "Vorbild: Jimmy Johnson’s Big Chill, Key Largo",
+   "lage_en": "Real-world model: Jimmy Johnson’s Big Chill, Key Largo",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-keys-pier/",
+   "x": 838.1,
+   "y": 1674.9,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-lummus",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Lummus Park",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-lummus/",
+   "x": 1313,
+   "y": 1018.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-muscle-beach",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Muscle Beach",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-muscle-beach/",
+   "x": 1299.6,
+   "y": 1056.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-ocean-drive",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Ocean Drive at night",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-ocean-drive/",
+   "x": 1292.5,
+   "y": 1048.8,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-portmiami",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "PortMiami",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-portmiami/",
+   "x": 1237,
+   "y": 1165.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-redneck-mud-park",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Thrillbilly Mud Club",
+   "lage": "Vorbild: Redneck Mud Park, Charlotte County, Florida",
+   "lage_en": "Real-world model: Redneck Mud Park, Charlotte County, Florida",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-redneck-mud-park/",
+   "x": 684.7,
+   "y": 608.4,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-jason-house",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Jason’s house",
+   "lage": "Vorbild: Garden Cove, North Key Largo, Florida Keys",
+   "lage_en": "Real-world model: Garden Cove, North Key Largo, Florida Keys",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-jason-house/",
+   "x": 853.8,
+   "y": 1658.8,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-clewiston-town",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Clewiston, Sugarland Highway",
+   "lage": "Vorbild: Clewiston, Florida",
+   "lage_en": "Real-world model: Clewiston, Florida",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-clewiston-town/",
+   "x": 812.7,
+   "y": 571.6,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-twisted-tonic",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Effluvia",
+   "lage": "Vorbild: The Twisted Tonic, 723 Lincoln Lane North, Miami Beach",
+   "lage_en": "Real-world model: The Twisted Tonic, 723 Lincoln Lane North, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-twisted-tonic/",
+   "x": 1258.4,
+   "y": 959.1,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-macarthur-causeway",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "MacArthur Causeway",
+   "lage": "Vorbild: MacArthur Causeway, Miami",
+   "lage_en": "Real-world model: MacArthur Causeway, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-macarthur-causeway/",
+   "x": 1153.2,
+   "y": 1086.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-floridian",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Floridian on West Avenue",
+   "lage": "Vorbild: The Floridian, 650 West Avenue, Miami Beach",
+   "lage_en": "Real-world model: The Floridian, 650 West Avenue, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-floridian/",
+   "x": 1225.2,
+   "y": 1054.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-washington-ave",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Sandeep Plaza",
+   "lage": "Vorbild: Washington Avenue, Miami Beach",
+   "lage_en": "Real-world model: Washington Avenue, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-washington-ave/",
+   "x": 1282.4,
+   "y": 1056.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-north-venetian-drive",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "North Venetian Drive on Biscayne Island",
+   "lage": "Vorbild: North Venetian Drive, Biscayne Island, Miami",
+   "lage_en": "Real-world model: North Venetian Drive, Biscayne Island, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-north-venetian-drive/",
+   "x": 1117.1,
+   "y": 973.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-indian-creek",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Star Island and the Flagler obelisk",
+   "lage": "Vorbild: Star Island and Monument Island, Biscayne Bay, Miami Beach",
+   "lage_en": "Real-world model: Star Island and Monument Island, Biscayne Bay, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-indian-creek/",
+   "x": 1171.1,
+   "y": 1071.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-miami-river",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Miami River at the viaduct",
+   "lage": "Vorbild: Miami River, Miami",
+   "lage_en": "Real-world model: Miami River, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-miami-river/",
+   "x": 969.4,
+   "y": 1128.5,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-king-of-diamonds",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Jack of Hearts",
+   "lage": "Vorbild: King of Diamonds, Miami",
+   "lage_en": "Real-world model: King of Diamonds, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-king-of-diamonds/",
+   "x": 1028.1,
+   "y": 976.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-venue-only-raw",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Only Raw Records",
+   "lage": "Vorbild: Slip-N-Slide Records, Miami",
+   "lage_en": "Real-world model: Slip-N-Slide Records, Miami",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/venue-only-raw/",
+   "x": 1022.6,
+   "y": 970.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-41st-street",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "41st Street in Mid-Beach",
+   "lage": "Vorbild: 41st Street at Chase Avenue, Miami Beach",
+   "lage_en": "Real-world model: 41st Street at Chase Avenue, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-41st-street/",
+   "x": 1246,
+   "y": 914.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-bayside",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Shoreline",
+   "lage": "Vorbild: Bayside Marketplace, Miami",
+   "lage_en": "Real-world model: Bayside Marketplace, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-bayside/",
+   "x": 1052.8,
+   "y": 1065.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-mia-airport",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Vice City airport",
+   "lage": "Vorbild: Miami International Airport, Miami",
+   "lage_en": "Real-world model: Miami International Airport, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-mia-airport/",
+   "x": 859.1,
+   "y": 1172.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-jade-ocean",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Jade Ocean tower, the jump spot",
+   "lage": "Vorbild: Jade Ocean, 17121 Collins Avenue, Sunny Isles Beach",
+   "lage_en": "Real-world model: Jade Ocean, 17121 Collins Avenue, Sunny Isles Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-jade-ocean/",
+   "x": 1261.1,
+   "y": 840.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-autodrome",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The circuit race at the speedway",
+   "lage": "Vorbild: Homestead-Miami Speedway, Homestead",
+   "lage_en": "Real-world model: Homestead-Miami Speedway, Homestead",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-autodrome/",
+   "x": 408.1,
+   "y": 859.9,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-belmar-condo",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Lucia’s building, the Belmar condo",
+   "lage": "Vorbild: Belmar Condo, Edgewater, Miami",
+   "lage_en": "Real-world model: Belmar Condo, Edgewater, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-belmar-condo/",
+   "x": 1044.4,
+   "y": 972,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-espanola-way",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Spanish block on Española Way",
+   "lage": "Vorbild: Española Way, Miami Beach",
+   "lage_en": "Real-world model: Española Way, Miami Beach",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-espanola-way/",
+   "x": 1288.4,
+   "y": 1015.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-one-biscayne-tower",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "One Biscayne Tower and the elevated line",
+   "lage": "Vorbild: One Biscayne Tower, 2 South Biscayne Boulevard, Miami",
+   "lage_en": "Real-world model: One Biscayne Tower, 2 South Biscayne Boulevard, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-one-biscayne-tower/",
+   "x": 1048.6,
+   "y": 1126.9,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-edgewater-bayfront",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Edgewater towers over the bay",
+   "lage": "Vorbild: Edgewater, North Bayshore Drive, Miami",
+   "lage_en": "Real-world model: Edgewater, North Bayshore Drive, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-edgewater-bayfront/",
+   "x": 1064.4,
+   "y": 960.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-brickell-pooldeck",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The rooftop pool deck in Brickell",
+   "lage": "Vorbild: Brickell, the mouth of the Miami River",
+   "lage_en": "Real-world model: Brickell, the mouth of the Miami River",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-brickell-pooldeck/",
+   "x": 1094.2,
+   "y": 1189,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-skyviews-wheel",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The observation wheel",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-skyviews-wheel/",
+   "x": 1097.7,
+   "y": 1084.7,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-i395-overpass",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The I-395 overpass",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-i395-overpass/",
+   "x": 1093,
+   "y": 1042.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-venue-stock-305",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Stock 305",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/venue-stock-305/",
+   "x": 1061.7,
+   "y": 914.6,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-venue-saras-salon",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Sara’s Unisex Salon",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/venue-saras-salon/",
+   "x": 834.9,
+   "y": 1442.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-venue-wymans-world",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Wyman’s World Auto Salvage Co.",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/venue-wymans-world/",
+   "x": 436.9,
+   "y": 781.8,
+   "county": "kelly"
+  },
+  {
+   "id": "m-venue-paradise-garage",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Paradise Garage",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "unverified",
+   "link": "https://mapheist.com/en/case/venue-paradise-garage/",
+   "x": 590.9,
+   "y": 1438.1,
+   "county": "mariana"
+  },
+  {
+   "id": "m-venue-one-eyed-willies",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "One-Eyed Willie’s",
+   "lage": "",
+   "lage_en": "",
+   "art": [
+    "venue"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/venue-one-eyed-willies/",
+   "x": 828.4,
+   "y": 676.6,
+   "county": "kelly"
+  },
+  {
+   "id": "m-place-keys-welcome",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Welcome to The Keys sign",
+   "lage": "Vorbild: The US 1 entrance to the Florida Keys, Key Largo",
+   "lage_en": "Real-world model: The US 1 entrance to the Florida Keys, Key Largo",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-keys-welcome/",
+   "x": 878.4,
+   "y": 1622.9,
+   "county": "mariana"
+  },
+  {
+   "id": "m-place-seaquarium",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The Vice City Oceanarium",
+   "lage": "Vorbild: Miami Seaquarium, Virginia Key, Miami",
+   "lage_en": "Real-world model: Miami Seaquarium, Virginia Key, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-seaquarium/",
+   "x": 1103.7,
+   "y": 1274.3,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-rickenbacker-road",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "The highway to the Vice City Oceanarium",
+   "lage": "Vorbild: The Rickenbacker Causeway, Miami",
+   "lage_en": "Real-world model: The Rickenbacker Causeway, Miami",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-rickenbacker-road/",
+   "x": 1106.7,
+   "y": 1302.2,
+   "county": "vicedale"
+  },
+  {
+   "id": "m-place-brians-marina",
+   "kat": "m-schauplatz",
+   "quelle": "mapheist",
+   "name": "Brian’s Marina",
+   "lage": "Vorbild: The Marina Club at Blackwater Sound, Key Largo (GTA Wiki's reading)",
+   "lage_en": "Real-world model: The Marina Club at Blackwater Sound, Key Largo (GTA Wiki's reading)",
+   "art": [
+    "place"
+   ],
+   "sicherheit": "community",
+   "link": "https://mapheist.com/en/case/place-brians-marina/",
+   "x": 834.4,
+   "y": 1691,
+   "county": "mariana"
+  }
+ ]
+}

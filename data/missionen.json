@@ -1,0 +1,738 @@
+{
+ "hinweis_de": "Missionsnamen laut VGC, die Zählweisen schwanken: 91 Pflichtmissionen, 93 mit den zwei optionalen aus Kapitel 2 oder 95 laut VGC.",
+ "hinweis_en": "Mission names according to VGC, counts vary: 91 mandatory missions, 93 with the two optional ones from chapter 2, or 95 according to VGC.",
+ "kapitel": [
+  {
+   "id": "k1",
+   "nr": 1,
+   "name": "Just Like Paradise",
+   "spoiler": false,
+   "rahmen_de": "Leonida Keys. Jason bereitet Lucias Entlassung vor.",
+   "rahmen_en": "Leonida Keys. Jason prepares for Lucia’s release.",
+   "notiz_de": "22 Missionen, der Prolog zählt mit.",
+   "notiz_en": "22 missions, including the prologue.",
+   "missionen": [
+    {
+     "id": "k1-01",
+     "name": "Prologue",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-02",
+     "name": "Gone Fishing",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-03",
+     "name": "Gear Up",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-04",
+     "name": "Just A Scratch",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-05",
+     "name": "Lab Fees",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-06",
+     "name": "Unwanted Attention",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-07",
+     "name": "Pipework",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-08",
+     "name": "Hey Arnold!",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-09",
+     "name": "Island Dreams",
+     "optional": false,
+     "frei_de": "Kentons Tauch- und Schatzsuche",
+     "frei_en": "Kenton’s diving and treasure hunt"
+    },
+    {
+     "id": "k1-10",
+     "name": "Feng Shui",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-11",
+     "name": "Coming Home",
+     "optional": false,
+     "frei_de": "Laut Guide zehn Ultimate-Extras",
+     "frei_en": "Ten Ultimate extras, according to a guide"
+    },
+    {
+     "id": "k1-12",
+     "name": "Buck Me",
+     "optional": false,
+     "frei_de": "BuckMe-Bankkonto",
+     "frei_en": "BuckMe bank account"
+    },
+    {
+     "id": "k1-13",
+     "name": "Clean Up After Donnie",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-14",
+     "name": "Down To Earth",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-15",
+     "name": "Clear Skies",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-16",
+     "name": "Day Release",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-17",
+     "name": "Swamped",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-18",
+     "name": "Don Gone",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-19",
+     "name": "Recalibration",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-20",
+     "name": "Tourist Trap",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-21",
+     "name": "Home Sweet Home",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k1-22",
+     "name": "Discharge Time",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    }
+   ]
+  },
+  {
+   "id": "k2",
+   "nr": 2,
+   "name": "Paradise Lost",
+   "spoiler": false,
+   "rahmen_de": "Kelly County rund um Port Gellhorn.",
+   "rahmen_en": "Kelly County around Port Gellhorn.",
+   "notiz_de": "Die Kapiteltabelle nennt 11 bis 13 Missionen. Zwei der 13 sind optional, die Quelle sagt aber nicht, welche.",
+   "notiz_en": "The chapter table lists 11 to 13 missions. Two of the 13 are optional, but the source does not say which ones.",
+   "missionen": [
+    {
+     "id": "k2-01",
+     "name": "What’s In The Bag?",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-02",
+     "name": "Ambulance Chaser",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-03",
+     "name": "Just Moved In",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-04",
+     "name": "Girl’s Trip",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-05",
+     "name": "Moses",
+     "optional": false,
+     "frei_de": "Fahrzeug-Registrierung, Slim Jim, Scooter-Bros-App, Autoverkauf an Moses",
+     "frei_en": "Vehicle registration, Slim Jim, Scooter Bros app, selling cars to Moses"
+    },
+    {
+     "id": "k2-06",
+     "name": "Daily Driver",
+     "optional": false,
+     "frei_de": "Port-Gellhorn-Garage und die 8 kaufbaren Garagen (Vice City Real Estate App)",
+     "frei_en": "Port Gellhorn garage and the 8 purchasable garages (Vice City Real Estate app)"
+    },
+    {
+     "id": "k2-07",
+     "name": "Slam Dunk",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-08",
+     "name": "Breakfast Run",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-09",
+     "name": "Coffee Break",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-10",
+     "name": "Afternoon Delight",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-11",
+     "name": "Thrillbillies",
+     "optional": false,
+     "frei_de": "Mud Club, kurz danach Marker für den Dominator Buggy",
+     "frei_en": "Mud Club, shortly afterwards a marker for the Dominator Buggy"
+    },
+    {
+     "id": "k2-12",
+     "name": "Twist Wrist, Smash, Grab",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k2-13",
+     "name": "Checking Out",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    }
+   ]
+  },
+  {
+   "id": "k3",
+   "nr": 3,
+   "name": "Tits Ass Drug Money",
+   "spoiler": false,
+   "rahmen_de": "Rückkehr nach Vice City.",
+   "rahmen_en": "Return to Vice City.",
+   "notiz_de": "Die Kapiteltabelle nennt 26 bis 31 Missionen. Andere Guides führen zusätzlich kurze Aufgaben wie „Send Money to Lorena“ und „Encrypted Hard Drive“.",
+   "notiz_en": "The chapter table lists 26 to 31 missions. Other guides also list short tasks such as “Send Money to Lorena” and “Encrypted Hard Drive”.",
+   "missionen": [
+    {
+     "id": "k3-01",
+     "name": "Welcome to Vice City",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-02",
+     "name": "Dealer’s Choice",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-03",
+     "name": "Meet The Heders",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-04",
+     "name": "Dubious Provenance",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-05",
+     "name": "Mami Knows Best",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-06",
+     "name": "South Leonida Real Estate",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-07",
+     "name": "Tyrone",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-08",
+     "name": "Here, Kitty Kitty",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-09",
+     "name": "Kitty Litter Labs",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-10",
+     "name": "Spin on This",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-11",
+     "name": "Car Service",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-12",
+     "name": "Top Billing",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-13",
+     "name": "Boobie Time",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-14",
+     "name": "First Impressions",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-15",
+     "name": "Caught Slipping",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-16",
+     "name": "Crosstown Traffic",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-17",
+     "name": "Credit Check",
+     "optional": false,
+     "frei_de": "Bank Jobs, Payday-Loan-Jobs und der Dye Pack Jammer (nötig für markierte Scheine)",
+     "frei_en": "Bank Jobs, Payday Loan Jobs and the Dye Pack Jammer (needed for marked bills)"
+    },
+    {
+     "id": "k3-18",
+     "name": "Steal Zorruss For Randy",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-19",
+     "name": "Sinfrontera National Bank",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-20",
+     "name": "Security Expert",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-21",
+     "name": "Ride or Die",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-22",
+     "name": "Company Property",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-23",
+     "name": "The Missing Link",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-24",
+     "name": "Safe Word",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-25",
+     "name": "Cooties",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-26",
+     "name": "Bricked Up",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-27",
+     "name": "Hidden Charges",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k3-28",
+     "name": "The Cartel Heist",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    }
+   ]
+  },
+  {
+   "id": "k4",
+   "nr": 4,
+   "name": "Vice City, Baby",
+   "spoiler": true,
+   "rahmen_de": "Laut VGC arbeiten Jason und Lucia verdeckt.",
+   "rahmen_en": "According to VGC, Jason and Lucia work undercover.",
+   "notiz_de": "25 Missionen, ein Titel ist wegen Spoiler geschwärzt. Dazu kommt die optionale Mission „That’s Where The Money Is“, sie öffnet die Tresorräume.",
+   "notiz_en": "25 missions, one title is redacted because of spoilers. There is also the optional mission “That’s Where The Money Is”, which opens the vaults.",
+   "missionen": [
+    {
+     "id": "k4-01",
+     "name": "Ocean Beach",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-02",
+     "name": "Another Life",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-03",
+     "name": "Company Cars",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-04",
+     "name": "Lawyer Up",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-05",
+     "name": "Party Hard",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-06",
+     "name": "Heavy Lifting",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-07",
+     "name": "Photo/Shoot",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-08",
+     "name": "Making Gainz",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-09",
+     "name": "Watch It",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-10",
+     "name": "Cash Injections",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-11",
+     "name": "Amateur Hour",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-12",
+     "name": "Dirty Work",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-13",
+     "name": "Too Much Baggage",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-14",
+     "name": "Adventures in Babysitting",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-15",
+     "name": "Fresh Evidence",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-16",
+     "name": "Power Play",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-17",
+     "name": "Child’s Play",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-18",
+     "name": "Headliners",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-19",
+     "name": "Close Surveillance",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-20",
+     "name": "Delivery Method",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-21",
+     "name": "Team Building",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-22",
+     "name": "Fully Catered",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-23",
+     "name": null,
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-24",
+     "name": "Sunset",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-25",
+     "name": "Starting From Zero",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k4-26",
+     "name": "That’s Where The Money Is",
+     "optional": true,
+     "frei_de": "Die 8 großen Tresorräume (Vaults)",
+     "frei_en": "The 8 large vaults"
+    }
+   ]
+  },
+  {
+   "id": "k5",
+   "nr": 5,
+   "name": "Top of the World, Ma",
+   "spoiler": true,
+   "rahmen_de": "Finale.",
+   "rahmen_en": "Finale.",
+   "notiz_de": "7 Missionen, drei Titel geschwärzt. „Honest Abe“ (Auslöser für den Grotti Cheetah) liegt laut Push Square auch in Kapitel 5. „Mall Rats“ stand im ersten Bericht, fehlt aber in der VGC-Liste. „Operation Savage Glory“ schaltet laut Fan-Guide die NE 15th Street Garage und die Pegassi Residences Garage frei.",
+   "notiz_en": "7 missions, three titles redacted. According to Push Square, “Honest Abe” (trigger for the Grotti Cheetah) is also in chapter 5. “Mall Rats” appeared in the first report but is missing from the VGC list. According to a fan guide, “Operation Savage Glory” unlocks the NE 15th Street Garage and the Pegassi Residences Garage.",
+   "missionen": [
+    {
+     "id": "k5-01",
+     "name": "Bird In the Hand",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-02",
+     "name": null,
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-03",
+     "name": "VC Baby",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-04",
+     "name": "Doggie Bag",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-05",
+     "name": "Operation Savage Glory",
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-06",
+     "name": null,
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    },
+    {
+     "id": "k5-07",
+     "name": null,
+     "optional": false,
+     "frei_de": null,
+     "frei_en": null
+    }
+   ]
+  }
+ ]
+}

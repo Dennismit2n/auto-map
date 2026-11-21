@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>G.aranT.iert A.uto-MAP++ · inoffizielle Karte für GTA VI</title>
+<meta name="description" content="Inoffizielle Karte und Checkliste für GTA VI. Offline, ohne Konto, kostenlos.">
+<meta name="theme-color" content="#1c002c">
+<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="preload" href="assets/fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="tokens/tokens.css">
+<link rel="stylesheet" href="css/beschlag.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+
+<header class="seite-kopf platte">
+  <div class="marke">
+    <h1 class="logo" aria-label="GaranTiert Auto-MAP++"><span aria-hidden="true"><b>G.</b>aran<b>T.</b>iert <b>A.</b>uto<i>-</i><em>MAP++</em></span></h1>
+    <p data-t="untertitel">Inoffizielle Karte und Checkliste für GTA VI · offline · ohne Konto</p>
+  </div>
+  <div class="kopf-steuer">
+    <button id="spoiler" class="spoiler frei" type="button" aria-pressed="true"><span class="spoiler-zeichen" aria-hidden="true">✓</span><span>SPOILERFREI</span></button>
+    <select id="profil-wahl" data-t-label="profil" aria-label="Durchgang"></select>
+    <select id="sprache" aria-label="Sprache / Language"></select>
+    <button id="installieren" class="knopf" type="button" hidden data-t="installieren">Installieren</button>
+  </div>
+</header>
+
+<p id="startfehler" class="platte startfehler" role="alert" hidden></p>
+
+<main class="buehne">
+  <section class="platte karte-rahmen" aria-label="Karte">
+    <div id="karte"></div>
+    <div class="suche" role="search">
+      <input id="suche" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" spellcheck="false" data-t-platzhalter="suchen" data-t-label="sucheLabel" placeholder="Orte, Pins und Namen suchen" aria-label="Karte durchsuchen">
+      <ul id="suche-liste" role="listbox" data-t-label="sucheLabel" aria-label="Karte durchsuchen" hidden></ul>
+      <p id="suche-status" class="visually-hidden" aria-live="polite"></p>
+    </div>
+    <button id="ganze-karte" class="knopf leise karte-knopf" type="button" data-t="ganzeKarte">Ganze Karte</button>
+    <details class="legende">
+      <summary data-t="legende">Legende</summary>
+      <ul>
+        <li><i class="f-wasser"></i><span data-t="g_wasser">Wasser</span></li>
+        <li><i class="f-sumpf"></i><span data-t="g_sumpf">Sumpf, Matsch</span></li>
+        <li><i class="f-wald"></i><span data-t="g_wald">Wald</span></li>
+        <li><i class="f-gruen"></i><span data-t="g_gruen">Grünland</span></li>
+        <li><i class="f-felder"></i><span data-t="g_felder">Felder, Parks, Boden</span></li>
+        <li><i class="f-stadt"></i><span data-t="g_stadt">Stadt, Asphalt</span></li>
+        <li><i class="f-gebaeude"></i><span data-t="g_gebaeude">Gebäude</span></li>
+        <li><i class="f-sand"></i><span data-t="g_sand">Sand, Strand</span></li>
+        <li><i class="f-strasse"></i><span data-t="g_strasse">Straßen</span></li>
+        <li><i class="f-autobahn"></i><span data-t="g_autobahn">Autobahnen</span></li>
+      </ul>
+    </details>
+  </section>
+
+  <div class="seitenleiste">
+    <div class="tabs platte" role="tablist" aria-label="Bereiche">
+      <button role="tab" type="button" id="tabknopf-karte" data-tab="karte" aria-controls="tab-karte" aria-selected="true" data-t="tabKarte">Karte</button>
+      <button role="tab" type="button" id="tabknopf-liste" data-tab="liste" aria-controls="tab-liste" aria-selected="false" tabindex="-1" data-t="tabListe">100 %</button>
+      <button role="tab" type="button" id="tabknopf-missionen" data-tab="missionen" aria-controls="tab-missionen" aria-selected="false" tabindex="-1" data-t="tabMissionen">Missionen</button>
+      <button role="tab" type="button" id="tabknopf-daten" data-tab="daten" aria-controls="tab-daten" aria-selected="false" tabindex="-1" data-t="tabDaten">Daten</button>
+    </div>
+
+    <div id="tab-karte" class="tabfeld" role="tabpanel" aria-labelledby="tabknopf-karte">
+      <section class="platte">
+        <h2 data-t="fortschritt">Fortschritt</h2>
+        <div id="uebersicht" class="uebersicht"></div>
+      </section>
+      <section class="platte">
+        <h2 data-t="countys">Countys</h2>
+        <div id="county-chips" class="chips" role="group" data-t-label="countys" aria-label="Countys"></div>
+        <h3 class="unterkopf" data-t="kategorien">Kategorien</h3>
+        <div id="kategorien-chips" class="chips" role="group" data-t-label="kategorien" aria-label="Kategorien"></div>
+        <button id="filter-alle" class="knopf leise" type="button" hidden data-t="alleZeigen">Alle zeigen</button>
+        <p class="leise-text" data-t="eigenHinweis"></p>
+      </section>
+      <section class="platte leuchtet" aria-live="polite">
+        <h2 data-t="naechstesZiel">Nächstes Ziel</h2>
+        <div id="ziel-inhalt"></div>
+      </section>
+    </div>
+
+    <div id="tab-liste" class="tabfeld" role="tabpanel" aria-labelledby="tabknopf-liste" hidden>
+      <section class="platte">
+        <h2 data-t="listeKopf">Die 100-%-Liste des Spiels</h2>
+        <div id="liste-inhalt"></div>
+      </section>
+    </div>
+
+    <div id="tab-missionen" class="tabfeld" role="tabpanel" aria-labelledby="tabknopf-missionen" hidden>
+      <section class="platte">
+        <h2 data-t="missionen">Missionen</h2>
+        <div id="missionen-inhalt"></div>
+      </section>
+    </div>
+
+    <div id="tab-daten" class="tabfeld" role="tabpanel" aria-labelledby="tabknopf-daten" hidden>
+      <section class="platte">
+        <h2 data-t="datenKopf">Durchgänge und Daten</h2>
+        <div class="reihe">
+          <button id="profil-neu" class="knopf" type="button" data-t="neuesProfil">Neuer Durchgang</button>
+          <button id="profil-umbenennen" class="knopf leise" type="button" data-t="umbenennen">Umbenennen</button>
+          <button id="profil-loeschen" class="knopf leise" type="button" data-t="loeschen">Löschen</button>
+        </div>
+        <div class="reihe">
+          <button id="export" class="knopf leise" type="button" data-t="exportieren">Exportieren</button>
+          <button id="import" class="knopf leise" type="button" data-t="importieren">Importieren</button>
+          <input id="import-datei" type="file" accept="application/json,.json" hidden>
+        </div>
+        <p id="speicher-hinweis" class="leise-text"></p>
+      </section>
+      <section class="platte">
+        <h2 data-t="quellen">Datenquellen</h2>
+        <ul id="provider-liste" class="provider"></ul>
+      </section>
+      <section class="platte">
+        <h2 data-t="hinweise">Woher die Angaben kommen</h2>
+        <div id="hinweise"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="seite-fuss"><p data-t="fuss">Nicht verbunden mit Rockstar Games oder Take-Two Interactive.</p></footer>
+
+<script src="vendor/leaflet/leaflet.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
