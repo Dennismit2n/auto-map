@@ -11,8 +11,9 @@ export const GTADB_KATEGORIEN = [
   { id: 'm-schauplatz', name_de: 'Schauplätze (Trailer, Vorbilder)', name_en: 'Scenes (trailers, real-world models)', zeichen: 'S', spoiler: false, gtadb: true }
 ];
 
-export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheist, strassen }) {
+export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio }) {
   const fehler = [];
+  const kapitelOk = (k) => k == null || (Number.isInteger(k) && k >= 1 && k <= 5);
   const ids = new Set();
   const neu = (id, was) => {
     if (!ID.test(id)) fehler.push(`${was}: ID ungültig (${id})`);
@@ -33,6 +34,8 @@ export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheis
     if (!Number.isFinite(o.x) || !Number.isFinite(o.y)) fehler.push(`Ort ${o.id}: Lage fehlt (Anker ${o.anker})`);
     else if (!(o.x >= 0 && o.x <= karte.breite && o.y >= 0 && o.y <= karte.hoehe)) fehler.push(`Ort ${o.id}: liegt außerhalb der Karte`);
     if (!o.name || !o.text_de || !o.text_en) fehler.push(`Ort ${o.id}: Name oder Text fehlt`);
+    if (!kapitelOk(o.ab_kapitel)) fehler.push(`Ort ${o.id}: ab_kapitel ungültig`);
+    if (Boolean(o.geheim_de) !== Boolean(o.geheim_en)) fehler.push(`Ort ${o.id}: Geheimnis-Satz nur in einer Sprache`);
   }
   const gKats = new Set(GTADB_KATEGORIEN.map((k) => k.id));
   for (const o of [...(gtadb?.orte ?? []), ...(mapheist?.orte ?? [])]) {
@@ -53,7 +56,13 @@ export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheis
       if (!['zaehler', 'haken', 'geld'].includes(z.art)) fehler.push(`Zeile ${z.id}: unbekannte Art ${z.art}`);
       if (!(z.noetig > 0)) fehler.push(`Zeile ${z.id}: noetig fehlt`);
       if (z.vorhanden != null && z.vorhanden < z.noetig) fehler.push(`Zeile ${z.id}: vorhanden kleiner als noetig`);
+      for (const h of z.hinweise ?? []) if (!kapitelOk(h.ab) || !h.de || !h.en) fehler.push(`Zeile ${z.id}: Hinweis ohne Text oder mit ungültigem Kapitel`);
+      for (const u of z.unterliste ?? []) if (!u.name || !kapitelOk(u.ab)) fehler.push(`Zeile ${z.id}: Eintrag der Unterliste ohne Namen oder mit ungültigem Kapitel`);
     }
+  }
+  for (const s of radio?.sender ?? []) {
+    neu(s.id, 'Sender');
+    if (!s.name || !Array.isArray(s.titel) || s.titel.some((t) => !t[0] || !t[1])) fehler.push(`Sender ${s.id}: Name oder Titel fehlt`);
   }
   for (const k of missionen.kapitel) {
     for (const m of k.missionen) {
@@ -64,15 +73,24 @@ export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheis
   return fehler;
 }
 
+// Community-Orte (gtadb, Mapheist), die es schon als festen Ort gibt (gleicher Name oder im festen Ort als derselbe vermerkt), nicht doppelt zeigen.
+// So verrät auch kein Community-Punkt einen festen Ort, den Spoilerfrei gerade verbirgt.
+export function ohneDoppelte(gtadbOrte, festeOrte) {
+  const gleich = (s) => String(s ?? '').toLowerCase().replace(/^the\s+/, '').replace(/[^a-z0-9]+/g, '');
+  const namen = new Set(festeOrte.flatMap((o) => [gleich(o.name), gleich(o.name_en)]).filter(Boolean));
+  const ids = new Set(festeOrte.filter((o) => o.gtadb_selbst).map((o) => o.gtadb));
+  return gtadbOrte.filter((o) => !ids.has(o.id) && !(namen.has(gleich(o.name)) && !o.namenlos));
+}
+
 export async function ladeDaten(basis = './data/') {
   const holen = async (pfad) => {
     const antwort = await fetch(basis + pfad);
     if (!antwort.ok) throw new Error(`${pfad}: ${antwort.status}`);
     return antwort.json();
   };
-  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json')]);
+  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json'), holen('radio.json')]);
   orte.kategorien = [...orte.kategorien.filter((k) => k.id !== 'eigen'), ...GTADB_KATEGORIEN, ...orte.kategorien.filter((k) => k.id === 'eigen')];
-  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, community: [...gtadb.orte.map((o) => ({ ...o, quelle: 'gtadb' })), ...mapheist.orte] };
+  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, community: [...ohneDoppelte(gtadb.orte, orte.orte).map((o) => ({ ...o, quelle: 'gtadb' })), ...ohneDoppelte(mapheist.orte, orte.orte)] };
   const fehler = pruefeDaten(daten);
   if (fehler.length) console.warn('Datenfehler:', fehler);
   return daten;

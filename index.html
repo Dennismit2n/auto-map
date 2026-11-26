@@ -27,8 +27,14 @@
   <div class="kopf-steuer">
     <button id="spoiler" class="spoiler frei" type="button" aria-pressed="true"><span class="spoiler-zeichen" aria-hidden="true">✓</span><span>SPOILERFREI</span></button>
     <select id="profil-wahl" data-t-label="profil" aria-label="Durchgang"></select>
+    <select id="kapitel-wahl" data-t-label="kapitelWahl" data-t-titel="kapitelWahl" aria-label="Dein Kapitel"></select>
     <select id="sprache" aria-label="Sprache / Language"></select>
     <button id="installieren" class="knopf" type="button" hidden data-t="installieren">Installieren</button>
+  </div>
+  <div class="suche" role="search">
+    <input id="suche" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" spellcheck="false" enterkeyhint="search" data-t-platzhalter="suchen" data-t-label="sucheLabel" placeholder="Suche: Orte, Läden, Sammelobjekte, Radio" aria-label="Alles durchsuchen">
+    <ul id="suche-liste" role="listbox" data-t-label="sucheLabel" aria-label="Alles durchsuchen" hidden></ul>
+    <p id="suche-status" class="visually-hidden" aria-live="polite"></p>
   </div>
 </header>
 
@@ -37,11 +43,6 @@
 <main class="buehne">
   <section class="platte karte-rahmen" aria-label="Karte">
     <div id="karte"></div>
-    <div class="suche" role="search">
-      <input id="suche" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="suche-liste" autocomplete="off" spellcheck="false" data-t-platzhalter="suchen" data-t-label="sucheLabel" placeholder="Orte, Pins und Namen suchen" aria-label="Karte durchsuchen">
-      <ul id="suche-liste" role="listbox" data-t-label="sucheLabel" aria-label="Karte durchsuchen" hidden></ul>
-      <p id="suche-status" class="visually-hidden" aria-live="polite"></p>
-    </div>
     <button id="ganze-karte" class="knopf leise karte-knopf" type="button" data-t="ganzeKarte">Ganze Karte</button>
     <details class="legende">
       <summary data-t="legende">Legende</summary>
@@ -127,6 +128,11 @@
     </div>
   </div>
 </main>
+
+<dialog id="fenster" class="fenster" aria-labelledby="fenster-titel">
+  <div id="fenster-inhalt"></div>
+  <form method="dialog"><button class="knopf" type="submit" data-t="schliessen" autofocus>Schließen</button></form>
+</dialog>
 
 <footer class="seite-fuss"><p data-t="fuss">Nicht verbunden mit Rockstar Games oder Take-Two Interactive.</p></footer>
 

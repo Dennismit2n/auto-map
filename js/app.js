@@ -1,6 +1,6 @@
 import { ladeDaten } from './daten.js';
 import {
-  neuesProfil, umschalten, istGefunden, setzeZaehler, zeileStand, checklisteStand, istVerborgen, missionsName,
+  neuesProfil, umschalten, istGefunden, setzeZaehler, zeileStand, checklisteStand, istVerborgen, missionsName, kapitelStand, sichtbareHinweise,
   passtZumFilter, zaehlen, zaehlenJeCounty, naechstesOffenes, neuerPin, exportieren, einlesen, importieren, pinsZusammenfuehren
 } from './fortschritt.js';
 import { planquadrat, entfernungText, countyVon, innerhalb } from './geo.js';
@@ -8,7 +8,8 @@ import * as speicher from './speicher.js';
 import { alleProvider } from './provider.js';
 import { t, feld, zahl, sprache, setzeSprache, uebersetzeSeite, sprachen, pinArten } from './i18n.js';
 import { karteAnlegen, strassenZeichnen, pinsZeichnen, punkteZeichnen, punktOeffnen, positionZeigen, popupZeigen, hinfliegen, ganzeKarte, pinOeffnen, stelleMarkieren } from './karte.js';
-import { suchen } from './suche.js';
+import { suchen, gruppieren } from './suche.js';
+import { ARTWORTE, KATWORTE } from './suchworte.js';
 
 const $ = (sel) => document.querySelector(sel);
 function el(tag, attrs = {}, ...kinder) {
@@ -31,21 +32,30 @@ const popupKnopf = (text, onclick, klasse) => knopf(text, () => setTimeout(oncli
 
 const zustand = {
   daten: null, profile: [], aktivId: null, pins: [], position: null, spoilerfrei: true, tab: 'karte',
-  filter: { countys: new Set(), kategorien: new Set() }, offeneKapitel: null
+  filter: { countys: new Set(), kategorien: new Set() }, offeneKapitel: null, offeneZeile: null
 };
 let k;
 const aktiv = () => zustand.profile.find((p) => p.id === zustand.aktivId);
+// Kapitel, in dem der gewählte Durchgang steht; Spoilerfrei verbirgt alles danach
+const stand = () => kapitelStand(aktiv(), zustand.daten.missionen);
 const kategorie = (id) => zustand.daten.orte.kategorien.find((x) => x.id === id);
 const county = (id) => zustand.daten.karte.countys.find((c) => c.id === id);
 const pinArt = (id) => pinArten.find((a) => a.id === id) ?? pinArten.at(-1);
+// Einträge der Unterlisten: Eigennamen haben nur name, übersetzbare zusätzlich name_en
+const unterName = (u) => (sprache === 'en' && u.name_en ? u.name_en : u.name);
 
 // Alle Pins, die gerade sichtbar sein dürfen: feste Orte (ohne Verborgenes) und eigene Pins.
 // Community-Orte (gtadb, Mapheist) ohne das, was der Spoiler-Schalter verbirgt
-function sichtbareCommunity() { return zustand.daten.community.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei)); }
+// Läden ohne eigenen Namen heißen nach ihrer Art, in der Sprache der Oberfläche
+function sichtbareCommunity() {
+  const st = stand();
+  return zustand.daten.community.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei, st))
+    .map((o) => (o.namenlos ? { ...o, name: artText(o.art.slice(0, 1)) } : o));
+}
 
 function sichtbarePins() {
-  const { orte } = zustand.daten;
-  const fest = orte.orte.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei))
+  const { orte } = zustand.daten; const st = stand();
+  const fest = orte.orte.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei, st))
     .map((o) => (sprache === 'en' && o.name_en ? { ...o, name: o.name_en } : o));
   const eigene = zustand.pins.filter((p) => !p.geloescht).map((p) => ({ ...p, name: p.name || pinArt(p.art)[sprache] }));
   return [...fest, ...eigene];
@@ -87,6 +97,7 @@ async function start() {
 // ---------- Zeichnen ----------
 function allesZeichnen() {
   const fokus = document.activeElement?.dataset?.fokus;
+  suchIndex = null;
   filterBereinigen();
   const p = aktiv(); const pins = sichtbarePins();
   const ziel = naechstesOffenes(pins, p, zustand.filter, zustand.position);
@@ -116,10 +127,12 @@ function filterBereinigen() {
 
 function kopfZeichnen() {
   $('#profil-wahl').replaceChildren(...zustand.profile.map((p) => new Option(p.name, p.id, false, p.id === zustand.aktivId)));
+  const st = stand();
+  $('#kapitel-wahl').replaceChildren(...zustand.daten.missionen.kapitel.map((kap) => new Option(t('kapitelKurz', { n: kap.nr }), kap.nr, false, kap.nr === st)));
   const s = $('#spoiler');
   s.setAttribute('aria-pressed', String(zustand.spoilerfrei));
   s.classList.toggle('frei', zustand.spoilerfrei);
-  s.title = t(zustand.spoilerfrei ? 'spoilerTitelFrei' : 'spoilerTitelAn');
+  s.title = t(zustand.spoilerfrei ? 'spoilerTitelFrei' : 'spoilerTitelAn', { n: st });
   s.replaceChildren(el('span', { class: 'spoiler-zeichen', 'aria-hidden': 'true', text: zustand.spoilerfrei ? '✓' : '!' }), el('span', { text: t(zustand.spoilerfrei ? 'spoilerfrei' : 'spoilerAn') }));
 }
 
@@ -197,7 +210,13 @@ function listeZeichnen() {
 
 function zeileZeichnen(z, p) {
   const s = zeileStand(z, p); const geld = z.art === 'geld';
-  const hinweis = [feld(z, 'hinweis'), zustand.spoilerfrei ? null : feld(z, 'spoilerhinweis')].filter(Boolean).join(' ');
+  const sicht = sichtbareHinweise(z, zustand.spoilerfrei, stand());
+  const hinweis = [...sicht.teile.map((h) => h[sprache] ?? h.de), sicht.spaeter ? t('zeileSpaeter', { n: sicht.spaeter }) : null].filter(Boolean).join(' ');
+  const unter = sicht.unterliste.length
+    ? el('details', { class: 'unterliste', open: zustand.offeneZeile === z.id, ontoggle: (e) => { if (e.target.open) zustand.offeneZeile = z.id; else if (zustand.offeneZeile === z.id) zustand.offeneZeile = null; } },
+      el('summary', { text: t('unterliste', { n: zahl(sicht.unterliste.length) }) }),
+      el('ul', {}, sicht.unterliste.map((u) => el('li', {}, el('span', { class: 'treffer-name', text: u.anzahl != null ? `${unterName(u)} (${zahl(u.anzahl)})` : unterName(u) }), feld(u, 'info') ? el('span', { class: 'leise-text', text: ` ${feld(u, 'info')}` }) : null))))
+    : null;
   const setzen = async (wert) => { await profilSichern(setzeZaehler(aktiv(), z.id, wert, Date.now(), geld ? 99999999 : (z.vorhanden ?? 9999))); allesZeichnen(); };
   let bedienung;
   if (z.art === 'haken') {
@@ -211,9 +230,9 @@ function zeileZeichnen(z, p) {
   }
   const ziel = geld ? `${zahl(s.wert)} / ${zahl(z.noetig)} $` : z.art === 'haken' ? (s.erfuellt ? t('erledigt') : t('offen')) : `${zahl(s.wert)} / ${zahl(z.noetig)}`;
   const zusatz = z.vorhanden != null && z.vorhanden !== z.noetig ? ` (${zahl(z.vorhanden)} ${t('imSpiel')})` : '';
-  return el('div', { class: `zeile${s.erfuellt ? ' erfuellt' : ''}` },
+  return el('div', { class: `zeile${s.erfuellt ? ' erfuellt' : ''}`, 'data-zeile': z.id },
     el('div', { class: 'zeile-kopf' }, el('span', { class: 'zeile-name', text: `${s.erfuellt ? '✓ ' : ''}${feld(z, 'name')}` }), el('span', { class: 'zeile-zahl', text: ziel + zusatz })),
-    hinweis ? el('p', { class: 'leise-text', text: hinweis }) : null, bedienung);
+    hinweis ? el('p', { class: 'leise-text', text: hinweis }) : null, unter, bedienung);
 }
 
 // ---------- Missionen ----------
@@ -223,17 +242,17 @@ function missionenZeichnen() {
     const erstes = missionen.kapitel.find((kap) => kap.missionen.some((m) => !istGefunden(p, m.id)));
     zustand.offeneKapitel = new Set(erstes ? [erstes.id] : []);
   }
-  const texte = { mission: t('mission'), geschwaerzt: t('geschwaerzt') };
+  const texte = { mission: t('mission'), geschwaerzt: t('geschwaerzt') }; const st = stand();
   const teile = [gurt(`${ms.fertig} / ${ms.gesamt}`, ms.gesamt ? ms.fertig / ms.gesamt : 0, t('missionen'))];
   for (const kap of missionen.kapitel) {
-    const verborgen = zustand.spoilerfrei && kap.spoiler;
+    const verborgen = zustand.spoilerfrei && kap.nr > st;
     const fertig = kap.missionen.filter((m) => istGefunden(p, m.id)).length;
     const liste = el('ul', { class: 'missionen' }, kap.missionen.map((m) => {
       const an = istGefunden(p, m.id); const frei = verborgen ? null : feld(m, 'frei');
       return el('li', {},
         el('label', { class: an ? 'fertig' : null },
           el('input', { type: 'checkbox', checked: an, 'data-fokus': `m-${m.id}`, onchange: () => abhaken(m.id) }),
-          el('span', { text: missionsName(m, kap, zustand.spoilerfrei, texte) }),
+          el('span', { text: missionsName(m, kap, zustand.spoilerfrei, texte, st) }),
           m.optional && !verborgen ? el('span', { class: 'schildchen', text: t('optional') }) : null),
         frei ? el('p', { class: 'leise-text einzug', text: `${t('schaltetFrei')}: ${frei}` }) : null);
     }));
@@ -255,7 +274,9 @@ function datenZeichnen() {
   $('#hinweise').replaceChildren(el('p', { class: 'leise-text', text: t('kartenHinweis') }), el('p', { class: 'leise-text', text: feld(zustand.daten.orte, 'hinweis') }),
     el('p', { class: 'leise-text' }, t('gtadbHinweis', { n: zahl(g.orte.length), stand: g.stand }) + ' ',
       el('a', { href: 'https://map.gtadb.org', target: '_blank', rel: 'noopener', text: 'gtadb.org and contributors' }), ', ',
-      el('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener', text: 'CC BY 4.0' }), '. ' + t('gtadbAenderung')),
+      el('a', { href: 'https://creativecommons.org/licenses/by/4.0/', target: '_blank', rel: 'noopener', text: 'CC BY 4.0' }), '. ' + t('gtadbAenderung') + ' ' + t('ladenHinweis')),
+    el('p', { class: 'leise-text' }, t('radioHinweis', { n: zahl(zustand.daten.radio.sender.length), m: zahl(zustand.daten.radio.sender.reduce((n, s) => n + s.titel.length, 0)) }) + ' ',
+      quellenLink('Rockstar Games', zustand.daten.radio.link), ', ' + t('radioAbgleich', { stand: datum(zustand.daten.radio.stand) })),
     el('p', { class: 'leise-text' }, t('kartenbildHinweis') + ' ', quellenLink('gtadb.org', 'https://map.gtadb.org'), ', ', quellenLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/'), '. ' + t('kartenbildAenderung')),
     el('p', { class: 'leise-text' }, t('mapheistHinweis', { n: zahl(zustand.daten.mapheist.orte.length) }) + ' ', quellenLink('mapheist.com', 'https://mapheist.com/en/data/'), ', ', quellenLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/'), '.'),
     el('p', { class: 'leise-text' }, t('strassenHinweis', { n: zahl(zustand.daten.strassen.strassen.length), m: zahl(zustand.daten.strassen.strassen.filter((s) => !s.ungefaehr).length) }) + ' ', quellenLink('gta.wiki', 'https://gta.wiki/w/List_of_Street_Names'), ', ', quellenLink('CC BY-NC-SA 3.0', 'https://creativecommons.org/licenses/by-nc-sa/3.0/'), '. ' + t('strassenAenderung')));
@@ -267,6 +288,8 @@ async function speicherHinweis() {
 }
 
 // ---------- Aktionen ----------
+// Abhaken. Eine abgehakte Mission aus einem späteren Kapitel hebt das Kapitel des Durchgangs an (kapitelStand),
+// solange der Haken sitzt; gespeichert wird nur die eigene Auswahl.
 async function abhaken(id) { await profilSichern(umschalten(aktiv(), id)); allesZeichnen(); }
 
 function pinPopup(pin, schliessen) {
@@ -278,6 +301,8 @@ function pinPopup(pin, schliessen) {
   if (eigen) { if (pin.notiz) teile.push(el('p', { text: pin.notiz })); }
   else {
     teile.push(el('p', { text: feld(pin, 'text') }));
+    // Easter Eggs an gewöhnlichen Orten: wie die Kategorie Geheimnisse nur, wenn Spoilerfrei aus ist
+    if (!zustand.spoilerfrei && feld(pin, 'geheim')) teile.push(el('p', { text: feld(pin, 'geheim') }));
     teile.push(el('p', { class: 'leise-text', text: [feld(pin, 'lage'), pin.ab_kapitel ? `${t('ab')} ${pin.ab_kapitel}` : null, t(pin.genau ? 'genau' : 'ungefaehr')].filter(Boolean).join(' · ') }));
   }
   const reihe = el('div', { class: 'reihe' }, popupKnopf(istGefunden(aktiv(), pin.id) ? t('zuruecknehmen') : t('abhaken'), () => { schliessen(); abhaken(pin.id); }));
@@ -292,6 +317,7 @@ function pinPopup(pin, schliessen) {
 
 // Arten der gtadb-Orte (englische Stichworte) in der Sprache der Oberfläche
 function lageText(o) { return (sprache === 'en' && o.lage_en) ? o.lage_en : (o.lage || ''); }
+const datum = (iso) => new Date(iso).toLocaleDateString(sprache === 'de' ? 'de-DE' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
 const quellenLink = (text, href) => el('a', { href, target: '_blank', rel: 'noopener', text });
 
 function strasseZeigen(s) {
@@ -304,7 +330,7 @@ function strasseZeigen(s) {
     el('p', { class: 'leise-text', text: `${t(s.fern ? 't_fern' : 't_strasse')} · ${s.gebiet ?? county(s.county)?.name ?? t('ohneCounty')}${s.ungefaehr ? '' : ` · ${t('planquadrat')} ${planquadrat(s.x, s.y, karte.gitter)}`}` }),
     el('p', { class: 'leise-text', text: s.ungefaehr ? t(s.x == null ? 'strasseOhneLage' : 'strasseUngefaehr') : t('strasseLage', { n: s.gebaeude }) }),
     el('p', { class: 'leise-text quelle' }, t('quelleGtadb') + ' ', ...quelle));
-  if (s.x == null) { ganzeKarte(k); k.karte.once('moveend', () => popupZeigen(k, k.karte.getCenter(), inhalt)); return; }
+  if (s.x == null) { k.karte.once('moveend', () => popupZeigen(k, k.karte.getCenter(), inhalt)); ganzeKarte(k); return; }
   const latlng = stelleMarkieren(k, s, s.ungefaehr ? 0 : 1);
   k.karte.once('moveend', () => popupZeigen(k, latlng, inhalt));
 }
@@ -357,28 +383,117 @@ function kartenKlick(pos, latlng, titel) {
 }
 
 // ---------- Suche ----------
+// Eine Suche für alles: Orte auf der Karte, Zeilen und Unterlisten der 100-%-Liste, Radiosender und Titel.
+// Der Index entsteht beim ersten Tippen und verfällt mit jedem Neuzeichnen (Sprache, Spoiler, Kapitel, Pins).
 const GEWICHT = { county: 4, stadt: 3, gewaesser: 1, insel: 1, viertel: 1, gebiet: 1, poi: 0 };
+let suchIndex = null;
+const artWorte = (arten) => (arten || []).map((a) => `${a} ${ARTWORTE[a.replace(/[^a-z]/g, '')] ?? ''}`).join(' ');
 function suchEintraege() {
-  const namen = zustand.daten.karte.labels.map((l) => ({
-    art: 'name', name: l.text, typ: l.typ, x: l.x, y: l.y, county: l.county, gewicht: GEWICHT[l.typ] ?? 0,
+  if (suchIndex) return suchIndex;
+  const { karte, strassen, checkliste, radio } = zustand.daten; const p = aktiv(); const st = stand();
+  const namen = karte.labels.map((l) => ({
+    gruppe: 'karte', art: 'name', name: l.text, typ: l.typ, x: l.x, y: l.y, county: l.county, gewicht: GEWICHT[l.typ] ?? 0,
     zusatz: `${t('t_' + l.typ)} ${county(l.county)?.name ?? ''}`
   }));
-  const pins = sichtbarePins().map((p) => ({
-    art: 'pin', id: p.id, kat: p.kat, name: p.name, x: p.x, y: p.y, county: p.county, gewicht: 2,
-    zusatz: `${p.kat === 'eigen' ? `${pinArt(p.art)[sprache]} ${p.notiz || ''}` : feld(kategorie(p.kat), 'name')} ${county(p.county)?.name ?? ''}`
+  const pins = sichtbarePins().map((x) => ({
+    gruppe: 'karte', art: 'pin', id: x.id, kat: x.kat, name: x.name, x: x.x, y: x.y, county: x.county, gewicht: 2,
+    zusatz: `${x.kat === 'eigen' ? `${pinArt(x.art)[sprache]} ${x.notiz || ''}` : `${feld(kategorie(x.kat), 'name')} ${feld(x, 'lage') ?? ''} ${feld(x, 'text') ?? ''} ${zustand.spoilerfrei ? '' : (feld(x, 'geheim') ?? '')} ${artWorte(x.arten)}`} ${KATWORTE[x.kat] ?? ''} ${county(x.county)?.name ?? ''}`
   }));
   const gtadb = sichtbareCommunity().map((o) => ({
-    art: 'gtadb', id: o.id, kat: o.kat, name: o.name, x: o.x, y: o.y, county: o.county, gewicht: 1,
-    zusatz: `${lageText(o)} ${artText(o.art)} ${feld(kategorie(o.kat), 'name')} ${county(o.county)?.name ?? ''}`
+    gruppe: 'karte', art: 'gtadb', id: o.id, kat: o.kat, name: o.name, suchname: o.namenlos ? '' : undefined, x: o.x, y: o.y, county: o.county, gewicht: o.namenlos ? 0 : 1,
+    namenlos: o.namenlos, lage: lageText(o), artText: artText((o.art || []).filter((a) => !/^(enterable|closed|retail|public)$/.test(a)).slice(0, 2)),
+    zusatz: `${lageText(o)} ${artText(o.art)} ${artWorte(o.art)} ${feld(kategorie(o.kat), 'name')} ${county(o.county)?.name ?? ''}`
   }));
-  const strassen = zustand.daten.strassen.strassen.map((s) => ({
-    art: 'strasse', id: s.id, name: s.name, x: s.x, y: s.y, county: s.county, gewicht: s.ungefaehr ? 0 : 2, strasse: s,
+  const wege = strassen.strassen.map((s) => ({
+    gruppe: 'karte', art: 'strasse', id: s.id, name: s.name, x: s.x, y: s.y, county: s.county, gewicht: s.ungefaehr ? 0 : 2, strasse: s,
     zusatz: `${t(s.fern ? 't_fern' : 't_strasse')} ${s.gebiet ?? ''} ${county(s.county)?.name ?? ''}`
   }));
-  return [...pins, ...namen, ...strassen, ...gtadb];
+  const zeilen = checkliste.gruppen.flatMap((g) => g.zeilen.flatMap((z) => {
+    // ohne Gewicht: Trifft nur der Hinweistext einer Zeile, steht sie hinter Orten, deren Art das Suchwort ist
+    const sicht = sichtbareHinweise(z, zustand.spoilerfrei, st);
+    const text = sicht.teile.map((h) => h[sprache] ?? h.de).join(' ');
+    const kopf = { gruppe: 'liste', art: 'zeile', id: z.id, name: feld(z, 'name'), gewicht: 0, wert: zeileStand(z, p), zeile: z, zusatz: `${z.name_de} ${z.name_en} ${text} ${feld(g, 'name')}${g.id === 'erkundung' ? ' sammelobjekt sammelobjekte collectible collectibles' : ''}` };
+    const unter = sicht.unterliste.map((u) => ({ gruppe: 'liste', art: 'zeile', id: z.id, name: unterName(u), gewicht: 0, in: feld(z, 'name'), zusatz: `${u.name} ${u.name_en ?? ''} ${feld(u, 'info') ?? ''} ${feld(z, 'name')}` }));
+    return [kopf, ...unter];
+  }));
+  const funk = radio.sender.flatMap((s) => [
+    { gruppe: 'radio', art: 'sender', name: s.name, gewicht: 3, sender: s, zusatz: `${feld(s, 'genre')} ${feld(s, 'hosts')} radio radiosender sender station` },
+    ...s.titel.map((ti, nr) => ({ gruppe: 'radio', art: 'titel', name: `${ti[0]}: ${ti[1]}`, sender: s, nr, zusatz: s.name }))
+  ]);
+  // Wissen zu Ladenketten je Art: was es im Spiel gibt, auch wenn die Karte die Läden nicht alle kennt
+  const wissen = (zustand.daten.orte.ketten ?? []).filter((w) => !istVerborgen(w, null, zustand.spoilerfrei, st)).map((w) => ({
+    gruppe: 'wissen', art: 'wissen', name: feld(w, 'name'), gewicht: 5, wissen: w, zusatz: `${w.name_de} ${w.name_en} ${artWorte(w.arten)} ${feld(w, 'text')}`
+  }));
+  suchIndex = [...pins, ...namen, ...wege, ...gtadb, ...zeilen, ...funk, ...wissen];
+  return suchIndex;
+}
+
+// Die zwei Zeilen eines Treffers: Name und was es ist
+function trefferText(e) {
+  const { gitter } = zustand.daten.karte; const wo = () => `${county(e.county)?.name ?? t('ohneCounty')} · ${planquadrat(e.x, e.y, gitter)}`;
+  if (e.art === 'strasse') return [e.name, `${t(e.strasse.fern ? 't_fern' : 't_strasse')} · ${county(e.county)?.name ?? t('ohneCounty')} · ${e.strasse.ungefaehr ? t('lageUnbekannt') : planquadrat(e.x, e.y, gitter)}`];
+  if (e.art === 'name') return [e.name, `${t('t_' + e.typ)} · ${wo()}`];
+  if (e.art === 'zeile') {
+    const z = e.zeile; const w = e.wert;
+    return [e.name, e.in ? `${t('tabListe')} · ${e.in}` : `${t('tabListe')} · ${z.art === 'haken' ? t(w.erfuellt ? 'erledigt' : 'offen') : `${zahl(w.wert)} / ${zahl(z.noetig)}${z.art === 'geld' ? ' $' : ''}`}`];
+  }
+  if (e.art === 'wissen') return [e.name, feld(e.wissen, 'text').slice(0, 90).replace(/\s+\S*$/, '') + ' …'];
+  if (e.art === 'sender') return [e.name, `${t('radioSender')} · ${feld(e.sender, 'genre')}`];
+  if (e.art === 'titel') return [e.sender.titel[e.nr][1], `${e.sender.titel[e.nr][0]} · ${e.sender.name}`];
+  if (e.art === 'gtadb') return [e.name, `${e.namenlos ? feld(kategorie(e.kat), 'name') : (e.artText || feld(kategorie(e.kat), 'name'))} · ${e.lage || county(e.county)?.name || t('ohneCounty')} · ${planquadrat(e.x, e.y, gitter)}`];
+  return [e.name, `${e.kat === 'eigen' ? t('t_pin') : feld(kategorie(e.kat), 'name')} · ${wo()}`];
+}
+
+// Auf dem Handy liegt die Karte unter der Suche: zu ihr rollen, wenn sie nicht ganz im Bild ist
+function karteInsBild() {
+  const r = $('.karte-rahmen').getBoundingClientRect();
+  if (r.top < 0 || r.top > innerHeight * 0.5) $('.karte-rahmen').scrollIntoView({ block: 'start', behavior: 'smooth' });
+}
+
+async function zeileZeigen(id) {
+  zustand.tab = 'liste'; zustand.offeneZeile = id; await speicher.einstellungSchreiben('tab', 'liste'); allesZeichnen();
+  const ziel = document.querySelector(`[data-zeile="${CSS.escape(id)}"]`);
+  if (!ziel) return;
+  ziel.classList.add('gefunden'); ziel.scrollIntoView({ block: 'center', behavior: 'smooth' });
+}
+
+function fensterZeigen(...inhalt) {
+  $('#fenster-inhalt').replaceChildren(...inhalt.filter(Boolean));
+  const fenster = $('#fenster');
+  if (!fenster.open) fenster.showModal();
+  $('#fenster-inhalt').scrollTop = 0;
+  return fenster;
+}
+
+function wissenZeigen(w) {
+  const n = zustand.daten.gtadb.orte.filter((o) => o.art.some((a) => w.arten.includes(a))).length;
+  fensterZeigen(
+    el('h2', { id: 'fenster-titel', text: feld(w, 'name') }),
+    el('p', { text: feld(w, 'text') }),
+    el('p', { class: 'leise-text', text: t('wissenKarte', { n: zahl(n) }) }),
+    el('p', { class: 'leise-text', text: t('wissenStand', { stand: datum(zustand.daten.orte.stand) }) }));
+}
+
+function radioZeigen(s, nr) {
+  const { radio } = zustand.daten;
+  const liste = s.titel.length ? el('ol', { class: 'radio-titel' }, s.titel.map((ti, i) => el('li', { class: i === nr ? 'gefunden' : null },
+    el('span', { class: 'treffer-name', text: ti[1] }), el('span', { class: 'treffer-zusatz', text: ti[0] })))) : null;
+  const fenster = fensterZeigen(
+    el('h2', { id: 'fenster-titel', text: s.name }),
+    el('p', { text: feld(s, 'genre') }),
+    el('p', { class: 'leise-text', text: `${t('radioHosts')}: ${feld(s, 'hosts')}` }),
+    feld(s, 'hinweis') ? el('p', { class: 'leise-text', text: feld(s, 'hinweis') }) : null,
+    el('h3', { class: 'unterkopf', text: s.titel.length ? t('radioTitel', { n: zahl(s.titel.length) }) : t('radioOhneTitel') }),
+    liste,
+    el('p', { class: 'leise-text quelle' }, t('quelleGtadb') + ' ', quellenLink('rockstargames.com/VI/credits', radio.link), ', ' + t('radioAbgleich', { stand: datum(radio.stand) })));
+  liste?.querySelector('.gefunden')?.scrollIntoView({ block: 'nearest' });
 }
 
 function trefferAnfliegen(e) {
+  if (e.art === 'zeile') { zeileZeigen(e.id); return; }
+  if (e.art === 'sender' || e.art === 'titel') { radioZeigen(e.sender, e.nr); return; }
+  if (e.art === 'wissen') { wissenZeigen(e.wissen); return; }
+  karteInsBild();
   if (e.art === 'strasse') { strasseZeigen(e.strasse); return; }
   if (e.art === 'gtadb') {
     if (!punktOeffnen(k, e.id)) { zustand.filter.countys.clear(); zustand.filter.kategorien.clear(); filterGeaendert().then(() => punktOeffnen(k, e.id)); }
@@ -403,26 +518,35 @@ function sucheVerdrahten() {
   const markieren = (i) => {
     if (!treffer.length) return;
     aktivIdx = i;
-    for (const [j, li] of [...liste.children].entries()) li.setAttribute('aria-selected', String(j === i));
-    const li = liste.children[i];
+    for (const li of liste.querySelectorAll('[role="option"]')) li.setAttribute('aria-selected', String(li.id === `treffer-${i}`));
+    const li = liste.querySelector(`#treffer-${i}`);
     if (li) { eingabe.setAttribute('aria-activedescendant', li.id); li.scrollIntoView({ block: 'nearest' }); }
   };
   const waehlen = (i) => {
     const e = treffer[i];
     if (!e) return;
-    schliessen(); eingabe.value = e.name; eingabe.blur(); trefferAnfliegen(e);
+    schliessen(); eingabe.value = trefferText(e)[0]; eingabe.blur(); trefferAnfliegen(e);
   };
   const zeigen = () => {
     const anfrage = eingabe.value.trim();
-    treffer = anfrage ? suchen(anfrage, suchEintraege(), 8) : [];
-    const gitter = zustand.daten.karte.gitter;
-    liste.replaceChildren(...treffer.map((e, i) => el('li', { id: `treffer-${i}`, role: 'option', 'aria-selected': 'false', onmousedown: (ev) => { ev.preventDefault(); waehlen(i); } },
-      el('span', { class: 'treffer-name', text: e.name }),
-      el('span', { class: 'treffer-zusatz', text: e.art === 'strasse' ? `${t(e.strasse.fern ? 't_fern' : 't_strasse')} · ${county(e.county)?.name ?? t('ohneCounty')} · ${e.strasse.ungefaehr ? t('lageUnbekannt') : planquadrat(e.x, e.y, gitter)}` : `${e.art !== 'name' ? (e.kat === 'eigen' ? t('t_pin') : feld(kategorie(e.kat), 'name')) : t('t_' + e.typ)} · ${county(e.county)?.name ?? t('ohneCounty')} · ${planquadrat(e.x, e.y, gitter)}` }))));
+    const alle = anfrage ? suchen(anfrage, suchEintraege(), 2000) : [];
+    // Gruppen in der Reihenfolge ihres besten Treffers
+    const gruppen = gruppieren(alle, [...new Set(alle.map((e) => e.gruppe))], 100);
+    treffer = gruppen.flatMap((g) => g.treffer);
+    let i = 0;
+    liste.replaceChildren(...gruppen.flatMap((g) => [
+      el('li', { class: 'gruppe', role: 'presentation' }, el('span', { text: t('sg_' + g.gruppe) }), el('span', { class: 'zahl', text: zahl(g.treffer.length + g.weitere) })),
+      ...g.treffer.map((e) => {
+        const nr = i++; const [name, zusatz] = trefferText(e);
+        return el('li', { id: `treffer-${nr}`, role: 'option', 'aria-selected': 'false', onmousedown: (ev) => { ev.preventDefault(); waehlen(nr); } },
+          el('span', { class: 'treffer-name', text: name }), el('span', { class: 'treffer-zusatz', text: zusatz }));
+      }),
+      g.weitere ? el('li', { class: 'leer', role: 'presentation', text: t('weitere', { n: zahl(g.weitere) }) }) : null
+    ]).filter(Boolean));
     if (anfrage && !treffer.length) liste.replaceChildren(el('li', { class: 'leer', role: 'option', 'aria-disabled': 'true', text: t('keineTreffer') }));
-    liste.hidden = !anfrage;
+    liste.hidden = !anfrage; liste.scrollTop = 0;
     eingabe.setAttribute('aria-expanded', String(Boolean(anfrage)));
-    status.textContent = anfrage ? (treffer.length ? t('treffer', { n: treffer.length }) : t('keineTreffer')) : '';
+    status.textContent = anfrage ? (alle.length ? t('treffer', { n: alle.length }) : t('keineTreffer')) : '';
     aktivIdx = -1; eingabe.removeAttribute('aria-activedescendant');
   };
   eingabe.addEventListener('input', zeigen);
@@ -430,19 +554,23 @@ function sucheVerdrahten() {
   eingabe.addEventListener('blur', () => setTimeout(schliessen, 150));
   eingabe.addEventListener('keydown', (ev) => {
     if (ev.key === 'ArrowDown') { ev.preventDefault(); if (liste.hidden) zeigen(); markieren(Math.min(treffer.length - 1, aktivIdx + 1)); }
-    else if (ev.key === 'ArrowUp') { ev.preventDefault(); markieren(Math.max(0, aktivIdx - 1)); }
+    else if (ev.key === 'ArrowUp') { ev.preventDefault(); if (liste.hidden) zeigen(); markieren(Math.max(0, aktivIdx - 1)); }
     else if (ev.key === 'Enter') { ev.preventDefault(); waehlen(aktivIdx >= 0 ? aktivIdx : 0); }
-    else if (ev.key === 'Escape') { if (!liste.hidden) { ev.preventDefault(); schliessen(); } else eingabe.value = ''; }
+    else if (ev.key === 'Escape') { if (!liste.hidden) { ev.preventDefault(); schliessen(); } else { eingabe.value = ''; zeigen(); } }
   });
 }
 
 function steuerungVerdrahten() {
   sucheVerdrahten();
   $('#profil-wahl').addEventListener('change', async (e) => {
-    zustand.aktivId = e.target.value; zustand.offeneKapitel = null; await speicher.einstellungSchreiben('aktivesProfil', zustand.aktivId); allesZeichnen();
+    zustand.aktivId = e.target.value; zustand.offeneKapitel = null; await speicher.einstellungSchreiben('aktivesProfil', zustand.aktivId); k.karte.closePopup(); allesZeichnen();
+  });
+  // Kapitel des Durchgangs: Spoilerfrei verbirgt alles danach. Abgehakte Missionen späterer Kapitel halten es oben.
+  $('#kapitel-wahl').addEventListener('change', async (e) => {
+    await profilSichern({ ...aktiv(), kapitel: Number(e.target.value) }); zustand.offeneKapitel = null; k.karte.closePopup(); allesZeichnen();
   });
   $('#spoiler').addEventListener('click', async () => {
-    if (zustand.spoilerfrei && !confirm(t('spoilerFrage'))) return;
+    if (zustand.spoilerfrei && !confirm(t('spoilerFrage', { n: stand() }))) return;
     zustand.spoilerfrei = !zustand.spoilerfrei; await speicher.einstellungSchreiben('spoilerfrei', zustand.spoilerfrei); k.karte.closePopup(); allesZeichnen();
   });
   const tabs = [...document.querySelectorAll('[role="tab"]')];

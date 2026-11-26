@@ -194,24 +194,54 @@ textarea { width: 100%; resize: vertical; }
 #karte[data-stufe="3"] .on-stadt span, #karte[data-stufe="4"] .on-stadt span { font-size: 17px; }
 #karte[data-stufe="3"] .ortsname span, #karte[data-stufe="4"] .ortsname span { font-size: 12.5px; }
 
-/* Suche oben links auf der Karte */
-.suche { position: absolute; left: 24px; top: 24px; z-index: 600; width: min(340px, calc(100% - 170px)); }
+/* Suche im Kopf: ein Feld für alles, in jedem Reiter erreichbar. Die Trefferliste klappt über Karte und Reiter. */
+.seite-kopf { z-index: 5; }
+.suche { position: relative; flex: 1 1 100%; min-width: 0; max-width: 760px; }
 .suche input {
-  width: 100%; padding: 9px 12px 9px 34px; font-size: .95rem; border-radius: var(--vc-radius-knopf);
-  background: rgba(28, 0, 44, .88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9b6dc' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21'/%3E%3C/svg%3E") 10px center / 16px no-repeat;
-  border: 1px solid var(--vc-glas-rand); box-shadow: var(--vc-schatten-klein);
+  width: 100%; padding: 11px 12px 11px 40px; font-size: 1rem; border-radius: var(--vc-radius-knopf);
+  background: rgba(28, 0, 44, .88) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c9b6dc' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21'/%3E%3C/svg%3E") 12px center / 18px no-repeat;
+  border: 1px solid var(--vc-akzent-lavendel); box-shadow: var(--vc-schatten-klein);
 }
 .suche input:focus { border-color: var(--vc-akzent-himmel); }
 .suche ul {
-  list-style: none; margin: 6px 0 0; padding: 4px; max-height: 50vh; overflow: auto;
+  position: absolute; left: 0; right: 0; top: 100%; z-index: 10;
+  list-style: none; margin: 6px 0 0; padding: 0 4px 4px; max-height: min(64vh, 560px); overflow: auto; overscroll-behavior: contain;
+  scroll-padding-top: calc(.74rem * 1.55 + 16px);   /* Höhe der klebenden Gruppenzeile: der markierte Treffer rollt nicht darunter */
   background: var(--vc-grund-flaeche); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-platte);
 }
-.suche li { display: grid; gap: 1px; padding: 6px 9px; border-radius: 3px; cursor: pointer; }
-.suche li[aria-selected="true"], .suche li:hover { background: var(--vc-glas-knopf); }
+.suche li { display: grid; gap: 1px; padding: 7px 9px; border-radius: 3px; cursor: pointer; }
+.suche li[aria-selected="true"], .suche li[role="option"]:hover { background: var(--vc-glas-knopf); }
 .suche li.leer { cursor: default; color: var(--vc-text-leise); background: none; }
+.suche li.gruppe {
+  position: sticky; top: 0; display: flex; justify-content: space-between; gap: 10px; cursor: default; border-radius: 0; margin: 0 -4px; padding: 7px 13px 5px;
+  background: var(--vc-grund-flaeche); border-bottom: 1px solid var(--vc-glas-rand);
+  font: 700 .74rem/1.55 var(--vc-schrift-text); letter-spacing: .07em; text-transform: uppercase; color: var(--vc-akzent-sonne);
+}
 .treffer-name { font-weight: 600; }
 .treffer-zusatz { font-size: .78rem; color: var(--vc-text-leise); }
-.suche li[aria-selected="true"] .treffer-zusatz, .suche li:hover .treffer-zusatz { color: #fff; }
+.suche li[aria-selected="true"] .treffer-zusatz, .suche li[role="option"]:hover .treffer-zusatz { color: #fff; }
+@media (max-width: 860px) { .suche { max-width: none; } }
+
+/* Fundstelle eines Suchtreffers in der 100-%-Liste und im Radio-Fenster */
+.zeile.gefunden, .radio-titel li.gefunden { background: var(--vc-glas-gurt); box-shadow: inset 3px 0 0 var(--vc-akzent-neon); }
+.zeile.gefunden { padding-left: 10px; padding-right: 6px; }
+.unterliste { margin: 6px 0 2px; font-size: .9rem; }
+.unterliste summary { cursor: pointer; color: var(--vc-akzent-himmel); }
+.unterliste ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 3px; }
+
+/* Fenster (Radiosender mit Titeln, Wissen zu Ladenketten) */
+.fenster {
+  width: min(560px, calc(100vw - 24px)); max-height: min(86vh, 760px); padding: 20px 22px 16px;
+  color: var(--vc-text-haupt); background: var(--vc-grund-flaeche); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-platte); box-shadow: var(--vc-schatten-platte);
+}
+.fenster[open] { display: flex; flex-direction: column; gap: 12px; }
+.fenster::backdrop { background: rgba(10, 0, 18, .72); }
+.fenster h2 { margin: 0 0 6px; font-size: 1.12rem; color: var(--vc-akzent-sonne); }
+.fenster p { margin: 4px 0; }
+#fenster-inhalt { overflow: auto; min-height: 0; padding-right: 4px; }
+.radio-titel { margin: 0; padding: 0 0 0 2.4em; display: grid; gap: 2px; }
+.radio-titel li { padding: 3px 8px; border-radius: 3px; }
+.radio-titel li span { display: block; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .such-ring { width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--vc-akzent-neon); box-shadow: 0 0 16px var(--vc-akzent-neon), inset 0 0 10px var(--vc-akzent-neon); }
 @media (prefers-reduced-motion: no-preference) { .such-ring { animation: puls 1.2s ease-in-out infinite alternate; } }

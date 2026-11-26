@@ -6,7 +6,7 @@ export const EXPORT_FORMAT = 'vice-companion-fortschritt';
 export const EXPORT_VERSION = 2;
 
 export function neuesProfil(name, zeit = Date.now(), id = `p-${zeit.toString(36)}-${Math.random().toString(36).slice(2, 7)}`) {
-  return { id, name: String(name || 'Durchgang').slice(0, 40), erstellt: zeit, punkte: {}, zaehler: {} };
+  return { id, name: String(name || 'Durchgang').slice(0, 40), erstellt: zeit, kapitel: 1, punkte: {}, zaehler: {} };
 }
 
 // ---- Abhaken (Orte, eigene Pins, Missionen, Haken-Zeilen) ----
@@ -42,17 +42,40 @@ export function checklisteStand(checkliste, profil) {
   return { gesamt, erfuellt, prozent: gesamt ? Math.floor((100 * anteil) / gesamt) : 0 };
 }
 
-// ---- Spoiler ----
-// Spoilerfrei verbirgt: Kategorien mit spoiler (Geheimnisse) und einzelne Einträge mit spoiler (spätes Spiel).
-export function istVerborgen(eintrag, kategorie, spoilerfrei) {
-  if (!spoilerfrei) return false;
-  return Boolean(eintrag?.spoiler || kategorie?.spoiler);
+// ---- Kapitel und Spoiler ----
+// Durchgänge von vor dem 26.11.2026 haben kein Kapitel. Bis dahin verbarg Spoilerfrei fest Kapitel 4 und 5, das bleibt für sie so.
+export const KAPITEL_ALT = 3;
+
+// Kapitel, in dem der Durchgang steht: die eigene Angabe, angehoben durch abgehakte Missionen späterer Kapitel.
+// Das Anheben wird nicht gespeichert: Nimmst du einen versehentlichen Haken zurück, gilt wieder deine Angabe.
+export function kapitelStand(profil, missionen) {
+  let stand = Number.isInteger(profil?.kapitel) ? profil.kapitel : KAPITEL_ALT;
+  for (const kap of missionen?.kapitel ?? []) if (kap.nr > stand && kap.missionen.some((m) => istGefunden(profil, m.id))) stand = kap.nr;
+  return Math.max(1, Math.min(5, stand));
 }
 
-// Anzeigename einer Mission. In spoilerfreien Kapiteln gibt es nur die Nummer.
-export function missionsName(mission, kapitel, spoilerfrei, texte) {
+// Spoilerfrei verbirgt: Kategorien mit spoiler (Geheimnisse), alles, was erst nach dem eigenen Kapitel kommt (ab_kapitel),
+// und Einträge mit spoiler ohne Kapitelangabe.
+export function istVerborgen(eintrag, kategorie, spoilerfrei, stand = KAPITEL_ALT) {
+  if (!spoilerfrei) return false;
+  if (kategorie?.spoiler) return true;
+  if (eintrag?.ab_kapitel != null) return eintrag.ab_kapitel > stand;
+  return Boolean(eintrag?.spoiler);
+}
+
+// Die Hinweise einer Zeile der 100-%-Liste sind nach Kapitel gestaffelt (hinweise: [{ab, de, en}]), ebenso einzelne Einträge
+// ihrer Unterliste (ab). Spoilerfrei zeigt nur, was bis zum eigenen Kapitel passt; spaeter nennt das Kapitel, ab dem mehr kommt.
+export function sichtbareHinweise(zeile, spoilerfrei, stand = KAPITEL_ALT) {
+  const alle = zeile.hinweise ?? []; const liste = zeile.unterliste ?? [];
+  if (!spoilerfrei) return { teile: alle, unterliste: liste, spaeter: null };
+  const rest = [...alle, ...liste].map((h) => h.ab ?? 1).filter((ab) => ab > stand);
+  return { teile: alle.filter((h) => (h.ab ?? 1) <= stand), unterliste: liste.filter((u) => (u.ab ?? 1) <= stand), spaeter: rest.length ? Math.min(...rest) : null };
+}
+
+// Anzeigename einer Mission. In Kapiteln nach dem eigenen gibt es spoilerfrei nur die Nummer.
+export function missionsName(mission, kapitel, spoilerfrei, texte, stand = KAPITEL_ALT) {
   const nr = mission.id.split('-')[1];
-  if (spoilerfrei && kapitel.spoiler) return `${texte.mission} ${kapitel.nr}.${nr}`;
+  if (spoilerfrei && kapitel.nr > stand) return `${texte.mission} ${kapitel.nr}.${nr}`;
   return mission.name ?? `${texte.mission} ${kapitel.nr}.${nr} (${texte.geschwaerzt})`;
 }
 
@@ -125,7 +148,8 @@ function pruefeProfil(p) {
     if (!ID.test(id) || !e || !Number.isFinite(e.wert) || !Number.isFinite(e.zeit) || e.wert < 0) continue;
     zaehler[id] = { wert: Math.round(e.wert), zeit: e.zeit };
   }
-  return { id: p.id, name: p.name.slice(0, 40), erstellt: Number(p.erstellt) || 0, punkte, zaehler };
+  const kapitel = Number.isInteger(p.kapitel) && p.kapitel >= 1 && p.kapitel <= 5 ? { kapitel: p.kapitel } : {};
+  return { id: p.id, name: p.name.slice(0, 40), erstellt: Number(p.erstellt) || 0, ...kapitel, punkte, zaehler };
 }
 
 function pruefePin(p) {
@@ -158,9 +182,12 @@ function juenger(alt, neu) {
   return out;
 }
 
-// Führt zwei Stände desselben Profils zusammen, je Eintrag gewinnt der jüngere.
+// Führt zwei Stände desselben Profils zusammen, je Eintrag gewinnt der jüngere; beim Kapitel das höhere.
 export function zusammenfuehren(alt, neu) {
-  return { ...alt, name: neu.name || alt.name, punkte: juenger(alt.punkte, neu.punkte), zaehler: juenger(alt.zaehler || {}, neu.zaehler || {}) };
+  // Fehlt das Kapitel auf einer Seite (alte Sicherung), sagt sie dazu nichts: Die eigene Angabe bleibt.
+  const angaben = [alt.kapitel, neu.kapitel].filter(Number.isInteger);
+  const kapitel = angaben.length ? { kapitel: Math.max(...angaben) } : {};
+  return { ...alt, name: neu.name || alt.name, ...kapitel, punkte: juenger(alt.punkte, neu.punkte), zaehler: juenger(alt.zaehler || {}, neu.zaehler || {}) };
 }
 
 export function importieren(vorhandene, eingelesene) {

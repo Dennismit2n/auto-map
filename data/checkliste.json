@@ -1,6 +1,6 @@
 {
- "hinweis_de": "Stand 20.11.2026: Die Zahlen stammen von Guide-Seiten (OutputLag, Push Square, AlcastHQ) und können sich noch ändern.",
- "hinweis_en": "As of 20 November 2026: the figures come from guide sites (OutputLag, Push Square, AlcastHQ) and may still change.",
+ "hinweis_de": "Zahlen und Hinweise stammen aus Guides und Wikis, Stand 26.11.2026 (eine Woche nach Release). Rockstar selbst nennt keine Zahlen. Spoilerfrei zeigt je Zeile nur die Hinweise bis zu deinem Kapitel.",
+ "hinweis_en": "Numbers and hints come from guides and wikis, as of 26 November 2026 (one week after release). Rockstar itself publishes no numbers. Spoiler free only shows the hints up to your chapter for each row.",
  "gruppen": [
   {
    "id": "story",
@@ -14,10 +14,18 @@
      "art": "haken",
      "noetig": 1,
      "vorhanden": null,
-     "hinweis_de": "Alle Hauptmissionen bis zu den Credits abschließen.",
-     "hinweis_en": "Finish all main missions up to the credits.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 91 Pflichtmissionen in fünf Kapiteln bis zu den Credits abschließen (das Story-Recap zählt teils 93). Die 100-%-Liste erscheint erst nach der Story unter Progress > Stats > 100% Completion, zählt aber alles, was du vorher erledigt hast. Laut Guides ist für 100 % nichts endgültig verpassbar, alles geht auch danach im Free Roam.",
+       "en": "Finish all 91 required missions across five chapters up to the credits (the Story Recap sometimes counts 93). The 100% list only appears after the story under Progress > Stats > 100% Completion, but it counts everything you did before. According to guides nothing is permanently missable for 100%, everything can be done in free roam afterwards."
+      },
+      {
+       "ab": 5,
+       "de": "Speichere vor der letzten Mission von Kapitel 5 von Hand: Das Ende hängt von einer Entscheidung ab.",
+       "en": "Make a manual save before the final mission of Chapter 5: the ending depends on a choice."
+      }
+     ]
     },
     {
      "id": "optionale-aufgaben",
@@ -26,10 +34,18 @@
      "art": "zaehler",
      "noetig": 100,
      "vorhanden": null,
-     "hinweis_de": "Nebenmissionen und lila Marker.",
-     "hinweis_en": "Side missions and purple markers.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Es zählt jeder lila Marker auf der Karte, etwa Strangers & Freaks und Meditationen. Eine feste Gesamtzahl nennt bisher kein Guide, es gibt aber deutlich mehr als 100 (Schätzungen 200 bis über 300). Hauptmissionen zählen nicht. Ein paar Aufgaben aus der Story laufen ab, etwa Lucias Kleidung vor ihrer Entlassung, das gleichst du mit anderen aus.",
+       "en": "Every purple marker on the map counts, such as Strangers & Freaks and meditations. No guide gives a fixed total yet, but there are clearly more than 100 (estimates range from 200 to over 300). Main missions do not count. A few story-era tasks expire, such as Lucia’s clothes before her release, but other tasks make up for them."
+      },
+      {
+       "ab": 3,
+       "de": "Dazu gehören auch Autolieferungen für Moses und Randy, Tyrones Labore und Cals Angel-Duelle.",
+       "en": "That includes car deliveries for Moses and Randy, Tyrone’s labs and Cal’s fishing duels."
+      }
+     ]
     },
     {
      "id": "gang-operations",
@@ -38,10 +54,13 @@
      "art": "zaehler",
      "noetig": 39,
      "vorhanden": 39,
-     "hinweis_de": "Alle 39 nötig. Gelbe Icons. Nimm jede Schlüssel-Wertsache mit, sonst zählt es nicht und die Operation kommt wieder.",
-     "hinweis_en": "All 39 required. Yellow icons. Take every key valuable, otherwise it does not count and the operation comes back.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 39 nötig, verteilt auf neun Gangs. Gelbe Symbole, Fortschritt unter Progress > Gangs. Eine Operation zählt erst, wenn ihre Karteninfo „All key valuables found“ zeigt: meist ein Safe, eine Einzelstück-Waffe, manchmal ein Standout-Fahrzeug. Lässt du etwas liegen, kommt die Operation nach einer langen Pause wieder. Viele Luxusuhren für die Styles liegen hier, die Drogen verkaufst du beim Hehler. Je eine Operation pro Gang gibt die Trophäe „Pest Control“, 25 mit dem Partner den Filter „Pinhole“.",
+       "en": "All 39 required, spread across nine gangs. Yellow icons, progress under Progress > Gangs. An operation only counts once its map card shows “All key valuables found”: usually a safe, a unique weapon and sometimes a standout vehicle. If you leave something behind, the operation returns after a long cooldown. Many luxury watches for the styles row are found here, and you sell the drugs to a fence. One operation per gang gives the “Pest Control” trophy, 25 with your partner unlock the “Pinhole” filter."
+      }
+     ]
     },
     {
      "id": "bank-jobs",
@@ -50,10 +69,39 @@
      "art": "zaehler",
      "noetig": 22,
      "vorhanden": 22,
-     "hinweis_de": "Alle 22 nötig (14 kleine, 8 große mit Tresor). Ab „Credit Check“ (Kapitel 3). Kasse und Safe ausräumen.",
-     "hinweis_en": "All 22 required (14 small, 8 large with a vault). Available from “Credit Check” (Chapter 3). Clear the register and the safe.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Überfalle Banken erst, wenn du in Kapitel 3 den Dye Pack Jammer hast: Ohne ihn machen Farbpatronen das Geld wertlos. Alle 22 nötig (14 kleine, 8 große Banken). Kassenschublade und Safe mitnehmen, sonst bleibt die Bank offen. Safe-Codes wechseln zwischen Überfällen, die erste Streife kommt rund 20 Sekunden nach dem Alarm. Beute sind markierte Scheine.",
+       "en": "Do not rob banks before you have the Dye Pack Jammer in chapter 3: without it, dye packs make the money worthless. All 22 required (14 small, 8 large banks). Take both the cash drawer and the safe, otherwise the bank stays incomplete. Safe codes change between robberies, and the first police car arrives about 20 seconds after the alarm. The loot is marked bills."
+      },
+      {
+       "ab": 3,
+       "de": "Ab „Credit Check“ (Kapitel 3), Karte > Robberies > Bank Jobs.",
+       "en": "Available from “Credit Check” (Chapter 3), Map > Robberies > Bank Jobs."
+      },
+      {
+       "ab": 4,
+       "de": "Laut PowerPyx zählen die 8 großen Banken erst mit geleertem Tresor als ganz erledigt, und die Tresore öffnen sich erst mit der optionalen Kapitel-4-Mission „That’s Where The Money Is“. OutputLag nennt nur Schublade und Safe.",
+       "en": "According to PowerPyx the 8 large banks only count as fully completed once the vault is emptied, and the vaults only open with the optional Chapter 4 mission “That’s Where The Money Is”. OutputLag only mentions drawer and safe."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Kleine Banken",
+       "name_en": "Small banks",
+       "anzahl": 14,
+       "info_de": "Kassenschublade und Safe.",
+       "info_en": "Cash drawer and safe."
+      },
+      {
+       "name": "Große Banken",
+       "name_en": "Large banks",
+       "anzahl": 8,
+       "info_de": "Kassenschublade, Safe und später der Tresorraum.",
+       "info_en": "Cash drawer, safe and later the vault."
+      }
+     ]
     },
     {
      "id": "payday-loan-jobs",
@@ -62,10 +110,18 @@
      "art": "zaehler",
      "noetig": 7,
      "vorhanden": 7,
-     "hinweis_de": "Alle 7 nötig. Ab „Credit Check“ (Kapitel 3).",
-     "hinweis_en": "All 7 required. Available from “Credit Check” (Chapter 3).",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 7 nötig. Schalter und den Safe im Hinterzimmer ausräumen. Die Beute sind markierte Scheine, also erst mit dem Dye Pack Jammer rauben. Karte > Robberies > Payday Loans.",
+       "en": "All 7 required. Clear the teller and the back-room safe. The loot is marked bills, so only rob them once you have the Dye Pack Jammer. Map > Robberies > Payday Loans."
+      },
+      {
+       "ab": 3,
+       "de": "Ab Kapitel 3 nach „Credit Check“, die Jobs kommen über Anrufe von Yasmani.",
+       "en": "Available in Chapter 3 after “Credit Check”, the jobs come through calls from Yasmani."
+      }
+     ]
     },
     {
      "id": "smash-n-grabs",
@@ -74,10 +130,36 @@
      "art": "zaehler",
      "noetig": 34,
      "vorhanden": 35,
-     "hinweis_de": "Pfandhäuser und Juweliere. Räum auch den Safe im Hinterzimmer aus.",
-     "hinweis_en": "Pawn shops and jewelers. Clear the safe in the back room too.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "34 von 35 nötig: 15 Pfandhäuser und 20 Juweliere. Vitrinen allein reichen nicht, leere auch den Keypad-Safe im Hinterzimmer; den Code findest du auf der Jobkarte, auf einem Zettel oder beim Personal. Mehrere Läden hintereinander bringen bis zu 4 Sterne. Ein unentdeckter Juwelier-Raub gibt die Trophäe „Sneakthief“.",
+       "en": "34 of 35 required: 15 pawn shops and 20 jewelry stores. Display cases alone are not enough, empty the keypad safe in the back room too; the code is on the job card, on a note or from the staff. Several stores in a row can reach 4 stars. Robbing a jewelry store undetected gives the “Sneakthief” trophy."
+      },
+      {
+       "ab": 3,
+       "de": "Pfandhäuser ab „Coffee Break“ (Kapitel 2), Juweliere ab „Yasmani’s Jewelry Jobs“ (Kapitel 3, Anruf von Yasmani).",
+       "en": "Pawn shops from “Coffee Break” (Chapter 2), jewelry stores from “Yasmani’s Jewelry Jobs” (Chapter 3, a call from Yasmani)."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Pfandhäuser",
+       "name_en": "Pawn shops",
+       "anzahl": 15,
+       "info_de": "Ab „Coffee Break“ (Kapitel 2).",
+       "info_en": "From “Coffee Break” (Chapter 2).",
+       "ab": 2
+      },
+      {
+       "name": "Juweliere",
+       "name_en": "Jewelry stores",
+       "anzahl": 20,
+       "info_de": "Ab „Yasmani’s Jewelry Jobs“ (Kapitel 3).",
+       "info_en": "From “Yasmani’s Jewelry Jobs” (Chapter 3).",
+       "ab": 3
+      }
+     ]
     },
     {
      "id": "stick-ups",
@@ -86,10 +168,13 @@
      "art": "zaehler",
      "noetig": 50,
      "vorhanden": 91,
-     "hinweis_de": "Convenience-, Spirituosen- und Fast-Food-Läden.",
-     "hinweis_en": "Convenience stores, liquor stores and fast food places.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "50 von 91. Convenience Stores, Spirituosenläden und Fast-Food-Läden; sie erscheinen auf der Karte, sobald dort der Nebel weg ist (Karte > Robberies > Stick Ups). 50 Überfälle mit dem Partner schalten den Filter „Faded Glory“ frei, 3 hintereinander mit dem Partner ohne Fahndungsverlust die Trophäe „Retail Therapy“.",
+       "en": "50 of 91. Convenience stores, liquor stores and fast food places; they appear on the map once the fog there is cleared (Map > Robberies > Stick Ups). 50 robberies with your partner unlock the “Faded Glory” filter, 3 in a row with your partner without losing the wanted level give the “Retail Therapy” trophy."
+      }
+     ]
     },
     {
      "id": "drogen-verhoekert",
@@ -98,10 +183,18 @@
      "art": "geld",
      "noetig": 100000,
      "vorhanden": null,
-     "hinweis_de": "Über Hehler (Fences) zu Geld machen. Cocaine Flamingos liefern Drogen zum Verhökern.",
-     "hinweis_en": "Turn them into cash through fences. Cocaine Flamingos give you drugs to fence.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Drogen aus Gang Operations und Cocaine Flamingos bei einem Hehler verkaufen, unverkaufte zählen nicht. Die Preise schwanken je nach Hehler, Kapitel und Gegend.",
+       "en": "Sell drugs from gang operations and Cocaine Flamingos to a fence, unsold stock does not count. Prices vary by fence, chapter and region."
+      },
+      {
+       "ab": 3,
+       "de": "Hehler: Brian ab Kapitel 1, Dunk nach „Slam Dunk“ (Kapitel 2), Yasmani und Tyrone ab Kapitel 3.",
+       "en": "Fences: Brian from Chapter 1, Dunk after “Slam Dunk” (Chapter 2), Yasmani and Tyrone from Chapter 3."
+      }
+     ]
     },
     {
      "id": "schmuck-verhoekert",
@@ -110,10 +203,18 @@
      "art": "geld",
      "noetig": 100000,
      "vorhanden": null,
-     "hinweis_de": "Über Hehler (Fences) zu Geld machen.",
-     "hinweis_en": "Turn it into cash through fences.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Schmuck aus den Smash ’n’ Grabs bei einem Hehler verkaufen.",
+       "en": "Sell jewelry from the Smash ’n’ Grabs to a fence."
+      },
+      {
+       "ab": 3,
+       "de": "Yasmani zahlt ab Kapitel 3 am meisten für Schmuck, Brian am wenigsten.",
+       "en": "From Chapter 3 Yasmani pays the most for jewelry, Brian the least."
+      }
+     ]
     },
     {
      "id": "markierte-scheine-verhoekert",
@@ -122,10 +223,18 @@
      "art": "geld",
      "noetig": 250000,
      "vorhanden": null,
-     "hinweis_de": "Braucht den Dye Pack Jammer aus „Credit Check“ (Kapitel 3) und einen Hehler.",
-     "hinweis_en": "Needs the Dye Pack Jammer from “Credit Check” (Chapter 3) and a fence.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Kommen aus Bank- und Payday-Loan-Jobs. Die Scheine bleiben im Beutel, bis ein Hehler sie kauft, und sind bei Tod oder Festnahme weg. 250.000 $ geben zugleich die Trophäe „Dime on the Dollar“.",
+       "en": "They come from bank and payday loan jobs. The bills stay in your stash bag until a fence buys them and are lost if you are wasted or busted. $250,000 also unlocks the “Dime on the Dollar” trophy."
+      },
+      {
+       "ab": 3,
+       "de": "Den Dye Pack Jammer bekommst du von Karim in „Credit Check“ (Kapitel 3). Yasmani zahlt am besten.",
+       "en": "Karim gives you the Dye Pack Jammer in “Credit Check” (Chapter 3). Yasmani pays best."
+      }
+     ]
     },
     {
      "id": "vaults",
@@ -134,10 +243,18 @@
      "art": "zaehler",
      "noetig": 8,
      "vorhanden": 8,
-     "hinweis_de": "Alle 8 nötig. Ab einer optionalen Mission in Kapitel 4.",
-     "hinweis_en": "All 8 required. Unlocked by an optional mission in Chapter 4.",
-     "spoilerhinweis_de": "Ab der optionalen Kapitel-4-Mission „That’s Where The Money Is“.",
-     "spoilerhinweis_en": "Unlocked by the optional Chapter 4 mission “That’s Where The Money Is”."
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 8 nötig, die Tresorräume der 8 großen Banken. Sie öffnen sich erst spät in der Story. Ein Tresor-Raub bringt sofort 4 Sterne; ruf den Partner über die Karteninfo des Ziels dazu, er trägt die zweite Beutetasche.",
+       "en": "All 8 required, the vaults of the 8 large banks. They only open late in the story. A vault robbery gives an instant 4-star wanted level; call your partner in from the map card to carry the second loot bag."
+      },
+      {
+       "ab": 4,
+       "de": "Ab der optionalen Mission „That’s Where The Money Is“ gegen Ende von Kapitel 4. 5 Tresore mit Flucht geben die Trophäe „Maximum Withdrawal“.",
+       "en": "Unlocked by the optional mission “That’s Where The Money Is” near the end of Chapter 4. Robbing 5 vaults and escaping gives the “Maximum Withdrawal” trophy."
+      }
+     ]
     },
     {
      "id": "fahrzeuge-verhoekert",
@@ -146,10 +263,23 @@
      "art": "geld",
      "noetig": 200000,
      "vorhanden": null,
-     "hinweis_de": "Ab „Moses“ (Kapitel 2). Später zählen auch Pay ’n’ Spray und Randys Wunschliste.",
-     "hinweis_en": "Available from “Moses” (Chapter 2). Later, Pay ’n’ Spray and Randy’s wish list count too.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Gestohlene Fahrzeuge an einen Fahrzeug-Hehler verkaufen. 500.000 $ aus Fahrzeugverkäufen schalten den Filter „Dark Mirror“ frei.",
+       "en": "Sell stolen vehicles to a vehicle fence. $500,000 from vehicle sales unlocks the “Dark Mirror” filter."
+      },
+      {
+       "ab": 2,
+       "de": "Ab „Moses“ (Kapitel 2) verkaufst du Autos an Moses.",
+       "en": "From “Moses” (Chapter 2) you sell cars to Moses."
+      },
+      {
+       "ab": 3,
+       "de": "Ab Kapitel 3 zählen auch Verkäufe bei Pay ’n’ Spray und Randys Wunschliste, die am meisten bringt.",
+       "en": "From Chapter 3, Pay ’n’ Spray sales and Randy’s wish list count too, and the wish list pays the most."
+      }
+     ]
     }
    ]
   },
@@ -165,10 +295,68 @@
      "art": "zaehler",
      "noetig": 5,
      "vorhanden": 7,
-     "hinweis_de": "Kentons Schatzsuche ab „Island Dreams“ (Kapitel 1). Mach trotzdem alle 7, die Unterwasser-Zeile braucht sie.",
-     "hinweis_en": "Kenton’s treasure hunt, from “Island Dreams” (Chapter 1). Do all 7 anyway, the underwater row needs them.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Kentons Schatzsuche ab „Island Dreams“ (Kapitel 1, Jason). Tauchausrüstung am Boot anlegen, mit dem Metalldetektor suchen, Fundstücke bei Kenton abgeben; das nächste Set kommt per SMS. Kenton zahlt pro Stück (Dublonen rund 400 $) und später einen Bonus pro vollem Set. Alle Wracks liegen im offenen Wasser bei den Keys (Mariana County). Die Kenton-Wracks zählen auch als Unterwasser-Entdeckungen, deshalb lohnen sich alle Sets. Laut einem Guide ruht die Suche nach Kapitel 1 eine Weile. Falle: Kentert das Boot auf dem Rückweg, kann ein Set verloren gehen; vorher speichern. Fortschritt unter Progress > Characters > Kenton Rees.",
+       "en": "Kenton’s treasure hunt from “Island Dreams” (Chapter 1, Jason). Put on the dive gear at the boat, search with the metal detector and hand the finds to Kenton; the next set arrives by text. Kenton pays per item (doubloons about $400) and later a bonus per full set. All wrecks are in open water near the Keys (Mariana County). Kenton’s wrecks also count as underwater discoveries, so all sets are worth doing. According to one guide the hunt pauses for a while after Chapter 1. Trap: if your boat capsizes on the way back, a set can be lost; save first. Progress under Progress > Characters > Kenton Rees."
+      },
+      {
+       "ab": 4,
+       "de": "Kentons Abschlussauftrag „Maritime Disputes“ folgt auf das letzte Set und ist laut Trophäenliste ein Kapitel-4-Auftrag (versteckte Trophäe „This Was No Boat Accident“). Mehr Bergungen verärgern Sir Todd, dazu gibt es einen optionalen Handlungsstrang.",
+       "en": "Kenton’s final job “Maritime Disputes” follows the last set and is a Chapter 4 job according to the trophy list (hidden trophy “This Was No Boat Accident”). More salvaging angers Sir Todd, which leads to an optional storyline."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Nuestra Señora del Ocio",
+       "anzahl": 10,
+       "info_de": "10 Golddublonen; die ersten findest du schon in „Island Dreams“, sie zählen mit.",
+       "info_en": "10 gold doubloons; the first ones are found during “Island Dreams” and they count."
+      },
+      {
+       "name": "Nuestra Señora de la Ética Laxa",
+       "anzahl": 5,
+       "info_de": "Wrack aus der ersten Runde.",
+       "info_en": "Wreck from the first batch."
+      },
+      {
+       "name": "Nuestra Señora de la Noche",
+       "anzahl": 7,
+       "info_de": "Wrack aus der ersten Runde.",
+       "info_en": "Wreck from the first batch."
+      },
+      {
+       "name": "Urca de Cinco Torres",
+       "anzahl": 6,
+       "info_de": "Wrack; die Guides ordnen es der ersten oder zweiten Runde zu. Name nur aus einer Quelle.",
+       "info_en": "Wreck; guides place it in the first or second batch. Name from a single source."
+      },
+      {
+       "name": "Nuestra Señora Lujuriosa",
+       "anzahl": 6,
+       "info_de": "Wrack aus der zweiten Runde. Name nur aus einer Quelle.",
+       "info_en": "Wreck from the second batch. Name from a single source."
+      },
+      {
+       "name": "Urca de Santa Sierra",
+       "anzahl": 6,
+       "info_de": "Wrack aus der zweiten Runde. Name nur aus einer Quelle.",
+       "info_en": "Wreck from the second batch. Name from a single source."
+      },
+      {
+       "name": "Belpoint Strait",
+       "anzahl": 5,
+       "info_de": "Nur bei Push Square als Set genannt, zählt dort nicht als Unterwasser-Entdeckung. Ob es eines der 7 Kenton-Sets ist, ist offen.",
+       "info_en": "Only Push Square lists it as a set, where it does not count as an underwater discovery. Whether it is one of the 7 Kenton sets is unclear."
+      },
+      {
+       "name": "Bobcat Dive Site",
+       "anzahl": 6,
+       "info_de": "Nur bei Push Square als Set genannt, zählt dort nicht als Unterwasser-Entdeckung. Ob es eines der 7 Kenton-Sets ist, ist offen.",
+       "info_en": "Only Push Square lists it as a set, where it does not count as an underwater discovery. Whether it is one of the 7 Kenton sets is unclear."
+      }
+     ]
     },
     {
      "id": "sammelkarten-sets",
@@ -177,10 +365,124 @@
      "art": "zaehler",
      "noetig": 15,
      "vorhanden": 18,
-     "hinweis_de": "Nur volle Sets zählen. Mit den kleinsten Sets brauchst du mindestens 372 Karten. Verkauf im Pfandhaus löscht die Karte nicht aus der Sammlung.",
-     "hinweis_en": "Only complete sets count. With the smallest sets you need at least 372 cards. Selling a card at a pawn shop does not remove it from the collection.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "480 Karten in 18 Sets (12 bis 36 Karten). Nur volle Sets zählen; mit den 15 kleinsten Sets brauchst du mindestens 372 Karten. Feste Fundorte drinnen und draußen (Schränke, Tische, Theken, Garagen, Werkzeugkisten), dazu gelbe Wandkästen mit Zufallskarten und glänzende Karten mit wechselnden Orten. Duplikate bringen nichts, lassen sich aber verkaufen. Verkauf im Pfandhaus (rund 20 $ bis über 1.000 $) löscht die Karte nicht aus der Sammlung. Laut Red Bull können zwei Karten nach Kapitel 2 unerreichbar werden. 3 volle Sets geben die Trophäe „Don’t Touch My Deck“, alle 24 Vice City Flamingos den Filter „Bubblegum“.",
+       "en": "480 cards in 18 sets (12 to 36 cards). Only complete sets count; with the 15 smallest sets you need at least 372 cards. Fixed spots indoors and outdoors (cabinets, tables, counters, garages, toolboxes), plus yellow wall boxes with random cards and shiny cards with changing spots. Duplicates add nothing but can be sold. Selling at a pawn shop (about $20 to over $1,000) does not remove the card from the collection. According to Red Bull two cards can become unreachable after Chapter 2. 3 complete sets give the “Don’t Touch My Deck” trophy, all 24 Vice City Flamingos cards unlock the “Bubblegum” filter."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Vice City Flamingos",
+       "anzahl": 24,
+       "info_de": "Baseball. Alle 24 schalten den Filter „Bubblegum“ frei.",
+       "info_en": "Baseball. All 24 unlock the “Bubblegum” filter."
+      },
+      {
+       "name": "Vice City Narcos",
+       "anzahl": 24,
+       "info_de": "Basketball.",
+       "info_en": "Basketball."
+      },
+      {
+       "name": "Vice City Manatees",
+       "anzahl": 24,
+       "info_de": "Football.",
+       "info_en": "Football."
+      },
+      {
+       "name": "Vice City Club De Fútbol",
+       "anzahl": 30,
+       "info_de": "Fußball.",
+       "info_en": "Soccer."
+      },
+      {
+       "name": "Liberty City Swingers",
+       "anzahl": 24,
+       "info_de": "Baseball.",
+       "info_en": "Baseball."
+      },
+      {
+       "name": "Liberty City Penetrators",
+       "anzahl": 24,
+       "info_de": "Basketball.",
+       "info_en": "Basketball."
+      },
+      {
+       "name": "Liberty City Wrath",
+       "anzahl": 24,
+       "info_de": "Football.",
+       "info_en": "Football."
+      },
+      {
+       "name": "Los Santos Corkers",
+       "anzahl": 24,
+       "info_de": "Baseball.",
+       "info_en": "Baseball."
+      },
+      {
+       "name": "Los Santos Panic",
+       "anzahl": 24,
+       "info_de": "Basketball.",
+       "info_en": "Basketball."
+      },
+      {
+       "name": "Los Santos Pounders",
+       "anzahl": 24,
+       "info_de": "Football.",
+       "info_en": "Football."
+      },
+      {
+       "name": "Backyard Wrestling",
+       "anzahl": 12,
+       "info_de": "Kurioses Set, das kleinste.",
+       "info_en": "Novelty set, the smallest."
+      },
+      {
+       "name": "America’s Next Top Hooker",
+       "anzahl": 24,
+       "info_de": "Kurioses Set.",
+       "info_en": "Novelty set."
+      },
+      {
+       "name": "Delights Dancers",
+       "anzahl": 18,
+       "info_de": "Tänzerinnen.",
+       "info_en": "Dancers."
+      },
+      {
+       "name": "Jack of Hearts Dancers",
+       "anzahl": 36,
+       "info_de": "Tänzerinnen.",
+       "info_en": "Dancers.",
+       "ab": 3
+      },
+      {
+       "name": "Nine1Nine Dancers",
+       "anzahl": 36,
+       "info_de": "Tänzerinnen.",
+       "info_en": "Dancers."
+      },
+      {
+       "name": "The Legends of Ratface",
+       "anzahl": 36,
+       "info_de": "Comic, teils „The Legend of Ratface“ geschrieben.",
+       "info_en": "Comic, sometimes spelled “The Legend of Ratface”."
+      },
+      {
+       "name": "Right Wing: America’s Hero",
+       "anzahl": 36,
+       "info_de": "Comic.",
+       "info_en": "Comic."
+      },
+      {
+       "name": "ED Comics Universe",
+       "anzahl": 36,
+       "info_de": "Comic.",
+       "info_en": "Comic."
+      }
+     ]
     },
     {
      "id": "waink-orte",
@@ -189,10 +491,45 @@
      "art": "zaehler",
      "noetig": 100,
      "vorhanden": null,
-     "hinweis_de": "Mit der Handy-App WAiNK scannen: unter anderem Landmarks, Curiosities, Sculptures, „No Flusher Tags“ und Weltraumschrott.",
-     "hinweis_en": "Scan with the WAiNK phone app: Landmarks, Curiosities, Sculptures, “No Flusher Tags” and space junk, among others.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Rund 108 Orte in fünf Kategorien, 100 nötig (die Gesamtzahl ist nicht gesichert, eine Quelle zählt 112). Mit der Handy-App WAiNK zu Fuß scannen (Steuerkreuz hoch halten, dann R1), ab Kapitel 1. Alles liegt draußen, verteilt über Vice City, Vice Beach und die Countys. AHOL-Street-Art und die 1010-Murals scannst du auch, sie zählen aber nicht mit, Fahrzeuge und Magazin-Cover haben eigene Zeilen. 100 Scans geben die Trophäe „You WAiNKer!“. Fortschritt unter Progress > Collections > WAiNK Locations.",
+       "en": "Around 108 locations in five categories, 100 required (the total is not confirmed, one source counts 112). Scan them on foot with the WAiNK phone app (hold d-pad up, then R1), from Chapter 1. Everything is outdoors, spread across Vice City, Vice Beach and the counties. You also scan AHOL street art and the 1010 murals, but they do not count here, and vehicles and magazine covers have their own rows. 100 scans give the “You WAiNKer!” trophy. Progress under Progress > Collections > WAiNK Locations."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Landmarks",
+       "anzahl": 31,
+       "info_de": "Bekannte Bauwerke und Orte.",
+       "info_en": "Well-known buildings and places."
+      },
+      {
+       "name": "Curiosities",
+       "anzahl": 35,
+       "info_de": "Kuriose Objekte in der Landschaft.",
+       "info_en": "Odd objects in the landscape."
+      },
+      {
+       "name": "Sculptures",
+       "anzahl": 23,
+       "info_de": "Skulpturen und Statuen.",
+       "info_en": "Sculptures and statues."
+      },
+      {
+       "name": "No Flusher Tags",
+       "anzahl": 15,
+       "info_de": "Graffiti-Tags in Vice Beach, eingeleitet per SMS. Nach 10 Scans meldet sich CantCloneThis89, am Ende gibt es einen Truffade Thrax. Anzahl nur aus einer Quelle.",
+       "info_en": "Graffiti tags in Vice Beach, introduced by text. After 10 scans CantCloneThis89 gets in touch, and the reward is a Truffade Thrax. Count from a single source."
+      },
+      {
+       "name": "Peewees Billboards",
+       "anzahl": 4,
+       "info_de": "Werbetafeln, ausgelöst durch einen Snapmatic-Post von Mr Enigma. Belohnung: Peewee’s-Shirt und Kappe. Anzahl nur aus einer Quelle.",
+       "info_en": "Billboards, triggered by a Snapmatic post from Mr Enigma. Reward: a Peewee’s shirt and cap. Count from a single source."
+      }
+     ]
     },
     {
      "id": "unterwasser-entdeckungen",
@@ -201,10 +538,36 @@
      "art": "zaehler",
      "noetig": 33,
      "vorhanden": 33,
-     "hinweis_de": "Alle 33 nötig. Kentons Tauchgänge ab „Island Dreams“ (Kapitel 1). Dafür brauchst du alle 7 Kenton-Sets.",
-     "hinweis_en": "All 33 required. Kenton’s dives, from “Island Dreams” (Chapter 1). You need all 7 Kenton sets for this.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 33 nötig. Zählt alles Auffällige am Meeresgrund: Kentons Wracks, Flugzeug-, Boot- und U-Boot-Wracks, Riffe, Tierkadaver, fünf BURG-Forschungsstationen, eine Kraken-Skulptur und mehr. Die Kenton-Wracks liefern nur einen Teil, den Rest findest du frei beim Tauchen. Der Zähler startet mit dem ersten Fund in „Island Dreams“ (Kapitel 1). Die Funde liegen vor allem bei den Keys, dazu vor Leonard und Kelly County und in den Gewässern um Vice City. Fortschritt unter Progress > Collections > Exploration.",
+       "en": "All 33 required. Everything notable on the seabed counts: Kenton’s wrecks, plane, boat and submarine wrecks, reefs, animal carcasses, five BURG research stations, a Kraken sculpture and more. Kenton’s wrecks are only part of it, you find the rest by diving freely. The counter starts with the first find in “Island Dreams” (Chapter 1). Most finds are near the Keys, plus off Leonard and Kelly County and in the waters around Vice City. Progress under Progress > Collections > Exploration."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Kenton-Wracks",
+       "name_en": "Kenton wrecks",
+       "anzahl": 6,
+       "info_de": "Laut Push Square zählen 6 Wracks aus Kentons Sets.",
+       "info_en": "According to Push Square, 6 wrecks from Kenton’s sets count."
+      },
+      {
+       "name": "BURG-Forschungsstationen",
+       "name_en": "BURG research stations",
+       "anzahl": 5,
+       "info_de": "Verteilt auf die Keys, Leonard und Kelly County.",
+       "info_en": "Spread across the Keys, Leonard and Kelly County."
+      },
+      {
+       "name": "Weitere Funde",
+       "name_en": "Other finds",
+       "anzahl": null,
+       "info_de": "Flugzeug-, Boot- und U-Boot-Wracks, Riffe, Kadaver, Kraken-Skulptur, Unterwasser-Hotel; der Rest bis 33.",
+       "info_en": "Plane, boat and submarine wrecks, reefs, carcasses, Kraken sculpture, underwater hotel; the rest up to 33."
+      }
+     ]
     },
     {
      "id": "magazine-buecher-comics",
@@ -213,10 +576,28 @@
      "art": "zaehler",
      "noetig": 30,
      "vorhanden": 34,
-     "hinweis_de": "Die 34 enthalten die 7 Book Swaps. Duplikate zählen nicht.",
-     "hinweis_en": "The 34 include the 7 Book Swaps. Duplicates do not count.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "34 insgesamt: 27 Magazine, Bücher und Comics plus 7 Book Swaps, die mitzählen. Duplikate zählen nicht. Sie liegen vor allem in Wohnungen, Motels, einem Fitnessstudio und draußen. Einige hängen an der Story; laut Push Square solltest du manche schon vor dem Ende von Kapitel 1, 2 oder 3 lesen. Fortschritt unter Progress > Collections > Exploration.",
+       "en": "34 in total: 27 magazines, books and comics plus 7 Book Swaps, which count too. Duplicates do not count. They are mostly found in homes, motels, a gym and outdoors. Some are tied to the story; according to Push Square you should read some before the end of Chapter 1, 2 or 3. Progress under Progress > Collections > Exploration."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Magazine, Bücher und Comics",
+       "name_en": "Magazines, books and comics",
+       "anzahl": 27,
+       "info_de": "Darunter Lifestyle- und Angel-Magazine, Memoiren und Romane.",
+       "info_en": "Including lifestyle and fishing magazines, memoirs and novels."
+      },
+      {
+       "name": "Book Swaps",
+       "anzahl": 7,
+       "info_de": "Bücher-Tauschstellen, zählen in dieselbe Zeile.",
+       "info_en": "Book swap spots, they count toward the same row."
+      }
+     ]
     },
     {
      "id": "meditationsplaetze",
@@ -225,10 +606,18 @@
      "art": "zaehler",
      "noetig": 15,
      "vorhanden": 18,
-     "hinweis_de": "Außenplätze zählen je einmal für Jason und Lucia. Der Balkon-Platz aus Kapitel 1 ist nach Kapitel 1 weg.",
-     "hinweis_en": "Outdoor spots count once each for Jason and Lucia. The balcony spot from Chapter 1 is gone after Chapter 1.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "18 Meditationen an 10 Plätzen. Außenplätze zählen je einmal für Jason und Lucia, der Gipfel-Platz nur einmal (beide meditieren zusammen), dazu Jasons Balkon. Der Balkon-Platz kommt nach „Down to Earth“ und ist nach Kapitel 1 weg: Für 100 % reichen 15, für die Trophäe „Positive Mental Attitude“ nimm ihn besser mit. Plätze in Mariana, Kelly, Lummox und Leonard County. 50 Meditationen schalten den Filter „Fast Forward“ frei.",
+       "en": "18 meditations at 10 spots. Outdoor spots count once each for Jason and Lucia, the summit spot only once (both meditate together), plus Jason’s balcony. The balcony spot comes after “Down to Earth” and is gone after Chapter 1: 15 is enough for 100%, but take it for the “Positive Mental Attitude” trophy. Spots are in Mariana, Kelly, Lummox and Leonard County. 50 meditations unlock the “Fast Forward” filter."
+      },
+      {
+       "ab": 2,
+       "de": "Die Außenplätze öffnen ab „Coffee Break“ (Kapitel 2), sobald du die Figuren wechseln kannst; Lucia führt das Meditieren ein.",
+       "en": "Outdoor spots open from “Coffee Break” (Chapter 2) once you can switch characters; Lucia introduces meditation."
+      }
+     ]
     },
     {
      "id": "cocaine-flamingos",
@@ -237,10 +626,13 @@
      "art": "zaehler",
      "noetig": 100,
      "vorhanden": 125,
-     "hinweis_de": "Nur Flamingos mit schwarz-weißem Schnabel zählen. Sie liefern Drogen zum Verhökern.",
-     "hinweis_en": "Only flamingos with a black and white beak count. They give you drugs to fence.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "125 im ganzen Land, 100 nötig. Nur Ton-Flamingos mit schwarz-weißem Schnabel und Kokain drin zählen, gelb-schwarze Rasendeko nicht; achte auf die Meldung nach dem Zerschlagen. Schießen oder mit dem Baseballschläger zerschlagen. Die Drogen verkaufst du beim Hehler. 50 zerstörte schalten den Fahrzeug-Cheat „Inflatable Flamingo“ frei. Fortschritt unter Progress > Collections > Exploration.",
+       "en": "125 across the state, 100 required. Only pottery flamingos with a black and white beak and cocaine inside count, yellow and black lawn decorations do not; watch for the notification after smashing one. Shoot them or smash them with a baseball bat. You sell the drugs to a fence. 50 destroyed unlock the “Inflatable Flamingo” vehicle cheat. Progress under Progress > Collections > Exploration."
+      }
+     ]
     },
     {
      "id": "unique-playlists",
@@ -249,10 +641,32 @@
      "art": "zaehler",
      "noetig": 2,
      "vorhanden": 2,
-     "hinweis_de": null,
-     "hinweis_en": null,
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Beide nötig. Poster mit WAiNK scannen, beide liegen in Vice City; das Handy meldet sich in der Nähe eines Posters. „The Vault“ braucht 1 Poster im gleichnamigen Club und schaltet einen geheimen Elektro-Radiosender frei. „The Sniper of La Perle“ braucht 4 Poster, meist in Läden in La Perle, und schaltet eine Playlist mit Kodak Black unter On Demand frei. Fortschritt unter Progress > Collections > Exploration.",
+       "en": "Both required. Scan posters with WAiNK, both are in Vice City; your phone alerts you near a poster. “The Vault” needs 1 poster at the club of the same name and unlocks a secret electronic radio station. “The Sniper of La Perle” needs 4 posters, mostly in shops in La Perle, and unlocks a Kodak Black playlist under On Demand. Progress under Progress > Collections > Exploration."
+      },
+      {
+       "ab": 4,
+       "de": "Ein Poster der La-Perle-Playlist taucht laut einem Guide erst nach Kapitel 3 auf.",
+       "en": "According to one guide, one poster for the La Perle playlist only appears after Chapter 3."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "The Vault",
+       "anzahl": 1,
+       "info_de": "Geheimer Elektro-Radiosender, danach im Radio wählbar. 1 Poster.",
+       "info_en": "Secret electronic radio station, selectable on the radio afterwards. 1 poster."
+      },
+      {
+       "name": "The Sniper of La Perle",
+       "anzahl": 4,
+       "info_de": "Playlist mit 22 Titeln und Kodak Black, danach unter On Demand. 4 Poster.",
+       "info_en": "22-track playlist with Kodak Black, afterwards under On Demand. 4 posters."
+      }
+     ]
     },
     {
      "id": "styles",
@@ -261,10 +675,43 @@
      "art": "zaehler",
      "noetig": 70,
      "vorhanden": 79,
-     "hinweis_de": "Styles aus Magazinen und 34 Luxusuhren. 10 Uhren schalten den Cheat „Move Time Forward“ frei, 20 Uhren „Pause Time of Day“.",
-     "hinweis_en": "Styles from magazines plus 34 luxury watches. 10 watches unlock the “Move Time Forward” cheat, 20 watches “Pause Time of Day”.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "79 Styles: 13 Magazin-Styles für Jason, 15 für Lucia und 17 Magazin-Tattoos, die du von Magazin-Covern mit WAiNK scannst, dazu 34 Luxusuhren. Die Uhren haben ein goldenes Symbol und liegen meist in Gang Operations. 10 Uhren schalten den Cheat „Move Time Forward“ frei, 20 Uhren „Pause Time of Day“. Fortschritt unter Progress > Collections > Discovered Styles.",
+       "en": "79 styles: 13 magazine styles for Jason, 15 for Lucia and 17 magazine tattoos, which you scan from magazine covers with WAiNK, plus 34 luxury watches. The watches have a golden icon and are mostly found in gang operations. 10 watches unlock the “Move Time Forward” cheat, 20 watches “Pause Time of Day”. Progress under Progress > Collections > Discovered Styles."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Jasons Magazin-Styles",
+       "name_en": "Jason’s magazine styles",
+       "anzahl": 13,
+       "info_de": "Per WAiNK von Magazin-Covern.",
+       "info_en": "Scanned from magazine covers with WAiNK."
+      },
+      {
+       "name": "Lucias Magazin-Styles",
+       "name_en": "Lucia’s magazine styles",
+       "anzahl": 15,
+       "info_de": "Per WAiNK von Magazin-Covern.",
+       "info_en": "Scanned from magazine covers with WAiNK."
+      },
+      {
+       "name": "Magazin-Tattoos",
+       "name_en": "Magazine tattoos",
+       "anzahl": 17,
+       "info_de": "Per WAiNK von Magazin-Covern.",
+       "info_en": "Scanned from magazine covers with WAiNK."
+      },
+      {
+       "name": "Luxusuhren",
+       "name_en": "Luxury watches",
+       "anzahl": 34,
+       "info_de": "Goldenes Symbol, meist in Gang Operations.",
+       "info_en": "Golden icon, mostly in gang operations."
+      }
+     ]
     },
     {
      "id": "rennen-gewonnen",
@@ -273,10 +720,59 @@
      "art": "zaehler",
      "noetig": 30,
      "vorhanden": 40,
-     "hinweis_de": "Straßenrennen (Yago), Dirtbike, Mud Club, Gellhorn Raceway, Boone Speedway und Offroad.",
-     "hinweis_en": "Street races (Yago), dirt bike, Mud Club, Gellhorn Raceway, Boone Speedway and off-road.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "40 Rennen in sechs Serien (blaue Symbole, Karte > Activities > Racing), 30 verschiedene Siege nötig. Die meisten Strecken liegen in Kelly County, Lummox County und Vice City. 20 verschiedene Siege geben die Trophäe „Earn Cash, Not Kudos“, 10 Siege auf Gellhorn, Mud Club oder Boone den Cheat „Repair Vehicle“.",
+       "en": "40 races in six series (blue icons, Map > Activities > Racing), 30 different wins required. Most tracks are in Kelly County, Lummox County and Vice City. 20 different wins give the “Earn Cash, Not Kudos” trophy, 10 wins at Gellhorn, the Mud Club or Boone unlock the “Repair Vehicle” cheat."
+      },
+      {
+       "ab": 3,
+       "de": "Die Straßenrennen „Hit ’N Run VC“ laufen über Yago ab Kapitel 3, der Mud Club über Billys „Thrillbillies“ (Kapitel 2), Gellhorn nach einer Einführung, die übrigen findest du frei.",
+       "en": "The “Hit ’N Run VC” street races run through Yago from Chapter 3, the Mud Club through Billy’s “Thrillbillies” (Chapter 2), Gellhorn after an introduction, and you find the rest freely."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Hit ’N Run VC (Straßenrennen)",
+       "name_en": "Hit ’N Run VC (street races)",
+       "anzahl": 9,
+       "info_de": "Über Yago, ab Kapitel 3 nach „Dealer’s Choice“; in Vice City.",
+       "info_en": "Through Yago, from Chapter 3 after “Dealer’s Choice”; in Vice City.",
+       "ab": 3
+      },
+      {
+       "name": "Gellhorn International Raceway",
+       "anzahl": 11,
+       "info_de": "Nach einer Einführungsmission; Sportwagen, Offroader und Superbikes.",
+       "info_en": "After an introduction mission; sports cars, off-roaders and superbikes."
+      },
+      {
+       "name": "Thrillbilly Mud Club",
+       "anzahl": 8,
+       "info_de": "Über Billys optionale Mission „Thrillbillies“ (Kapitel 2); 6 Dirt-Track- und 2 Oval-Rennen.",
+       "info_en": "Through Billy’s optional mission “Thrillbillies” (Chapter 2); 6 dirt track and 2 oval races.",
+       "ab": 2
+      },
+      {
+       "name": "Animal Crackers (Offroad)",
+       "anzahl": 8,
+       "info_de": "Frei in der Welt, in Lummox und Mariana County.",
+       "info_en": "Found in the open world, in Lummox and Mariana County."
+      },
+      {
+       "name": "Boone Speedway",
+       "anzahl": 2,
+       "info_de": "Hinfahren reicht.",
+       "info_en": "Just visit the venue."
+      },
+      {
+       "name": "Ambrosia Raceway",
+       "anzahl": 2,
+       "info_de": "Demolition-Rennen; Symbol erscheint in der Nähe.",
+       "info_en": "Demolition races; the icon appears when you are close."
+      }
+     ]
     },
     {
      "id": "renn-challenges-gold",
@@ -285,10 +781,43 @@
      "art": "zaehler",
      "noetig": 10,
      "vorhanden": 13,
-     "hinweis_de": "Die Quellen widersprechen sich: OutputLag nennt 10 von 13, Push Square 30 Gold-Medaillen.",
-     "hinweis_en": "Sources disagree: OutputLag says 10 of 13, Push Square says 30 gold medals.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "13 Medaillen-Prüfungen, getrennt von den 40 Rennen: Zeitfahren, Stunt-Läufe, ein Bergrennen und ein Sumpflauf, jeweils mit Bronze, Silber und Gold. Gold in 10 davon reicht, drei schwere kannst du auslassen. Die meisten liegen am Thrillbilly Mud Club und in Gellhorn, je eine in Ambrosia, Boone, Hamlet, Kalaga und Waning Sands. Das Symbol erscheint erst in der Nähe, manche brauchen eine Einführung. Fortschritt unter Progress > Activities > Race Challenges.",
+       "en": "13 medal events, separate from the 40 races: time trials, stunt runs, a hill climb and a swamp run, each with bronze, silver and gold. Gold in 10 of them is enough, so you can skip three hard ones. Most are at the Thrillbilly Mud Club and in Gellhorn, one each in Ambrosia, Boone, Hamlet, Kalaga and Waning Sands. The icon only appears when you are close, some need an introduction first. Progress under Progress > Activities > Race Challenges."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Zeitfahren",
+       "name_en": "Time trials",
+       "anzahl": 8,
+       "info_de": "Drag, Dragway, zwei Raceway-Läufe, Speedway, Dirt Track, Oval, Rad.",
+       "info_en": "Drag, dragway, two raceway trials, speedway, dirt track, oval, cycling."
+      },
+      {
+       "name": "Stunt-Läufe",
+       "name_en": "Stunt runs",
+       "anzahl": 3,
+       "info_de": "Air Time, BMX, Motocross; Wertung nach Punkten.",
+       "info_en": "Air time, BMX, motocross; scored by points."
+      },
+      {
+       "name": "Bergrennen",
+       "name_en": "Hill climb",
+       "anzahl": 1,
+       "info_de": "Hill Climb.",
+       "info_en": "Hill climb."
+      },
+      {
+       "name": "Sumpflauf",
+       "name_en": "Swamp run",
+       "anzahl": 1,
+       "info_de": "Swamp Run.",
+       "info_en": "Swamp run."
+      }
+     ]
     },
     {
      "id": "schiessstand-gold",
@@ -297,10 +826,27 @@
      "art": "zaehler",
      "noetig": 42,
      "vorhanden": 42,
-     "hinweis_de": "Alle 42 nötig. Schießstände bei Ammu-Nation, je 5 $ für den Waiver-Pass.",
-     "hinweis_en": "All 42 required. Shooting ranges at Ammu-Nation, $5 each for the waiver pass.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 42 nötig. Es gibt zwei eigene Schießstände, nicht in den Ammu-Nation-Läden: Griffin Shooting Range im Nordwesten von Vice City (6 Parcours, je 3 Gold) und Rodgers Ranch in Kelly County (6 Parcours, je 4 Gold). Kauf vorher beim Kassierer den Waiver-Pass für 5 $. Zeitkurse in Griffin lieber mit Lucia, sie ist schneller. Alle 42 Gold geben die Trophäe „The Shootist“ und das Gewehr Hillinger M306 TMR bei Ammu-Nation; 25 Medaillen schalten die Munitions-Cheats frei.",
+       "en": "All 42 required. There are two dedicated ranges, not inside the Ammu-Nation stores: Griffin Shooting Range in northwest Vice City (6 courses, 3 golds each) and Rodgers Ranch in Kelly County (6 courses, 4 golds each). Buy the $5 waiver pass from the clerk first. Play the timed courses at Griffin as Lucia, she is faster. All 42 golds give “The Shootist” trophy and the Hillinger M306 TMR rifle at Ammu-Nation; 25 medals unlock the ammo cheats."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Griffin Shooting Range",
+       "anzahl": 18,
+       "info_de": "Vice City, 6 Parcours mit je 3 Gold. Aufteilung der 42 nur aus einer Quelle.",
+       "info_en": "Vice City, 6 courses with 3 golds each. Split of the 42 from a single source."
+      },
+      {
+       "name": "Rodgers Ranch & Shooting Range",
+       "anzahl": 24,
+       "info_de": "Kelly County, 6 Parcours mit je 4 Gold. Aufteilung der 42 nur aus einer Quelle.",
+       "info_en": "Kelly County, 6 courses with 4 golds each. Split of the 42 from a single source."
+      }
+     ]
     },
     {
      "id": "videospiele",
@@ -309,10 +855,39 @@
      "art": "zaehler",
      "noetig": 4,
      "vorhanden": 4,
-     "hinweis_de": "Drei auf Jasons Konsole, „Bang For Your Buck“ nur am Automaten.",
-     "hinweis_en": "Three on Jason’s console, “Bang For Your Buck” only on the arcade machine.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Jedes Spiel einmal starten und wieder beenden reicht. Tenebrae Lux, Street Trash III und Time Jackers: Rewind laufen auf der JoySystem-Konsole (in Kapitel 1 in Jasons Haus), Bang For Your Buck nur an Automaten in Bars und Läden. Die Konsole gibt es ab „Feng Shui“ (Kapitel 1), in Kapitel 2 nicht, ab Kapitel 3 wieder. Ein Spiel komplett durchspielen gibt die Trophäe „Stick Fiddler“.",
+       "en": "Starting each game once and quitting is enough. Tenebrae Lux, Street Trash III and Time Jackers: Rewind run on the JoySystem console (in chapter 1 in Jason’s house), Bang For Your Buck only on arcade machines in bars and shops. The console is available from “Feng Shui” (Chapter 1), not in Chapter 2, and again from Chapter 3. Finishing one game completely gives the “Stick Fiddler” trophy."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Tenebrae Lux",
+       "anzahl": null,
+       "info_de": "JoySystem-Konsole, Rätselspiel.",
+       "info_en": "JoySystem console, puzzle game."
+      },
+      {
+       "name": "Street Trash III: Dezombifier",
+       "anzahl": null,
+       "info_de": "JoySystem-Konsole, Zombie-Spiel; Schreibweise schwankt.",
+       "info_en": "JoySystem console, zombie game; spelling varies."
+      },
+      {
+       "name": "Time Jackers: Rewind",
+       "anzahl": null,
+       "info_de": "JoySystem-Konsole, im Menü auswählen.",
+       "info_en": "JoySystem console, pick it from the menu."
+      },
+      {
+       "name": "Bang For Your Buck",
+       "anzahl": null,
+       "info_de": "Nur an Automaten, etwa in Bars, Convenience Stores, Kleidungs-, Elektronik- und Schmuckläden; drei kurze Jagdreviere.",
+       "info_en": "Arcade machines only, for example in bars, convenience stores, clothing, electronics and jewelry stores; three short hunting grounds."
+      }
+     ]
     },
     {
      "id": "billard-gegner",
@@ -321,10 +896,13 @@
      "art": "zaehler",
      "noetig": 5,
      "vorhanden": 7,
-     "hinweis_de": null,
-     "hinweis_en": null,
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "5 von 7 Gegnern schlagen. 8-Ball gegen Stammgäste an festen Lokalen im ganzen Land: Bars, Tavernen und Cafés. Es gibt 17 Tische, nicht an jedem sitzt ein Gegner, manche kommen nur zu bestimmten Uhrzeiten. Eine Revanche kostet 5 $. Ein Lokal ist zeitweise gesperrt und später wieder offen. Fortschritt unter Progress > Activities > Sports > Pool.",
+       "en": "Beat 5 of 7 opponents. 8-ball against regulars at fixed venues across the state: bars, taverns and cafes. There are 17 tables, not every one has an opponent, and some only show up at certain hours. A rematch costs $5. One venue is closed for a while and opens again later. Progress under Progress > Activities > Sports > Pool."
+      }
+     ]
     },
     {
      "id": "minigolf-kurse",
@@ -333,10 +911,33 @@
      "art": "zaehler",
      "noetig": 2,
      "vorhanden": 3,
-     "hinweis_de": null,
-     "hinweis_en": null,
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "2 der 3 Minigolf-Anlagen spielen, welche ist egal. Die großen Golfplätze Leaf Links und Mount Hailes zählen nicht. Frei spielbar ohne Story-Voraussetzung.",
+       "en": "Play 2 of the 3 mini golf courses, any two. The full-size courses Leaf Links and Mount Hailes do not count. Playable in free roam without story requirements."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "King Gator Adventure Golf",
+       "anzahl": null,
+       "info_de": "Buckskin Swamp.",
+       "info_en": "Buckskin Swamp."
+      },
+      {
+       "name": "Frontier Adventure Golf",
+       "anzahl": null,
+       "info_de": "Waning Sands, Leonard County.",
+       "info_en": "Waning Sands, Leonard County."
+      },
+      {
+       "name": "Dino Golf Challenge",
+       "anzahl": null,
+       "info_de": "Frogswater, Kelly County; verlassen, kostenlos.",
+       "info_en": "Frogswater, Kelly County; abandoned, free to play."
+      }
+     ]
     },
     {
      "id": "basketballkoerbe",
@@ -345,10 +946,13 @@
      "art": "zaehler",
      "noetig": 90,
      "vorhanden": 100,
-     "hinweis_de": null,
-     "hinweis_en": null,
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "90 verschiedene Körbe, an jedem einmal treffen; ein zweiter Treffer am selben Korb zählt nicht. Körbe stehen in Parks, Höfen und an Häusern im ganzen Land, die meisten in den Keys. Karte > Exploration > Points of Interest > Basketball Hoops.",
+       "en": "90 different hoops, score once at each; a second basket at the same hoop does not count. Hoops are in parks, yards and at houses across the state, most of them in the Keys. Map > Exploration > Points of Interest > Basketball Hoops."
+      }
+     ]
     },
     {
      "id": "drohnen-zeitrennen",
@@ -357,10 +961,13 @@
      "art": "zaehler",
      "noetig": 42,
      "vorhanden": 42,
-     "hinweis_de": "Alle 42 nötig.",
-     "hinweis_en": "All 42 required.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 42 nötig: 14 Top-Fun-Drones-Standorte mit je 3 Zeitrennen. Schlag in den ersten beiden die Par-Zeit, dann öffnet sich das dritte; dort reicht Ankommen. Karte > Activities > Top Fun Drones. Ein Sieg an jedem Standort gibt die Trophäe „Top Fun“.",
+       "en": "All 42 required: 14 Top Fun Drones locations with 3 time trials each. Beat par in the first two to unlock the third; there you only need to finish. Map > Activities > Top Fun Drones. A win at every location gives the “Top Fun” trophy."
+      }
+     ]
     },
     {
      "id": "stunts",
@@ -369,10 +976,39 @@
      "art": "zaehler",
      "noetig": 300,
      "vorhanden": 397,
-     "hinweis_de": "Vier Stunt-Arten, beliebig mischbar.",
-     "hinweis_en": "Four stunt types, mix them however you like.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "300 von 397, beliebig gemischt aus vier Arten; denselben Stunt zu wiederholen bringt nichts. Fortschritt nach Regionen unter Progress > Activities > Stunts. 250 Stunts geben die Trophäe „Cunning Stunts“, 50 Stunt Jumps den Cheat „Unlimited Nitrous“, 50 Fallschirm- oder BASE-Sprünge ab 300 Fuß den Cheat „Parachute“.",
+       "en": "300 of 397, any mix of four types; repeating the same stunt adds nothing. Progress by region under Progress > Activities > Stunts. 250 stunts give the “Cunning Stunts” trophy, 50 stunt jumps unlock the “Unlimited Nitrous” cheat, 50 skydives or BASE jumps from 300 feet the “Parachute” cheat."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Stunt Jumps",
+       "anzahl": 130,
+       "info_de": "Rampe oder Kante treffen und landen; jeder Sprung hat eine eigene Bedingung.",
+       "info_en": "Hit a ramp or edge and land; each jump has its own condition."
+      },
+      {
+       "name": "Under the Bridge",
+       "anzahl": 202,
+       "info_de": "Unter Brücken, Dämmen oder Überführungen durchfliegen.",
+       "info_en": "Fly under bridges, causeways or overpasses."
+      },
+      {
+       "name": "Knife Flights",
+       "anzahl": 40,
+       "info_de": "Durch die Lücke zwischen zwei Gebäuden fliegen.",
+       "info_en": "Fly through the gap between two buildings."
+      },
+      {
+       "name": "BASE Jumps",
+       "anzahl": 25,
+       "info_de": "Mit Fallschirm von Dach, Antenne oder Klippe springen.",
+       "info_en": "Parachute off a roof, antenna or cliff."
+      }
+     ]
     },
     {
      "id": "challenges",
@@ -381,10 +1017,63 @@
      "art": "zaehler",
      "noetig": 70,
      "vorhanden": 80,
-     "hinweis_de": "Acht Gruppen: Combat, Criminal, Exploration, Fitness, Shopping, Sports, Survival und Vehicle.",
-     "hinweis_en": "Eight groups: Combat, Criminal, Exploration, Fitness, Shopping, Sports, Survival and Vehicle.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "80 Challenges in 8 Gruppen zu je 10, 70 nötig, ab Spielstart verfügbar. Viele erledigen sich nebenbei, schau erst spät unter Progress > Challenges nach und lass die zehn schwersten aus. 5 und alle Challenges einer Gruppe schalten je einen Fahrzeug-Cheat frei, alle 80 den Kampfjet Hauners P-996 Lazer. 50 Challenges geben die Trophäe „One Last Thing“.",
+       "en": "80 challenges in 8 groups of 10, 70 required, available from the start. Many complete themselves along the way, so check Progress > Challenges late and skip the ten hardest. 5 and all challenges of a group each unlock a vehicle cheat, all 80 the Hauners P-996 Lazer jet. 50 challenges give the “One Last Thing” trophy."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Combat",
+       "anzahl": 10,
+       "info_de": "5: Speeder 700 GT; alle: Bravado Banshee.",
+       "info_en": "5: Speeder 700 GT; all: Bravado Banshee."
+      },
+      {
+       "name": "Criminal",
+       "anzahl": 10,
+       "info_de": "5: Maibatsu Sanchez; alle: Western Zombie Bobber.",
+       "info_en": "5: Maibatsu Sanchez; all: Western Zombie Bobber."
+      },
+      {
+       "name": "Exploration",
+       "anzahl": 10,
+       "info_de": "5: Nagasaki Sea Sparrow; alle: Nagasaki Carbon RS.",
+       "info_en": "5: Nagasaki Sea Sparrow; all: Nagasaki Carbon RS."
+      },
+      {
+       "name": "Fitness",
+       "anzahl": 10,
+       "info_de": "5: Tuff BMX; alle: ’65 Vapid Dominator.",
+       "info_en": "5: Tuff BMX; all: ’65 Vapid Dominator."
+      },
+      {
+       "name": "Shopping",
+       "anzahl": 10,
+       "info_de": "5: Maibatsu Boomazoom; alle: Truffade Thrax.",
+       "info_en": "5: Maibatsu Boomazoom; all: Truffade Thrax."
+      },
+      {
+       "name": "Sports",
+       "anzahl": 10,
+       "info_de": "5: Vapid Stanier G2 Taxi; alle: Brimstone Golfer.",
+       "info_en": "5: Vapid Stanier G2 Taxi; all: Brimstone Golfer."
+      },
+      {
+       "name": "Survival",
+       "anzahl": 10,
+       "info_de": "5: Airboat 09; alle: Hauners Rhino Tank. Teils „Survivalist“ genannt.",
+       "info_en": "5: Airboat 09; all: Hauners Rhino Tank. Sometimes called “Survivalist”."
+      },
+      {
+       "name": "Vehicle",
+       "anzahl": 10,
+       "info_de": "5: Lapwing Mallard; alle: Progen Emerus.",
+       "info_en": "5: Lapwing Mallard; all: Progen Emerus."
+      }
+     ]
     },
     {
      "id": "brets-target-decks",
@@ -393,10 +1082,18 @@
      "art": "zaehler",
      "noetig": 15,
      "vorhanden": 15,
-     "hinweis_de": "Alle 15 nötig. Nur mit Jason. Gehört zur Trophäe „Fair Game“.",
-     "hinweis_en": "All 15 required. Jason only. Tied to the “Fair Game” trophy.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "Alle 15 nötig. Kleine Tiere transportierst du im Pick-up. Das nächste Deck kommt per SMS, oft mit Hinweis aufs Verhalten des Tiers. Karte > Activities > Target Deck.",
+       "en": "All 15 required. Carry small animals in a pickup truck. The next deck arrives by text, often with a hint about the animal’s behavior. Map > Activities > Target Deck."
+      },
+      {
+       "ab": 2,
+       "de": "Nur mit Jason: Bret Vogel von Killtelligence Provisions schreibt ihm ab „Coffee Break“ (Kapitel 2). Pro Deck erlegst du bestimmte Tiere, Bret nimmt nur Zustand „Pristine“ oder „Good“: passende Munition, sauberer Kopf- oder Herztreffer, Focus zeigt die Vitalpunkte. Trophäe „Fair Game“ für ein besonderes Tier für Bret.",
+       "en": "Jason only: Bret Vogel of Killtelligence Provisions texts him from “Coffee Break” (Chapter 2). Each deck asks for specific animals, and Bret only accepts “Pristine” or “Good” condition: the right ammo, a clean head or heart shot, Focus shows the vitals. “Fair Game” trophy for a special animal for Bret."
+      }
+     ]
     }
    ]
   },
@@ -412,10 +1109,13 @@
      "art": "zaehler",
      "noetig": 200,
      "vorhanden": 277,
-     "hinweis_de": "Mit WAiNK scannen. Boote und Flugzeuge zählen, Standout-Varianten nicht.",
-     "hinweis_en": "Scan them with WAiNK. Boats and planes count, Standout variants do not.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "277 Basismodelle, 200 nötig. Mit WAiNK scannen; Boote und Flugzeuge zählen, die 280 Standout-Varianten nicht. Fortschritt unter Progress > Vehicles. 100 entdeckte Fahrzeuge geben die Trophäe „Whip It Good“.",
+       "en": "277 base models, 200 required. Scan them with WAiNK; boats and aircraft count, the 280 standout variants do not. Progress under Progress > Vehicles. 100 discovered vehicles give the “Whip It Good” trophy."
+      }
+     ]
     },
     {
      "id": "standardwaffen",
@@ -424,10 +1124,36 @@
      "art": "zaehler",
      "noetig": 50,
      "vorhanden": 66,
-     "hinweis_de": "Einmal in der Hand halten reicht.",
-     "hinweis_en": "Holding a weapon once is enough.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "66 Standardwaffen, 50 nötig. Einmal in der Hand halten reicht, auch Waffen von Gegnern oder aus Ammu-Nation. Goldene Einzelstücke zählen nicht. Fortschritt unter Progress > Weapons.",
+       "en": "66 standard weapons, 50 required. Holding one once is enough, including weapons dropped by enemies or bought at Ammu-Nation. Gold unique weapons do not count. Progress under Progress > Weapons."
+      }
+     ],
+     "unterliste": [
+      {
+       "name": "Schusswaffen",
+       "name_en": "Firearms",
+       "anzahl": 53,
+       "info_de": "Pistolen bis schwere Waffen.",
+       "info_en": "Pistols up to heavy weapons."
+      },
+      {
+       "name": "Nahkampfwaffen",
+       "name_en": "Melee weapons",
+       "anzahl": 9,
+       "info_de": "Schläger, Messer und Ähnliches.",
+       "info_en": "Bats, knives and the like."
+      },
+      {
+       "name": "Sprengstoffe",
+       "name_en": "Explosives",
+       "anzahl": 4,
+       "info_de": "Wurf- und Sprengwaffen.",
+       "info_en": "Throwables and explosives."
+      }
+     ]
     },
     {
      "id": "tiere-studiert",
@@ -436,12 +1162,16 @@
      "art": "zaehler",
      "noetig": 100,
      "vorhanden": 255,
-     "hinweis_de": "Mit dem Fernglas studieren. Jagen musst du dafür nicht.",
-     "hinweis_en": "Study them with the binoculars. You do not have to hunt for this.",
-     "spoilerhinweis_de": null,
-     "spoilerhinweis_en": null
+     "hinweise": [
+      {
+       "ab": 1,
+       "de": "255 Einträge im Tier-Journal, 100 nötig. Mit dem Fernglas studieren, jagen musst du dafür nicht (nur für die Target Decks). Ob jede Hunde- und Katzenrasse einzeln zählt, ist unbestätigt. Fortschritt unter Progress > Animals.",
+       "en": "255 entries in the animal journal, 100 required. Study them with the binoculars, no hunting needed (only for the target decks). Whether each dog and cat breed counts separately is unconfirmed. Progress under Progress > Animals."
+      }
+     ]
     }
    ]
   }
- ]
+ ],
+ "stand": "2026-11-26"
 }
