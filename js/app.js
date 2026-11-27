@@ -12,6 +12,7 @@ import { karteAnlegen, strassenZeichnen, pinsZeichnen, punkteZeichnen, punktOeff
 import { suchen, gruppieren } from './suche.js';
 import { ARTWORTE, KATWORTE, BEREICHWORTE, VERSTECKWORTE } from './suchworte.js';
 import { ARTEN, ART_GRUPPEN, ARTEN_ZU, artenVon, artenAus, artMit, artFarbe, zeichenSvg } from './arten.js';
+import * as sehhilfe from './sehhilfe.js';
 
 const $ = (sel) => document.querySelector(sel);
 // Wer im System „Bewegung reduzieren“ gewählt hat, bekommt kein weiches Rollen (die Karte springt dann ebenfalls, js/karte.js)
@@ -55,7 +56,7 @@ const DUNKEL = 'var(--vc-grund-nacht)';
 const zeichenEl = (artId, groesse = 20) => { const s = el('span', { class: 'zeichen', 'aria-hidden': 'true' }); s.innerHTML = zeichenSvg(artId, `var(${artFarbe(artId)})`, DUNKEL, groesse); return s; };
 const zeichenBild = new Map();
 async function zeichenLaden() {
-  const stil = getComputedStyle(document.documentElement); const dunkel = stil.getPropertyValue('--vc-grund-nacht').trim();
+  const stil = getComputedStyle($('#karte')); const dunkel = stil.getPropertyValue('--vc-grund-nacht').trim();
   await Promise.all(ARTEN.map((a) => {
     const bild = new Image();
     bild.src = `data:image/svg+xml,${encodeURIComponent(zeichenSvg(a.id, stil.getPropertyValue(artFarbe(a.id)).trim(), dunkel, 96))}`;
@@ -878,6 +879,12 @@ function steuerungVerdrahten() {
   spr.addEventListener('change', async (e) => {
     setzeSprache(e.target.value); await speicher.einstellungSchreiben('sprache', e.target.value); uebersetzeSeite(); k.karte.closePopup(); allesZeichnen(); speicherHinweis();
   });
+  // Sehhilfen: Die Leinwand der Karte und die Bilder der Piktogramme lesen ihre Farben einmal aus, darum nach jedem Wechsel neu
+  const seh = $('#darstellung');
+  const neuFaerben = async () => { seh.value = sehhilfe.eintragVon(sehhilfe.gespeichert()); await zeichenLaden(); allesZeichnen(); };
+  seh.value = sehhilfe.eintragVon(sehhilfe.gespeichert());
+  seh.addEventListener('change', () => { sehhilfe.waehlen(seh.value); neuFaerben(); });
+  sehhilfe.beobachten(neuFaerben);
 
   // Installieren-Knopf (Muster der Werkstatt): nur sichtbar, wenn der Browser es anbietet
   let angebot = null;

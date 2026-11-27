@@ -1,7 +1,8 @@
 // Texte auf Deutsch und Englisch. Eigennamen aus dem Spiel bleiben im Original.
 const texte = {
   de: {
-    untertitel: 'Inoffizielle Karte und Checkliste für GTA VI · offline · ohne Konto',
+    untertitel: 'Inoffizielle Karte und Checkliste für GTA VI · nach dem ersten Besuch auch offline · ohne Konto',
+    darstellung: 'Darstellung', sehNormal: 'Normal', sehKontrastDunkel: 'Hoher Kontrast dunkel', sehKontrastHell: 'Hoher Kontrast hell', sehFarbenblind: 'Farbenblind', sehUmkehr: 'Umgekehrte Farben',
     installieren: 'Installieren',
     profil: 'Durchgang',
     spoilerfrei: 'SPOILERFREI',
@@ -83,7 +84,8 @@ const texte = {
     provPc: 'PC-Brücke (live)', provPcText: 'Nur mit einer PC-Version und einem Script Hook möglich. Beides ist nicht angekündigt.'
   },
   en: {
-    untertitel: 'Unofficial map and checklist for GTA VI · offline · no account',
+    untertitel: 'Unofficial map and checklist for GTA VI · works offline after your first visit · no account',
+    darstellung: 'Appearance', sehNormal: 'Normal', sehKontrastDunkel: 'High contrast dark', sehKontrastHell: 'High contrast light', sehFarbenblind: 'Color-blind', sehUmkehr: 'Inverted colors',
     installieren: 'Install',
     profil: 'Playthrough',
     spoilerfrei: 'SPOILER FREE',

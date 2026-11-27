@@ -1,8 +1,12 @@
 # Gee Tee Auto-MAP+
 
-Inoffizielle Fan-Karte und Checkliste für GTA VI: https://dennismit2n.github.io/auto-map/
+Meine inoffizielle Fan-Karte und Checkliste für GTA VI: https://dennismit2n.github.io/auto-map/
+
+![Gee Tee Auto-MAP+ am Rechner: dunkle Karte von Vice City mit Straßennamen, Punkten und Piktogrammen, rechts Fortschritt und Filter](assets/bildschirmfoto-de.webp)
 
 Nicht verbunden mit Rockstar Games oder Take-Two Interactive. Grand Theft Auto ist eine Marke von Take-Two Interactive. Kostenlos, ohne Werbung, ohne Konto.
+
+Im Browser, auf Deutsch und Englisch, nach dem ersten Besuch auch offline. Orte und Läden aus gtadb.org, eine Suche für alles, die 100-%-Liste, Missionen, Nachschlagen, eigene Pins zum Teilen per Link und ein Schalter, der alles nach deinem Kapitel verbirgt. Dein Fortschritt liegt nur in deinem Browser.
 
 ## Quellen und Lizenzen
 

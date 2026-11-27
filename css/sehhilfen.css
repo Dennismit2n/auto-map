@@ -1,0 +1,91 @@
+/* Sehhilfen der Werkstatt (js/sehhilfe.js): Hoher Kontrast, Farbenblind, Umgekehrte Farben.
+   Die App ist nur dunkel. Die Karte ist Inhalt wie ein Foto: Im hellen Kontrast und bei Umkehr bleibt sie dunkel
+   und echt, samt Namen, Zeichen und Fenstern darauf. Farben hier sind gerechnet (WCAG, mindestens 7,2 zu 1 im
+   Hohen Kontrast), nicht aus tokens.json: Die Token beschreiben nur die normale Darstellung. */
+
+/* ---------- Hoher Kontrast dunkel; im hellen Kontrast gilt derselbe Satz für die Karte ---------- */
+:root[data-vision="contrast"][data-hc="dark"],
+:root[data-vision="contrast"][data-hc="light"] #karte {
+  color-scheme: dark;
+  --vc-grund-nacht: #000000; --vc-grund-flaeche: #000000; --vc-grund-kontur: #A0A0A0;
+  --vc-text-haupt: #E0E0E0; --vc-text-leise: #C4C4C4;
+  --vc-glas-platte: #000000; --vc-glas-gurt: #000000; --vc-glas-rand: #A0A0A0; --vc-glas-knopf: #4840C0;
+  --vc-akzent-rosa: #F89FC5; --vc-akzent-lavendel: #9C8ED3; --vc-akzent-himmel: #7EB5DE; --vc-akzent-tuerkis: #8BC5C9;
+  --vc-akzent-sonne: #FCB54A; --vc-akzent-neon: #F7AED4;
+  --vc-verlauf-magenta: #F755D7; --vc-verlauf-koralle: #FD7582; --vc-verlauf-orange: #FD934B;
+  --vc-ort-vicecity: #E19FCE; --vc-ort-keys: #5FCF8F; --vc-ort-gellhorn: #FE8F13; --vc-ort-ambrosia: #7AA3DC;
+  --vc-ort-grassrivers: #8CBF2A; --vc-ort-kalaga: #E3D36B;
+  --vc-art-laden: #E58FB4; --vc-art-waffen: #F96962; --vc-art-auto: #E8A33C; --vc-art-nacht: #B79CF0;
+  --vc-art-aktiv: #7FCF7A; --vc-art-dienst: #7AA9E8; --vc-art-verkehr: #6FD0CF;
+  --vc-signal-gruen: #35D07F; --vc-signal-rot: #FF626A; --vc-signal-tinte: #000000;
+  --vc-schatten-platte: none; --vc-schatten-klein: none;
+  --vc-kappe: linear-gradient(var(--vc-akzent-sonne), var(--vc-akzent-sonne));
+}
+
+/* ---------- Hoher Kontrast hell: alles außer der Karte ---------- */
+:root[data-vision="contrast"][data-hc="light"] {
+  color-scheme: light;
+  --vc-grund-nacht: #FFFFFF; --vc-grund-flaeche: #FFFFFF; --vc-grund-kontur: #585757;
+  --vc-text-haupt: #000000; --vc-text-leise: #2B2B2B;
+  --vc-glas-platte: #FFFFFF; --vc-glas-gurt: #FFFFFF; --vc-glas-rand: #585757; --vc-glas-knopf: #4840C0;
+  --vc-akzent-rosa: #8A3C61; --vc-akzent-lavendel: #5D4D8D; --vc-akzent-himmel: #255B80; --vc-akzent-tuerkis: #265F63;
+  --vc-akzent-sonne: #784E00; --vc-akzent-neon: #814266;
+  --vc-verlauf-magenta: #A2008B; --vc-verlauf-koralle: #A6223B; --vc-verlauf-orange: #8C4200;
+  --vc-ort-vicecity: #7E436E; --vc-ort-keys: #006439; --vc-ort-gellhorn: #864700; --vc-ort-ambrosia: #33588C;
+  --vc-ort-grassrivers: #436000; --vc-ort-kalaga: #635700;
+  --vc-art-laden: #893D61; --vc-art-waffen: #AB1A21; --vc-art-auto: #794E00; --vc-art-nacht: #644895;
+  --vc-art-aktiv: #0D650F; --vc-art-dienst: #2D5891; --vc-art-verkehr: #006161;
+  --vc-signal-gruen: #006537; --vc-signal-rot: #B1002B; --vc-signal-tinte: #FFFFFF;
+  --vc-schatten-platte: none; --vc-schatten-klein: none;
+  --vc-kappe: linear-gradient(var(--vc-akzent-sonne), var(--vc-akzent-sonne));
+}
+
+/* Ohne Verlauf, Leuchten, Glas und Schatten */
+:root[data-vision="contrast"] .aurora { display: none; }
+:root[data-vision="contrast"] *, :root[data-vision="contrast"] *::before, :root[data-vision="contrast"] *::after { box-shadow: none !important; }
+:root[data-vision="contrast"] .platte { -webkit-backdrop-filter: none; backdrop-filter: none; }
+:root[data-vision="contrast"] .logo b { text-shadow: none; }
+:root[data-vision="contrast"] .logo em { background: none; color: var(--vc-verlauf-koralle); filter: none; }
+:root[data-vision="contrast"] .balken { border: 1px solid var(--vc-glas-rand); }
+:root[data-vision="contrast"] .balken i { background: var(--vc-akzent-sonne); }
+:root[data-vision="contrast"] .zeichen-pin.leuchten { filter: none; }
+:root[data-vision="contrast"] :focus-visible { outline: 3px solid var(--vc-akzent-sonne); outline-offset: 2px; }
+/* Flächen, die sonst nur ein Schatten oder ein Farbschimmer vom Grund abhebt, bekommen einen Rand */
+:root[data-vision="contrast"] :is(.knopf, .tabs [role="tab"][aria-selected="true"]) { border: 1px solid var(--vc-text-haupt); }
+:root[data-vision="contrast"] .spoiler { border-color: var(--vc-text-haupt); }
+:root[data-vision="contrast"] :is(.chip[aria-pressed="true"], .suche input, .legende, .setz-hinweis) { background-color: var(--vc-grund-nacht); }
+:root[data-vision="contrast"] .chip[aria-pressed="true"] { border-width: 2px; padding: 3px 8px; }
+:root[data-vision="contrast"] .art-gruppe { background: none; }
+:root[data-vision="contrast"] :is(.suche li[aria-selected="true"], .suche li[role="option"]:hover) { color: #fff; }
+:root[data-vision="contrast"] :is(.zeile.gefunden, .radio-titel li.gefunden, .eintrag.gefunden) { border-left: 4px solid var(--vc-akzent-neon); }
+:root[data-vision="contrast"] .fenster::backdrop { background: rgba(0, 0, 0, .85); }
+/* Lupe im Suchfeld: im Hellen dunkel */
+:root[data-vision="contrast"][data-hc="light"] .suche input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232B2B2B' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21'/%3E%3C/svg%3E"); }
+
+/* ---------- Farbenblind: Countys und Arten in den Farben von Okabe und Ito ----------
+   Die Form trägt die Bedeutung ohnehin (Piktogramme, Buchstaben, Haken, Text am Spoiler-Schalter);
+   die Farben sind nur so gewählt, dass sie bei jeder Farbsehschwäche auseinanderzuhalten sind. */
+:root[data-vision="cvd"] {
+  --vc-ort-vicecity: #CC79A7; --vc-ort-keys: #009E73; --vc-ort-gellhorn: #E69F00; --vc-ort-ambrosia: #56B4E9;
+  --vc-ort-grassrivers: #E8743A; --vc-ort-kalaga: #F0E442;
+  --vc-art-laden: #CC79A7; --vc-art-waffen: #E8743A; --vc-art-auto: #E69F00; --vc-art-nacht: #F0E442;
+  --vc-art-aktiv: #009E73; --vc-art-dienst: #56B4E9; --vc-art-verkehr: #D0D0D0;
+  --vc-signal-gruen: #56B4E9; --vc-signal-rot: #E8743A;
+}
+:root[data-vision="cvd"] .spoiler { box-shadow: var(--vc-schatten-klein), 0 0 18px rgba(232, 116, 58, .55); }
+:root[data-vision="cvd"] .spoiler.frei { box-shadow: var(--vc-schatten-klein), 0 0 18px rgba(86, 180, 233, .5); }
+
+/* ---------- Umgekehrte Farben, wie der Farbfilter von Windows ----------
+   Die Karte und alles, was ihre Farben erklärt (Legende, Piktogramme, County-Farbfelder), wird zurückgedreht
+   und bleibt echt. Der Druck dreht nie um. */
+:root[data-vision="invert"] { filter: invert(1); }
+:root[data-vision="invert"] :is(#karte, .legende, .zeichen:not(#karte *, .legende *), .chip .farbe),
+:root[data-vision="invert"] .art-gruppen-name::before { filter: invert(1); }
+:root[data-vision="invert"] .county-chip .name { color: inherit; }
+/* Das Fenster liegt in der obersten Ebene des Browsers, dorthin reicht der Filter der Seite nicht */
+:root[data-vision="invert"] .fenster, :root[data-vision="invert"] .fenster::backdrop { filter: invert(1); }
+@media print {
+  :root[data-vision="invert"], :root[data-vision="invert"] .fenster,
+  :root[data-vision="invert"] :is(#karte, .legende, .zeichen:not(#karte *, .legende *), .chip .farbe),
+  :root[data-vision="invert"] .art-gruppen-name::before { filter: none; }
+}

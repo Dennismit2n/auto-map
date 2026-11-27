@@ -161,7 +161,7 @@ function punkteVerteilen(k) {
 export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
   k.punktNachId.clear(); k.buendelTitel = buendelTitel;
   k.schilder.clearLayers(); k.schildNachId.clear();
-  const stil = getComputedStyle(document.documentElement);
+  const stil = getComputedStyle(k.karte.getContainer());   // an der Karte, nicht am Dokument: im hellen Kontrast bleibt die Karte dunkel
   const rand = stil.getPropertyValue('--vc-grund-nacht').trim();
   for (const o of [...orte].sort((a, b) => Boolean(a.bild) - Boolean(b.bild))) {   // Piktogramme zuletzt, also über den Punkten
     if (o.schild) {

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gee Tee Auto-MAP+ · inoffizielle Karte für GTA VI</title>
-<meta name="description" content="Inoffizielle Karte und Checkliste für GTA VI. Offline, ohne Konto, kostenlos.">
+<meta name="description" content="Inoffizielle Karte und Checkliste für GTA VI, nicht verbunden mit Rockstar Games oder Take-Two. Nach dem ersten Besuch auch offline, ohne Konto, kostenlos.">
 <meta name="theme-color" content="#1c002c">
 <meta name="robots" content="noindex, nofollow">
 <link rel="manifest" href="manifest.webmanifest">
@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="tokens/tokens.css">
 <link rel="stylesheet" href="css/beschlag.css">
 <link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/sehhilfen.css">
+<!-- Sehhilfen der Werkstatt: setzt die gemeinsame Wahl (werkstatt.darstellung) vor dem ersten Bild. Dieselbe Logik steht in js/sehhilfe.js. -->
+<script>(function(){var v=null,r=document.documentElement,m=window.matchMedia;try{v=localStorage.getItem('werkstatt.darstellung');}catch(e){}var d=!!(m&&m('(prefers-color-scheme: dark)').matches),k=!!(m&&m('(prefers-contrast: more)').matches);if(v==='hc-dark'||v==='hc-light'){r.setAttribute('data-vision','contrast');r.setAttribute('data-hc',v.slice(3));}else if(v==='cvd-dark'||v==='cvd-light'){r.setAttribute('data-vision','cvd');}else if(v==='invert'){r.setAttribute('data-vision','invert');}else if(k&&(!v||v==='system')){r.setAttribute('data-vision','contrast');r.setAttribute('data-hc',d?'dark':'light');}})();</script>
 </head>
 <body>
 <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
@@ -22,12 +25,19 @@
 <header class="seite-kopf platte">
   <div class="marke">
     <h1 class="logo" aria-label="Gee Tee Auto-MAP+"><span aria-hidden="true"><b>G</b>ee <b>T</b>ee <b>A</b>uto<i>-</i><em>MAP+</em></span></h1>
-    <p data-t="untertitel">Inoffizielle Karte und Checkliste für GTA VI · offline · ohne Konto</p>
+    <p data-t="untertitel">Inoffizielle Karte und Checkliste für GTA VI · nach dem ersten Besuch auch offline · ohne Konto</p>
   </div>
   <div class="kopf-steuer">
     <button id="spoiler" class="spoiler frei" type="button"><span class="spoiler-zeichen" aria-hidden="true">✓</span><span>SPOILERFREI</span></button>
     <select id="profil-wahl" data-t-label="profil" aria-label="Durchgang"></select>
     <select id="kapitel-wahl" data-t-label="kapitelWahl" data-t-titel="kapitelWahl" aria-label="Dein Kapitel"></select>
+    <select id="darstellung" data-t-label="darstellung" data-t-titel="darstellung" aria-label="Darstellung">
+      <option value="normal" data-t="sehNormal">Normal</option>
+      <option value="hc-dark" data-t="sehKontrastDunkel">Hoher Kontrast dunkel</option>
+      <option value="hc-light" data-t="sehKontrastHell">Hoher Kontrast hell</option>
+      <option value="cvd" data-t="sehFarbenblind">Farbenblind</option>
+      <option value="invert" data-t="sehUmkehr">Umgekehrte Farben</option>
+    </select>
     <select id="sprache" aria-label="Sprache / Language"></select>
     <button id="installieren" class="knopf" type="button" hidden data-t="installieren">Installieren</button>
   </div>
