@@ -20,6 +20,8 @@ export const ARTWORTE = {
   carwash: 'waschanlage autowäsche car wash',
   carshop: 'werkstatt autowerkstatt tuning mod shop lackiererei pay n spray reifen auto shop autoshop',
   modshop: 'tuning mod shop werkstatt',
+  paynspray: 'pay n spray lackiererei lackieren umlackieren spray',
+  ferriswheel: 'riesenrad ferris wheel',
   bikeshop: 'motorrad motorradladen bike shop',
   cardealer: 'autohändler autohaus händler fahrzeughändler auto shop car dealer dealership',
   parkhaus: 'parkhaus parkhäuser parken garage parking',
@@ -34,6 +36,9 @@ export const ARTWORTE = {
   fence: 'hehler fence',
   electronics: 'elektronik elektronikladen electronics',
   jewelry: 'juwelier schmuck jewelry jeweler',
+  diamonds: 'diamanten juwelier schmuck diamonds jeweler',
+  curiosity: 'kurioses kuriosität sehenswürdigkeit wrack curiosity oddity',
+  sculpture: 'skulptur statue denkmal sculpture monument',
   pharmacy: 'apotheke pharmacy',
   hotel: 'hotel hotels motel unterkunft',
   marina: 'hafen jachthafen yachthafen boote marina',
@@ -43,6 +48,7 @@ export const ARTWORTE = {
   bus: 'bushaltestelle bus',
   metro: 'u bahn metro', metromover: 'hochbahn metromover',
   racetrack: 'rennstrecke rennen racetrack',
+  shootingrange: 'schießstand schiessstand schießen schiessen schießanlage shooting range gun range medaillen',
   golf: 'golf golfplatz', tennis: 'tennis tennisplatz', gym: 'fitnessstudio gym', volleyball: 'volleyball',
   safehouse: 'unterschlupf safehouse versteck'
 };

@@ -141,6 +141,15 @@ textarea { width: 100%; resize: vertical; }
 .chip[aria-pressed="true"]::before { content: "✓"; font-weight: 700; color: var(--ort, var(--vc-akzent-himmel)); }
 .chip .farbe { width: 10px; height: 10px; border-radius: 2px; background: var(--ort); box-shadow: 0 0 8px var(--ort); }
 .county-chip .name { color: var(--ort); }
+.chip .zeichen { flex: none; margin: -2px -2px -2px -3px; }
+/* Arten im Filter: je Gruppe aufklappbar */
+.art-gruppen { display: grid; gap: 6px; margin: 0 0 12px; }
+.art-gruppe { border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); background: rgba(28, 0, 44, .35); }
+.art-gruppe > summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 10px; cursor: pointer; font-size: .9rem; }
+.art-gruppe > summary .zahl { color: var(--vc-text-leise); font-size: .78rem; font-variant-numeric: tabular-nums; }
+.art-gruppen-name::before { content: ""; display: inline-block; width: 9px; height: 9px; margin-right: 7px; border-radius: 2px; background: var(--ort); }
+.art-gruppe > .chips { margin: 0; padding: 2px 8px 8px; }
+.legende-zeichen .zeichen { width: 18px; }
 .chip .anzahl { color: var(--vc-text-leise); font-size: .78rem; font-variant-numeric: tabular-nums; }
 .unterkopf { margin: 14px 0 6px; font: 700 .74rem/1.55 var(--vc-schrift-text); letter-spacing: .07em; text-transform: uppercase; color: var(--vc-text-leise); }
 .leise-text { color: var(--vc-text-leise); font-size: .85rem; margin: 6px 0 0; }
@@ -251,7 +260,7 @@ textarea { width: 100%; resize: vertical; }
 .radio-titel li span { display: block; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .such-ring { width: 44px; height: 44px; border-radius: 50%; border: 3px solid var(--vc-akzent-neon); box-shadow: 0 0 16px var(--vc-akzent-neon), inset 0 0 10px var(--vc-akzent-neon); }
-@media (prefers-reduced-motion: no-preference) { .such-ring { animation: puls 1.2s ease-in-out infinite alternate; } }
+@media (prefers-reduced-motion: no-preference) { .such-ring { animation: puls 1.2s ease-in-out 6 alternate; } }   /* pulst kurz, bleibt dann ruhig stehen */
 @keyframes puls { to { transform: scale(1.25); opacity: .6; } }
 
 /* Legende unten rechts */
@@ -292,6 +301,15 @@ textarea { width: 100%; resize: vertical; }
 .pin.gefunden { background: var(--vc-grund-flaeche); border-color: var(--vc-akzent-tuerkis); box-shadow: -2px 3px 6px rgba(0, 0, 0, .6); }
 .pin.gefunden b { color: var(--vc-akzent-tuerkis); }
 .pin.ziel { outline: 2px solid var(--vc-akzent-neon); outline-offset: 3px; }
+/* Feste Orte mit bekannter Art: Piktogramm statt Nadel (js/arten.js). Schießstände leuchten. */
+.zeichen-pin { position: relative; width: 26px; height: 26px; cursor: pointer; filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, .6)); }
+.zeichen-pin svg, .zeichen svg { display: block; }
+.zeichen-pin.leuchten { filter: drop-shadow(0 0 3px var(--art)) drop-shadow(0 0 8px var(--art)); }
+.zeichen-pin.gefunden svg { opacity: .45; }
+.zeichen-pin i { position: absolute; right: -5px; bottom: -5px; display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; background: var(--vc-grund-flaeche); border: 1.5px solid var(--vc-akzent-tuerkis); color: var(--vc-akzent-tuerkis); font: 700 9px/1 var(--vc-schrift-text); font-style: normal; }
+.zeichen-pin.ziel { outline: 2px solid var(--vc-akzent-neon); outline-offset: 2px; border-radius: 50%; }
+#karte[data-stufe="0"] .zeichen-pin { transform: scale(.72); }
+#karte[data-stufe="1"] .zeichen-pin { transform: scale(.86); }
 .ich { width: 16px; height: 16px; border-radius: 50%; background: var(--vc-akzent-himmel); border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(126, 181, 222, .35), 0 0 16px var(--vc-akzent-himmel); }
 
 /* Herausgezoomt: Pins kleiner, damit die Karte lesbar bleibt */

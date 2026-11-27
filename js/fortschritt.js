@@ -83,7 +83,9 @@ export function missionsName(mission, kapitel, spoilerfrei, texte, stand = KAPIT
 export function passtZumFilter(pin, filter) {
   if (!filter) return true;
   if (filter.countys?.size && !filter.countys.has(pin.county)) return false;
-  if (filter.kategorien?.size && !filter.kategorien.has(pin.kat)) return false;
+  // Kategorien und Arten ergänzen sich: es passt, was zu einer gewählten Kategorie oder zu einer gewählten Art gehört
+  const kat = filter.kategorien?.size; const art = filter.arten?.size;
+  if ((kat || art) && !(kat && filter.kategorien.has(pin.kat)) && !(art && pin.artIds?.some((a) => filter.arten.has(a)))) return false;
   if (filter.versteck && !pin.versteck) return false;
   return true;
 }

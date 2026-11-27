@@ -94,7 +94,12 @@ export function pinsZeichnen(k, { pins, profil, zielId }) {
     const icon = L.divIcon({
       className: '',
       html: `<div class="pin${gefunden ? ' gefunden' : ''}${p.id === zielId ? ' ziel' : ''}${p.kat === 'eigen' ? ' eigen' : ''}" style="--ort:var(${p.farbe})"><b>${gefunden ? '✓' : p.zeichen}</b></div>`,
-      iconSize: [22, 22], iconAnchor: [11, 22], popupAnchor: [0, -22]
+      iconSize: [22, 22], iconAnchor: [11, 22], popupAnchor: [0, -22],
+      // Orte mit bekannter Art: ihr Piktogramm statt der Nadel, auf Wunsch mit Leuchten (Schießstände)
+      ...(p.bild ? {
+        html: `<div class="zeichen-pin${gefunden ? ' gefunden' : ''}${p.id === zielId ? ' ziel' : ''}${p.leuchten ? ' leuchten' : ''}" style="--art:var(${p.artFarbe})">${p.bild}${gefunden ? '<i>✓</i>' : ''}</div>`,
+        iconSize: [26, 26], iconAnchor: [13, 13], popupAnchor: [0, -13]
+      } : {})
     });
     const marker = L.marker(ll(p.x, p.y), { icon, title: p.name, alt: p.name, keyboard: true, zIndexOffset: p.id === zielId ? 500 : 0 });
     marker.bindPopup(() => p.popup(() => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
@@ -105,22 +110,35 @@ export function pinsZeichnen(k, { pins, profil, zielId }) {
 // Community-Orte als kleine Punkte auf einer Leinwand (schnell auch bei fast tausend Orten). Unterhalb von BUENDEL_BIS
 // fasst die Karte nahe Punkte (Umkreis 40 Bildpunkte) zu Bündeln mit Anzahl zusammen; ein Klick zoomt hinein.
 const PUNKT = [2, 2.5, 3.5, 5, 6];
+const ZEICHEN_RADIUS = [7, 8.5, 10, 11, 12];      // Orte mit Piktogramm: halbe Kantenlänge je Zoomstufe
+// Ein Ort mit Piktogramm ist auf der Leinwand ein Kreis-Marker, der statt des Kreises sein Bild malt (Treffer, Fenster,
+// Namen beim Darüberfahren und Bündel laufen dadurch wie bei den Punkten).
+const ZeichenPunkt = L.CircleMarker.extend({
+  _updatePath() {
+    const bild = this.options.bild; const leinwand = this._renderer;
+    if (!bild.complete || !bild.naturalWidth) { L.CircleMarker.prototype._updatePath.call(this); return; }
+    if (!leinwand._drawing || this._empty()) return;
+    const g = this._radius * 2;
+    leinwand._ctx.drawImage(bild, this._point.x - g / 2, this._point.y - g / 2, g, g);
+  }
+});
 const BUENDEL_BIS = 1.25;
 const stufeVon = (zoom) => Math.max(0, Math.min(4, Math.floor((zoom + 1.75) / 0.75)));
 function punkteVerteilen(k) {
-  const zoom = k.karte.getZoom(); const r = PUNKT[stufeVon(zoom)];
+  const zoom = k.karte.getZoom(); const s = stufeVon(zoom);
   const alle = [...k.punktNachId.values()];
   const offen = alle.find((m) => m.isPopupOpen());   // ein offenes Fenster bleibt nach dem Neuverteilen offen
   k.punkte.clearLayers();
-  const einzeln = (m) => { m.setRadius(r); m.addTo(k.punkte); };
+  const einzeln = (m) => { m.setRadius((m.options.bild ? ZEICHEN_RADIUS : PUNKT)[s]); m.addTo(k.punkte); };
   const fertig = () => { if (offen && k.punkte.hasLayer(offen)) offen.openPopup(); k.karte.fire('punkteverteilt'); };
   if (zoom >= BUENDEL_BIS) { alle.forEach(einzeln); fertig(); return; }
+  const lose = [];
   const lage = alle.map((m) => k.karte.project(m.getLatLng(), zoom)); const frei = alle.map(() => true);
   for (let i = 0; i < alle.length; i++) {
     if (!frei[i]) continue;
     const gruppe = [];
     for (let j = i; j < alle.length; j++) if (frei[j] && lage[i].distanceTo(lage[j]) < 40) { gruppe.push(j); frei[j] = false; }
-    if (gruppe.length < 3) { gruppe.forEach((j) => einzeln(alle[j])); continue; }
+    if (gruppe.length < 3) { lose.push(...gruppe); continue; }
     const marker = gruppe.map((j) => alle[j]); const n = marker.length;
     const zaehl = new Map(); for (const m of marker) zaehl.set(m.farbe, (zaehl.get(m.farbe) ?? 0) + 1);
     const farbe = [...zaehl].sort((a, b) => b[1] - a[1])[0][0];
@@ -131,6 +149,7 @@ function punkteVerteilen(k) {
       title: k.buendelTitel?.(n) ?? String(n), alt: k.buendelTitel?.(n) ?? String(n), riseOnHover: true, zIndexOffset: 600
     }).on('click', () => k.karte.fitBounds(L.latLngBounds(marker.map((m) => m.getLatLng())), { padding: [60, 60], maxZoom: BUENDEL_BIS })).addTo(k.punkte);
   }
+  lose.sort((a, b) => a - b).forEach((j) => einzeln(alle[j]));   // in der Reihenfolge der Liste: Piktogramme über den Punkten
   fertig();
 }
 // Orte mit schild (etwa „P“ für Parkhäuser) stehen als eigenes Zeichen auf der Karte: nie im Bündel, Namen weichen ihnen aus.
@@ -139,7 +158,7 @@ export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
   k.schilder.clearLayers(); k.schildNachId.clear();
   const stil = getComputedStyle(document.documentElement);
   const rand = stil.getPropertyValue('--vc-grund-nacht').trim();
-  for (const o of orte) {
+  for (const o of [...orte].sort((a, b) => Boolean(a.bild) - Boolean(b.bild))) {   // Piktogramme zuletzt, also über den Punkten
     if (o.schild) {
       const s = L.marker(ll(o.x, o.y), {
         icon: L.divIcon({ className: '', html: `<div class="schild-ort">${o.schild}</div>`, iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -9] }),
@@ -149,12 +168,12 @@ export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
       s.addTo(k.schilder); k.schildNachId.set(o.id, s);
       continue;
     }
-    const m = L.circleMarker(ll(o.x, o.y), {
-      renderer: k.leinwand, radius: 3, weight: 1, color: rand, fillColor: stil.getPropertyValue(farbeVon(o)).trim(), fillOpacity: 0.95
+    const m = new (o.bild ? ZeichenPunkt : L.CircleMarker)(ll(o.x, o.y), {
+      renderer: k.leinwand, radius: 3, weight: 1, color: rand, fillColor: stil.getPropertyValue(farbeVon(o)).trim(), fillOpacity: 0.95, bild: o.bild
     });
     m.farbe = farbeVon(o);
     m.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
-    m.bindTooltip(o.name, { direction: 'top', offset: [0, -4], className: 'punkt-name' });
+    m.bindTooltip(o.name, { direction: 'top', offset: [0, o.bild ? -9 : -4], className: 'punkt-name' });
     k.punktNachId.set(o.id, m);
   }
   punkteVerteilen(k);
@@ -246,10 +265,16 @@ export function pinOeffnen(k, id) {
   k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), 0.5), { duration: 0.6 });
   return true;
 }
-export function stelleMarkieren(k, p, zoom) {
-  if (k.markierung) k.karte.removeLayer(k.markierung);
-  k.markierung = L.marker(ll(p.x, p.y), { interactive: false, keyboard: false, zIndexOffset: 300, icon: L.divIcon({ className: '', html: '<div class="such-ring"></div>', iconSize: [44, 44], iconAnchor: [22, 22] }) }).addTo(k.karte);
-  const weg = k.markierung; setTimeout(() => { if (k.markierung === weg) { k.karte.removeLayer(weg); k.markierung = null; } }, 6000);
-  k.karte.flyTo(ll(p.x, p.y), zoom, { duration: 0.6 });
-  return ll(p.x, p.y);
+// Der Ring bleibt stehen, bis markierungWeg ihn nimmt (Suchfeld geleert, anderer Treffer). Mit zoom fliegt die Karte hin.
+export function markierungWeg(k) { if (k.markierung) { k.karte.removeLayer(k.markierung); k.markierung = null; } }
+export function stelleMarkieren(k, orte, zoom) {
+  markierungWeg(k);
+  const ring = L.divIcon({ className: '', html: '<div class="such-ring"></div>', iconSize: [44, 44], iconAnchor: [22, 22] });
+  k.markierung = L.layerGroup(orte.map((p) => L.marker(ll(p.x, p.y), { interactive: false, keyboard: false, zIndexOffset: 300, icon: ring }))).addTo(k.karte);
+  if (zoom != null) k.karte.flyTo(ll(orte[0].x, orte[0].y), zoom, { duration: 0.6 });
+  return ll(orte[0].x, orte[0].y);
+}
+// Ausschnitt, in dem alle genannten Orte liegen
+export function ausschnittZeigen(k, orte) {
+  if (orte.length) k.karte.flyToBounds(L.latLngBounds(orte.map((o) => ll(o.x, o.y))), { padding: [60, 60], maxZoom: BUENDEL_BIS, duration: 0.6 });
 }

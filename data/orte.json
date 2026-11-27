@@ -317,8 +317,8 @@
    "text_en": "Ultimate Edition extra from chapter 2: Wyman hands it over, the marker appears shortly after “Thrillbillies”. In northeastern Watson Bay at the edge of the Grassrivers. 1 space with a weapon locker and a stash for stolen goods, the ’67 Vapid Dominator Buggy is parked here.",
    "ab_kapitel": 2,
    "spoiler": false,
-   "x": 679,
-   "y": 1343,
+   "x": 689,
+   "y": 1402,
    "genau": true
   },
   {
@@ -580,8 +580,9 @@
    "text_en": "State park in North Leonard County, in the northeast of Leonida.",
    "ab_kapitel": null,
    "spoiler": false,
-   "x": 1064,
-   "y": 532
+   "x": 1085,
+   "y": 491,
+   "genau": true
   },
   {
    "id": "ort-bundesgefaengnis-key-lento",
@@ -1239,8 +1240,9 @@
    "text_en": "Animal park northwest of Hamlet with exotic species, handy for animal journal entries. Also a Top Fun Drones course.",
    "ab_kapitel": null,
    "spoiler": false,
-   "x": 628,
-   "y": 1469
+   "x": 730,
+   "y": 1380,
+   "genau": true
   },
   {
    "id": "ort-emerald-springs",
@@ -1292,8 +1294,8 @@
    "text_en": "From chapter 2 at night, most reliably around 2 a.m.: a car with open doors and hazard lights stands at the roadside. Follow the trail into the woods, free the floating woman, and the UFO grabs you on the way back. It does not spawn every night. The story continues at the alien research facility.",
    "ab_kapitel": 2,
    "spoiler": true,
-   "x": 424,
-   "y": 746
+   "x": 417,
+   "y": 747
   },
   {
    "id": "geheimnis-ufo-haus",
@@ -1572,7 +1574,7 @@
    "text_en": "At a yard sale in southern Port Gellhorn the “Genuine Cowboy Hat” lies on a white couch, Arthur Morgan’s hat from Red Dead Redemption 2. Buy it and wear it.",
    "ab_kapitel": null,
    "spoiler": true,
-   "x": 437,
+   "x": 430,
    "y": 746
   },
   {
@@ -1603,8 +1605,45 @@
    "text_en": "The “Pilot Wanted” flyer at the Starlet Motel starts Kyle’s Strangers & Freaks chain at McKittrick Farm in chapter 2. In “Buddy?” Kyle turns into something like the Red Hulk: spare him and he escapes with a Hulk leap, otherwise you get $5,000.",
    "ab_kapitel": 2,
    "spoiler": true,
-   "x": 646,
-   "y": 699
+   "x": 689,
+   "y": 686,
+   "genau": true
+  },
+  {
+   "id": "ort-griffin-shooting-range",
+   "kat": "ort",
+   "name": "Griffin Shooting Range",
+   "county": "vicedale",
+   "anker": "Rockridge",
+   "lage_de": "Nordwesten von Vice City",
+   "lage_en": "Northwest Vice City",
+   "text_de": "Schießstand mit 6 Parcours. Beim Personal kaufst du für 5 $ den Haftungsverzicht (Waiver Pass), dann öffnen die Challenges. Hier gibt es 18 der 42 Goldmedaillen (je Parcours 3); diese Aufteilung nennt bisher nur eine Quelle. Zeitkurse lieber mit Lucia. Die genaue Stelle ist nicht belegt, der Pin steht am Ortsnamen.",
+   "text_en": "Shooting range with 6 courses. Buy the liability waiver (Waiver Pass) from the staff for $5 and the challenges open up. 18 of the 42 gold medals are here (3 per course); only one source gives this split so far. Timed courses are easier with Lucia. The exact spot is not confirmed, the pin sits at the place name.",
+   "ab_kapitel": null,
+   "spoiler": false,
+   "arten": [
+    "shootingrange"
+   ],
+   "x": 966,
+   "y": 1029
+  },
+  {
+   "id": "ort-rodgers-ranch-shooting-range",
+   "kat": "ort",
+   "name": "Rodgers Ranch & Shooting Range",
+   "county": "kelly",
+   "anker": "Port Gellhorn",
+   "lage_de": "Bei Port Gellhorn",
+   "lage_en": "Near Port Gellhorn",
+   "text_de": "Schießstand mit 6 Parcours. Beim Personal kaufst du für 5 $ den Haftungsverzicht (Waiver Pass), dann öffnen die Challenges. Hier gibt es 24 der 42 Goldmedaillen (je Parcours 4); diese Aufteilung nennt bisher nur eine Quelle. Die genaue Stelle ist nicht belegt: Der Pin steht nur beim Ortsnamen Port Gellhorn, die Anlage liegt laut Guides nordöstlich der Stadt.",
+   "text_en": "Shooting range with 6 courses. Buy the liability waiver (Waiver Pass) from the staff for $5 and the challenges open up. 24 of the 42 gold medals are here (4 per course); only one source gives this split so far. The exact spot is not confirmed: the pin only sits near the place name Port Gellhorn, guides put the range northeast of the town.",
+   "ab_kapitel": null,
+   "spoiler": false,
+   "arten": [
+    "shootingrange"
+   ],
+   "x": 445,
+   "y": 746
   }
  ],
  "stand": "2026-11-26",
