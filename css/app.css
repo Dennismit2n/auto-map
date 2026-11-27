@@ -1,4 +1,4 @@
-/* G.aranT.iert A.uto-MAP++: Vice-Palette, Glas über Aurora, Werkstatt-Beschlag. Farben nur über tokens.css. */
+/* Gee Tee Auto-MAP+: Vice-Palette, Glas über Aurora, Werkstatt-Beschlag. Farben nur über tokens.css. */
 @font-face {
   font-family: "Fraunces Werkstatt";
   src: url("../assets/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
@@ -87,6 +87,9 @@ h1, h2, .schild { font-family: var(--vc-schrift-schild); font-weight: 600; }
 #karte { width: 100%; height: 100%; border-radius: 3px; background: var(--vc-karte-wasser); }
 .karte-knoepfe { position: absolute; right: 24px; top: 24px; z-index: 600; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
 @media (max-height: 820px) { .popup-offen .karte-knoepfe { visibility: hidden; } }
+/* Schmale Schirme: die drei Knöpfe bleiben in einer Reihe (sonst deckt der Setz-Hinweis die zweite Reihe ab) */
+@media (max-width: 430px) { .karte-knoepfe { gap: 5px; } .karte-knoepfe .knopf { padding: 6px 8px; font-size: .8rem; } }
+.leaflet-popup-scrolled { border-top: 1px solid var(--vc-glas-rand); border-bottom: 1px solid var(--vc-glas-rand); }
 /* Setzmodus für eigene Pins: Knopf gedrückt, Fadenkreuz auf der Karte, Hinweis oben */
 #pin-modus[aria-pressed="true"] { background: var(--vc-glas-knopf); color: #fff; border-color: transparent; box-shadow: var(--vc-schatten-klein), 0 0 14px var(--vc-akzent-neon); }
 #pin-modus[aria-pressed="true"]::before { content: "✓ "; }
@@ -265,6 +268,7 @@ textarea { width: 100%; resize: vertical; }
 
 /* Legende unten rechts */
 .legende { position: absolute; right: 24px; bottom: 24px; z-index: 1001; font-size: .82rem; background: rgba(28, 0, 44, .9); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-klein); }
+.legende { max-height: calc(100% - 48px); overflow-y: auto; }   /* offen nie höher als die Karte */
 .legende summary { cursor: pointer; padding: 6px 11px; font-weight: 600; }
 .legende ul { list-style: none; margin: 0; padding: 2px 11px 9px; display: grid; gap: 4px; }
 .legende li { display: flex; align-items: center; gap: 8px; }

@@ -154,6 +154,7 @@ export function exportieren(profile, pins = [], zeit = Date.now()) {
 }
 
 const ID = /^[a-z0-9-]{1,120}$/;
+const PIN_WEITE = 4000;      // großzügig über der Karte (1452 × 2026 Einheiten); was weiter draußen liegt, ist kein Pin
 
 function pruefeProfil(p) {
   if (!p || typeof p !== 'object') throw new Error('Profil fehlt');
@@ -174,10 +175,13 @@ function pruefeProfil(p) {
 }
 
 function pruefePin(p) {
-  if (!p || typeof p.id !== 'string' || !ID.test(p.id)) return null;
-  if (!Number.isFinite(p.x) || !Number.isFinite(p.y)) return null;
-  const pin = neuerPin(p, Number(p.erstellt) || 0, p.id);
-  pin.zeit = Number.isFinite(p.zeit) ? p.zeit : pin.erstellt;
+  // Nur IDs eigener Pins: Eine fremde ID wie die einer Mission oder Zeile würde deren Haken mitschalten (und das Kapitel anheben)
+  if (!p || typeof p.id !== 'string' || !ID.test(p.id) || !p.id.startsWith('pin-')) return null;
+  if (!Number.isFinite(p.x) || !Number.isFinite(p.y) || p.x < 0 || p.y < 0 || p.x > PIN_WEITE || p.y > PIN_WEITE) return null;
+  // Zeiten endlich und nicht aus der Zukunft, sonst ließe sich der Pin nie mehr ändern oder löschen
+  const zeit = (z) => (Number.isFinite(z) && z > 0 ? Math.min(z, Date.now() + 86400000) : 0);
+  const pin = neuerPin(p, zeit(Number(p.erstellt)), p.id);
+  pin.zeit = Number.isFinite(p.zeit) ? zeit(p.zeit) : pin.erstellt;
   pin.county = typeof p.county === 'string' && ID.test(p.county) ? p.county : null;
   if (p.geloescht === true) pin.geloescht = true;
   return pin;

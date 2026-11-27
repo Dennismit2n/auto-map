@@ -109,11 +109,15 @@ export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheis
 
 // Community-Orte (gtadb, Mapheist), die es schon als festen Ort gibt (gleicher Name oder im festen Ort als derselbe vermerkt), nicht doppelt zeigen.
 // So verrät auch kein Community-Punkt einen festen Ort, den Spoilerfrei gerade verbirgt.
+// Mapheist führt zwei feste Orte unter anderem Namen und an der Stelle des Vorbilds: One-Eyed Willie’s (Auto Shop) und das
+// Gefängnis bei Hamlet unter seinem alten Namen
+const ZWILLINGE = { 'm-venue-one-eyed-willies': 'ort-one-eyed-willies-auto-shop', 'm-place-broward-jail': 'ort-bundesgefaengnis-key-lento' };
 export function ohneDoppelte(gtadbOrte, festeOrte) {
+  const fest = new Set(festeOrte.map((o) => o.id));
   const gleich = (s) => String(s ?? '').toLowerCase().replace(/^the\s+/, '').replace(/[^a-z0-9]+/g, '');
   const namen = new Set(festeOrte.flatMap((o) => [gleich(o.name), gleich(o.name_en)]).filter(Boolean));
   const ids = new Set(festeOrte.filter((o) => o.gtadb_selbst).map((o) => o.gtadb));
-  return gtadbOrte.filter((o) => !ids.has(o.id) && !(namen.has(gleich(o.name)) && !o.namenlos));
+  return gtadbOrte.filter((o) => !ids.has(o.id) && !fest.has(ZWILLINGE[o.id]) && !(namen.has(gleich(o.name)) && !o.namenlos));
 }
 
 export async function ladeDaten(basis = './data/') {

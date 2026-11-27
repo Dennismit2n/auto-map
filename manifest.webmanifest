@@ -1,6 +1,7 @@
 {
-  "name": "G.aranT.iert A.uto-MAP++ (inoffiziell)",
-  "short_name": "Auto-MAP++",
+  "id": "./",
+  "name": "Gee Tee Auto-MAP+ (inoffiziell)",
+  "short_name": "Auto-MAP+",
   "description": "Inoffizielle Karte und Checkliste für GTA VI. Offline, ohne Konto, kostenlos.",
   "lang": "de",
   "start_url": "./",

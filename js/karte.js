@@ -10,6 +10,9 @@ const el = (tag, klasse, text) => { const e = document.createElement(tag); if (k
 
 // Fenster der Orte bleiben unter der Knopfreihe oben rechts (Pin setzen, Pins teilen, Ganze Karte)
 const POPUP_RAND = { autoPanPaddingTopLeft: [10, 58], autoPanPaddingBottomRight: [10, 10] };
+// Maße der Fenster nach der Größe der Karte: auf dem Handy schmaler, und nie höher als die Karte (dann rollt der Inhalt)
+const fenster = (k, schmal = 220) => { const g = k.karte.getSize(); return { maxWidth: Math.max(180, Math.min(300, g.x - 70)), minWidth: Math.max(160, Math.min(schmal, g.x - 70)), maxHeight: Math.max(170, g.y - 100), ...POPUP_RAND }; };
+const FLUG = typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches ? { animate: false } : { duration: 0.6 };
 
 // Ab welcher Zoomstufe ein Namenstyp überhaupt in Frage kommt; ob er erscheint, entscheidet dann der Platz
 const AB_STUFE = { county: 0, stadt: 0, gewaesser: 1, insel: 1, gebiet: 1, viertel: 2, poi: 2 };
@@ -81,6 +84,8 @@ export async function karteAnlegen(element, karte, { onKlick }) {
 
   // Auf niedrigen Bildschirmen reicht der Platz nicht für Fenster und Knopfreihe: solange ein Fenster offen ist, tritt die Reihe zurück (CSS)
   k.on('popupopen popupclose', (e) => element.parentElement.classList.toggle('popup-offen', e.type === 'popupopen'));
+  // Per Tastatur geöffnet (Fokus sitzt auf dem Marker): Fokus ins Fenster, sonst sind seine Knöpfe kaum zu erreichen
+  k.on('popupopen', (e) => { if (document.activeElement?.classList.contains('leaflet-marker-icon')) e.popup.getElement()?.querySelector('button, a[href], select, input')?.focus(); });
   k.on('click', (e) => onKlick?.({ x: Math.round(e.latlng.lng), y: Math.round(karte.hoehe - e.latlng.lat) }, e.latlng));
   const ergebnis = { karte: k, punkte: L.layerGroup().addTo(k), punktNachId: new Map(), schilder: L.layerGroup().addTo(k), schildNachId: new Map(), leinwand: L.canvas({ padding: 0.3 }), pins: L.layerGroup().addTo(k), nachId: new Map(), ich: null, markierung: null, grenzen };
   return ergebnis;
@@ -102,7 +107,7 @@ export function pinsZeichnen(k, { pins, profil, zielId }) {
       } : {})
     });
     const marker = L.marker(ll(p.x, p.y), { icon, title: p.name, alt: p.name, keyboard: true, zIndexOffset: p.id === zielId ? 500 : 0 });
-    marker.bindPopup(() => p.popup(() => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
+    marker.bindPopup(() => p.popup(() => k.karte.closePopup()), fenster(k));
     marker.addTo(k.pins); k.nachId.set(p.id, marker);
   }
 }
@@ -164,7 +169,7 @@ export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
         icon: L.divIcon({ className: '', html: `<div class="schild-ort">${o.schild}</div>`, iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -9] }),
         title: o.titel ?? o.name, alt: o.titel ?? o.name, keyboard: true, zIndexOffset: 200
       });
-      s.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
+      s.bindPopup(() => popup(o, () => k.karte.closePopup()), fenster(k));
       s.addTo(k.schilder); k.schildNachId.set(o.id, s);
       continue;
     }
@@ -172,7 +177,7 @@ export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
       renderer: k.leinwand, radius: 3, weight: 1, color: rand, fillColor: stil.getPropertyValue(farbeVon(o)).trim(), fillOpacity: 0.95, bild: o.bild
     });
     m.farbe = farbeVon(o);
-    m.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
+    m.bindPopup(() => popup(o, () => k.karte.closePopup()), fenster(k));
     m.bindTooltip(o.name, { direction: 'top', offset: [0, o.bild ? -9 : -4], className: 'punkt-name' });
     k.punktNachId.set(o.id, m);
   }
@@ -182,7 +187,7 @@ export function punktOeffnen(k, id) {
   const m = k.punktNachId.get(id) ?? k.schildNachId.get(id);
   if (!m) return false;
   k.karte.once('moveend', () => m.openPopup());
-  k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), BUENDEL_BIS), { duration: 0.6 });   // dort sind alle Punkte einzeln
+  k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), BUENDEL_BIS), FLUG);   // dort sind alle Punkte einzeln
   return true;
 }
 
@@ -253,8 +258,8 @@ export function positionZeigen(k, position, titel) {
   }).addTo(k.karte);
 }
 
-export function popupZeigen(k, latlng, inhalt) { return L.popup({ maxWidth: 300, minWidth: 230, ...POPUP_RAND }).setLatLng(latlng).setContent(inhalt).openOn(k.karte); }
-export function hinfliegen(k, p, zoom = 0.5) { k.karte.flyTo(ll(p.x, p.y), Math.max(k.karte.getZoom(), zoom), { duration: 0.6 }); }
+export function popupZeigen(k, latlng, inhalt) { return L.popup(fenster(k, 230)).setLatLng(latlng).setContent(inhalt).openOn(k.karte); }
+export function hinfliegen(k, p, zoom = 0.5) { k.karte.flyTo(ll(p.x, p.y), Math.max(k.karte.getZoom(), zoom), FLUG); }
 export function ganzeKarte(k) { k.karte.fitBounds(k.grenzen, { padding: [8, 8] }); }
 
 // Suchtreffer anfliegen: Pins öffnen ihr Fenster, Ortsnamen bekommen kurz einen leuchtenden Ring
@@ -262,19 +267,20 @@ export function pinOeffnen(k, id) {
   const m = k.nachId.get(id);
   if (!m) return false;
   k.karte.once('moveend', () => m.openPopup());
-  k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), 0.5), { duration: 0.6 });
+  k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), 0.5), FLUG);
   return true;
 }
 // Der Ring bleibt stehen, bis markierungWeg ihn nimmt (Suchfeld geleert, anderer Treffer). Mit zoom fliegt die Karte hin.
 export function markierungWeg(k) { if (k.markierung) { k.karte.removeLayer(k.markierung); k.markierung = null; } }
-export function stelleMarkieren(k, orte, zoom) {
+export function stelleMarkieren(k, orte, zoom, danach) {
   markierungWeg(k);
   const ring = L.divIcon({ className: '', html: '<div class="such-ring"></div>', iconSize: [44, 44], iconAnchor: [22, 22] });
   k.markierung = L.layerGroup(orte.map((p) => L.marker(ll(p.x, p.y), { interactive: false, keyboard: false, zIndexOffset: 300, icon: ring }))).addTo(k.karte);
-  if (zoom != null) k.karte.flyTo(ll(orte[0].x, orte[0].y), zoom, { duration: 0.6 });
-  return ll(orte[0].x, orte[0].y);
+  const ziel = ll(orte[0].x, orte[0].y);
+  if (zoom != null) { if (danach) k.karte.once('moveend', () => danach(ziel)); k.karte.flyTo(ziel, zoom, FLUG); }
+  return ziel;
 }
 // Ausschnitt, in dem alle genannten Orte liegen
 export function ausschnittZeigen(k, orte) {
-  if (orte.length) k.karte.flyToBounds(L.latLngBounds(orte.map((o) => ll(o.x, o.y))), { padding: [60, 60], maxZoom: BUENDEL_BIS, duration: 0.6 });
+  if (orte.length) k.karte.flyToBounds(L.latLngBounds(orte.map((o) => ll(o.x, o.y))), { padding: [60, 60], maxZoom: BUENDEL_BIS, ...FLUG });
 }

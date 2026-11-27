@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>G.aranT.iert A.uto-MAP++ · inoffizielle Karte für GTA VI</title>
+<title>Gee Tee Auto-MAP+ · inoffizielle Karte für GTA VI</title>
 <meta name="description" content="Inoffizielle Karte und Checkliste für GTA VI. Offline, ohne Konto, kostenlos.">
 <meta name="theme-color" content="#1c002c">
 <meta name="robots" content="noindex, nofollow">
@@ -21,11 +21,11 @@
 
 <header class="seite-kopf platte">
   <div class="marke">
-    <h1 class="logo" aria-label="GaranTiert Auto-MAP++"><span aria-hidden="true"><b>G.</b>aran<b>T.</b>iert <b>A.</b>uto<i>-</i><em>MAP++</em></span></h1>
+    <h1 class="logo" aria-label="Gee Tee Auto-MAP+"><span aria-hidden="true"><b>G</b>ee <b>T</b>ee <b>A</b>uto<i>-</i><em>MAP+</em></span></h1>
     <p data-t="untertitel">Inoffizielle Karte und Checkliste für GTA VI · offline · ohne Konto</p>
   </div>
   <div class="kopf-steuer">
-    <button id="spoiler" class="spoiler frei" type="button" aria-pressed="true"><span class="spoiler-zeichen" aria-hidden="true">✓</span><span>SPOILERFREI</span></button>
+    <button id="spoiler" class="spoiler frei" type="button"><span class="spoiler-zeichen" aria-hidden="true">✓</span><span>SPOILERFREI</span></button>
     <select id="profil-wahl" data-t-label="profil" aria-label="Durchgang"></select>
     <select id="kapitel-wahl" data-t-label="kapitelWahl" data-t-titel="kapitelWahl" aria-label="Dein Kapitel"></select>
     <select id="sprache" aria-label="Sprache / Language"></select>
@@ -41,7 +41,7 @@
 <p id="startfehler" class="platte startfehler" role="alert" hidden></p>
 
 <main class="buehne">
-  <section class="platte karte-rahmen" aria-label="Karte">
+  <section class="platte karte-rahmen" data-t-label="tabKarte" aria-label="Karte">
     <div id="karte"></div>
     <div class="karte-knoepfe">
       <button id="pin-modus" class="knopf leise" type="button" aria-pressed="false" data-t="pinSetzen" data-t-titel="pinModusTitel">Pin setzen</button>
@@ -68,7 +68,7 @@
   </section>
 
   <div class="seitenleiste">
-    <div class="tabs platte" role="tablist" aria-label="Bereiche">
+    <div class="tabs platte" role="tablist" data-t-label="nachBereiche" aria-label="Bereiche">
       <button role="tab" type="button" id="tabknopf-karte" data-tab="karte" aria-controls="tab-karte" aria-selected="true" data-t="tabKarte">Karte</button>
       <button role="tab" type="button" id="tabknopf-liste" data-tab="liste" aria-controls="tab-liste" aria-selected="false" tabindex="-1" data-t="tabListe">100 %</button>
       <button role="tab" type="button" id="tabknopf-nachschlagen" data-tab="nachschlagen" aria-controls="tab-nachschlagen" aria-selected="false" tabindex="-1" data-t="tabNachschlagen">Nachschlagen</button>

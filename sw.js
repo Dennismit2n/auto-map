@@ -1,7 +1,8 @@
+// Gee Tee Auto-MAP+ (die Speicher heißen weiter mappp-…, damit alte Stände erkannt und gelöscht werden).
 // Service Worker: online immer die neueste Fassung vom Server holen, offline aus dem Speicher.
 // (Bis 20.11.2026 lieferte er zuerst aus dem Speicher; dadurch sah man nach Änderungen die alte Karte.)
 // STAND bei jeder Änderung an der Liste hochzählen. Kartenkacheln (assets/karte/kacheln) landen beim Ansehen im Speicher.
-const STAND = 'mappp-2026-11-27c';
+const STAND = 'mappp-2026-11-27d';
 // Kartenkacheln liegen in einem eigenen Speicher, der neue App-Fassungen überlebt. Nur hochzählen, wenn die Kacheln neu gebaut wurden.
 const KACHELN = 'kacheln-2026-11-27b';
 const GERUEST = [
@@ -15,11 +16,15 @@ const GERUEST = [
 ];
 
 self.addEventListener('install', (e) => {
-  e.waitUntil(caches.open(STAND).then((c) => c.addAll(GERUEST)).then(() => self.skipWaiting()));
+  // cache: 'reload' holt am HTTP-Zwischenspeicher vorbei, sonst geraten nach einem Deploy alte Dateien in den neuen Stand
+  e.waitUntil(caches.open(STAND).then((c) => c.addAll(GERUEST.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 
 self.addEventListener('activate', (e) => {
-  e.waitUntil(caches.keys().then((alle) => Promise.all(alle.filter((n) => n !== STAND && n !== KACHELN).map((n) => caches.delete(n)))).then(() => self.clients.claim()));
+  // Nur die eigenen alten Speicher löschen: unter dennismit2n.github.io liegen auch die Speicher der anderen Werkzeuge
+  // (Pocketsum, Kugelblitz ...). Bis 27.11.2026 löschte diese Zeile alle fremden mit.
+  const eigen = (n) => n.startsWith('mappp-') || n.startsWith('kacheln-');
+  e.waitUntil(caches.keys().then((alle) => Promise.all(alle.filter((n) => eigen(n) && n !== STAND && n !== KACHELN).map((n) => caches.delete(n)))).then(() => self.clients.claim()));
 });
 
 // Netz zuerst (mit kurzer Frist), Antwort im Speicher ablegen; ohne Netz der gespeicherte Stand
@@ -29,7 +34,7 @@ self.addEventListener('fetch', (e) => {
   const kachel = url.pathname.includes('/assets/karte/kacheln/');
   e.respondWith((async () => {
     const c = await caches.open(kachel ? KACHELN : STAND);
-    const netz = fetch(e.request, { cache: 'no-cache' }).then((antwort) => { if (antwort.ok) c.put(e.request, antwort.clone()); return antwort; });
+    const netz = fetch(e.request, { cache: 'no-cache' }).then((antwort) => { if (antwort.ok) c.put(e.request, antwort.clone()).catch(() => {}); return antwort; });   // voller Speicher: Kachel fehlt dann nur offline
     netz.catch(() => {});
     try {
       const frist = new Promise((_, nein) => setTimeout(() => nein(new Error('Frist')), kachel ? 1000 : 4000));

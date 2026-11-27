@@ -7,13 +7,15 @@ import {
 import { planquadrat, entfernungText, countyVon, innerhalb } from './geo.js';
 import * as speicher from './speicher.js';
 import { alleProvider } from './provider.js';
-import { t, feld, zahl, sprache, setzeSprache, uebersetzeSeite, sprachen, pinArten } from './i18n.js';
+import { t, feld, zahl, sprache, setzeSprache, uebersetzeSeite, sprachen, pinArten, FEHLER_EN } from './i18n.js';
 import { karteAnlegen, strassenZeichnen, pinsZeichnen, punkteZeichnen, punktOeffnen, positionZeigen, popupZeigen, hinfliegen, ganzeKarte, pinOeffnen, stelleMarkieren, markierungWeg, ausschnittZeigen } from './karte.js';
 import { suchen, gruppieren } from './suche.js';
 import { ARTWORTE, KATWORTE, BEREICHWORTE, VERSTECKWORTE } from './suchworte.js';
 import { ARTEN, ART_GRUPPEN, ARTEN_ZU, artenVon, artenAus, artMit, artFarbe, zeichenSvg } from './arten.js';
 
 const $ = (sel) => document.querySelector(sel);
+// Wer im System „Bewegung reduzieren“ gewählt hat, bekommt kein weiches Rollen (die Karte springt dann ebenfalls, js/karte.js)
+const ROLLEN = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
 function el(tag, attrs = {}, ...kinder) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
@@ -164,7 +166,6 @@ function kopfZeichnen() {
   const st = stand();
   $('#kapitel-wahl').replaceChildren(...zustand.daten.missionen.kapitel.map((kap) => new Option(t('kapitelKurz', { n: kap.nr }), kap.nr, false, kap.nr === st)));
   const s = $('#spoiler');
-  s.setAttribute('aria-pressed', String(zustand.spoilerfrei));
   s.classList.toggle('frei', zustand.spoilerfrei);
   s.title = t(zustand.spoilerfrei ? 'spoilerTitelFrei' : 'spoilerTitelAn', { n: st });
   s.replaceChildren(el('span', { class: 'spoiler-zeichen', 'aria-hidden': 'true', text: zustand.spoilerfrei ? '✓' : '!' }), el('span', { text: t(zustand.spoilerfrei ? 'spoilerfrei' : 'spoilerAn') }));
@@ -186,7 +187,8 @@ function gurt(zahlText, anteil, unterText) {
 
 function missionsStand(p) {
   let gesamt = 0; let fertig = 0;
-  for (const kap of zustand.daten.missionen.kapitel) for (const m of kap.missionen) { gesamt++; if (istGefunden(p, m.id)) fertig++; }
+  // optionale Missionen zählen nicht mit (95 Pflichtmissionen), abhaken lassen sie sich trotzdem
+  for (const kap of zustand.daten.missionen.kapitel) for (const m of kap.missionen) { if (m.optional) continue; gesamt++; if (istGefunden(p, m.id)) fertig++; }
   return { gesamt, fertig };
 }
 
@@ -210,7 +212,7 @@ function kartenTabZeichnen(pins, ziel, community) {
     gurt(`${cl.erfuellt} / ${cl.gesamt}`, cl.prozent / 100, t('zeilen')),
     gurt(`${ms.fertig} / ${ms.gesamt}`, ms.gesamt ? ms.fertig / ms.gesamt : 0, t('missionen')));
 
-  const je = zaehlenJeCounty(pins.filter((x) => passtZumFilter(x, { kategorien: f.kategorien, versteck: f.versteck })), p);
+  const je = zaehlenJeCounty(pins.filter((x) => passtZumFilter(x, { kategorien: f.kategorien, arten: f.arten, versteck: f.versteck })), p);
   $('#county-chips').replaceChildren(...karte.countys.map((c) => chip({
     text: c.name, an: f.countys.has(c.id), farbe: c.farbe, fokus: `county-${c.id}`,
     anzahl: `${je[c.id]?.gefunden ?? 0}/${je[c.id]?.gesamt ?? 0}`, onKlick: () => wechsel(f.countys, c.id)
@@ -350,7 +352,7 @@ async function eintragZeigen(id) {
   if (e.gruppe) zustand.nachOffen.add(e.gruppe);
   await speicher.einstellungSchreiben('tab', 'nachschlagen'); await speicher.einstellungSchreiben('nachBereich', e.bereich);
   k.karte.closePopup(); allesZeichnen();
-  document.querySelector(`[data-eintrag="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  document.querySelector(`[data-eintrag="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'center', behavior: ROLLEN });
 }
 
 // Orte bestimmter Arten auf der Karte zeigen (aus der 100-%-Liste, dem Reiter Nachschlagen oder dem Ladenwissen):
@@ -424,7 +426,7 @@ function datenZeichnen() {
     el('p', { class: 'leise-text' }, t('radioHinweis', { n: zahl(zustand.daten.radio.sender.length), m: zahl(zustand.daten.radio.sender.reduce((n, s) => n + s.titel.length, 0)) }) + ' ',
       quellenLink('Rockstar Games', zustand.daten.radio.link), ', ' + t('radioAbgleich', { stand: datum(zustand.daten.radio.stand) })),
     el('p', { class: 'leise-text' }, t('kartenbildHinweis') + ' ', quellenLink('gtadb.org', 'https://map.gtadb.org'), ', ', quellenLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/'), '. ' + t('kartenbildAenderung')),
-    el('p', { class: 'leise-text' }, t('mapheistHinweis', { n: zahl(zustand.daten.mapheist.orte.length) }) + ' ', quellenLink('mapheist.com', 'https://mapheist.com/en/data/'), ', ', quellenLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/'), '.'),
+    el('p', { class: 'leise-text' }, t('mapheistHinweis', { n: zahl(zustand.daten.mapheist.orte.length) }) + ' ', quellenLink('mapheist.com', 'https://mapheist.com/en/data/'), ', ', quellenLink('CC BY 4.0', 'https://creativecommons.org/licenses/by/4.0/'), '. ' + t('mapheistAenderung')),
     el('p', { class: 'leise-text' }, t('strassenHinweis', { n: zahl(zustand.daten.strassen.strassen.length), m: zahl(zustand.daten.strassen.strassen.filter((s) => !s.ungefaehr).length) }) + ' ', quellenLink('gta.wiki', 'https://gta.wiki/w/List_of_Street_Names'), ', ', quellenLink('CC BY-NC-SA 3.0', 'https://creativecommons.org/licenses/by-nc-sa/3.0/'), '. ' + t('strassenAenderung')));
 }
 
@@ -481,8 +483,7 @@ function strasseZeigen(s) {
     el('p', { class: 'leise-text', text: s.ungefaehr ? t(s.x == null ? 'strasseOhneLage' : 'strasseUngefaehr') : t('strasseLage', { n: s.gebaeude }) }),
     el('p', { class: 'leise-text quelle' }, t('quelleGtadb') + ' ', ...quelle));
   if (s.x == null) { k.karte.once('moveend', () => popupZeigen(k, k.karte.getCenter(), inhalt)); ganzeKarte(k); return; }
-  const latlng = stelleMarkieren(k, [s], s.ungefaehr ? 0 : 1);
-  k.karte.once('moveend', () => popupZeigen(k, latlng, inhalt));
+  stelleMarkieren(k, [s], s.ungefaehr ? 0 : 1, (latlng) => popupZeigen(k, latlng, inhalt));
 }
 
 function artText(arten) { return (arten || []).map((a) => { const s = t('art_' + a.replace(/[^a-z]/g, '')); return s.startsWith('art_') ? a : s; }).join(', '); }
@@ -676,14 +677,14 @@ function trefferText(e) {
 // Auf dem Handy liegt die Karte unter der Suche: zu ihr rollen, wenn sie nicht ganz im Bild ist
 function karteInsBild() {
   const r = $('.karte-rahmen').getBoundingClientRect();
-  if (r.top < 0 || r.top > innerHeight * 0.5) $('.karte-rahmen').scrollIntoView({ block: 'start', behavior: 'smooth' });
+  if (r.top < 0 || r.top > innerHeight * 0.5) $('.karte-rahmen').scrollIntoView({ block: 'start', behavior: ROLLEN });
 }
 
 async function zeileZeigen(id) {
   zustand.tab = 'liste'; zustand.offeneZeile = id; await speicher.einstellungSchreiben('tab', 'liste'); allesZeichnen();
   const ziel = document.querySelector(`[data-zeile="${CSS.escape(id)}"]`);
   if (!ziel) return;
-  ziel.classList.add('gefunden'); ziel.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  ziel.classList.add('gefunden'); ziel.scrollIntoView({ block: 'center', behavior: ROLLEN });
 }
 
 function fensterZeigen(...inhalt) {
@@ -751,8 +752,7 @@ function trefferAnfliegen(e) {
   sucheLoesen();
   if (e.art === 'strasse') { strasseZeigen(e.strasse); return; }
   const zoom = { county: -1, stadt: 0, gewaesser: 0, insel: 0.5, gebiet: 0.5, viertel: 1, poi: 1 }[e.typ] ?? 0.5;
-  const latlng = stelleMarkieren(k, [e], zoom);
-  k.karte.once('moveend', () => ortsnameZeigen(e, latlng));
+  stelleMarkieren(k, [e], zoom, (latlng) => ortsnameZeigen(e, latlng));
 }
 
 function sucheVerdrahten() {
@@ -857,7 +857,7 @@ function steuerungVerdrahten() {
   });
   $('#export').addEventListener('click', () => {
     const blob = new Blob([JSON.stringify(exportieren(zustand.profile, zustand.pins), null, 1)], { type: 'application/json' });
-    const a = el('a', { href: URL.createObjectURL(blob), download: `map-plusplus-fortschritt-${new Date().toISOString().slice(0, 10)}.json` });
+    const a = el('a', { href: URL.createObjectURL(blob), download: `auto-map-fortschritt-${new Date().toISOString().slice(0, 10)}.json` });
     a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
   $('#import').addEventListener('click', () => $('#import-datei').click());
@@ -871,7 +871,7 @@ function steuerungVerdrahten() {
       for (const p of zustand.profile) await speicher.profilSpeichern(p);
       for (const p of zustand.pins) await speicher.pinSpeichern(p);
       alert(t('importOk', { n: neu.profile.length, p: neu.pins.filter((x) => !x.geloescht).length })); allesZeichnen();
-    } catch (fehler) { alert(t('importFehler', { fehler: fehler.message })); }
+    } catch (fehler) { alert(t('importFehler', { fehler: sprache === 'en' ? (FEHLER_EN[fehler.message] ?? fehler.message) : fehler.message })); }
   });
   const spr = $('#sprache');
   spr.replaceChildren(...sprachen.map((s) => new Option(s.toUpperCase(), s, false, s === sprache)));
@@ -895,6 +895,12 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   navigator.serviceWorker.addEventListener('controllerchange', () => { if (hatteSteuerung && !neuGeladen) { neuGeladen = true; location.reload(); } });
   navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' }).then((r) => r.update()).catch((e) => console.warn('Service Worker:', e));
 }
+// Schreiben in den Gerätespeicher gescheitert (voll oder vom Browser gesperrt): sagen, statt den Haken still zu verlieren
+addEventListener('unhandledrejection', (e) => {
+  if (!(e.reason instanceof DOMException)) return;
+  console.warn('Speicher:', e.reason);
+  $('#startfehler').hidden = false; $('#startfehler').textContent = t('speicherFehler');
+});
 start().catch((e) => {
   console.error(e);
   $('#startfehler').hidden = false; $('#startfehler').textContent = t('ladefehler', { fehler: e.message });

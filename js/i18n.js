@@ -65,6 +65,7 @@ const texte = {
     nachNoetig: '{n} nötig für 100 %', nachSpaeter: '{n} weitere ab Kapitel {k}.', nachSchwer: 'schwer', nachZeile: 'Im Reiter 100 %: {name}',
     nachTipp: 'Tipp', nachBekommen: 'So bekommst du es', nachStand: 'Stand {stand}, aus Guides zusammengetragen. Zahlen können sich ändern.',
     versteckChip: 'Verstecke auf der Flucht',
+    mapheistAenderung: 'Geändert: nur Einträge mit Lage übernommen und auf diese Karte umgerechnet.', speicherFehler: 'Speichern hat nicht geklappt: Der Speicher ist voll oder der Browser sperrt ihn. Dein letzter Schritt ist nicht gesichert. Exportiere deinen Stand im Reiter Daten.',
     arten: 'Arten', artenAn: '{n} von {m} an', aufKarte: 'Auf der Karte zeigen ({n})', lz_zeichen: 'Piktogramm: Art des Ortes, Farbe der Gruppe (siehe Arten)', art_shootingrange: 'Schießstand', art_diamonds: 'Diamanten', art_curiosity: 'Kurioses', art_sculpture: 'Skulptur',
     versteck: 'Versteck auf der Flucht', versteckMehr: 'Mehr zur Flucht', parkhausText: 'Öffentliches Parkhaus, kein eigener Stellplatz.',
     eigeneGarage: 'Eigene Garage', lz_parkhaus: 'Öffentliches Parkhaus', lz_eigen: 'Eigener Pin', lz_punkt: 'Ort aus gtadb ohne eigene Art, Farbe des Countys', lz_ich: 'Deine Position',
@@ -146,6 +147,7 @@ const texte = {
     nachNoetig: '{n} needed for 100%', nachSpaeter: '{n} more from chapter {k}.', nachSchwer: 'hard', nachZeile: 'In the 100% tab: {name}',
     nachTipp: 'Tip', nachBekommen: 'How to get it', nachStand: 'As of {stand}, gathered from guides. Numbers may change.',
     versteckChip: 'Hideouts on the run',
+    mapheistAenderung: 'Changed: only entries with a location, converted to this map.', speicherFehler: 'Saving failed: storage is full or blocked by the browser. Your last step is not saved. Export your progress in the Data tab.',
     arten: 'Types', artenAn: '{n} of {m} on', aufKarte: 'Show on the map ({n})', lz_zeichen: 'Pictogram: type of place, colour of its group (see Types)', art_shootingrange: 'Shooting range', art_diamonds: 'Diamonds', art_curiosity: 'Curiosity', art_sculpture: 'Sculpture',
     versteck: 'Hideout on the run', versteckMehr: 'More on escaping', parkhausText: 'Public parking garage, not a parking space of your own.',
     eigeneGarage: 'Your own garage', lz_parkhaus: 'Public parking garage', lz_eigen: 'Own pin', lz_punkt: 'Place from gtadb without a type, county colour', lz_ich: 'Your position',
@@ -194,6 +196,11 @@ export function t(schluessel, werte = {}) {
 // Feld in der aktuellen Sprache aus einem Datensatz: feld(o, 'text') liest text_de oder text_en
 export function feld(objekt, name) { return objekt?.[`${name}_${sprache}`] ?? objekt?.[`${name}_de`] ?? null; }
 export function zahl(n) { return Number(n).toLocaleString(sprache === 'de' ? 'de-DE' : 'en-US'); }
+// Fehlertexte des Imports (js/fortschritt.js wirft sie deutsch) für die englische Oberfläche
+export const FEHLER_EN = {
+  'Keine gültige JSON-Datei': 'Not a valid JSON file', 'Unbekanntes Dateiformat': 'Unknown file format',
+  'Datei stammt aus einer neueren Version der App': 'The file comes from a newer version of the app', 'Keine Profile in der Datei': 'No playthroughs in the file', 'Profil fehlt': 'Playthrough missing'
+};
 export function uebersetzeSeite() {
   for (const e of document.querySelectorAll('[data-t]')) e.textContent = t(e.dataset.t);
   for (const e of document.querySelectorAll('[data-t-label]')) e.setAttribute('aria-label', t(e.dataset.tLabel));
