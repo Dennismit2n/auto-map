@@ -8,6 +8,9 @@ let H = 0;
 export const ll = (x, y) => [H - y, x];
 const el = (tag, klasse, text) => { const e = document.createElement(tag); if (klasse) e.className = klasse; if (text != null) e.textContent = text; return e; };
 
+// Fenster der Orte bleiben unter der Knopfreihe oben rechts (Pin setzen, Pins teilen, Ganze Karte)
+const POPUP_RAND = { autoPanPaddingTopLeft: [10, 58], autoPanPaddingBottomRight: [10, 10] };
+
 // Ab welcher Zoomstufe ein Namenstyp überhaupt in Frage kommt; ob er erscheint, entscheidet dann der Platz
 const AB_STUFE = { county: 0, stadt: 0, gewaesser: 1, insel: 1, gebiet: 1, viertel: 2, poi: 2 };
 
@@ -59,7 +62,7 @@ export async function karteAnlegen(element, karte, { onKlick }) {
     geplant = 0;
     const s = stufe(); element.dataset.stufe = String(s);
     const rahmen = element.getBoundingClientRect();
-    const belegt = [...element.querySelectorAll('.buendel')].map((b) => b.getBoundingClientRect());   // Bündelzahlen bleiben frei
+    const belegt = [...element.querySelectorAll('.buendel, .schild-ort')].map((b) => b.getBoundingClientRect());   // Bündelzahlen und Schilder (P) bleiben frei
     for (const n of namen) {
       const span = n.m.getElement()?.firstElementChild;
       if (!span) continue;
@@ -76,8 +79,10 @@ export async function karteAnlegen(element, karte, { onKlick }) {
   k.on('zoomend', () => punkteVerteilen(ergebnis));
   platzVerteilen();
 
+  // Auf niedrigen Bildschirmen reicht der Platz nicht für Fenster und Knopfreihe: solange ein Fenster offen ist, tritt die Reihe zurück (CSS)
+  k.on('popupopen popupclose', (e) => element.parentElement.classList.toggle('popup-offen', e.type === 'popupopen'));
   k.on('click', (e) => onKlick?.({ x: Math.round(e.latlng.lng), y: Math.round(karte.hoehe - e.latlng.lat) }, e.latlng));
-  const ergebnis = { karte: k, punkte: L.layerGroup().addTo(k), punktNachId: new Map(), leinwand: L.canvas({ padding: 0.3 }), pins: L.layerGroup().addTo(k), nachId: new Map(), ich: null, markierung: null, grenzen };
+  const ergebnis = { karte: k, punkte: L.layerGroup().addTo(k), punktNachId: new Map(), schilder: L.layerGroup().addTo(k), schildNachId: new Map(), leinwand: L.canvas({ padding: 0.3 }), pins: L.layerGroup().addTo(k), nachId: new Map(), ich: null, markierung: null, grenzen };
   return ergebnis;
 }
 
@@ -92,7 +97,7 @@ export function pinsZeichnen(k, { pins, profil, zielId }) {
       iconSize: [22, 22], iconAnchor: [11, 22], popupAnchor: [0, -22]
     });
     const marker = L.marker(ll(p.x, p.y), { icon, title: p.name, alt: p.name, keyboard: true, zIndexOffset: p.id === zielId ? 500 : 0 });
-    marker.bindPopup(() => p.popup(() => k.karte.closePopup()), { maxWidth: 300, minWidth: 220 });
+    marker.bindPopup(() => p.popup(() => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
     marker.addTo(k.pins); k.nachId.set(p.id, marker);
   }
 }
@@ -128,23 +133,34 @@ function punkteVerteilen(k) {
   }
   fertig();
 }
+// Orte mit schild (etwa „P“ für Parkhäuser) stehen als eigenes Zeichen auf der Karte: nie im Bündel, Namen weichen ihnen aus.
 export function punkteZeichnen(k, { orte, farbeVon, popup, buendelTitel }) {
   k.punktNachId.clear(); k.buendelTitel = buendelTitel;
+  k.schilder.clearLayers(); k.schildNachId.clear();
   const stil = getComputedStyle(document.documentElement);
   const rand = stil.getPropertyValue('--vc-grund-nacht').trim();
   for (const o of orte) {
+    if (o.schild) {
+      const s = L.marker(ll(o.x, o.y), {
+        icon: L.divIcon({ className: '', html: `<div class="schild-ort">${o.schild}</div>`, iconSize: [18, 18], iconAnchor: [9, 9], popupAnchor: [0, -9] }),
+        title: o.titel ?? o.name, alt: o.titel ?? o.name, keyboard: true, zIndexOffset: 200
+      });
+      s.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
+      s.addTo(k.schilder); k.schildNachId.set(o.id, s);
+      continue;
+    }
     const m = L.circleMarker(ll(o.x, o.y), {
       renderer: k.leinwand, radius: 3, weight: 1, color: rand, fillColor: stil.getPropertyValue(farbeVon(o)).trim(), fillOpacity: 0.95
     });
     m.farbe = farbeVon(o);
-    m.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220 });
+    m.bindPopup(() => popup(o, () => k.karte.closePopup()), { maxWidth: 300, minWidth: 220, ...POPUP_RAND });
     m.bindTooltip(o.name, { direction: 'top', offset: [0, -4], className: 'punkt-name' });
     k.punktNachId.set(o.id, m);
   }
   punkteVerteilen(k);
 }
 export function punktOeffnen(k, id) {
-  const m = k.punktNachId.get(id);
+  const m = k.punktNachId.get(id) ?? k.schildNachId.get(id);
   if (!m) return false;
   k.karte.once('moveend', () => m.openPopup());
   k.karte.flyTo(m.getLatLng(), Math.max(k.karte.getZoom(), BUENDEL_BIS), { duration: 0.6 });   // dort sind alle Punkte einzeln
@@ -192,7 +208,7 @@ export function strassenZeichnen(k, strassen) {
   const anpassen = () => {
     const z = k.karte.getZoom(); const wurzel = k.karte.getContainer();
     svg.style.fontSize = `${(z >= 1 ? 13 : 11) / 2 ** z}px`;
-    const belegt = [...wurzel.querySelectorAll('.ortsname span:not(.verdeckt), .buendel')].map((x) => x.getBoundingClientRect());
+    const belegt = [...wurzel.querySelectorAll('.ortsname span:not(.verdeckt), .buendel, .schild-ort')].map((x) => x.getBoundingClientRect());
     for (const t of texte) {
       t.text.classList.remove('verdeckt');
       if (t.text.classList.toggle('zu-lang', t.text.getComputedTextLength() > t.pfad.getTotalLength() * 0.96)) continue;
@@ -218,7 +234,7 @@ export function positionZeigen(k, position, titel) {
   }).addTo(k.karte);
 }
 
-export function popupZeigen(k, latlng, inhalt) { return L.popup({ maxWidth: 300, minWidth: 230 }).setLatLng(latlng).setContent(inhalt).openOn(k.karte); }
+export function popupZeigen(k, latlng, inhalt) { return L.popup({ maxWidth: 300, minWidth: 230, ...POPUP_RAND }).setLatLng(latlng).setContent(inhalt).openOn(k.karte); }
 export function hinfliegen(k, p, zoom = 0.5) { k.karte.flyTo(ll(p.x, p.y), Math.max(k.karte.getZoom(), zoom), { duration: 0.6 }); }
 export function ganzeKarte(k) { k.karte.fitBounds(k.grenzen, { padding: [8, 8] }); }
 

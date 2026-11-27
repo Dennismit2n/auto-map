@@ -48,8 +48,18 @@ export const ARTWORTE = {
 };
 export const KATWORTE = {
   safehouse: 'unterschlupf unterschlüpfe safehouse versteck wohnung zuhause',
-  garage: 'garage garagen stellplatz parken fahrzeuge abstellen',
+  garage: 'garage garagen stellplatz stellplätze eigene garage eigener stellplatz parken fahrzeuge abstellen own parking',
   ort: 'sehenswertes sehenswürdigkeit interessant poi point of interest',
   geheimnis: 'geheimnis geheimnisse easter egg secret',
-  eigen: 'pin eigener pin own pin'
+  eigen: 'pin eigener pin own pin',
+  'g-parkhaus': 'parkhaus parkhäuser öffentliches parkhaus parken parking garage'
 };
+// Suchwörter für die Bereiche des Reiters Nachschlagen und für Orte mit Versteck-Wert
+export const BEREICHWORTE = {
+  ausruestung: 'ausrüstung ausruestung equipment gadget gadgets werkzeug werkzeuge gerät tool gear',
+  sammlung: 'sammlung sammlungen sammeln sammelobjekt sammelobjekte collection collections collectible collectibles',
+  aktivitaeten: 'aktivität aktivitäten activity activities freizeit minispiel minispiele hobby pastime',
+  herausforderungen: 'herausforderung herausforderungen challenge challenges aufgabe',
+  flucht: 'flucht fliehen fahndung fahndungslevel polizei cops abhängen abschütteln entkommen verstecken versteck sterne heat wanted escape evade hide police'
+};
+export const VERSTECKWORTE = 'versteck verstecke verstecken versteckmöglichkeit flucht fluchtort fahndung polizei cops abhängen abschütteln entkommen hideout hide escape evade police wanted';

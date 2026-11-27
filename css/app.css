@@ -85,7 +85,13 @@ h1, h2, .schild { font-family: var(--vc-schrift-schild); font-weight: 600; }
 .buehne { display: grid; gap: 18px; margin: 16px; grid-template-columns: minmax(0, 1fr) minmax(300px, 380px); align-items: start; }
 .karte-rahmen { padding: 12px; height: calc(100vh - 150px); min-height: 440px; position: sticky; top: 16px; }
 #karte { width: 100%; height: 100%; border-radius: 3px; background: var(--vc-karte-wasser); }
-.karte-knopf { position: absolute; right: 24px; top: 24px; z-index: 600; }
+.karte-knoepfe { position: absolute; right: 24px; top: 24px; z-index: 600; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+@media (max-height: 820px) { .popup-offen .karte-knoepfe { visibility: hidden; } }
+/* Setzmodus für eigene Pins: Knopf gedrückt, Fadenkreuz auf der Karte, Hinweis oben */
+#pin-modus[aria-pressed="true"] { background: var(--vc-glas-knopf); color: #fff; border-color: transparent; box-shadow: var(--vc-schatten-klein), 0 0 14px var(--vc-akzent-neon); }
+#pin-modus[aria-pressed="true"]::before { content: "✓ "; }
+#karte.setzmodus, #karte.setzmodus .leaflet-interactive { cursor: crosshair; }
+.setz-hinweis { position: absolute; left: 50%; top: 66px; transform: translateX(-50%); z-index: 600; margin: 0; max-width: calc(100% - 48px); padding: 6px 12px; font-size: .88rem; text-align: center; background: rgba(28, 0, 44, .92); border: 1px solid var(--vc-akzent-neon); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-klein); }
 .seitenleiste, .tabfeld { display: grid; gap: 18px; min-width: 0; }
 @media (max-width: 860px) {
   .buehne { grid-template-columns: minmax(0, 1fr); }
@@ -105,7 +111,8 @@ h1, h2, .schild { font-family: var(--vc-schrift-schild); font-weight: 600; }
 .spoiler.frei .spoiler-zeichen { color: var(--vc-signal-gruen); }
 
 /* Reiter */
-.tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; padding: 14px 16px 12px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 16px 12px; }
+.tabs [role="tab"] { flex: 1 1 auto; }
 .tabs [role="tab"] {
   font: 600 .88rem/1.2 var(--vc-schrift-text); color: var(--vc-text-leise); cursor: pointer;
   background: var(--vc-glas-gurt); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); padding: 8px 4px;
@@ -324,3 +331,32 @@ textarea { width: 100%; resize: vertical; }
 }
 .strassenpfade .zu-lang, .strassenpfade .verdeckt, #karte[data-stufe="0"] .strassenpfade, #karte[data-stufe="1"] .strassenpfade, #karte[data-stufe="2"] .strassenpfade { visibility: hidden; }
 
+
+/* Reiter Nachschlagen: Einträge mit Haken, Text und Zusatz */
+.knopf.klein { font-size: .82rem; padding: 4px 9px; }
+.eintraege li { padding: 6px 0; border-top: 1px dashed var(--vc-glas-rand); }
+.eintraege li:first-child { border-top: 0; }
+.eintraege label { align-items: flex-start; }
+.eintraege input { margin-top: 2px; }
+.eintrag-name { font-weight: 600; flex: 1; min-width: 0; }
+.eintrag.ohne-haken .eintrag-name { margin: 0 0 2px; color: var(--vc-akzent-sonne); }
+.eintrag.ohne-haken .einzug { margin-left: 0; }
+.eintrag .einzug { margin-top: 2px; }
+.eintrag .einzug strong { color: var(--vc-text-haupt); font-weight: 600; }
+.eintrag.gefunden { background: var(--vc-glas-gurt); box-shadow: inset 3px 0 0 var(--vc-akzent-neon); padding-left: 10px; padding-right: 6px; }
+.kapitel > .knopf.klein { margin: 4px 0 2px; }
+
+/* Parkhäuser: Schild „P“ auf der Karte (wie das Verkehrszeichen: blau mit heller Schrift, gedämpft) */
+.schild-ort { display: grid; place-items: center; width: 18px; height: 18px; border-radius: 3px; cursor: pointer; background: #2f5f9e; border: 1.5px solid #cfe1f5; color: #eaf2fb; font: 800 12px/1 var(--vc-schrift-text); box-shadow: 0 0 8px rgba(126, 181, 222, .55), var(--vc-schatten-klein); }
+#karte[data-stufe="0"] .schild-ort { transform: scale(.8); }
+.versteck-zeile { margin: 6px 0; padding: 6px 8px; border-left: 3px solid var(--vc-akzent-tuerkis); background: var(--vc-glas-gurt); border-radius: 0 3px 3px 0; }
+.versteck-zeile p { margin: 0 0 4px; font-size: .9rem; }
+
+/* Legende: Zeichen der Karte */
+.legende-zeichen { border-top: 1px solid var(--vc-glas-rand); padding-top: 7px !important; }
+.legende b.lz { display: grid; place-items: center; width: 18px; height: 18px; flex: none; border-radius: 50% 50% 50% 0; background: var(--vc-akzent-lavendel); border: 1.5px solid var(--vc-grund-nacht); color: var(--vc-grund-nacht); font: 700 10px/1 var(--vc-schrift-text); }
+.legende b.lz.rund { border-radius: 50%; }
+.legende b.lz.schild-ort { border-radius: 3px; background: #2f5f9e; border-color: #cfe1f5; color: #eaf2fb; box-shadow: none; }
+.legende b.lz.punkt { width: 10px; height: 10px; margin: 0 4px; border-radius: 50%; }
+.legende b.lz.ichpunkt { width: 12px; height: 12px; margin: 0 3px; border-radius: 50%; background: var(--vc-akzent-himmel); border: 2px solid #fff; }
+.teilen-link { font-size: .78rem; word-break: break-all; }

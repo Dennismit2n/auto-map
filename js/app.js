@@ -1,7 +1,8 @@
-import { ladeDaten } from './daten.js';
+import { ladeDaten, versteckVon } from './daten.js';
 import {
   neuesProfil, umschalten, istGefunden, setzeZaehler, zeileStand, checklisteStand, istVerborgen, missionsName, kapitelStand, sichtbareHinweise,
-  passtZumFilter, zaehlen, zaehlenJeCounty, naechstesOffenes, neuerPin, exportieren, einlesen, importieren, pinsZusammenfuehren
+  passtZumFilter, zaehlen, zaehlenJeCounty, naechstesOffenes, neuerPin, exportieren, einlesen, importieren, pinsZusammenfuehren,
+  pinsNeuheiten, pinsVerpacken, pinsAuspacken, nachschlagenSicht, nachschlagenStand
 } from './fortschritt.js';
 import { planquadrat, entfernungText, countyVon, innerhalb } from './geo.js';
 import * as speicher from './speicher.js';
@@ -9,7 +10,7 @@ import { alleProvider } from './provider.js';
 import { t, feld, zahl, sprache, setzeSprache, uebersetzeSeite, sprachen, pinArten } from './i18n.js';
 import { karteAnlegen, strassenZeichnen, pinsZeichnen, punkteZeichnen, punktOeffnen, positionZeigen, popupZeigen, hinfliegen, ganzeKarte, pinOeffnen, stelleMarkieren } from './karte.js';
 import { suchen, gruppieren } from './suche.js';
-import { ARTWORTE, KATWORTE } from './suchworte.js';
+import { ARTWORTE, KATWORTE, BEREICHWORTE, VERSTECKWORTE } from './suchworte.js';
 
 const $ = (sel) => document.querySelector(sel);
 function el(tag, attrs = {}, ...kinder) {
@@ -32,7 +33,8 @@ const popupKnopf = (text, onclick, klasse) => knopf(text, () => setTimeout(oncli
 
 const zustand = {
   daten: null, profile: [], aktivId: null, pins: [], position: null, spoilerfrei: true, tab: 'karte',
-  filter: { countys: new Set(), kategorien: new Set() }, offeneKapitel: null, offeneZeile: null
+  filter: { countys: new Set(), kategorien: new Set(), versteck: false }, offeneKapitel: null, offeneZeile: null,
+  setzmodus: false, nachBereich: 'herausforderungen', nachOffen: new Set(), nachMarkiert: null
 };
 let k;
 const aktiv = () => zustand.profile.find((p) => p.id === zustand.aktivId);
@@ -50,14 +52,17 @@ const unterName = (u) => (sprache === 'en' && u.name_en ? u.name_en : u.name);
 function sichtbareCommunity() {
   const st = stand();
   return zustand.daten.community.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei, st))
-    .map((o) => (o.namenlos ? { ...o, name: artText(o.art.slice(0, 1)) } : o));
+    .map((o) => ({
+      ...o, ...(o.namenlos ? { name: artText(o.art.slice(0, 1)) } : {}), versteck: versteckVon(o),
+      ...(o.kat === 'g-parkhaus' ? { schild: kategorie(o.kat).zeichen, titel: `${o.name}, ${lageText(o)}` } : {})
+    }));
 }
 
 function sichtbarePins() {
   const { orte } = zustand.daten; const st = stand();
   const fest = orte.orte.filter((o) => !istVerborgen(o, kategorie(o.kat), zustand.spoilerfrei, st))
-    .map((o) => (sprache === 'en' && o.name_en ? { ...o, name: o.name_en } : o));
-  const eigene = zustand.pins.filter((p) => !p.geloescht).map((p) => ({ ...p, name: p.name || pinArt(p.art)[sprache] }));
+    .map((o) => ({ ...o, ...(sprache === 'en' && o.name_en ? { name: o.name_en } : {}), versteck: versteckVon(o) }));
+  const eigene = zustand.pins.filter((p) => !p.geloescht).map((p) => ({ ...p, name: p.name || pinArt(p.art)[sprache], versteck: p.art === 'versteck' ? 'eigen' : null }));
   return [...fest, ...eigene];
 }
 
@@ -81,17 +86,21 @@ async function start() {
   if (!aktiv()) zustand.aktivId = zustand.profile[0].id;
   zustand.pins = await speicher.allePins();
   const f = await speicher.einstellungLesen('filter');
-  if (f) zustand.filter = { countys: new Set(f.countys || []), kategorien: new Set(f.kategorien || []) };
+  if (f) zustand.filter = { countys: new Set(f.countys || []), kategorien: new Set(f.kategorien || []), versteck: f.versteck === true };
   const pos = await speicher.einstellungLesen('position');
   zustand.position = pos && innerhalb(pos.x, pos.y, zustand.daten.karte) ? pos : null;
   zustand.spoilerfrei = (await speicher.einstellungLesen('spoilerfrei')) !== false;   // Standard: spoilerfrei
   zustand.tab = (await speicher.einstellungLesen('tab')) || 'karte';
+  const nb = await speicher.einstellungLesen('nachBereich');
+  if (zustand.daten.nachschlagen.bereiche.some((b) => b.id === nb)) zustand.nachBereich = nb;
 
   k = await karteAnlegen($('#karte'), zustand.daten.karte, { onKlick: kartenKlick });
   strassenZeichnen(k, zustand.daten.strassen.strassen);
   steuerungVerdrahten();
   allesZeichnen();
   speicherHinweis();
+  geteiltePinsPruefen();
+  addEventListener('hashchange', geteiltePinsPruefen);
 }
 
 // ---------- Zeichnen ----------
@@ -104,7 +113,7 @@ function allesZeichnen() {
   pinsZeichnen(k, {
     profil: p, zielId: ziel?.pin.id,
     pins: pins.filter((x) => passtZumFilter(x, zustand.filter)).map((x) => ({
-      ...x, zeichen: x.kat === 'eigen' ? 'P' : kategorie(x.kat).zeichen, farbe: county(x.county)?.farbe ?? '--vc-akzent-lavendel', popup: (zu) => pinPopup(x, zu)
+      ...x, zeichen: kategorie(x.kat).zeichen, farbe: county(x.county)?.farbe ?? '--vc-akzent-lavendel', popup: (zu) => pinPopup(x, zu)
     }))
   });
   punkteZeichnen(k, {
@@ -113,7 +122,7 @@ function allesZeichnen() {
   });
   positionZeigen(k, zustand.position, t('meinePosition'));
   kopfZeichnen(); tabsZeichnen();
-  kartenTabZeichnen(pins, ziel); listeZeichnen(); missionenZeichnen(); datenZeichnen();
+  kartenTabZeichnen(pins, ziel); listeZeichnen(); nachschlagenZeichnen(); missionenZeichnen(); datenZeichnen(); legendeZeichnen();
   if (fokus) document.querySelector(`[data-fokus="${CSS.escape(fokus)}"]`)?.focus();
 }
 
@@ -162,10 +171,11 @@ function chip({ text, an, farbe, anzahl, onKlick, fokus }) {
 }
 
 async function filterGeaendert() {
-  await speicher.einstellungSchreiben('filter', { countys: [...zustand.filter.countys], kategorien: [...zustand.filter.kategorien] });
+  await speicher.einstellungSchreiben('filter', { countys: [...zustand.filter.countys], kategorien: [...zustand.filter.kategorien], versteck: zustand.filter.versteck });
   allesZeichnen();
 }
 const wechsel = (menge, id) => { if (menge.has(id)) menge.delete(id); else menge.add(id); filterGeaendert(); };
+const filterLeeren = () => { zustand.filter.countys.clear(); zustand.filter.kategorien.clear(); zustand.filter.versteck = false; };
 
 function kartenTabZeichnen(pins, ziel) {
   const p = aktiv(); const { karte, orte, checkliste } = zustand.daten; const f = zustand.filter;
@@ -175,15 +185,15 @@ function kartenTabZeichnen(pins, ziel) {
     gurt(`${cl.erfuellt} / ${cl.gesamt}`, cl.prozent / 100, t('zeilen')),
     gurt(`${ms.fertig} / ${ms.gesamt}`, ms.gesamt ? ms.fertig / ms.gesamt : 0, t('missionen')));
 
-  const je = zaehlenJeCounty(pins.filter((x) => !f.kategorien.size || f.kategorien.has(x.kat)), p);
+  const je = zaehlenJeCounty(pins.filter((x) => passtZumFilter(x, { kategorien: f.kategorien, versteck: f.versteck })), p);
   $('#county-chips').replaceChildren(...karte.countys.map((c) => chip({
     text: c.name, an: f.countys.has(c.id), farbe: c.farbe, fokus: `county-${c.id}`,
     anzahl: `${je[c.id]?.gefunden ?? 0}/${je[c.id]?.gesamt ?? 0}`, onKlick: () => wechsel(f.countys, c.id)
   })));
   $('#kategorien-chips').replaceChildren(...orte.kategorien.filter((x) => !(zustand.spoilerfrei && x.spoiler)).map((x) => chip({
     text: `${x.zeichen} · ${feld(x, 'name')}`, an: f.kategorien.has(x.id), fokus: `kat-${x.id}`, onKlick: () => wechsel(f.kategorien, x.id)
-  })));
-  $('#filter-alle').hidden = !f.countys.size && !f.kategorien.size;
+  })), chip({ text: t('versteckChip'), an: f.versteck, fokus: 'kat-versteck', onKlick: () => { f.versteck = !f.versteck; filterGeaendert(); } }));
+  $('#filter-alle').hidden = !f.countys.size && !f.kategorien.size && !f.versteck;
 
   const box = $('#ziel-inhalt'); box.replaceChildren();
   if (!ziel) { box.append(el('p', { class: 'leise-text', text: t('zielLeer') })); return; }
@@ -233,6 +243,89 @@ function zeileZeichnen(z, p) {
   return el('div', { class: `zeile${s.erfuellt ? ' erfuellt' : ''}`, 'data-zeile': z.id },
     el('div', { class: 'zeile-kopf' }, el('span', { class: 'zeile-name', text: `${s.erfuellt ? '✓ ' : ''}${feld(z, 'name')}` }), el('span', { class: 'zeile-zahl', text: ziel + zusatz })),
     hinweis ? el('p', { class: 'leise-text', text: hinweis }) : null, unter, bedienung);
+}
+
+// ---------- Nachschlagen ----------
+// Bereiche wie im Ingame-Menü Fortschritt (Ausrüstung, Sammlung, Aktivitäten, Herausforderungen), dazu Fluchtwissen.
+// Abhaken je Durchgang; Spoilerfrei verbirgt Einträge, die erst nach dem eigenen Kapitel kommen.
+function nachschlagenZeichnen() {
+  const n = zustand.daten.nachschlagen; const p = aktiv(); const st = stand();
+  const bereich = n.bereiche.find((b) => b.id === zustand.nachBereich) ?? n.bereiche[0];
+  $('#nach-bereiche').replaceChildren(...n.bereiche.map((b) => {
+    const s = nachschlagenStand(n, b.id, p);
+    return chip({ text: feld(b, 'name'), an: b.id === bereich.id, anzahl: s.gesamt ? `${s.fertig}/${s.gesamt}` : null, fokus: `nach-${b.id}`, onKlick: () => bereichZeigen(b.id) });
+  }));
+  const s = nachschlagenStand(n, bereich.id, p); const sicht = nachschlagenSicht(n, bereich.id, zustand.spoilerfrei, st);
+  const ohneHaken = new Set(n.gruppen.filter((g) => g.abhaken === false).map((g) => g.id));
+  const abhakbar = (e) => bereich.abhaken !== false && e.abhaken !== false && !ohneHaken.has(e.gruppe);
+  const zusatzKopf = bereich.id === 'ausruestung' ? t('nachBekommen') : bereich.id === 'herausforderungen' ? t('nachTipp') : null;
+  const zeilenKnopf = (zid) => {
+    const z = zustand.daten.checkliste.gruppen.flatMap((g) => g.zeilen).find((x) => x.id === zid);
+    return z ? knopf(t('nachZeile', { name: feld(z, 'name') }), () => zeileZeigen(zid), 'knopf leise klein') : null;
+  };
+  const eintrag = (e) => {
+    const an = istGefunden(p, e.id); const name = unterName(e);
+    const kopf = abhakbar(e)
+      ? el('label', { class: an ? 'fertig' : null },
+        el('input', { type: 'checkbox', checked: an, 'data-fokus': `n-${e.id}`, onchange: () => abhaken(e.id) }),
+        el('span', { class: 'eintrag-name', text: e.anzahl != null ? `${name} (${zahl(e.anzahl)})` : name }),
+        e.schwer ? el('span', { class: 'schildchen', text: t('nachSchwer') }) : null)
+      : el('p', { class: 'eintrag-name', text: name });
+    const zusatz = feld(e, 'zusatz');
+    return el('li', { class: `eintrag${abhakbar(e) ? '' : ' ohne-haken'}${zustand.nachMarkiert === e.id ? ' gefunden' : ''}`, 'data-eintrag': e.id },
+      kopf,
+      el('p', { class: 'leise-text einzug', text: feld(e, 'text') }),
+      zusatz ? el('p', { class: 'leise-text einzug' }, zusatzKopf ? el('strong', { text: `${zusatzKopf}: ` }) : null, zusatz) : null,
+      !zustand.spoilerfrei && feld(e, 'spoiler') ? el('p', { class: 'leise-text einzug', text: feld(e, 'spoiler') }) : null,
+      e.zeile && !n.gruppen.find((g) => g.id === e.gruppe)?.zeile ? el('div', { class: 'einzug' }, zeilenKnopf(e.zeile)) : null);
+  };
+  const teile = [];
+  if (s.gesamt) teile.push(gurt(`${s.fertig} / ${s.gesamt}`, s.fertig / s.gesamt, bereich.noetig ? t('nachNoetig', { n: zahl(bereich.noetig) }) : null));
+  teile.push(el('p', { class: 'leise-text', text: feld(bereich, 'text') }));
+  const gruppen = n.gruppen.filter((g) => g.bereich === bereich.id);
+  for (const g of gruppen) {
+    const eigene = sicht.sichtbar.filter((e) => e.gruppe === g.id);
+    const zaehlbar = eigene.filter(abhakbar); const fertig = zaehlbar.filter((e) => istGefunden(p, e.id)).length;
+    if (!eigene.length && !feld(g, 'text')) continue;
+    teile.push(el('details', { class: 'kapitel', open: zustand.nachOffen.has(g.id), ontoggle: (ev) => { if (ev.target.open) zustand.nachOffen.add(g.id); else zustand.nachOffen.delete(g.id); } },
+      el('summary', {}, el('span', { class: 'kapitel-name', text: feld(g, 'name') }), el('span', { class: 'zahl', text: zaehlbar.length ? `${fertig} / ${zaehlbar.length}` : zahl(eigene.length) })),
+      feld(g, 'text') ? el('p', { class: 'leise-text', text: feld(g, 'text') }) : null,
+      g.zeile ? zeilenKnopf(g.zeile) : null,
+      el('ul', { class: 'missionen eintraege' }, eigene.map(eintrag))));
+  }
+  const lose = sicht.sichtbar.filter((e) => e.gruppe == null);
+  if (lose.length) teile.push(el('ul', { class: 'missionen eintraege' }, lose.map(eintrag)));
+  if (sicht.verborgen) teile.push(el('p', { class: 'leise-text', text: t('nachSpaeter', { n: zahl(sicht.verborgen), k: sicht.spaeter ?? '?' }) }));
+  teile.push(el('p', { class: 'leise-text', text: t('nachStand', { stand: datum(n.stand) }) }));
+  $('#nach-inhalt').replaceChildren(...teile);
+}
+
+async function bereichZeigen(id) {
+  zustand.nachBereich = id; zustand.nachMarkiert = null;
+  await speicher.einstellungSchreiben('nachBereich', id); allesZeichnen();
+}
+
+// Einen Eintrag aufschlagen (aus der Suche oder aus einem Karten-Fenster): Reiter, Bereich und Gruppe öffnen, hinrollen, markieren
+async function eintragZeigen(id) {
+  const e = zustand.daten.nachschlagen.eintraege.find((x) => x.id === id);
+  if (!e) return;
+  zustand.tab = 'nachschlagen'; zustand.nachBereich = e.bereich; zustand.nachMarkiert = id;
+  if (e.gruppe) zustand.nachOffen.add(e.gruppe);
+  await speicher.einstellungSchreiben('tab', 'nachschlagen'); await speicher.einstellungSchreiben('nachBereich', e.bereich);
+  k.karte.closePopup(); allesZeichnen();
+  document.querySelector(`[data-eintrag="${CSS.escape(id)}"]`)?.scrollIntoView({ block: 'center', behavior: 'smooth' });
+}
+
+// Zeichen der Karte in der Legende: was U, G, P und der Stern bedeuten
+function legendeZeichnen() {
+  const zeile = (zeichen, text, klasse = 'lz') => el('li', {}, el('b', { class: klasse, 'aria-hidden': 'true', text: zeichen }), el('span', { text }));
+  const kat = (id) => kategorie(id);
+  $('#legende-zeichen').replaceChildren(
+    ...['safehouse', 'garage', 'ort'].map((id) => zeile(kat(id).zeichen, feld(kat(id), 'name'))),
+    zeile(kat('g-parkhaus').zeichen, t('lz_parkhaus'), 'lz schild-ort'),
+    zeile(kat('eigen').zeichen, t('lz_eigen'), 'lz rund'),
+    zeile('', t('lz_punkt'), 'lz punkt'),
+    zeile('', t('lz_ich'), 'lz ichpunkt'));
 }
 
 // ---------- Missionen ----------
@@ -300,12 +393,16 @@ function pinPopup(pin, schliessen) {
   ];
   if (eigen) { if (pin.notiz) teile.push(el('p', { text: pin.notiz })); }
   else {
+    const plaetze = pin.kat === 'garage' ? /\d+ (Stellpl[a-zä]+|spaces?)/.exec(feld(pin, 'text')) : null;
+    if (plaetze) teile.push(el('p', {}, el('strong', { text: `${t('eigeneGarage')} · ${plaetze[0]}` })));
     teile.push(el('p', { text: feld(pin, 'text') }));
     // Easter Eggs an gewöhnlichen Orten: wie die Kategorie Geheimnisse nur, wenn Spoilerfrei aus ist
     if (!zustand.spoilerfrei && feld(pin, 'geheim')) teile.push(el('p', { text: feld(pin, 'geheim') }));
     teile.push(el('p', { class: 'leise-text', text: [feld(pin, 'lage'), pin.ab_kapitel ? `${t('ab')} ${pin.ab_kapitel}` : null, t(pin.genau ? 'genau' : 'ungefaehr')].filter(Boolean).join(' · ') }));
+    teile.push(versteckZeile(pin, schliessen));
   }
-  const reihe = el('div', { class: 'reihe' }, popupKnopf(istGefunden(aktiv(), pin.id) ? t('zuruecknehmen') : t('abhaken'), () => { schliessen(); abhaken(pin.id); }));
+  const reihe = el('div', { class: 'reihe' }, popupKnopf(istGefunden(aktiv(), pin.id) ? t('zuruecknehmen') : t('abhaken'), () => { schliessen(); abhaken(pin.id); }),
+    popupKnopf(t('hierBinIch'), () => positionSetzen(pin), 'knopf leise'));
   if (eigen) reihe.append(popupKnopf(t('pinLoeschen'), async () => {
     if (!confirm(t('pinLoeschenFrage'))) return;
     const weg = { ...zustand.pins.find((x) => x.id === pin.id), geloescht: true, zeit: Date.now() };
@@ -348,38 +445,106 @@ function punktPopup(o, schliessen) {
     lageText(o) ? el('p', { text: lageText(o) }) : null,
     o.art?.length ? el('p', { class: 'leise-text', text: artText(o.art) + (o.sicherheit ? ` · ${t('sicher_' + o.sicherheit)}` : '') }) : null,
     o.unsicher ? el('p', { class: 'leise-text', text: t('unsicher') }) : null,
+    o.kat === 'g-parkhaus' ? el('p', { class: 'leise-text', text: t('parkhausText') }) : null,
+    versteckZeile(o, schliessen),
     quelle,
-    el('div', { class: 'reihe' }, popupKnopf(t('hierBinIch'), async () => {
-      zustand.position = { x: Math.round(o.x), y: Math.round(o.y) }; await speicher.einstellungSchreiben('position', zustand.position); schliessen(); allesZeichnen();
-    })));
+    el('div', { class: 'reihe' }, popupKnopf(t('hierBinIch'), () => positionSetzen(o))));
 }
 
-function kartenKlick(pos, latlng, titel) {
+// Zeile „Versteck auf der Flucht“ im Fenster eines Ortes: wogegen der Ort hilft, mit Sprung zum Fluchtwissen
+function versteckZeile(ort, schliessen) {
+  if (!ort.versteck || ort.versteck === 'eigen') return null;
+  const e = zustand.daten.nachschlagen.eintraege.find((x) => x.versteck === ort.versteck);
+  if (!e) return null;
+  return el('div', { class: 'versteck-zeile' },
+    el('p', {}, el('strong', { text: `${t('versteck')}: ` }), feld(e, 'text')),
+    popupKnopf(t('versteckMehr'), () => { schliessen(); eintragZeigen(e.id); }, 'knopf leise klein'));
+}
+
+// ---------- Kartenklick und Setzmodus ----------
+// Ein Klick ins Leere tut nichts. Erst der Knopf „Pin setzen“ schaltet den Setzmodus ein; der nächste Klick auf die Karte
+// öffnet dann das Formular für einen eigenen Pin, danach ist der Modus wieder aus.
+function setzmodus(an) {
+  zustand.setzmodus = an;
+  $('#pin-modus').setAttribute('aria-pressed', String(an));
+  $('#karte').classList.toggle('setzmodus', an);
+  $('#setz-hinweis').hidden = !an;
+  if (an) { k.karte.closePopup(); karteInsBild(); }
+}
+
+function kartenKlick(pos, latlng) {
   const { karte } = zustand.daten;
-  if (!innerhalb(pos.x, pos.y, karte)) return;
-  const inhalt = el('div', { class: 'popup' });
-  const start = () => inhalt.replaceChildren(
-    titel ? el('strong', { class: 'schild popup-titel', text: titel }) : null,
+  if (!zustand.setzmodus || !innerhalb(pos.x, pos.y, karte)) return;
+  setzmodus(false);
+  const art = el('select', { id: 'pin-art' }, pinArten.map((a) => new Option(a[sprache], a.id)));
+  const name = el('input', { id: 'pin-name', type: 'text', maxlength: '60', autocomplete: 'off' });
+  const notiz = el('textarea', { id: 'pin-notiz', rows: '2', maxlength: '240' });
+  const inhalt = el('div', { class: 'popup' },
     el('p', { class: 'leise-text', text: `${t('planquadrat')} ${planquadrat(pos.x, pos.y, karte.gitter)}` }),
+    el('label', { for: 'pin-art', text: t('pinArt') }), art,
+    el('label', { for: 'pin-name', text: t('pinName') }), name,
+    el('label', { for: 'pin-notiz', text: t('pinNotiz') }), notiz,
     el('div', { class: 'reihe' },
-      popupKnopf(t('hierBinIch'), async () => { zustand.position = pos; await speicher.einstellungSchreiben('position', pos); k.karte.closePopup(); allesZeichnen(); }),
-      popupKnopf(t('pinSetzen'), formular, 'knopf leise')));
-  const formular = () => {
-    const art = el('select', { id: 'pin-art' }, pinArten.map((a) => new Option(a[sprache], a.id)));
-    const name = el('input', { id: 'pin-name', type: 'text', maxlength: '60', autocomplete: 'off' });
-    const notiz = el('textarea', { id: 'pin-notiz', rows: '2', maxlength: '240' });
-    inhalt.replaceChildren(
-      el('label', { for: 'pin-art', text: t('pinArt') }), art,
-      el('label', { for: 'pin-name', text: t('pinName') }), name,
-      el('label', { for: 'pin-notiz', text: t('pinNotiz') }), notiz,
-      el('div', { class: 'reihe' }, popupKnopf(t('pinSpeichern'), async () => {
+      popupKnopf(t('pinSpeichern'), async () => {
         const pin = neuerPin({ ...pos, art: art.value, name: name.value, notiz: notiz.value, county: countyVon(pos.x, pos.y, karte.labels) });
         zustand.pins.push(pin); await speicher.pinSpeichern(pin); k.karte.closePopup(); allesZeichnen();
-      })));
-    art.focus();
-  };
-  start();
+      }),
+      popupKnopf(t('pinPosition'), () => positionSetzen(pos), 'knopf leise')));
   popupZeigen(k, latlng, inhalt);
+  art.focus();
+}
+
+async function positionSetzen(pos) {
+  zustand.position = { x: Math.round(pos.x), y: Math.round(pos.y) };
+  await speicher.einstellungSchreiben('position', zustand.position); k.karte.closePopup(); allesZeichnen();
+}
+
+// Suchtreffer auf einen Ortsnamen: kleines Fenster mit Name und Planquadrat, ohne Pin-Formular
+function ortsnameZeigen(e, latlng) {
+  popupZeigen(k, latlng, el('div', { class: 'popup' },
+    el('strong', { class: 'schild popup-titel', text: e.name }),
+    el('p', { class: 'leise-text', text: `${t('t_' + e.typ)} · ${t('planquadrat')} ${planquadrat(e.x, e.y, zustand.daten.karte.gitter)}` }),
+    el('div', { class: 'reihe' }, popupKnopf(t('hierBinIch'), () => positionSetzen(e)))));
+}
+
+// ---------- Pins teilen per Link ----------
+// Die eigenen Pins stecken im Anker des Links (#pins=…). Den Anker sieht kein Server; wer den Link öffnet, wird gefragt.
+async function pinsTeilen() {
+  const n = zustand.pins.filter((p) => !p.geloescht).length;
+  if (!n) { fensterZeigen(el('h2', { id: 'fenster-titel', text: t('teilenKopf') }), el('p', { text: t('teilenLeer') })); return; }
+  const link = `${location.origin}${location.pathname}#pins=${await pinsVerpacken(zustand.pins)}`;
+  const feldLink = el('textarea', { class: 'teilen-link', rows: '4', readonly: true, 'aria-label': t('teilenLink') }); feldLink.value = link;
+  const kopieren = knopf(t('teilenKopieren'), async () => {
+    try { await navigator.clipboard.writeText(link); } catch { feldLink.select(); document.execCommand('copy'); }
+    kopieren.textContent = `✓ ${t('teilenKopiert')}`;
+  });
+  const senden = navigator.share ? knopf(t('teilenSenden'), () => navigator.share({ title: document.title, url: link }).catch(() => {}), 'knopf leise') : null;
+  fensterZeigen(el('h2', { id: 'fenster-titel', text: t('teilenKopf') }), el('p', { text: t('teilenText', { n: zahl(n) }) }), feldLink, el('div', { class: 'reihe' }, kopieren, senden));
+  feldLink.addEventListener('focus', () => feldLink.select());
+}
+
+// Der Anker bleibt in der Adresse, bis entschieden ist. Lädt eine neue App-Fassung die Seite genau jetzt neu
+// (Service Worker), kommt die Frage danach wieder, statt dass der Link verpufft.
+let geteiltOffen = false;
+async function geteiltePinsPruefen() {
+  const m = /^#pins=(.+)$/.exec(location.hash);
+  if (!m || geteiltOffen) return;
+  geteiltOffen = true;
+  const ankerWeg = () => { if (location.hash.startsWith('#pins=')) history.replaceState(null, '', location.pathname + location.search); };
+  const zeigen = (...inhalt) => fensterZeigen(el('h2', { id: 'fenster-titel', text: t('geteiltKopf') }), ...inhalt)
+    .addEventListener('close', () => { geteiltOffen = false; ankerWeg(); }, { once: true });
+  let pins;
+  try { pins = await pinsAuspacken(decodeURIComponent(m[1])); } catch { zeigen(el('p', { text: t('geteiltFehler') })); return; }
+  const neu = pinsNeuheiten(zustand.pins, pins); const im = pins.filter((p) => !p.geloescht).length;
+  if (!neu.length) { zeigen(el('p', { text: t('geteiltNichts', { m: zahl(im) }) })); return; }
+  const text = el('p', { text: t('geteiltText', { n: zahl(neu.length), m: zahl(im) }) });
+  const nehmen = knopf(t('geteiltNehmen'), async () => {
+    nehmen.disabled = true;
+    zustand.pins = pinsZusammenfuehren(zustand.pins, pins);
+    for (const p of neu) await speicher.pinSpeichern(p);
+    ankerWeg(); text.textContent = t('geteiltFertig', { n: zahl(neu.length) }); nehmen.remove(); allesZeichnen();
+  });
+  zeigen(text, el('div', { class: 'reihe' }, nehmen));
 }
 
 // ---------- Suche ----------
@@ -397,12 +562,12 @@ function suchEintraege() {
   }));
   const pins = sichtbarePins().map((x) => ({
     gruppe: 'karte', art: 'pin', id: x.id, kat: x.kat, name: x.name, x: x.x, y: x.y, county: x.county, gewicht: 2,
-    zusatz: `${x.kat === 'eigen' ? `${pinArt(x.art)[sprache]} ${x.notiz || ''}` : `${feld(kategorie(x.kat), 'name')} ${feld(x, 'lage') ?? ''} ${feld(x, 'text') ?? ''} ${zustand.spoilerfrei ? '' : (feld(x, 'geheim') ?? '')} ${artWorte(x.arten)}`} ${KATWORTE[x.kat] ?? ''} ${county(x.county)?.name ?? ''}`
+    zusatz: `${x.kat === 'eigen' ? `${pinArt(x.art)[sprache]} ${x.notiz || ''}` : `${feld(kategorie(x.kat), 'name')} ${feld(x, 'lage') ?? ''} ${feld(x, 'text') ?? ''} ${zustand.spoilerfrei ? '' : (feld(x, 'geheim') ?? '')} ${artWorte(x.arten)}`} ${KATWORTE[x.kat] ?? ''} ${x.versteck ? VERSTECKWORTE : ''} ${county(x.county)?.name ?? ''}`
   }));
   const gtadb = sichtbareCommunity().map((o) => ({
     gruppe: 'karte', art: 'gtadb', id: o.id, kat: o.kat, name: o.name, suchname: o.namenlos ? '' : undefined, x: o.x, y: o.y, county: o.county, gewicht: o.namenlos ? 0 : 1,
     namenlos: o.namenlos, lage: lageText(o), artText: artText((o.art || []).filter((a) => !/^(enterable|closed|retail|public)$/.test(a)).slice(0, 2)),
-    zusatz: `${lageText(o)} ${artText(o.art)} ${artWorte(o.art)} ${feld(kategorie(o.kat), 'name')} ${county(o.county)?.name ?? ''}`
+    zusatz: `${lageText(o)} ${artText(o.art)} ${artWorte(o.art)} ${feld(kategorie(o.kat), 'name')} ${KATWORTE[o.kat] ?? ''} ${o.versteck ? VERSTECKWORTE : ''} ${county(o.county)?.name ?? ''}`
   }));
   const wege = strassen.strassen.map((s) => ({
     gruppe: 'karte', art: 'strasse', id: s.id, name: s.name, x: s.x, y: s.y, county: s.county, gewicht: s.ungefaehr ? 0 : 2, strasse: s,
@@ -424,7 +589,16 @@ function suchEintraege() {
   const wissen = (zustand.daten.orte.ketten ?? []).filter((w) => !istVerborgen(w, null, zustand.spoilerfrei, st)).map((w) => ({
     gruppe: 'wissen', art: 'wissen', name: feld(w, 'name'), gewicht: 5, wissen: w, zusatz: `${w.name_de} ${w.name_en} ${artWorte(w.arten)} ${feld(w, 'text')}`
   }));
-  suchIndex = [...pins, ...namen, ...wege, ...gtadb, ...zeilen, ...funk, ...wissen];
+  // Reiter Nachschlagen: Ausrüstung, Sammlung, Aktivitäten, Herausforderungen und Fluchtwissen, ohne was Spoilerfrei verbirgt
+  const ns = zustand.daten.nachschlagen;
+  const nach = ns.bereiche.flatMap((b) => nachschlagenSicht(ns, b.id, zustand.spoilerfrei, st).sichtbar.map((e) => {
+    const g = ns.gruppen.find((x) => x.id === e.gruppe);
+    return {
+      gruppe: 'nach', art: 'nach', id: e.id, name: unterName(e), gewicht: 0, eintrag: e, bereich: feld(b, 'name'), in: g ? feld(g, 'name') : null,
+      zusatz: `${e.name} ${e.name_en ?? ''} ${e.stichworte ?? ''} ${feld(e, 'text')} ${feld(e, 'zusatz') ?? ''} ${b.name_de} ${b.name_en} ${g ? `${g.name_de} ${g.name_en}` : ''} ${BEREICHWORTE[b.id] ?? ''}`
+    };
+  }));
+  suchIndex = [...pins, ...namen, ...wege, ...gtadb, ...zeilen, ...funk, ...wissen, ...nach];
   return suchIndex;
 }
 
@@ -438,6 +612,7 @@ function trefferText(e) {
     return [e.name, e.in ? `${t('tabListe')} · ${e.in}` : `${t('tabListe')} · ${z.art === 'haken' ? t(w.erfuellt ? 'erledigt' : 'offen') : `${zahl(w.wert)} / ${zahl(z.noetig)}${z.art === 'geld' ? ' $' : ''}`}`];
   }
   if (e.art === 'wissen') return [e.name, feld(e.wissen, 'text').slice(0, 90).replace(/\s+\S*$/, '') + ' …'];
+  if (e.art === 'nach') return [e.name, [e.bereich, e.in, feld(e.eintrag, 'text').slice(0, 70).replace(/\s+\S*$/, '') + ' …'].filter(Boolean).join(' · ')];
   if (e.art === 'sender') return [e.name, `${t('radioSender')} · ${feld(e.sender, 'genre')}`];
   if (e.art === 'titel') return [e.sender.titel[e.nr][1], `${e.sender.titel[e.nr][0]} · ${e.sender.name}`];
   if (e.art === 'gtadb') return [e.name, `${e.namenlos ? feld(kategorie(e.kat), 'name') : (e.artText || feld(kategorie(e.kat), 'name'))} · ${e.lage || county(e.county)?.name || t('ohneCounty')} · ${planquadrat(e.x, e.y, gitter)}`];
@@ -493,22 +668,23 @@ function trefferAnfliegen(e) {
   if (e.art === 'zeile') { zeileZeigen(e.id); return; }
   if (e.art === 'sender' || e.art === 'titel') { radioZeigen(e.sender, e.nr); return; }
   if (e.art === 'wissen') { wissenZeigen(e.wissen); return; }
+  if (e.art === 'nach') { eintragZeigen(e.id); return; }
   karteInsBild();
   if (e.art === 'strasse') { strasseZeigen(e.strasse); return; }
   if (e.art === 'gtadb') {
-    if (!punktOeffnen(k, e.id)) { zustand.filter.countys.clear(); zustand.filter.kategorien.clear(); filterGeaendert().then(() => punktOeffnen(k, e.id)); }
+    if (!punktOeffnen(k, e.id)) { filterLeeren(); filterGeaendert().then(() => punktOeffnen(k, e.id)); }
     return;
   }
   if (e.art === 'pin') {
     if (!pinOeffnen(k, e.id)) {           // vom Filter ausgeblendet: Filter lösen, dann öffnen
-      zustand.filter.countys.clear(); zustand.filter.kategorien.clear();
+      filterLeeren();
       filterGeaendert().then(() => pinOeffnen(k, e.id));
     }
     return;
   }
   const zoom = { county: -1, stadt: 0, gewaesser: 0, insel: 0.5, gebiet: 0.5, viertel: 1, poi: 1 }[e.typ] ?? 0.5;
   const latlng = stelleMarkieren(k, e, zoom);
-  k.karte.once('moveend', () => kartenKlick({ x: e.x, y: e.y }, latlng, e.name));
+  k.karte.once('moveend', () => ortsnameZeigen(e, latlng));
 }
 
 function sucheVerdrahten() {
@@ -583,8 +759,12 @@ function steuerungVerdrahten() {
       if (e.key === 'ArrowLeft') zeigeTab(tabs[(i + tabs.length - 1) % tabs.length].dataset.tab, true);
     });
   }
-  $('#filter-alle').addEventListener('click', () => { zustand.filter.countys.clear(); zustand.filter.kategorien.clear(); filterGeaendert(); });
+  $('#filter-alle').addEventListener('click', () => { filterLeeren(); filterGeaendert(); });
   $('#ganze-karte').addEventListener('click', () => ganzeKarte(k));
+  $('#pin-modus').addEventListener('click', () => setzmodus(!zustand.setzmodus));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && zustand.setzmodus) setzmodus(false); });
+  $('#pins-teilen').addEventListener('click', pinsTeilen);
+  $('#pins-teilen-karte').addEventListener('click', pinsTeilen);
   $('#profil-neu').addEventListener('click', async () => {
     const name = prompt(t('profilName'), `${t('profil')} ${zustand.profile.length + 1}`);
     if (!name) return;

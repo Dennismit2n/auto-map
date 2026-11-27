@@ -2543,7 +2543,7 @@
   },
   {
    "id": "g-l582",
-   "kat": "g-gebaeude",
+   "kat": "g-parkhaus",
    "name": "Parking Garage",
    "lage": "Downtown, Vice City",
    "art": [
@@ -4018,7 +4018,7 @@
   },
   {
    "id": "g-l1025",
-   "kat": "g-gebaeude",
+   "kat": "g-parkhaus",
    "name": "Parking Garage",
    "lage": "Ocean Beach, Vice Beach",
    "art": [
@@ -4924,7 +4924,7 @@
   },
   {
    "id": "g-l1354",
-   "kat": "g-gebaeude",
+   "kat": "g-parkhaus",
    "name": "Parking Garage",
    "lage": "Crosstown, Vice City",
    "art": [
@@ -6214,7 +6214,7 @@
   },
   {
    "id": "g-l1654",
-   "kat": "g-verkehr",
+   "kat": "g-parkhaus",
    "name": "Parking Garage",
    "lage": "Downtown, Vice City",
    "art": [
@@ -8208,7 +8208,7 @@
   },
   {
    "id": "g-l2423",
-   "kat": "g-gebaeude",
+   "kat": "g-parkhaus",
    "name": "Banner Parking Garage",
    "lage": "Salton, Vice City",
    "art": [

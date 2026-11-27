@@ -4,6 +4,7 @@ const ID = /^[a-z0-9-]{2,120}$/;
 
 // Kategorien der Community-Orte von gtadb.org (CC BY 4.0); die Zuordnung macht tools/karte/gtadb-bauen.mjs
 export const GTADB_KATEGORIEN = [
+  { id: 'g-parkhaus', name_de: 'Parkhäuser (öffentlich)', name_en: 'Parking garages (public)', zeichen: 'P', spoiler: false, gtadb: true },
   { id: 'g-laden', name_de: 'Läden und Dienste', name_en: 'Shops and services', zeichen: 'L', spoiler: false, gtadb: true },
   { id: 'g-verkehr', name_de: 'Verkehr', name_en: 'Transport', zeichen: 'V', spoiler: false, gtadb: true },
   { id: 'g-freizeit', name_de: 'Freizeit und Wahrzeichen', name_en: 'Leisure and landmarks', zeichen: 'F', spoiler: false, gtadb: true },
@@ -11,7 +12,20 @@ export const GTADB_KATEGORIEN = [
   { id: 'm-schauplatz', name_de: 'Schauplätze (Trailer, Vorbilder)', name_en: 'Scenes (trailers, real-world models)', zeichen: 'S', spoiler: false, gtadb: true }
 ];
 
-export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio }) {
+// Orte mit Versteck-Wert auf der Flucht: welche Art eines Ortes welchem Flucht-Eintrag (data/nachschlagen.json, Feld versteck)
+// entspricht. Gassen, Büsche oder der Kofferraum sind keine Kartenorte und stehen nur im Text.
+const VERSTECK_ARTEN = { parkhaus: 'parkhaus', 'pay\'n\'spray': 'pay-n-spray', clothes: 'kleiderladen', hair: 'friseur' };
+export function versteckVon(ort) {
+  if (ort.kat === 'safehouse') return 'unterschlupf';
+  for (const a of [...(ort.art ?? []), ...(ort.arten ?? [])]) if (VERSTECK_ARTEN[a]) return VERSTECK_ARTEN[a];
+  // was gtadb ohne Art führt, am Namen: Friseure, überdachte Parkplätze, Ammu-Nation
+  const name = ort.name ?? '';
+  if (/\bbarber\b|hair salon/i.test(name)) return 'friseur';
+  if (/covered parking/i.test(name)) return 'parkhaus';
+  return /ammu-nation/i.test(name) ? 'ammu-nation' : null;
+}
+
+export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen }) {
   const fehler = [];
   const kapitelOk = (k) => k == null || (Number.isInteger(k) && k >= 1 && k <= 5);
   const ids = new Set();
@@ -70,6 +84,26 @@ export function pruefeDaten({ karte, orte, checkliste, missionen, gtadb, mapheis
       if (!m.id.startsWith(`${k.id}-`)) fehler.push(`Mission ${m.id}: passt nicht zum Kapitel ${k.id}`);
     }
   }
+  if (nachschlagen) {
+    const bereiche = new Set(nachschlagen.bereiche.map((b) => b.id));
+    const gruppen = new Map(nachschlagen.gruppen.map((g) => [g.id, g]));
+    const zeilen = new Set(checkliste.gruppen.flatMap((g) => g.zeilen.map((z) => z.id)));
+    for (const b of nachschlagen.bereiche) if (!b.name_de || !b.name_en || !b.text_de || !b.text_en) fehler.push(`Bereich ${b.id}: Name oder Text fehlt`);
+    for (const g of nachschlagen.gruppen) {
+      neu(g.id, 'Gruppe');
+      if (!bereiche.has(g.bereich) || !g.name_de || !g.name_en) fehler.push(`Gruppe ${g.id}: Bereich unbekannt oder Name fehlt`);
+      if (g.zeile && !zeilen.has(g.zeile)) fehler.push(`Gruppe ${g.id}: unbekannte Zeile ${g.zeile}`);
+    }
+    for (const e of nachschlagen.eintraege) {
+      neu(e.id, 'Eintrag');
+      if (!bereiche.has(e.bereich)) fehler.push(`Eintrag ${e.id}: unbekannter Bereich ${e.bereich}`);
+      if (e.gruppe != null && gruppen.get(e.gruppe)?.bereich !== e.bereich) fehler.push(`Eintrag ${e.id}: Gruppe ${e.gruppe} fehlt oder gehört zu einem anderen Bereich`);
+      if (!e.name || !e.text_de || !e.text_en) fehler.push(`Eintrag ${e.id}: Name oder Text fehlt`);
+      if (Boolean(e.zusatz_de) !== Boolean(e.zusatz_en) || Boolean(e.spoiler_de) !== Boolean(e.spoiler_en)) fehler.push(`Eintrag ${e.id}: Zusatz oder Spoiler nur in einer Sprache`);
+      if (!kapitelOk(e.ab_kapitel)) fehler.push(`Eintrag ${e.id}: ab_kapitel ungültig`);
+      if (e.zeile && !zeilen.has(e.zeile)) fehler.push(`Eintrag ${e.id}: unbekannte Zeile ${e.zeile}`);
+    }
+  }
   return fehler;
 }
 
@@ -88,9 +122,9 @@ export async function ladeDaten(basis = './data/') {
     if (!antwort.ok) throw new Error(`${pfad}: ${antwort.status}`);
     return antwort.json();
   };
-  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json'), holen('radio.json')]);
+  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json'), holen('radio.json'), holen('nachschlagen.json')]);
   orte.kategorien = [...orte.kategorien.filter((k) => k.id !== 'eigen'), ...GTADB_KATEGORIEN, ...orte.kategorien.filter((k) => k.id === 'eigen')];
-  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, community: [...ohneDoppelte(gtadb.orte, orte.orte).map((o) => ({ ...o, quelle: 'gtadb' })), ...ohneDoppelte(mapheist.orte, orte.orte)] };
+  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen, community: [...ohneDoppelte(gtadb.orte, orte.orte).map((o) => ({ ...o, quelle: 'gtadb' })), ...ohneDoppelte(mapheist.orte, orte.orte)] };
   const fehler = pruefeDaten(daten);
   if (fehler.length) console.warn('Datenfehler:', fehler);
   return daten;

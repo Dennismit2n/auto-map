@@ -84,7 +84,26 @@ export function passtZumFilter(pin, filter) {
   if (!filter) return true;
   if (filter.countys?.size && !filter.countys.has(pin.county)) return false;
   if (filter.kategorien?.size && !filter.kategorien.has(pin.kat)) return false;
+  if (filter.versteck && !pin.versteck) return false;
   return true;
+}
+
+// ---- Nachschlagen (Ausrüstung, Sammlung, Aktivitäten, Herausforderungen, Flucht) ----
+// Einträge eines Bereichs, die der Durchgang sehen darf, und wie viele Spoilerfrei noch verbirgt (mit dem Kapitel, ab dem mehr kommt).
+export function nachschlagenSicht(nachschlagen, bereichId, spoilerfrei, stand = KAPITEL_ALT) {
+  const alle = nachschlagen.eintraege.filter((e) => e.bereich === bereichId);
+  const sichtbar = alle.filter((e) => !istVerborgen(e, null, spoilerfrei, stand));
+  const rest = alle.filter((e) => istVerborgen(e, null, spoilerfrei, stand)).map((e) => e.ab_kapitel).filter(Number.isInteger);
+  return { sichtbar, verborgen: alle.length - sichtbar.length, spaeter: rest.length ? Math.min(...rest) : null };
+}
+
+// Zähler eines Bereichs: abhakbar ist alles außer Einträgen und Gruppen mit abhaken: false. Verborgene zählen mit, damit die Summe stimmt.
+export function nachschlagenStand(nachschlagen, bereichId, profil) {
+  const bereich = nachschlagen.bereiche.find((b) => b.id === bereichId);
+  if (!bereich || bereich.abhaken === false) return { gesamt: 0, fertig: 0 };
+  const ohne = new Set(nachschlagen.gruppen.filter((g) => g.abhaken === false).map((g) => g.id));
+  const zaehlbar = nachschlagen.eintraege.filter((e) => e.bereich === bereichId && e.abhaken !== false && !ohne.has(e.gruppe));
+  return { gesamt: zaehlbar.length, fertig: zaehlbar.filter((e) => istGefunden(profil, e.id)).length };
 }
 
 export function zaehlen(pins, profil, filter) {
@@ -204,4 +223,57 @@ export function pinsZusammenfuehren(vorhandene, eingelesene) {
     if (!alt || (p.zeit ?? 0) > (alt.zeit ?? 0)) nachId.set(p.id, p);
   }
   return [...nachId.values()];
+}
+
+// Was ein Zusammenführen ändern würde: Pins, die neu oder jünger sind als der eigene Stand
+export function pinsNeuheiten(vorhandene, eingelesene) {
+  const nachId = new Map(vorhandene.map((p) => [p.id, p]));
+  return eingelesene.filter((p) => { const alt = nachId.get(p.id); return alt ? (p.zeit ?? 0) > (alt.zeit ?? 0) : !p.geloescht; });
+}
+
+// ---- Pins teilen per Link ----
+// Die eigenen Pins (samt Löschvermerken) als kurzer Text für den Anker eines Links: JSON, gepackt (deflate), base64url.
+// Kein Server sieht den Anker; wer den Link hat, hat die Pins.
+const PINS_KENNUNG = 'mp1';
+export const PINS_HOECHSTENS = 500;
+const ENTPACKT_HOECHSTENS = 2_000_000;   // Bytes; ein echter Link mit 500 Pins bleibt weit darunter
+// Schickt Bytes durch einen (De-)Kompressionsstrom und bricht ab, wenn mehr als hoechstens herauskommt (präparierte Links)
+async function durchStrom(bytes, strom, hoechstens = Infinity) {
+  const leser = new Blob([bytes]).stream().pipeThrough(strom).getReader();
+  const teile = []; let n = 0;
+  for (;;) {
+    const { done, value } = await leser.read();
+    if (done) break;
+    n += value.length;
+    if (n > hoechstens) { await leser.cancel(); throw new Error('zu groß'); }
+    teile.push(value);
+  }
+  const aus = new Uint8Array(n); let ab = 0;
+  for (const teil of teile) { aus.set(teil, ab); ab += teil.length; }
+  return aus;
+}
+
+export async function pinsVerpacken(pins) {
+  // Erst die sichtbaren Pins, dann die Löschvermerke: Reicht der Platz nicht, fallen Vermerke weg, keine Pins.
+  // Von einem gelöschten Pin reist nur der Vermerk (ID und Zeit) mit, nicht Name, Notiz oder Lage.
+  const zeilen = [...pins.filter((p) => !p.geloescht), ...pins.filter((p) => p.geloescht)].slice(0, PINS_HOECHSTENS)
+    .map((p) => (p.geloescht ? [p.id, '', '', '', 0, 0, null, p.erstellt, p.zeit, 1] : [p.id, p.art, p.name, p.notiz, p.x, p.y, p.county, p.erstellt, p.zeit, 0]));
+  const gepackt = await durchStrom(new TextEncoder().encode(JSON.stringify(zeilen)), new CompressionStream('deflate-raw'));
+  let s = ''; for (const b of gepackt) s += String.fromCharCode(b);
+  return `${PINS_KENNUNG}.${btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')}`;
+}
+
+export async function pinsAuspacken(text) {
+  const m = /^mp1\.([A-Za-z0-9_-]{1,400000})$/.exec(String(text ?? '').trim());
+  if (!m) throw new Error('Kein gültiger Pin-Link');
+  let zeilen;
+  try {
+    const roh = atob(m[1].replace(/-/g, '+').replace(/_/g, '/'));
+    const bytes = Uint8Array.from(roh, (c) => c.charCodeAt(0));
+    zeilen = JSON.parse(new TextDecoder().decode(await durchStrom(bytes, new DecompressionStream('deflate-raw'), ENTPACKT_HOECHSTENS)));
+  } catch { throw new Error('Pin-Link ist beschädigt'); }
+  if (!Array.isArray(zeilen) || zeilen.length > PINS_HOECHSTENS) throw new Error('Pin-Link ist beschädigt');
+  return zeilen.map((z) => (Array.isArray(z)
+    ? pruefePin({ id: z[0], art: z[1], name: z[2], notiz: z[3], x: z[4], y: z[5], county: z[6], erstellt: z[7], zeit: z[8], geloescht: z[9] === 1 })
+    : null)).filter(Boolean);
 }

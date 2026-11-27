@@ -1,0 +1,2041 @@
+{
+ "stand": "2026-11-27",
+ "quelle_de": "Eigene Zusammenfassung aus Guides eine Woche nach Release, Quellen im Nachtrag vom 27.11.2026.",
+ "quelle_en": "Own summary from guides one week after release.",
+ "bereiche": [
+  {
+   "id": "ausruestung",
+   "name_de": "Ausrüstung",
+   "name_en": "Equipment",
+   "abhaken": true,
+   "text_de": "Werkzeuge und Geräte aus der Karte Ausrüstung im Fortschritt-Menü. Waffen zählen dort nicht mit, sie haben eine eigene Karte. Was du einmal hast, verlierst du nicht mehr.",
+   "text_en": "Tools and gadgets from the Equipment card in the Progress menu. Weapons have their own card. Once you have something, you keep it."
+  },
+  {
+   "id": "sammlung",
+   "name_de": "Sammlung",
+   "name_en": "Collections",
+   "abhaken": true,
+   "text_de": "Die Karte Sammlungen im Fortschritt-Menü: Kentons Schätze, Sammelkarten, WAiNK-Orte und Erkundung. Zahlen und Bedingungen für 100 % stehen im Reiter 100 %.",
+   "text_en": "The Collections card in the Progress menu: Kenton’s Treasures, Collectible Cards, WAiNK Locations and Exploration. Counts needed for 100% are in the 100% tab."
+  },
+  {
+   "id": "aktivitaeten",
+   "name_de": "Aktivitäten",
+   "name_en": "Activities",
+   "abhaken": true,
+   "text_de": "Freizeit und Nebenbeschäftigungen aus der Karte Aktivitäten. Darts und Bowling gibt es nicht, auch kein spielbares Casino.",
+   "text_en": "Pastimes from the Activities card. There is no darts, no bowling and no playable casino."
+  },
+  {
+   "id": "herausforderungen",
+   "name_de": "Herausforderungen",
+   "name_en": "Challenges",
+   "abhaken": true,
+   "noetig": 70,
+   "text_de": "80 Herausforderungen in acht Gruppen zu je zehn, 70 reichen für 100 %. Alle sind ab Spielstart sichtbar. 5 und alle 10 einer Gruppe schalten je einen Fahrzeug-Cheat frei, alle 80 den Kampfjet Hauners P-996 Lazer, 50 die Trophäe „One Last Thing“. Cheats kannst du erst nach dem Abspann nutzen.",
+   "text_en": "80 challenges in eight groups of ten, 70 are enough for 100%. All are visible from the start. 5 and all 10 of a group each unlock a vehicle cheat, all 80 the Hauners P-996 Lazer jet, 50 the trophy “One Last Thing”. Cheats only work after the credits."
+  },
+  {
+   "id": "flucht",
+   "name_de": "Flucht",
+   "name_en": "Escape",
+   "abhaken": false,
+   "text_de": "Wie du eine Fahndung abschüttelst und wo du dich verstecken kannst. Orte mit Versteck-Wert zeigt die Karte über den Filter Versteck.",
+   "text_en": "How to shake off the police and where to hide. Places that help are shown on the map with the Hideout filter."
+  }
+ ],
+ "gruppen": [
+  {
+   "id": "a-karte",
+   "bereich": "ausruestung",
+   "name_de": "Auf der Karte Ausrüstung",
+   "name_en": "On the Equipment card"
+  },
+  {
+   "id": "a-weitere",
+   "bereich": "ausruestung",
+   "name_de": "Weitere Ausrüstung (nicht auf der Karte)",
+   "name_en": "Other gear (not on the card)",
+   "abhaken": false
+  },
+  {
+   "id": "s-kenton",
+   "bereich": "sammlung",
+   "name_de": "Kentons Schätze",
+   "name_en": "Kenton’s Treasures",
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-karten",
+   "bereich": "sammlung",
+   "name_de": "Sammelkarten",
+   "name_en": "Collectible Cards",
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-waink",
+   "bereich": "sammlung",
+   "name_de": "WAiNK-Orte",
+   "name_en": "WAiNK Locations",
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-erkundung",
+   "bereich": "sammlung",
+   "name_de": "Erkundung",
+   "name_en": "Exploration"
+  },
+  {
+   "id": "h-combat",
+   "bereich": "herausforderungen",
+   "name_de": "Combat (Kampf)",
+   "name_en": "Combat",
+   "text_de": "5 geschafft: Cheat Speeder 700 GT. Alle 10: Cheat Bravado Banshee.",
+   "text_en": "5 done: cheat Speeder 700 GT. All 10: cheat Bravado Banshee."
+  },
+  {
+   "id": "h-criminal",
+   "bereich": "herausforderungen",
+   "name_de": "Criminal (Verbrechen)",
+   "name_en": "Criminal",
+   "text_de": "5 geschafft: Cheat Maibatsu Sanchez. Alle 10: Cheat Western Zombie Bobber.",
+   "text_en": "5 done: cheat Maibatsu Sanchez. All 10: cheat Western Zombie Bobber."
+  },
+  {
+   "id": "h-exploration",
+   "bereich": "herausforderungen",
+   "name_de": "Exploration (Erkundung)",
+   "name_en": "Exploration",
+   "text_de": "5 geschafft: Cheat Nagasaki Sea Sparrow. Alle 10: Cheat Nagasaki Carbon RS.",
+   "text_en": "5 done: cheat Nagasaki Sea Sparrow. All 10: cheat Nagasaki Carbon RS."
+  },
+  {
+   "id": "h-fitness",
+   "bereich": "herausforderungen",
+   "name_de": "Fitness",
+   "name_en": "Fitness",
+   "text_de": "5 geschafft: Cheat Tuff BMX. Alle 10: Cheat ’65 Vapid Dominator.",
+   "text_en": "5 done: cheat Tuff BMX. All 10: cheat ’65 Vapid Dominator."
+  },
+  {
+   "id": "h-shopping",
+   "bereich": "herausforderungen",
+   "name_de": "Shopping (Einkaufen)",
+   "name_en": "Shopping",
+   "text_de": "5 geschafft: Cheat Maibatsu Boomazoom. Alle 10: Cheat Truffade Thrax.",
+   "text_en": "5 done: cheat Maibatsu Boomazoom. All 10: cheat Truffade Thrax."
+  },
+  {
+   "id": "h-sports",
+   "bereich": "herausforderungen",
+   "name_de": "Sports (Sport)",
+   "name_en": "Sports",
+   "text_de": "5 geschafft: Cheat Vapid Stanier G2 Taxi. Alle 10: Cheat Brimstone Golfer.",
+   "text_en": "5 done: cheat Vapid Stanier G2 Taxi. All 10: cheat Brimstone Golfer."
+  },
+  {
+   "id": "h-survival",
+   "bereich": "herausforderungen",
+   "name_de": "Survival (Überleben)",
+   "name_en": "Survival",
+   "text_de": "5 geschafft: Cheat Airboat 09. Alle 10: Cheat Hauners Rhino Tank.",
+   "text_en": "5 done: cheat Airboat 09. All 10: cheat Hauners Rhino Tank."
+  },
+  {
+   "id": "h-vehicle",
+   "bereich": "herausforderungen",
+   "name_de": "Vehicle (Fahrzeuge)",
+   "name_en": "Vehicle",
+   "text_de": "5 geschafft: Cheat Lapwing Mallard. Alle 10: Cheat Progen Emerus.",
+   "text_en": "5 done: cheat Lapwing Mallard. All 10: cheat Progen Emerus."
+  },
+  {
+   "id": "f-regeln",
+   "bereich": "flucht",
+   "name_de": "Fahndung abschütteln",
+   "name_en": "Losing the police"
+  },
+  {
+   "id": "f-verstecke",
+   "bereich": "flucht",
+   "name_de": "Wo du dich verstecken kannst",
+   "name_en": "Where to hide"
+  }
+ ],
+ "eintraege": [
+  {
+   "id": "a-01",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Binoculars",
+   "text_de": "Ziele, Gegner und Überfallorte aus der Ferne auskundschaften, Tiere beobachten (zählt fürs Studieren).",
+   "text_en": "Scout distant targets, enemies and robbery spots, and watch animals from afar (works for studying them).",
+   "zusatz_de": "Bekommst du automatisch in der Mission „Gone Fishing“ (Kapitel 1).",
+   "zusatz_en": "Given automatically during the mission “Gone Fishing” (Chapter 1).",
+   "stichworte": "fernglas"
+  },
+  {
+   "id": "a-02",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Flashlight",
+   "text_de": "Leuchtet dunkle Orte aus, ersetzt aber keine Waffe.",
+   "text_en": "Lights up dark places, but it is no substitute for a weapon.",
+   "zusatz_de": "Bekommst du zusammen mit dem Fernglas in „Gone Fishing“ (Kapitel 1).",
+   "zusatz_en": "Comes with the binoculars in “Gone Fishing” (Chapter 1).",
+   "stichworte": "taschenlampe lampe"
+  },
+  {
+   "id": "a-03",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Duffel Bag",
+   "text_de": "Trägt Wertsachen wie markierte Scheine, Schmuck und Drogen zur Übergabe.",
+   "text_en": "Carries valuables such as marked bills, jewelry and narcotics to a drop-off.",
+   "zusatz_de": "Bekommst du automatisch in der Mission „Lab Fees“ (Kapitel 1). Laut einer Quelle taucht sie auf, sobald du mehr als 20.000 $ Bargeld dabeihast.",
+   "zusatz_en": "Given automatically in the mission “Lab Fees” (Chapter 1). One source says it shows up once your pocket cash goes past $20,000.",
+   "stichworte": "tasche beutel sporttasche beutetasche"
+  },
+  {
+   "id": "a-04",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Headphones",
+   "text_de": "Radio, Playlists und Podcasts hören, während du zu Fuß unterwegs bist.",
+   "text_en": "Listen to radio, playlists and podcasts while on foot.",
+   "zusatz_de": "Kaufst du in Elektronikläden, sobald nach der Mission „Gear Up“ (Kapitel 1) das freie Spiel offen ist.",
+   "zusatz_en": "Bought at electronics stores once free roam opens after the mission “Gear Up” (Chapter 1).",
+   "stichworte": "kopfhörer"
+  },
+  {
+   "id": "a-05",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Pry Bar",
+   "text_de": "Bricht versiegelte Kisten auf, bringt bei manchen Überfällen mehr Beute.",
+   "text_en": "Breaks open sealed crates and can raise the take on some robberies.",
+   "zusatz_de": "Kommt automatisch in der Mission „Meet the Heders“ (Kapitel 3) dazu und wird an öffnenbaren Holzkisten von selbst gezückt.",
+   "zusatz_en": "Added automatically in the mission “Meet the Heders” (Chapter 3) and pulled out on its own near crates you can open.",
+   "ab_kapitel": 3,
+   "stichworte": "brechstange brecheisen stemmeisen crowbar"
+  },
+  {
+   "id": "a-06",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Masks",
+   "text_de": "Verbirgt dein Gesicht vor Polizei und Zeugen. Abnehmen, sobald du außer Sicht bist.",
+   "text_en": "Hides your face from the police and witnesses. Take it off once you are out of sight.",
+   "zusatz_de": "Kaufst du bei Ammu-Nation nach der Mission „Gear Up“ (Kapitel 1). Weitere gibt es laut einer Quelle durch Story-Überfälle.",
+   "zusatz_en": "Bought at Ammu-Nation after the mission “Gear Up” (Chapter 1). One source says more are handed out in story robberies.",
+   "stichworte": "masken maske"
+  },
+  {
+   "id": "a-07",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Metal Detector",
+   "text_de": "Findet Metall in der Nähe, auch unter Wasser, für Kentons Schatzsuche und Unterwasser-Schätze. Legt sich an Land nach einer Weile von selbst ab.",
+   "text_en": "Finds nearby metal, underwater too, for Kenton’s treasure hunts and underwater treasures. It unequips itself after a while on land.",
+   "zusatz_de": "Bekommst du über Kenton nach der Mission „Island Dreams“ (Kapitel 1). Kaufen kannst du ihn nicht.",
+   "zusatz_en": "Given by Kenton after the mission “Island Dreams” (Chapter 1). It cannot be bought.",
+   "stichworte": "metalldetektor detektor schatzsuche"
+  },
+  {
+   "id": "a-08",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Slim Jim",
+   "text_de": "Öffnet Autotüren leise, ohne Alarm. Leiser als Scheibe einschlagen, aber langsamer. Startet keine Autos mit schlüssellosem Zugang.",
+   "text_en": "Opens car doors quietly without setting off the alarm. Quieter than smashing a window but slower. It will not start keyless cars.",
+   "zusatz_de": "Gibt dir der Hehler Moses in der Mission „Moses“ (Kapitel 2, nach „Girls’ Trip“), nachdem du seinen Autodiebstahl-Test bestanden hast.",
+   "zusatz_en": "Handed over by the fence Moses in the mission “Moses” (Chapter 2, after “Girls’ Trip”) once you pass his car theft test.",
+   "ab_kapitel": 2,
+   "stichworte": "autoöffner auto aufbrechen"
+  },
+  {
+   "id": "a-09",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Snap Gun",
+   "text_de": "Mechanischer Dietrich, öffnet verschlossene Türen leise und ohne Alarm, braucht etwas Geduld. Kein Überfall setzt ihn voraus.",
+   "text_en": "A mechanical lockpick that opens locked doors quietly without tripping alarms, though it takes patience. No robbery requires it.",
+   "zusatz_de": "Gibt dir der Schmuckhehler Yasmani, nachdem du einen seiner Juwelier-Jobs erledigt hast. Die Jobs öffnen sich nach der Mission „Boobie Time“ (Kapitel 3).",
+   "zusatz_en": "Given by the jewelry fence Yasmani after you finish one of his Jewelry Jobs, which open after the mission “Boobie Time” (Chapter 3).",
+   "ab_kapitel": 3,
+   "stichworte": "pickpistole schloss knacken lockpick"
+  },
+  {
+   "id": "a-10",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Cut-Off Tool",
+   "text_de": "Schneidet Schlösser an schweren Containern (z. B. SCOOP-Container) und bestimmten Fahrzeugen auf. Laut, aber wirksam.",
+   "text_en": "Cuts locks on heavy containers, such as SCOOP containers, and certain vehicles. Loud but effective.",
+   "zusatz_de": "Bekommst du in der Mission „Meet the Heders“ (Kapitel 3) und behältst es danach. Nicht im Laden erhältlich.",
+   "zusatz_en": "Received in the mission “Meet the Heders” (Chapter 3) and kept afterwards. Not sold in shops.",
+   "ab_kapitel": 3,
+   "stichworte": "trennschleifer flex schneidwerkzeug"
+  },
+  {
+   "id": "a-11",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Key Cloner",
+   "text_de": "Umgeht die Sicherung von Autos mit schlüssellosem Zugang, damit du auch die modernsten Wagen stehlen kannst.",
+   "text_en": "Bypasses the security of keyless cars so you can steal even the most advanced ones.",
+   "zusatz_de": "Randy schickt dir die App in seinem Auftrag „Clonin’ Keys, Makin’ GS“ (auf der Karte auch „Steal the Zorrusso for Randy“, Kapitel 3). Du installierst sie über das Handy, danach haben sie beide Figuren.",
+   "zusatz_en": "Randy sends you the app during his job “Clonin’ Keys, Makin’ GS” (also labelled “Steal the Zorrusso for Randy” on the map, Chapter 3). You install it from your phone, after which both characters have it.",
+   "ab_kapitel": 3,
+   "stichworte": "schlüssel klonen keyless"
+  },
+  {
+   "id": "a-12",
+   "bereich": "ausruestung",
+   "gruppe": "a-karte",
+   "name": "Dye Pack Jammer",
+   "text_de": "Schaltet Farbbeutel bei Bank- und Payday-Loans-Überfällen von selbst ab. Nötig, um markierte Scheine aus solchen Überfällen loszuwerden.",
+   "text_en": "Automatically disables dye packs during bank and payday loan robberies. Needed to fence marked bills from those jobs.",
+   "zusatz_de": "Bekommst du automatisch in der Mission „Credit Check“ (Raul’s Crew, Kapitel 3).",
+   "zusatz_en": "Given automatically in the mission “Credit Check” (meeting Raul’s crew, Chapter 3).",
+   "ab_kapitel": 3,
+   "stichworte": "farbbeutel farbpatronen störsender"
+  },
+  {
+   "id": "a-w01",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "Parachute",
+   "text_de": "Nicht in der Startausrüstung. Erstmals im Ammu-Nation in Key Lento, als Parachute Bag laut Dexerto für 300 $ bei Big Shots und Chuck’s Tackle & Shot. Teilt sich den Platz mit der Schutzweste. Nicht unter den 12 Equipment-Einträgen der Guides.",
+   "text_en": "Not part of the starting kit. First available at the Key Lento Ammu-Nation; Dexerto lists the Parachute Bag at $300 at Big Shots and Chuck’s Tackle & Shot. Shares a slot with body armor. Not among the 12 equipment entries in the guides."
+  },
+  {
+   "id": "a-w02",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "Body Armor",
+   "text_de": "250 $ bei Big Shots und Chuck’s Tackle & Shot (Dexerto). Nicht unter den 12 Equipment-Einträgen der Guides.",
+   "text_en": "$250 at Big Shots and Chuck’s Tackle & Shot (Dexerto). Not among the 12 equipment entries in the guides."
+  },
+  {
+   "id": "a-w03",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "Ammo Pack",
+   "text_de": "Füllt alle normalen Munitionsarten auf, 950 $ (Dexerto).",
+   "text_en": "Refills all standard ammo types, $950 (Dexerto)."
+  },
+  {
+   "id": "a-w04",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "Explosives Pack",
+   "text_de": "Füllt Granaten und Haftbomben auf, 1.500 $ (Dexerto).",
+   "text_en": "Refills grenades and sticky bombs, $1,500 (Dexerto)."
+  },
+  {
+   "id": "a-w05",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "Scuba gear",
+   "text_de": "Kommt über Kenton (Island Dreams), wird bei Island Dreams oder auf seinen Booten angelegt und an Land nach einer Weile abgelegt. Kein eigener Eintrag in den Equipment-Listen.",
+   "text_en": "Comes through Kenton (Island Dreams), is put on at Island Dreams or on his boats and comes off after a while on land. No entry of its own in the equipment lists."
+  },
+  {
+   "id": "a-w06",
+   "bereich": "ausruestung",
+   "gruppe": "a-weitere",
+   "name": "WAiNK",
+   "text_de": "Scannt Autos auf Tracker und Sehenswürdigkeiten. In keiner Equipment-Liste enthalten.",
+   "text_en": "Scans cars for trackers and scans landmarks. Not in any equipment list."
+  },
+  {
+   "id": "s-kenton-01",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Nuestra Señora del Ocio",
+   "text_de": "10 Golddublonen; die ersten findest du schon in „Island Dreams“, sie zählen mit.",
+   "text_en": "10 gold doubloons; the first ones are found during “Island Dreams” and they count.",
+   "anzahl": 10,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-02",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Nuestra Señora de la Ética Laxa",
+   "text_de": "Wrack aus der ersten Runde.",
+   "text_en": "Wreck from the first batch.",
+   "anzahl": 5,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-03",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Nuestra Señora de la Noche",
+   "text_de": "Wrack aus der ersten Runde.",
+   "text_en": "Wreck from the first batch.",
+   "anzahl": 7,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-04",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Urca de Cinco Torres",
+   "text_de": "Wrack; die Guides ordnen es der ersten oder zweiten Runde zu. Name nur aus einer Quelle.",
+   "text_en": "Wreck; guides place it in the first or second batch. Name from a single source.",
+   "anzahl": 6,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-05",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Nuestra Señora Lujuriosa",
+   "text_de": "Wrack aus der zweiten Runde. Name nur aus einer Quelle.",
+   "text_en": "Wreck from the second batch. Name from a single source.",
+   "anzahl": 6,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-06",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Urca de Santa Sierra",
+   "text_de": "Wrack aus der zweiten Runde. Name nur aus einer Quelle.",
+   "text_en": "Wreck from the second batch. Name from a single source.",
+   "anzahl": 6,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-07",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Belpoint Strait",
+   "text_de": "Nur bei Push Square als Set genannt, zählt dort nicht als Unterwasser-Entdeckung. Ob es eines der 7 Kenton-Sets ist, ist offen.",
+   "text_en": "Only Push Square lists it as a set, where it does not count as an underwater discovery. Whether it is one of the 7 Kenton sets is unclear.",
+   "anzahl": 5,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-kenton-08",
+   "bereich": "sammlung",
+   "gruppe": "s-kenton",
+   "name": "Bobcat Dive Site",
+   "text_de": "Nur bei Push Square als Set genannt, zählt dort nicht als Unterwasser-Entdeckung. Ob es eines der 7 Kenton-Sets ist, ist offen.",
+   "text_en": "Only Push Square lists it as a set, where it does not count as an underwater discovery. Whether it is one of the 7 Kenton sets is unclear.",
+   "anzahl": 6,
+   "zeile": "kenton-sets"
+  },
+  {
+   "id": "s-karten-01",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Vice City Flamingos",
+   "text_de": "Baseball. Alle 24 schalten den Filter „Bubblegum“ frei.",
+   "text_en": "Baseball. All 24 unlock the “Bubblegum” filter.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-02",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Vice City Narcos",
+   "text_de": "Basketball.",
+   "text_en": "Basketball.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-03",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Vice City Manatees",
+   "text_de": "Football.",
+   "text_en": "Football.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-04",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Vice City Club De Fútbol",
+   "text_de": "Fußball.",
+   "text_en": "Soccer.",
+   "anzahl": 30,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-05",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Liberty City Swingers",
+   "text_de": "Baseball.",
+   "text_en": "Baseball.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-06",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Liberty City Penetrators",
+   "text_de": "Basketball.",
+   "text_en": "Basketball.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-07",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Liberty City Wrath",
+   "text_de": "Football.",
+   "text_en": "Football.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-08",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Los Santos Corkers",
+   "text_de": "Baseball.",
+   "text_en": "Baseball.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-09",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Los Santos Panic",
+   "text_de": "Basketball.",
+   "text_en": "Basketball.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-10",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Los Santos Pounders",
+   "text_de": "Football.",
+   "text_en": "Football.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-11",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Backyard Wrestling",
+   "text_de": "Kurioses Set, das kleinste.",
+   "text_en": "Novelty set, the smallest.",
+   "anzahl": 12,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-12",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "America’s Next Top Hooker",
+   "text_de": "Kurioses Set.",
+   "text_en": "Novelty set.",
+   "anzahl": 24,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-13",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Delights Dancers",
+   "text_de": "Tänzerinnen.",
+   "text_en": "Dancers.",
+   "anzahl": 18,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-14",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Jack of Hearts Dancers",
+   "text_de": "Tänzerinnen.",
+   "text_en": "Dancers.",
+   "ab_kapitel": 3,
+   "anzahl": 36,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-15",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Nine1Nine Dancers",
+   "text_de": "Tänzerinnen.",
+   "text_en": "Dancers.",
+   "anzahl": 36,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-16",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "The Legends of Ratface",
+   "text_de": "Comic, teils „The Legend of Ratface“ geschrieben.",
+   "text_en": "Comic, sometimes spelled “The Legend of Ratface”.",
+   "anzahl": 36,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-17",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "Right Wing: America’s Hero",
+   "text_de": "Comic.",
+   "text_en": "Comic.",
+   "anzahl": 36,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-karten-18",
+   "bereich": "sammlung",
+   "gruppe": "s-karten",
+   "name": "ED Comics Universe",
+   "text_de": "Comic.",
+   "text_en": "Comic.",
+   "anzahl": 36,
+   "zeile": "sammelkarten-sets"
+  },
+  {
+   "id": "s-waink-01",
+   "bereich": "sammlung",
+   "gruppe": "s-waink",
+   "name": "Landmarks",
+   "text_de": "Bekannte Bauwerke und Orte.",
+   "text_en": "Well-known buildings and places.",
+   "anzahl": 31,
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-waink-02",
+   "bereich": "sammlung",
+   "gruppe": "s-waink",
+   "name": "Curiosities",
+   "text_de": "Kuriose Objekte in der Landschaft.",
+   "text_en": "Odd objects in the landscape.",
+   "anzahl": 35,
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-waink-03",
+   "bereich": "sammlung",
+   "gruppe": "s-waink",
+   "name": "Sculptures",
+   "text_de": "Skulpturen und Statuen.",
+   "text_en": "Sculptures and statues.",
+   "anzahl": 23,
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-waink-04",
+   "bereich": "sammlung",
+   "gruppe": "s-waink",
+   "name": "No Flusher Tags",
+   "text_de": "Graffiti-Tags in Vice Beach, eingeleitet per SMS. Nach 10 Scans meldet sich CantCloneThis89, am Ende gibt es einen Truffade Thrax. Anzahl nur aus einer Quelle.",
+   "text_en": "Graffiti tags in Vice Beach, introduced by text. After 10 scans CantCloneThis89 gets in touch, and the reward is a Truffade Thrax. Count from a single source.",
+   "anzahl": 15,
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-waink-05",
+   "bereich": "sammlung",
+   "gruppe": "s-waink",
+   "name": "Peewees Billboards",
+   "text_de": "Werbetafeln, ausgelöst durch einen Snapmatic-Post von Mr Enigma. Belohnung: Peewee’s-Shirt und Kappe. Anzahl nur aus einer Quelle.",
+   "text_en": "Billboards, triggered by a Snapmatic post from Mr Enigma. Reward: a Peewee’s shirt and cap. Count from a single source.",
+   "anzahl": 4,
+   "zeile": "waink-orte"
+  },
+  {
+   "id": "s-erkundung-01",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Unterwasser-Entdeckungen",
+   "name_en": "Underwater Discoveries",
+   "text_de": "33 im Spiel, 33 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "33 in the game, 33 for 100%. Tips in the 100% tab.",
+   "anzahl": 33,
+   "zeile": "unterwasser-entdeckungen"
+  },
+  {
+   "id": "s-erkundung-02",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Magazine, Bücher und Comics",
+   "name_en": "Magazines, Books & Comics",
+   "text_de": "34 im Spiel, 30 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "34 in the game, 30 for 100%. Tips in the 100% tab.",
+   "anzahl": 34,
+   "zeile": "magazine-buecher-comics"
+  },
+  {
+   "id": "s-erkundung-03",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Meditationsplätze",
+   "name_en": "Meditation Spots",
+   "text_de": "18 im Spiel, 15 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "18 in the game, 15 for 100%. Tips in the 100% tab.",
+   "anzahl": 18,
+   "zeile": "meditationsplaetze"
+  },
+  {
+   "id": "s-erkundung-04",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Cocaine Flamingos",
+   "text_de": "125 im Spiel, 100 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "125 in the game, 100 for 100%. Tips in the 100% tab.",
+   "anzahl": 125,
+   "zeile": "cocaine-flamingos"
+  },
+  {
+   "id": "s-erkundung-05",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Unique Playlists",
+   "text_de": "2 im Spiel, 2 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "2 in the game, 2 for 100%. Tips in the 100% tab.",
+   "anzahl": 2,
+   "zeile": "unique-playlists"
+  },
+  {
+   "id": "s-erkundung-06",
+   "bereich": "sammlung",
+   "gruppe": "s-erkundung",
+   "name": "Styles",
+   "text_de": "79 im Spiel, 70 für 100 %. Hinweise im Reiter 100 %.",
+   "text_en": "79 in the game, 70 for 100%. Tips in the 100% tab.",
+   "anzahl": 79,
+   "zeile": "styles"
+  },
+  {
+   "id": "t-angeln",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Angeln",
+   "name_en": "Fishing",
+   "text_de": "Geht fast von Anfang an überall am Wasser, zuerst am Steg hinter Jasons Haus in Key Lento. Nach „Feng Shui“ stellt Cal dir eine Angel-Aufgabe. Fische setzt du wieder aus, verkaufen geht nicht. 100 Fische schalten den Filter „Fisheye“ frei. Keine eigene 100-%-Zeile.",
+   "text_en": "Possible almost from the start anywhere near water, first at the dock behind Jason’s house in Key Lento. After “Feng Shui” Cal gives you a fishing challenge. You release the fish again; selling them is not possible. 100 fish unlock the “Fisheye” filter. No 100% row of its own."
+  },
+  {
+   "id": "t-jagen",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Jagen (Brets Target Decks)",
+   "name_en": "Hunting (Bret’s Target Decks)",
+   "text_de": "Nur mit Jason, über Bret Vogel ab Kapitel 2; der erste Auftrag „Veteran Hunted“ kommt nach „Coffee Break“. 15 Target Decks, Brets Hütte liegt ganz im Norden von Lummox County. Der erste Job gibt ein Jagdgewehr, am Ende ein goldenes Gewehr und die Trophäe „Fair Game“.",
+   "text_en": "Jason only, through Bret Vogel from Chapter 2; the first job, “Veteran Hunted”, comes after “Coffee Break”. 15 Target Decks; Bret’s cabin is in the far north of Lummox County. The first job gives you a hunting rifle, and at the end you get a gold rifle and the trophy “Fair Game”.",
+   "ab_kapitel": 2,
+   "zeile": "brets-target-decks"
+  },
+  {
+   "id": "t-golf",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Golf und Minigolf",
+   "name_en": "Golf and mini golf",
+   "text_de": "Fünf Plätze: drei Minigolf-Anlagen (King Gator Adventure Golf in Buckskin Swamp, Frontier Adventure Golf in Waning Sands, Dino Golf Challenge in Frogswater) und zwei echte 18-Loch-Plätze (Leaf Links in Vice Beach, Mount Hailes in Waning Sands). Für 100 % zählen nur zwei der drei Minigolf-Anlagen.",
+   "text_en": "Five courses: three mini golf venues (King Gator Adventure Golf in Buckskin Swamp, Frontier Adventure Golf in Waning Sands, Dino Golf Challenge in Frogswater) and two real 18-hole courses (Leaf Links in Vice Beach, Mount Hailes in Waning Sands). Only two of the three mini golf venues count for 100%.",
+   "zeile": "minigolf-kurse"
+  },
+  {
+   "id": "t-basketball",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Basketball",
+   "text_de": "100 Körbe über Leonida verteilt, neben jedem liegt ein Ball, einer steht vor Jasons Haus. 90 Treffer an verschiedenen Körben zählen für 100 %.",
+   "text_en": "100 hoops spread across Leonida, each with a ball lying next to it; one is outside Jason’s house. Scoring at 90 different hoops counts for 100%.",
+   "zeile": "basketballkoerbe"
+  },
+  {
+   "id": "t-billard",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Billard",
+   "name_en": "Pool",
+   "text_de": "17 Tische in Bars und Cafés, 7 feste Gegner, 5 Siege zählen für 100 %. Bars mit Tisch sind zum Beispiel The Rusty Anchor in Key Lento, Skeeter’s, Zotico’s, Jacob’s Tavern und Delights.",
+   "text_en": "17 tables in bars and cafes, 7 fixed opponents, 5 wins count for 100%. Bars with a table include The Rusty Anchor in Key Lento, Skeeter’s, Zotico’s, Jacob’s Tavern and Delights.",
+   "zeile": "billard-gegner"
+  },
+  {
+   "id": "t-rennen",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Rennen",
+   "name_en": "Racing",
+   "text_de": "40 Rennen: 9 Straßenrennen „Hit ’N Run VC“ (nach „Dealer’s Choice“ über die optionale Mission „Join a Street Race“), 11 auf dem Gellhorn International Raceway, 8 im Thrillbilly Mud Club (Billys Mission „Thrillbillies“), 8 „Animal Crackers“ in Lummox und Mariana County, 2 auf dem Boone Speedway, 2 Demolition auf dem Ambrosia Raceway. Blaue Symbole erscheinen in etwa 100 m Nähe. 30 Siege zählen für 100 %, 20 geben „Earn Cash, Not Kudos“.",
+   "text_en": "40 races: 9 “Hit ’N Run VC” street races (after “Dealer’s Choice” through the optional mission “Join a Street Race”), 11 at Gellhorn International Raceway, 8 at Thrillbilly Mud Club (Billy’s mission “Thrillbillies”), 8 “Animal Crackers” in Lummox and Mariana County, 2 at Boone Speedway, 2 Demolition races at Ambrosia Raceway. Blue icons appear when you are within about 100 m. 30 wins count for 100%, 20 give “Earn Cash, Not Kudos”.",
+   "ab_kapitel": 3,
+   "zeile": "rennen-gewonnen",
+   "spoiler_de": "Die Straßenrennen öffnen erst in Kapitel 3 nach „Dealer’s Choice“, der Mud Club in Kapitel 2.",
+   "spoiler_en": "Street races open in chapter 3 after “Dealer’s Choice”, the Mud Club in chapter 2."
+  },
+  {
+   "id": "t-renn-challenges",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Renn-Challenges",
+   "name_en": "Race Challenges (Trials)",
+   "text_de": "13 Herausforderungen mit Bronze, Silber, Gold: Air Time, Drag, Hill Climb, Dirt Track, Oval und Sumpf im Mud Club, dazu Raceway, Dragway, Speedway, BMX, Radrennen am Mount Kalaga und Motocross. Gold in 10 zählt für 100 %.",
+   "text_en": "13 challenges with bronze, silver and gold: Air Time, Drag, Hill Climb, Dirt Track, Oval and Swamp at the Mud Club, plus Raceway, Dragway, Speedway, BMX, a bike race on Mount Kalaga and Motocross. Gold in 10 counts for 100%.",
+   "zeile": "renn-challenges-gold"
+  },
+  {
+   "id": "t-schiessstand",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Schießstand",
+   "name_en": "Shooting Range",
+   "text_de": "Zwei eigene Schießstände: Griffin Shooting Range im Nordwesten von Vice City und Rodgers Ranch nordöstlich von Port Gellhorn. Für 5 $ kaufst du beim Personal den Haftungsverzicht, dann öffnen die Challenges. 42 Goldmedaillen zählen für 100 % und geben „The Shootist“; nach der Story schalten Medaillen Cheats frei.",
+   "text_en": "Two dedicated shooting ranges: Griffin Shooting Range in northwest Vice City and Rodgers Ranch northeast of Port Gellhorn. Buy the liability waiver from the staff for $5 and the challenges open up. 42 gold medals count for 100% and give “The Shootist”; after the story, medals unlock cheats.",
+   "zeile": "schiessstand-gold"
+  },
+  {
+   "id": "t-videospiele",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Videospiele",
+   "name_en": "Video Games",
+   "text_de": "Vier Spiele: drei auf der JoySystem-Konsole zu Hause (Street Trash 3: Dezombifier, Tenebrae Lux, Time Jackers: Rewind) und Bang For Your Buck an Spielautomaten draußen. Eingeführt in „Feng Shui“, in Teilen von Kapitel 2 nicht erreichbar. Für 100 % jedes einmal starten; ein Spiel durchspielen gibt „Stick Fiddler“.",
+   "text_en": "Four games: three on the JoySystem console at home (Street Trash 3: Dezombifier, Tenebrae Lux, Time Jackers: Rewind) and Bang For Your Buck on arcade cabinets outside. Introduced in “Feng Shui”, out of reach during parts of Chapter 2. For 100% start each one once; finishing a game gives “Stick Fiddler”.",
+   "zeile": "videospiele"
+  },
+  {
+   "id": "t-stunts",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Stunts",
+   "text_de": "397 Stunts in vier Arten: Stunt Jumps, Under the Bridges (unter Brücken durchfliegen), Knife Flights (durch Lücken zwischen Hochhäusern) und Base Jumps von den höchsten Gebäuden. Eine Seite nennt 130, 202, 40 und 25. 300 zählen für 100 %, 250 geben „Cunning Stunts“.",
+   "text_en": "397 stunts of four types: Stunt Jumps, Under the Bridges (flying under bridges), Knife Flights (through gaps between high-rises) and Base Jumps from the tallest buildings. One site gives 130, 202, 40 and 25. 300 count for 100%, 250 give “Cunning Stunts”.",
+   "zeile": "stunts"
+  },
+  {
+   "id": "t-top-fun-drones",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Top-Fun-Drohnenrennen",
+   "name_en": "Top Fun Drones",
+   "text_de": "14 Orte mit je drei Zeitrennen, zusammen 42. Das dritte Rennen öffnet erst, wenn du auf den ersten beiden die Richtzeit schlägst. Alle 42 zählen für 100 %, ein Sieg an jedem Ort gibt „Top Fun“. Ab wann es geht, nennt kein Guide.",
+   "text_en": "14 locations with three time trials each, 42 in total. The third trial only opens once you beat the par time on the first two. All 42 count for 100%, and a win at every location gives “Top Fun”. No guide says when it becomes available.",
+   "zeile": "drohnen-zeitrennen"
+  },
+  {
+   "id": "t-fitness",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Fitness",
+   "name_en": "Gym / Workouts",
+   "text_de": "Kraft- und Ausdauertraining auf Jasons Terrasse ab Kapitel 1, in öffentlichen Studios mit Mitgliedschaft. Steigert Gesundheit und Ausdauer, 100 Workouts schalten den Cheat „Body Armor“ frei. Zählt nicht für 100 %.",
+   "text_en": "Strength and cardio on Jason’s deck from chapter 1, membership gyms. Raises health and stamina; 100 workouts unlock the Body Armor cheat. Not part of 100%."
+  },
+  {
+   "id": "t-stripclubs",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Stripclubs",
+   "name_en": "Strip Clubs",
+   "text_de": "Drei Clubs, darunter Delights Cabaret und NINE1NINE im Norden von Downtown; der dritte öffnet erst mit der Story. Trinken, zuschauen, Privattanz (rund 300 $, Trinkgeld verlängert). Keine Eifersucht zwischen Jason und Lucia, kein Weg zu Sex. Zählt nicht für 100 %; die Tänzerinnen-Sammelkarten sind ein eigenes Thema.",
+   "text_en": "Three clubs, among them Delights Cabaret and NINE1NINE in the north of Downtown; the third only opens with the story. Drink, watch, private dance (about $300, tipping extends it). No jealousy between Jason and Lucia, no route to sex. Does not count for 100%; the dancer trading cards are a topic of their own.",
+   "spoiler_de": "Der dritte Club ist das Jack of Hearts, ab Kapitel 3.",
+   "spoiler_en": "The third club is the Jack of Hearts, from chapter 3."
+  },
+  {
+   "id": "t-bars-nachtleben",
+   "bereich": "aktivitaeten",
+   "gruppe": null,
+   "name": "Bars und Nachtleben",
+   "name_en": "Bars and nightlife",
+   "text_de": "Bars zum Trinken und Billardspielen, dazu der Nachtclub The Vault neben NINE1NINE. Das Casino Merlin’s Palace ist zu, Glücksspiel gibt es nicht. Keine eigene Zeile im Menü belegt.",
+   "text_en": "Bars for drinking and playing pool, plus The Vault nightclub next to NINE1NINE. The Merlin’s Palace casino is closed, and there is no gambling. No row of its own in the menu is documented."
+  },
+  {
+   "id": "h-combat-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Speed Kills",
+   "text_de": "Erledige 3 Gegner innerhalb von 30 Sekunden.",
+   "text_en": "Kill 3 enemies within 30 seconds.",
+   "zusatz_de": "Such dir eine Stelle, an der mehrere Gegner dicht beieinander stehen.",
+   "zusatz_en": "Pick a spot where several enemies are bunched together."
+  },
+  {
+   "id": "h-combat-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Melee Combat",
+   "text_de": "Schalte 5 Gegner hintereinander im Nahkampf aus (töten oder K.o.), ohne zu sterben.",
+   "text_en": "Take down 5 enemies in a row with melee attacks, kills or knockouts, without dying.",
+   "zusatz_de": "Geh mit voller Gesundheit rein und meide bewaffnete Gruppen.",
+   "zusatz_en": "Start at full health and avoid armed groups."
+  },
+  {
+   "id": "h-combat-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Explosive Combat",
+   "text_de": "Töte oder verletze 3 Gegner mit einem einzigen Sprengsatz.",
+   "text_en": "Kill or injure 3 enemies with a single explosive.",
+   "zusatz_de": "Eine Granate mitten in eine Gruppe reicht.",
+   "zusatz_en": "One grenade into the middle of a group does it."
+  },
+  {
+   "id": "h-combat-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Headshots",
+   "text_de": "Erziele 4 Kopfschuss-Kills während einer einzigen Nutzung des Kampffokus.",
+   "text_en": "Get 4 headshot kills during a single use of Combat Focus.",
+   "zusatz_de": "Starte den Kampffokus erst, wenn mehrere Gegner im Blick sind.",
+   "zusatz_en": "Only trigger Combat Focus once several enemies are in view."
+  },
+  {
+   "id": "h-combat-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Drive-Bys",
+   "text_de": "Erledige 5 Gegner aus einem Fahrzeug heraus innerhalb einer Minute, ohne auszusteigen.",
+   "text_en": "Kill 5 enemies from a vehicle within one minute without getting out.",
+   "zusatz_de": "Fahr langsam an einer Gegnergruppe vorbei und schieß aus dem Fenster.",
+   "zusatz_en": "Roll slowly past a group of enemies and shoot from the window."
+  },
+  {
+   "id": "h-combat-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Stealth Sniping",
+   "text_de": "Erledige 7 ahnungslose Gegner mit einem Scharfschützengewehr mit Zielfernrohr, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Kill 7 unaware enemies with a scoped sniper rifle without dying or getting arrested.",
+   "zusatz_de": "Halte viel Abstand und nimm zuerst Gegner, die allein stehen.",
+   "zusatz_en": "Keep your distance and pick off isolated enemies first."
+  },
+  {
+   "id": "h-combat-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Incendiary",
+   "text_de": "Töte oder verletze 5 Gegner mit Feuer innerhalb von 15 Sekunden.",
+   "text_en": "Kill or injure 5 enemies with fire within 15 seconds.",
+   "zusatz_de": "Ein Brandsatz in eine dichte Gruppe ist der schnellste Weg.",
+   "zusatz_en": "A fire bomb thrown into a tight group is the quickest way."
+  },
+  {
+   "id": "h-combat-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Revolver Headshots",
+   "text_de": "Erziele 6 Kopfschuss-Kills mit einem Revolver, ohne nachzuladen oder die Waffe zu wechseln.",
+   "text_en": "Get 6 revolver headshot kills without reloading or switching weapons.",
+   "zusatz_de": "Lade vorher voll nach und nutze den Kampffokus, damit kein Schuss danebengeht.",
+   "zusatz_en": "Reload fully first and use Combat Focus so no shot is wasted."
+  },
+  {
+   "id": "h-combat-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "Long-Range Sniping",
+   "text_de": "Erledige 3 Gegner mit einem Scharfschützengewehr mit Zielfernrohr aus mindestens 300 Fuß Entfernung innerhalb von 10 Sekunden.",
+   "text_en": "Kill 3 enemies with a scoped sniper rifle from at least 300 feet away within 10 seconds.",
+   "zusatz_de": "Such dir eine erhöhte Position mit freier Sicht auf eine Gruppe.",
+   "zusatz_en": "Find a high spot with a clear view of a group."
+  },
+  {
+   "id": "h-combat-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-combat",
+   "name": "High Explosive",
+   "text_de": "Töte oder verletze 8 Gegner mit Sprengstoff innerhalb von 20 Sekunden, ohne selbst Schaden zu nehmen.",
+   "text_en": "Kill or injure 8 enemies with explosives within 20 seconds without taking damage.",
+   "zusatz_de": "Leg Haftbomben vorher aus und zünde sie aus sicherer Entfernung.",
+   "zusatz_en": "Plant sticky bombs ahead of time and set them off from a safe distance."
+  },
+  {
+   "id": "h-criminal-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Mugging",
+   "text_de": "Raube 5 Passanten aus.",
+   "text_en": "Rob 5 pedestrians.",
+   "zusatz_de": "Geht nebenbei in belebten Straßen.",
+   "zusatz_en": "Easy to do on the side in busy streets."
+  },
+  {
+   "id": "h-criminal-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Stick Ups",
+   "text_de": "Überfalle an einem Spieltag 3 Läden, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Rob 3 stores in one in-game day without dying or getting arrested.",
+   "zusatz_de": "Plane drei nahe Läden und schüttel die Polizei zwischen den Überfällen ab.",
+   "zusatz_en": "Plan three stores close together and lose the cops between robberies."
+  },
+  {
+   "id": "h-criminal-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Carjacking",
+   "text_de": "Stiehl an einem Spieltag 3 Fahrzeuge und bring sie zu einem Pay ’n’ Spray, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Steal 3 vehicles and bring them to a Pay ’n’ Spray in one in-game day without dying or getting arrested.",
+   "zusatz_de": "Prüf Autos vorher mit der App WAiNK auf Tracker.",
+   "zusatz_en": "Check cars for trackers with the WAiNK app first."
+  },
+  {
+   "id": "h-criminal-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Mugging Spree",
+   "text_de": "Erbeute an einem Spieltag 500 $ Bargeld von Passanten, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Take $500 in cash from pedestrians in one in-game day without dying or getting arrested.",
+   "zusatz_de": "Lässt sich gut mit „Mugging“ zusammen erledigen.",
+   "zusatz_en": "Pairs well with Mugging."
+  },
+  {
+   "id": "h-criminal-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Cop Car Theft",
+   "text_de": "Halte 5 Minuten lang eine Fahndungsstufe, während du ein gestohlenes Polizeifahrzeug fährst.",
+   "text_en": "Keep a wanted level for 5 minutes while driving a stolen police vehicle.",
+   "zusatz_de": "Fahr auf breiten Straßen außerhalb der Stadt, dort kommst du leichter durch.",
+   "zusatz_en": "Stick to wide roads outside the city where it is easier to keep moving."
+  },
+  {
+   "id": "h-criminal-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Cop Weapon Theft",
+   "text_de": "Nimm aus den Kofferräumen von 5 verschiedenen Polizeifahrzeugen je eine Waffe, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Take a weapon from the trunks of 5 different police vehicles without dying or getting arrested.",
+   "zusatz_de": "Such Streifenwagen, deren Besatzung gerade nicht im Auto sitzt.",
+   "zusatz_en": "Look for patrol cars whose officers are out of the vehicle."
+  },
+  {
+   "id": "h-criminal-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Stick Up Spree",
+   "text_de": "Überfalle in jedem der 5 Countys je 2 Läden innerhalb von 20 Minuten, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Rob 2 stores in each of the 5 counties within 20 minutes without dying or getting arrested.",
+   "zusatz_de": "Leg die Route vorher auf der Karte fest und nimm ein schnelles Fahrzeug.",
+   "zusatz_en": "Plot the route on the map beforehand and use a fast vehicle.",
+   "schwer": true
+  },
+  {
+   "id": "h-criminal-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Cop Tow",
+   "text_de": "Schlepp ein besetztes Polizeifahrzeug eine Meile weit ab, ohne anzuhalten.",
+   "text_en": "Tow an occupied police vehicle for one mile without stopping.",
+   "zusatz_de": "Du brauchst einen Abschleppwagen und eine lange, gerade Strecke.",
+   "zusatz_en": "You need a tow truck and a long, straight road."
+  },
+  {
+   "id": "h-criminal-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Carjacking Spree",
+   "text_de": "Lass innerhalb von 30 Minuten gestohlene Fahrzeuge von 10 verschiedenen Herstellern bei einem Pay ’n’ Spray registrieren oder umlackieren, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Register or respray stolen vehicles from 10 different manufacturers at a Pay ’n’ Spray within 30 minutes without dying or getting arrested.",
+   "zusatz_de": "Merk dir vorher, wo verschiedene Marken in der Nähe parken.",
+   "zusatz_en": "Scout where different makes are parked nearby before you start."
+  },
+  {
+   "id": "h-criminal-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-criminal",
+   "name": "Carjacking Pro",
+   "text_de": "Verdiene an einem Spieltag 100.000 $ mit dem Verkauf gestohlener Fahrzeuge an einen Hehler oder einen Pay ’n’ Spray, ohne zu sterben oder verhaftet zu werden.",
+   "text_en": "Earn $100,000 in one in-game day selling stolen vehicles to a fence or a Pay ’n’ Spray without dying or getting arrested.",
+   "zusatz_de": "Der Verkauf an Moses geht ab Kapitel 2, an Pay ’n’ Spray erst ab Kapitel 3. Teure Autos mit schlüssellosem Zugang gehen erst mit dem Key Cloner (Kapitel 3).",
+   "zusatz_en": "Selling to Moses works from Chapter 2, to Pay ’n’ Spray only from Chapter 3. Expensive keyless cars need the Key Cloner from Chapter 3.",
+   "ab_kapitel": 2
+  },
+  {
+   "id": "h-exploration-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "WAiNK Locations",
+   "text_de": "Scanne mit der App WAiNK 4 Sehenswürdigkeiten, Kuriositäten oder Skulpturen.",
+   "text_en": "Scan 4 landmarks, curiosities or sculptures with the WAiNK app.",
+   "zusatz_de": "Klappt nebenbei, sobald du an einer markanten Stelle vorbeikommst.",
+   "zusatz_en": "Easy to pick up whenever you pass a notable spot."
+  },
+  {
+   "id": "h-exploration-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Skyscrapers",
+   "text_de": "Erreiche das Dach der 5 höchsten Wolkenkratzer im Vice-Dale County.",
+   "text_en": "Reach the top of the 5 tallest skyscrapers in Vice-Dale County.",
+   "zusatz_de": "Erledige alle fünf in einer Runde.",
+   "zusatz_en": "Do all five in one trip."
+  },
+  {
+   "id": "h-exploration-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Collectible Cards",
+   "text_de": "Finde in jedem der 5 Countys 3 Sammelkarten.",
+   "text_en": "Find 3 collectible cards in each of the 5 counties.",
+   "zusatz_de": "Läuft beim Sammeln für die Collections-Karte im Fortschritt-Menü mit.",
+   "zusatz_en": "Comes naturally while collecting for the Collections card in the Progress menu."
+  },
+  {
+   "id": "h-exploration-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Encyclopedia",
+   "text_de": "Entdecke insgesamt 100 Einträge aus Tieren, Fahrzeugen und Waffen.",
+   "text_en": "Discover 100 entries across animals, vehicles and weapons combined.",
+   "zusatz_de": "Läuft beim normalen Spielen nebenher, Fahrzeuge kannst du mit WAiNK scannen.",
+   "zusatz_en": "Ticks up during normal play; you can scan vehicles with WAiNK."
+  },
+  {
+   "id": "h-exploration-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Underwater Discoveries",
+   "text_de": "Finde und erkunde 25 ungewöhnliche Orte am Meeresgrund.",
+   "text_en": "Find and explore 25 unusual sights on the ocean floor.",
+   "zusatz_de": "Tauchausrüstung und Metalldetektor gibt es über Kenton (Mission „Island Dreams“, Kapitel 1).",
+   "zusatz_en": "Scuba gear and the metal detector come through Kenton (mission “Island Dreams”, Chapter 1)."
+  },
+  {
+   "id": "h-exploration-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Rail Tour",
+   "text_de": "Fahr an einem Spieltag in jedem County mindestens eine Meile mit dem Zug, ohne die Fahrt zu überspringen.",
+   "text_en": "Ride a train for at least one mile in each county in one in-game day without skipping the ride.",
+   "zusatz_de": "Plane die Strecke so, dass du von einer Linie zur nächsten kommst.",
+   "zusatz_en": "Plan the route so you can hop from one line to the next."
+  },
+  {
+   "id": "h-exploration-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Underwater Treasures",
+   "text_de": "Finde 85 Unterwasser-Schätze.",
+   "text_en": "Find 85 underwater treasures.",
+   "zusatz_de": "Nutz den Metalldetektor unter Wasser und verbinde das mit den anderen Tauchzielen.",
+   "zusatz_en": "Use the metal detector underwater and combine it with the other diving goals."
+  },
+  {
+   "id": "h-exploration-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Black Hole Wrecks",
+   "text_de": "Finde alle 11 Black-Hole-Wracks.",
+   "text_en": "Find all 11 Black Hole wrecks.",
+   "zusatz_de": "Verbinde das mit der Schatzsuche unter Wasser.",
+   "zusatz_en": "Combine it with your underwater treasure runs."
+  },
+  {
+   "id": "h-exploration-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Road Trip",
+   "text_de": "Fahr an einem Spieltag in jede Stadt und jeden Ort in Leonida und steig nur zum Tanken aus.",
+   "text_en": "Drive to every city and town in Leonida in one in-game day, only getting out to refuel.",
+   "zusatz_de": "Nimm ein schnelles Auto mit großer Reichweite und plane die Route vorher.",
+   "zusatz_en": "Use a fast car with good range and plan the route first.",
+   "schwer": true
+  },
+  {
+   "id": "h-exploration-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-exploration",
+   "name": "Helipad Flyovers",
+   "text_de": "Überfliege alle 41 Hubschrauberlandeplätze in Vice City und Vice Beach in höchstens 100 Fuß Höhe innerhalb von 10 Minuten.",
+   "text_en": "Fly over all 41 helipads in Vice City and Vice Beach at 100 feet or lower within 10 minutes.",
+   "zusatz_de": "Ein wendiger Hubschrauber und eine vorher geübte Route helfen.",
+   "zusatz_en": "A nimble helicopter and a practiced route help a lot.",
+   "schwer": true
+  },
+  {
+   "id": "h-fitness-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Gym Member",
+   "text_de": "Werde Mitglied in einem beliebigen Fitnessstudio.",
+   "text_en": "Become a member at any gym.",
+   "zusatz_de": "Gleich am Anfang erledigen, das ist die leichteste Challenge.",
+   "zusatz_en": "Do it early, it is the easiest challenge."
+  },
+  {
+   "id": "h-fitness-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Foot Travel",
+   "text_de": "Leg an einem Spieltag 5 Meilen zu Fuß zurück.",
+   "text_en": "Travel 5 miles on foot in one in-game day.",
+   "zusatz_de": "Lässt sich mit „Waning Sands Run“ verbinden.",
+   "zusatz_en": "Combine it with Waning Sands Run."
+  },
+  {
+   "id": "h-fitness-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Pro Cyclist",
+   "text_de": "Fahr an einem Spieltag 15 Meilen mit dem Fahrrad.",
+   "text_en": "Cycle 15 miles in one in-game day.",
+   "zusatz_de": "Lässt sich mit „Southwind Cycle“ verbinden.",
+   "zusatz_en": "Combine it with Southwind Cycle."
+  },
+  {
+   "id": "h-fitness-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Pro Swimmer",
+   "text_de": "Schwimm an einem Spieltag 3 Meilen.",
+   "text_en": "Swim 3 miles in one in-game day.",
+   "zusatz_de": "Lässt sich mit „Tequesta Swim“ verbinden.",
+   "zusatz_en": "Combine it with Tequesta Swim."
+  },
+  {
+   "id": "h-fitness-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Balanced Workout",
+   "text_de": "Trainiere an einem Spieltag an jeder Art von Fitnessgerät.",
+   "text_en": "Complete a workout on every type of gym equipment in one in-game day.",
+   "zusatz_de": "Erledige alles in einem Studio in einem Durchgang.",
+   "zusatz_en": "Do it all in one gym visit."
+  },
+  {
+   "id": "h-fitness-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Strength Regime",
+   "text_de": "Halte bei Jason und Lucia gleichzeitig 5 Tage am Stück Kraft-Stufe 4.",
+   "text_en": "Keep Strength at level 4 for both Jason and Lucia for 5 days in a row.",
+   "zusatz_de": "Früh anfangen, weil Spieltage vergehen müssen.",
+   "zusatz_en": "Start early, since in-game days have to pass."
+  },
+  {
+   "id": "h-fitness-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Cardio Regime",
+   "text_de": "Halte bei Jason und Lucia gleichzeitig 5 Tage am Stück Ausdauer-Stufe 4.",
+   "text_en": "Keep Cardio at level 4 for both Jason and Lucia for 5 days in a row.",
+   "zusatz_de": "Zusammen mit „Strength Regime“ angehen.",
+   "zusatz_en": "Work on it alongside Strength Regime."
+  },
+  {
+   "id": "h-fitness-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Waning Sands Run",
+   "text_de": "Lauf in unter 13 Minuten vom Pier-Tor bei The Tip bis Waning Sands, ohne Schaden zu nehmen.",
+   "text_en": "Run from The Tip pier gate to Waning Sands in under 13 minutes without taking damage.",
+   "zusatz_de": "Vorher Ausdauer trainieren und Straßen mit viel Verkehr meiden.",
+   "zusatz_en": "Build up Cardio first and avoid busy roads."
+  },
+  {
+   "id": "h-fitness-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Tequesta Swim",
+   "text_de": "Schwimm in unter 15 Minuten vom Tequesta Retreat nach Starfish Island.",
+   "text_en": "Swim from Tequesta Retreat to Starfish Island in under 15 minutes.",
+   "zusatz_de": "Mit höherer Ausdauer-Stufe deutlich leichter.",
+   "zusatz_en": "Much easier with a higher Cardio level."
+  },
+  {
+   "id": "h-fitness-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-fitness",
+   "name": "Southwind Cycle",
+   "text_de": "Fahr mit dem Rad in unter 22 Minuten vom Williams Guest House in Grayson zu Chicky’s Tiki Bar in Southwind, ohne zu stürzen.",
+   "text_en": "Bike from Williams Guest House in Grayson to Chicky’s Tiki Bar in Southwind in under 22 minutes without falling off.",
+   "zusatz_de": "Nimm ein schnelles Rennrad und fahr defensiv.",
+   "zusatz_en": "Use a fast road bike and ride carefully."
+  },
+  {
+   "id": "h-shopping-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Vehicle Modder",
+   "text_de": "Bau in einer Tuning-Werkstatt 5 Änderungen an einem Fahrzeug ein.",
+   "text_en": "Make 5 modifications to a vehicle at a mod shop.",
+   "zusatz_de": "Kleine, billige Teile zählen genauso.",
+   "zusatz_en": "Cheap small parts count just the same."
+  },
+  {
+   "id": "h-shopping-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Grocery Shopper",
+   "text_de": "Gib an einem Spieltag mehr als 250 $ in Kiosken oder Spirituosenläden aus.",
+   "text_en": "Spend more than $250 at convenience or liquor stores in one in-game day.",
+   "zusatz_de": "Einfach Vorräte kaufen, bis die Summe steht.",
+   "zusatz_en": "Just stock up until you hit the total."
+  },
+  {
+   "id": "h-shopping-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Well Armed",
+   "text_de": "Kauf bei Ammu-Nation 3 Handfeuerwaffen und 3 Langwaffen.",
+   "text_en": "Buy 3 sidearms and 3 longarms at Ammu-Nation.",
+   "zusatz_de": "Ergibt sich beim normalen Ausrüsten.",
+   "zusatz_en": "Happens naturally as you gear up."
+  },
+  {
+   "id": "h-shopping-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Well Groomed",
+   "text_de": "Gib insgesamt mehr als 1.000 $ bei Barbieren, Friseuren oder Salons aus.",
+   "text_en": "Spend more than $1,000 in total at barbershops, hairdressers or salons.",
+   "zusatz_de": "Zählt über alle Besuche zusammen.",
+   "zusatz_en": "Adds up across all visits."
+  },
+  {
+   "id": "h-shopping-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Stylishly Armed",
+   "text_de": "Kauf bei Ammu-Nation optische Upgrades für 5 Handfeuerwaffen und 5 Langwaffen.",
+   "text_en": "Buy cosmetic upgrades for 5 sidearms and 5 longarms at Ammu-Nation.",
+   "zusatz_de": "Billige Lackierungen reichen.",
+   "zusatz_en": "Cheap finishes are enough."
+  },
+  {
+   "id": "h-shopping-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Well Dressed",
+   "text_de": "Gib insgesamt mehr als 5.000 $ für Kleidung aus.",
+   "text_en": "Spend more than $5,000 in total on clothing.",
+   "zusatz_de": "Zählt über alle Einkäufe zusammen.",
+   "zusatz_en": "Adds up across all purchases."
+  },
+  {
+   "id": "h-shopping-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Custom Ride",
+   "text_de": "Gib bei einem einzigen Besuch in einer Tuning-Werkstatt mehr als 20.000 $ aus.",
+   "text_en": "Spend more than $20,000 in a single mod shop visit.",
+   "zusatz_de": "Ein teures Auto komplett in einem Rutsch ausbauen.",
+   "zusatz_en": "Upgrade an expensive car all in one go."
+  },
+  {
+   "id": "h-shopping-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Heavily Armed",
+   "text_de": "Gib insgesamt mehr als 50.000 $ bei Ammu-Nation aus.",
+   "text_en": "Spend more than $50,000 in total at Ammu-Nation.",
+   "zusatz_de": "Läuft mit Waffen, Munition und Upgrades über die Zeit zusammen.",
+   "zusatz_en": "Builds up over time with guns, ammo and upgrades."
+  },
+  {
+   "id": "h-shopping-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Serious Modder",
+   "text_de": "Gib insgesamt mehr als 125.000 $ in Tuning-Werkstätten aus.",
+   "text_en": "Spend more than $125,000 in total at mod shops.",
+   "zusatz_de": "Erst angehen, wenn genug Geld da ist.",
+   "zusatz_en": "Leave it until you have money to spare."
+  },
+  {
+   "id": "h-shopping-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-shopping",
+   "name": "Nest Egg",
+   "text_de": "Hab 1.500.000 $ auf dem BuckMe-Girokonto.",
+   "text_en": "Have $1,500,000 in your BuckMe Checking account.",
+   "zusatz_de": "Erledige das, bevor du große Summen für Tuning und Waffen ausgibst.",
+   "zusatz_en": "Do this before spending big on mods and weapons.",
+   "schwer": true
+  },
+  {
+   "id": "h-sports-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Basketball Rookie",
+   "text_de": "Triff an einem Spieltag an 3 verschiedenen Körben.",
+   "text_en": "Score at 3 different hoops in one in-game day.",
+   "zusatz_de": "Nimm Körbe mit, an denen du ohnehin vorbeikommst.",
+   "zusatz_en": "Hit hoops you pass anyway."
+  },
+  {
+   "id": "h-sports-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Golf Rookie",
+   "text_de": "Spiel 18 Löcher bei King Gator oder Frontier Adventure Golf in unter 30 Minuten mit 3 unter Par oder besser.",
+   "text_en": "Play 18 holes at King Gator or Frontier Adventure Golf in under 30 minutes, finishing 3 under par or better.",
+   "zusatz_de": "Erst üben, dann auf Zeit spielen.",
+   "zusatz_en": "Practice first, then go for the time."
+  },
+  {
+   "id": "h-sports-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Basketball Streak",
+   "text_de": "Triff 10 Würfe hintereinander innerhalb von 2 Minuten.",
+   "text_en": "Make 10 shots in a row within 2 minutes.",
+   "zusatz_de": "Immer von derselben Position werfen, um das Timing zu halten.",
+   "zusatz_en": "Shoot from the same spot to keep your timing."
+  },
+  {
+   "id": "h-sports-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Pool Streak",
+   "text_de": "Gewinn an einem Spieltag Billard an 3 verschiedenen Orten, ohne zu verlieren oder aufzugeben.",
+   "text_en": "Win pool at 3 different locations in one in-game day without losing or quitting.",
+   "zusatz_de": "Vorher speichern, falls du ein Spiel verlierst.",
+   "zusatz_en": "Save first in case you lose a game."
+  },
+  {
+   "id": "h-sports-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Basketball Tour",
+   "text_de": "Triff in jedem County mindestens einen Korb.",
+   "text_en": "Score a basket in every county.",
+   "zusatz_de": "Läuft beim Erkunden der Countys mit.",
+   "zusatz_en": "Comes naturally as you explore each county."
+  },
+  {
+   "id": "h-sports-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Golf Pro",
+   "text_de": "Spiel an einem Spieltag 18 Löcher auf beiden Plätzen, King Gator und Frontier Adventure Golf, jeweils mit Par oder besser.",
+   "text_en": "Play 18 holes at both King Gator and Frontier Adventure Golf in one in-game day, at par or better on each.",
+   "zusatz_de": "Nach „Golf Rookie“ angehen, wenn du die Bahnen kennst.",
+   "zusatz_en": "Tackle it after Golf Rookie once you know the holes."
+  },
+  {
+   "id": "h-sports-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Triple Bank",
+   "text_de": "Lass die weiße Kugel über 3 Banden laufen, bevor du eine Kugel versenkst.",
+   "text_en": "Bank the cue ball off 3 rails before potting a ball.",
+   "zusatz_de": "Probier es mit einer Kugel nahe einer Tasche.",
+   "zusatz_en": "Try it with a ball sitting close to a pocket."
+  },
+  {
+   "id": "h-sports-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Basketball Pro",
+   "text_de": "Triff an allen 100 Körben in Leonida.",
+   "text_en": "Score at all 100 hoops in Leonida.",
+   "zusatz_de": "Die 100%-Liste verlangt ohnehin 90 Körbe, die restlichen 10 lohnen sich dann.",
+   "zusatz_en": "The 100% checklist already asks for 90 hoops, so the last 10 are worth it.",
+   "schwer": true
+  },
+  {
+   "id": "h-sports-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "8-Ball Break",
+   "text_de": "Gewinn eine Partie Billard, indem du die schwarze 8 beim Anstoß versenkst.",
+   "text_en": "Win a game of pool by sinking the 8-ball on the break.",
+   "zusatz_de": "Reine Glückssache, einfach oft anstoßen.",
+   "zusatz_en": "Mostly luck, just keep breaking."
+  },
+  {
+   "id": "h-sports-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-sports",
+   "name": "Double Hole in One",
+   "text_de": "Spiel in einer Runde auf King Gator oder Frontier Adventure Golf zweimal hintereinander ein Hole-in-One.",
+   "text_en": "Get two holes-in-one in a row in a single round at King Gator or Frontier Adventure Golf.",
+   "zusatz_de": "Gilt als eine der nervigsten Aufgaben, guter Kandidat zum Auslassen.",
+   "zusatz_en": "Widely seen as one of the most annoying, a good one to skip.",
+   "schwer": true
+  },
+  {
+   "id": "h-survival-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Alligator Kills",
+   "text_de": "Töte 3 wilde Alligatoren.",
+   "text_en": "Kill 3 wild alligators.",
+   "zusatz_de": "In Sumpfgebieten mit genug Abstand schießen.",
+   "zusatz_en": "Shoot from a safe distance in swampy areas."
+  },
+  {
+   "id": "h-survival-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Big Fish",
+   "text_de": "Fang einen Fisch mit mindestens 20 Pfund.",
+   "text_en": "Catch a fish weighing at least 20 pounds.",
+   "zusatz_de": "Ergibt sich oft beim Angeln für die anderen Angel-Challenges.",
+   "zusatz_en": "Often happens while fishing for the other angling challenges."
+  },
+  {
+   "id": "h-survival-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Marksman",
+   "text_de": "Hol an einem Spieltag eine Medaille auf beiden Schießständen.",
+   "text_en": "Earn a medal at both shooting ranges in one in-game day.",
+   "zusatz_de": "Fahr direkt nacheinander zu beiden Ständen.",
+   "zusatz_en": "Go to both ranges back to back."
+  },
+  {
+   "id": "h-survival-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Catch of the Day",
+   "text_de": "Fang an einem Spieltag mit jeder Köderart 3 Fische.",
+   "text_en": "Catch 3 fish with each type of lure in one in-game day.",
+   "zusatz_de": "Alle Köderarten vorher kaufen.",
+   "zusatz_en": "Buy every lure type beforehand."
+  },
+  {
+   "id": "h-survival-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Zoologist",
+   "text_de": "Studiere 20 verschiedene Tierarten.",
+   "text_en": "Study 20 different animal species.",
+   "zusatz_de": "Mit Fernglas oder Scharfschützengewehr beobachten, eine Pistole reicht nicht.",
+   "zusatz_en": "Observe them with binoculars or a sniper rifle; a pistol will not work."
+  },
+  {
+   "id": "h-survival-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Angler",
+   "text_de": "Fang 4 verschiedene Fischarten innerhalb von 6 Minuten.",
+   "text_en": "Catch 4 different fish species within 6 minutes.",
+   "zusatz_de": "An einer Stelle mit gemischtem Fischbestand angeln.",
+   "zusatz_en": "Fish somewhere with a varied mix of species."
+  },
+  {
+   "id": "h-survival-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Pro Marksman",
+   "text_de": "Hol in der Meister-Herausforderung bei 3 verschiedenen Schießstand-Disziplinen hintereinander Gold, ohne zu scheitern oder abzubrechen.",
+   "text_en": "Earn gold in the Master challenge of 3 different range events in a row without failing or quitting.",
+   "zusatz_de": "Erst die Disziplinen einzeln üben.",
+   "zusatz_en": "Practice each event on its own first."
+  },
+  {
+   "id": "h-survival-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Hunting Spree",
+   "text_de": "Töte innerhalb von 15 Minuten ein Wildschwein, eine Klapperschlange und einen Panther, ohne Schaden durch Gegner oder Tiere zu nehmen.",
+   "text_en": "Kill a boar, a rattlesnake and a panther within 15 minutes without taking damage from enemies or animals.",
+   "zusatz_de": "Erst ein Gebiet suchen, in dem alle drei vorkommen.",
+   "zusatz_en": "Find an area where all three live before starting."
+  },
+  {
+   "id": "h-survival-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Pro Angler",
+   "text_de": "Fang jede Fischart im Spiel.",
+   "text_en": "Catch every fish species in the game.",
+   "zusatz_de": "Lange Sammelaufgabe, nebenbei abarbeiten.",
+   "zusatz_en": "A long collecting task, chip away at it on the side.",
+   "schwer": true
+  },
+  {
+   "id": "h-survival-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-survival",
+   "name": "Legendary Hunter",
+   "text_de": "Töte alle 8 einzigartigen Tiere.",
+   "text_en": "Kill all 8 unique animals.",
+   "zusatz_de": "Vor dem Auslassen prüfen, ob du die Tiere ohnehin für die Jagdaufträge ab Kapitel 2 brauchst.",
+   "zusatz_en": "Before skipping it, check whether the hunting jobs from Chapter 2 need these animals anyway."
+  },
+  {
+   "id": "h-vehicle-01",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Vehicle Discovery",
+   "text_de": "Untersuche oder entdecke 6 verschiedene Fahrzeuge.",
+   "text_en": "Examine or discover 6 different vehicles.",
+   "zusatz_de": "Parkende Autos mit WAiNK scannen.",
+   "zusatz_en": "Scan parked cars with WAiNK."
+  },
+  {
+   "id": "h-vehicle-02",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Wheelie",
+   "text_de": "Fahr einen Wheelie über eine Viertelmeile.",
+   "text_en": "Pull a wheelie for 0.25 miles.",
+   "zusatz_de": "Auf einer langen, geraden Straße mit einem Motorrad.",
+   "zusatz_en": "Use a motorcycle on a long, straight road."
+  },
+  {
+   "id": "h-vehicle-03",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Winning Streak",
+   "text_de": "Gewinn 3 Rennen, je eines mit einem Muscle-Car, einem Sportwagen und einem Supersportwagen.",
+   "text_en": "Win 3 races, one each with a muscle car, a sports car and a supercar.",
+   "zusatz_de": "Das stärkste Auto der jeweiligen Klasse nehmen.",
+   "zusatz_en": "Pick the strongest car in each class."
+  },
+  {
+   "id": "h-vehicle-04",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Throttled",
+   "text_de": "Fahr mit einem Motorfahrzeug ununterbrochen schneller als 100 mph. Die meisten Guides sagen 2 Minuten lang, einige 2 Meilen weit; wer 2 Minuten hält, schafft beides.",
+   "text_en": "Stay above 100 mph in a motor vehicle without a break. Most guides say for 2 minutes, some say for 2 miles; holding it for 2 minutes covers both.",
+   "zusatz_de": "Lange Autobahnstrecke ohne Verkehr wählen.",
+   "zusatz_en": "Pick a long highway stretch with little traffic."
+  },
+  {
+   "id": "h-vehicle-05",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Drawbridge Jump",
+   "text_de": "Spring 3 Mal mehr als 100 Fuß weit über eine Zugbrücke, ohne auszusteigen.",
+   "text_en": "Jump more than 100 feet over a drawbridge 3 times without leaving the vehicle.",
+   "zusatz_de": "Warte, bis die Brücke offen ist, und nimm viel Anlauf.",
+   "zusatz_en": "Wait for the bridge to open and take a long run-up."
+  },
+  {
+   "id": "h-vehicle-06",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Top Speed",
+   "text_de": "Erreiche 175 mph mit einem Auto, Lastwagen oder Motorrad.",
+   "text_en": "Reach 175 mph in a car, truck or motorcycle.",
+   "zusatz_de": "Voll getuntes Supersportauto auf einer langen Geraden.",
+   "zusatz_en": "A fully upgraded supercar on a long straight."
+  },
+  {
+   "id": "h-vehicle-07",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Train Landing",
+   "text_de": "Lande ein Flugzeug im Flug auf einem fahrenden Zug, ohne es zu zerstören.",
+   "text_en": "Land a flying airplane on a moving train without destroying it.",
+   "zusatz_de": "Ein kleines, langsames Flugzeug macht es leichter.",
+   "zusatz_en": "A small, slow plane makes it easier.",
+   "schwer": true
+  },
+  {
+   "id": "h-vehicle-08",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Oceanarium Jump",
+   "text_de": "Spring aus mindestens einer halben Meile Höhe aus einem Fluggerät und lande mit dem Fallschirm im Orca- oder Delfinbecken des Oceanariums in Vice City, ohne zu sterben.",
+   "text_en": "Jump from an aircraft at 0.5 miles or higher and parachute into the orca or dolphin tank at the Vice City Oceanarium without dying.",
+   "zusatz_de": "Vorher einen Fallschirm kaufen und den Sprung über dem Ziel ansetzen.",
+   "zusatz_en": "Buy a parachute first and start the jump right above the target.",
+   "schwer": true
+  },
+  {
+   "id": "h-vehicle-09",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Rally Winner",
+   "text_de": "Gewinn an einem Spieltag 3 Rennen hintereinander auf Thrillbilly Mud Club, Gellhorn International Raceway und Boone Speedway, ohne abzubrechen oder neu zu starten.",
+   "text_en": "Win 3 races in a row in one in-game day at Thrillbilly Mud Club, Gellhorn International Raceway and Boone Speedway without quitting or restarting.",
+   "zusatz_de": "Vorher jede Strecke einzeln üben.",
+   "zusatz_en": "Practice each track on its own first."
+  },
+  {
+   "id": "h-vehicle-10",
+   "bereich": "herausforderungen",
+   "gruppe": "h-vehicle",
+   "name": "Train Jump",
+   "text_de": "Spring mit einem Motorrad zweimal innerhalb von 20 Minuten mindestens 75 Fuß weit auf einen fahrenden Zug.",
+   "text_en": "Jump a motorcycle at least 75 feet onto a moving train twice within 20 minutes.",
+   "zusatz_de": "Eine Rampe neben den Gleisen suchen und den Zug abpassen.",
+   "zusatz_en": "Find a ramp next to the tracks and time the train.",
+   "schwer": true
+  },
+  {
+   "id": "f-regel-01",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Ohne Zeugen keine Fahndung",
+   "name_en": "No witness, no wanted level",
+   "text_de": "Eine Tat wird nur gemeldet, wenn jemand sie sieht oder ein Alarm losgeht. Leere Straße, kein Alarm: keine Sterne. Zeugen können auch noch melden, nachdem du weg bist, und ein bedrohter Passant ruft die Polizei, ohne dass ein Schuss fällt.",
+   "text_en": "A crime is only reported if someone sees it or an alarm goes off. Empty street, no alarm: no stars. Witnesses can still report it after you have left, and a threatened bystander calls the police without a single shot being fired."
+  },
+  {
+   "id": "f-regel-02",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Was die Sterne zeigen",
+   "name_en": "What the stars mean",
+   "text_de": "Hohl: Tat gemeldet, aber niemand weiß, wer es war; verschwindest du vor der Streife, sucht sie dich nicht. Weiß: Sie sehen dich und jagen dich. Weiß blinkend: Sichtkontakt verloren, sie suchen am letzten Ort. Rot: Jagd vorbei, aber du stehst noch im Heat-Gebiet und sie kennen deine Beschreibung. Dazu gibt es graue Sterne, deren Bedeutung die Guides verschieden erklären.",
+   "text_en": "Hollow: crime reported, but nobody knows who did it; if you disappear before the patrol arrives, they will not look for you. White: they see you and are chasing you. Flashing white: they lost sight of you and are searching your last position. Red: the chase is over, but you are still inside the heat area and they know your description. There are also grey stars, which guides explain in different ways."
+  },
+  {
+   "id": "f-regel-03",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Zwei rote Ringe, dann Heat-Gebiet",
+   "name_en": "Two red rings, then a heat area",
+   "text_de": "Um den Tatort legt die Polizei einen inneren und einen äußeren roten Ring auf die Minikarte. Raus aus beiden, ohne gesehen zu werden, und die Jagd endet. Danach bleibt ein Heat-Gebiet etwa in Viertelgröße: Kommst du mit derselben Beschreibung zurück, geht es wieder los. Mehrere Taten im selben Viertel machen das Gebiet größer und bringen mehr Streifen.",
+   "text_en": "Around the crime scene the police put an inner and an outer red ring on the minimap. Get out of both without being seen and the chase ends. Afterwards a heat area about the size of a neighbourhood remains: come back with the same description and it starts again. Several crimes in the same neighbourhood make the area bigger and bring more patrols."
+  },
+  {
+   "id": "f-regel-04",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Heat kühlt von selbst ab",
+   "name_en": "Heat cools down on its own",
+   "text_de": "Heat sinkt mit der Zeit, solange du dich fernhältst. Auf der Karte siehst du, wo du noch Heat hast; fährst du mit der Maus über ein Gebiet, zeigt es die gespeicherte Beschreibung.",
+   "text_en": "Heat drops over time as long as you stay away. The map shows where you still have heat; hovering the mouse over an area shows the stored description."
+  },
+  {
+   "id": "f-regel-05",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Jedes Heat-Symbol einzeln",
+   "name_en": "Each heat icon on its own",
+   "text_de": "Jedes rote Symbol hat seinen eigenen Zähler. Ein neues Hemd hilft nicht gegen ein bekanntes Gesicht, eine Maske verdeckt weder Hemd noch Auto noch die Tatsache, dass zwei Leute rausgerannt sind.",
+   "text_en": "Each red icon has its own counter. A new shirt does not help against a known face, and a mask hides neither your shirt nor your car nor the fact that two people ran out."
+  },
+  {
+   "id": "f-regel-06",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Aussehen (Person)",
+   "name_en": "Appearance (person)",
+   "text_de": "Am besten vorher: Maske oder Helm vor der Tat aufsetzen und abnehmen, sobald dich niemand sieht. Danach hilft Hut oder Brille an und aus (L1/LB, Accessoires liegen im Kofferraum unter Loadout, Items) oder ein Friseurbesuch.",
+   "text_en": "Best done beforehand: put on a mask or helmet before the crime and take it off as soon as nobody sees you. Afterwards, putting a hat or glasses on and off helps (L1/LB; accessories are in the trunk under Loadout, Items), or a visit to the barber."
+  },
+  {
+   "id": "f-regel-07",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Outfit (Kleiderbügel)",
+   "name_en": "Outfit (hanger)",
+   "text_de": "Komplett umziehen: im Kleiderladen, am Schrank im Unterschlupf oder mit einem Ersatzoutfit aus dem Kofferraum. Dafür speicherst du ein Outfit am Kleiderschrank und markierst es für den Kofferraum. In manchen Läden kannst du Kleidung auch klauen.",
+   "text_en": "Change completely: at a clothing store, at the wardrobe in a safehouse or with a spare outfit from the trunk. For that, save an outfit at the wardrobe and mark it for the trunk. In some stores you can also steal clothes."
+  },
+  {
+   "id": "f-regel-08",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Waffe",
+   "name_en": "Weapon",
+   "text_de": "Faustfeuerwaffen steckst du mit L1/LB weg, dann sind sie verborgen. Langwaffen lassen sich nicht verstecken: in den Kofferraum oder wegwerfen. Das Symbol kann auch kommen, wenn die Polizei dein Gesicht nicht kennt, dich aber bewaffnet sieht.",
+   "text_en": "Holster sidearms with L1/LB and they are concealed. Long guns cannot be hidden: put them in the trunk or throw them away. The icon can also appear when the police do not know your face but see you armed."
+  },
+  {
+   "id": "f-regel-09",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Paar (zwei Personen)",
+   "name_en": "Couple (two people)",
+   "text_de": "Steuerkreuz rechts halten trennt Jason und Lucia, das Paar-Symbol fällt weg. Während einer Jagd bittet dieselbe Taste den Partner, die Polizei abzulenken. Wird einer von beiden geschnappt, heißt es für dich trotzdem „Busted“.",
+   "text_en": "Holding D-pad right splits up Jason and Lucia, and the couple icon goes away. During a chase the same button asks your partner to distract the police. If either of the two gets caught, it is still “Busted” for you."
+  },
+  {
+   "id": "f-regel-10",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Kamera (CCTV)",
+   "name_en": "Camera (CCTV)",
+   "text_de": "Normale Aufnahmen liegen vor Ort: am Rekorder im Gebäude löschen oder Kameras vor der Tat zerschießen. Cloud-Kameras lassen sich nicht löschen und lösen irgendwann Alarm aus; dann alle anderen Symbole loswerden und das Gebiet verlassen.",
+   "text_en": "Regular footage is stored on site: delete it at the recorder inside the building or shoot out the cameras before the crime. Cloud cameras cannot be deleted and will trigger an alarm at some point; then get rid of all other icons and leave the area."
+  },
+  {
+   "id": "f-regel-11",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Fahrzeug",
+   "name_en": "Vehicle",
+   "text_de": "Auto wechseln oder umlackieren lassen. Sieht die Polizei dich nicht aussteigen, reißt die Verbindung zum alten Auto ab. Verbrennen musst du es nicht, das war nur eine Story-Szene.",
+   "text_en": "Switch cars or get a respray. If the police do not see you get out, the link to the old car breaks. You do not have to burn it; that was only a story scene."
+  },
+  {
+   "id": "f-regel-12",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Vorsicht Tracker",
+   "name_en": "Watch out for trackers",
+   "text_de": "Neuere und teure Autos haben oft einen Tracker, über den die Polizei sie wiederfindet; manche melden ihre Position nur, wenn du unter einem Mindesttempo fährst. Prüf ein Auto vorher mit der Scanner-App. Alte, schlichte Autos sind schwerer zu verfolgen. Pay ’n’ Spray kann Autos mit Tracker ablehnen; später in der Story baut es Tracker aus.",
+   "text_en": "Newer and expensive cars often have a tracker the police use to find them again; some only report their position when you drive below a minimum speed. Check a car with the scanner app first. Old, plain cars are harder to track. Pay ’n’ Spray may refuse cars with a tracker; later in the story it removes trackers."
+  },
+  {
+   "id": "f-regel-13",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Pay ’n’ Spray nur ungesehen",
+   "name_en": "Pay ’n’ Spray only when unseen",
+   "text_de": "Solange die Polizei dich sieht, bleibt das Tor zu. Werkstätten zum Tunen lassen dich als bekannter Verdächtiger gar nicht rein. Das Umlackieren nimmt nur das Fahrzeug-Symbol weg, nicht Outfit oder Gesicht. Eingeführt wird das Pay ’n’ Spray in „Unwanted Attention“.",
+   "text_en": "As long as the police can see you, the gate stays shut. Mod shops will not let you in at all as a known suspect. A respray only removes the vehicle icon, not your outfit or face. The Pay ’n’ Spray is introduced in “Unwanted Attention”."
+  },
+  {
+   "id": "f-regel-14",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Blut und Farbe abwaschen",
+   "name_en": "Wash off blood and dye",
+   "text_de": "Blutflecken und geplatzte Farbpatronen machen dich leichter erkennbar. Duschen im Unterschlupf hilft.",
+   "text_en": "Bloodstains and burst dye packs make you easier to recognise. Shower at the safehouse."
+  },
+  {
+   "id": "f-regel-15",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Sichtlinie brechen",
+   "name_en": "Break line of sight",
+   "text_de": "Erst raus aus dem Blick: enge Gassen, Seitenstraßen, über Zäune und auf Dächer. In dichten Vierteln bist du zu Fuß oft schneller weg als mit dem Auto (Rutschen über die Motorhaube mit X/A, manche Tore öffnest du mit einem Schuss). Klettern nützt nichts, wenn sie dir dabei zusehen.",
+   "text_en": "First get out of sight: narrow alleys, side streets, over fences and onto rooftops. In dense neighbourhoods you often get away faster on foot than by car (slide over the hood with X/A; some gates open with a shot). Climbing is useless if they watch you do it."
+  },
+  {
+   "id": "f-regel-16",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Verstecken und ducken",
+   "name_en": "Hide and duck",
+   "text_de": "Dein Pfeil auf der Karte ändert die Farbe, wenn du versteckt bist oder die Polizei weiß, wo du bist. Im stehenden Auto Kreis/B halten zum Ducken, das geht auch, wenn du zu Fuß in ein geparktes Auto springst. Hilft nur, solange dich noch niemand sieht, und nie gegen einen Tracker. Auf dem Land verstecken dich Wald und Büsche, außerdem helfen Leitern und unverschlossene Türen.",
+   "text_en": "Your map arrow changes colour when you are hidden or located. In a stationary car hold Circle/B to duck, also after jumping into a parked car on foot. It only works while nobody sees you, and never against a tracker. In the countryside woods and bushes hide you; ladders and unlocked doors help."
+  },
+  {
+   "id": "f-regel-17",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Polizei unsichtbar auf der Minikarte",
+   "name_en": "Police not on the minimap",
+   "text_de": "Streifenwagen erscheinen nicht auf der Minikarte und es gibt keine Sichtkegel. Mit dem Fokus siehst du Polizisten in der Nähe, ein blauer Balken über ihnen füllt sich, wenn sie dich sehen. Mit dem Polizeiscanner hörst du später den Funk und siehst, wohin Streifen geschickt werden.",
+   "text_en": "Patrol cars do not appear on the minimap, and there are no vision cones. With Focus you see nearby officers; a blue bar above them fills when they see you. With the police scanner you later hear their radio and see where patrols are being sent."
+  },
+  {
+   "id": "f-regel-18",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Hubschrauber",
+   "name_en": "Helicopters",
+   "text_de": "Laut gta.wiki kommt ab 3 Sternen ein Hubschrauber, ab 4 Sternen zwei. Gegen den Blick von oben hilft nur ein festes Dach: Unterführungen unterbrechen die Sicht, eine offene Gasse reicht nicht. Schießt du auf den Hubschrauber, dreht er manchmal ab. Im Flugzeug fliegst du am besten tief, dann sieht dich die Polizei schlechter.",
+   "text_en": "According to gta.wiki one helicopter comes from 3 stars, two from 4 stars. Only a solid roof helps against the view from above: underpasses break the line of sight, an open alley is not enough. If you shoot at the helicopter, it sometimes turns away. In a plane it is best to fly low, so the police see you less easily."
+  },
+  {
+   "id": "f-regel-19",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Polizeihunde",
+   "name_en": "Police dogs",
+   "text_de": "Auf höheren Stufen kommen Hundestaffeln. Sie verfolgen dich hartnäckig, also bleib in Bewegung und versteck dich nicht einfach. Nachts kommen Nagelbänder dazu.",
+   "text_en": "At higher levels K9 units show up. They track you relentlessly, so keep moving instead of just hiding. At night stinger strips are added."
+  },
+  {
+   "id": "f-regel-20",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Nicht eskalieren",
+   "name_en": "Don’t escalate",
+   "text_de": "Wer Polizisten tötet, bekommt mehr Sterne und härtere Gegner. Ziel auf Beine oder Schutzweste (die Anzeige wird gelb), gib Deckungsfeuer daneben oder zerschieß Reifen. Mit der Waffe drohen ohne zu schießen hält die Fahndung niedrig. Unnötige Gewalt drückt auch dein Kriminalprofil.",
+   "text_en": "Killing cops gets you more stars and tougher opponents. Aim at legs or body armor (the indicator turns yellow), fire suppressing shots beside them or shoot out tyres. Threatening with a weapon without firing keeps the wanted level low. Unnecessary violence also hurts your criminal profile."
+  },
+  {
+   "id": "f-regel-21",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Stadt ab 3 Sternen",
+   "name_en": "City at 3+ stars",
+   "text_de": "Ab 3 Sternen in der Stadt hast du mit einem normalen Auto kaum eine Chance. Ein Hypercar oder ein schnelles Motorrad schafft Abstand, sonst Auto stehen lassen und zu Fuß durch Gassen.",
+   "text_en": "At 3 stars or more in the city you barely stand a chance in a normal car. A hypercar or a fast motorcycle gains distance; otherwise leave the car behind and go through alleys on foot."
+  },
+  {
+   "id": "f-regel-22",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Danach unauffällig",
+   "name_en": "Stay boring afterwards",
+   "text_de": "Mit dem neuen Auto langsam und normal im Verkehr fahren, nicht rasen. Maske nur aufsetzen, solange dich keiner sieht.",
+   "text_en": "Drive the new car slowly and normally with traffic, no speeding. Only put a mask on while nobody sees you."
+  },
+  {
+   "id": "f-regel-23",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "6 Sterne",
+   "name_en": "6 stars",
+   "text_de": "Bei 6 Sternen deckt das Heat-Gebiet die ganze Karte, ein Viertelwechsel bringt nichts. Normal abschütteln kannst du die Polizei dann nicht mehr, es endet mit „Busted“ oder „Wasted“. 6 Sterne gibt es zum Beispiel, wenn du in der Mile Zero Air Station einen Panzer klaust.",
+   "text_en": "At 6 stars the heat area covers the whole map, so changing districts does not help. You can no longer shake off the police in the normal way, it ends in “Busted” or “Wasted”. You get 6 stars, for example, by stealing a tank at Mile Zero Air Station.",
+   "spoiler_de": "Spieler haben eine Ausnahme gefunden: das geheime Portal im Turtle Head Power Station, offen nur von 19 bis 6 Uhr und erst nach dem Rätsel am Umspannwerk. Ein zweiter Weg über einen Bunker ist kaum belegt.",
+   "spoiler_en": "Players have found an exception: the secret portal at Turtle Head Power Station, open only from 7 PM to 6 AM and only after the substation puzzle. A second way through a bunker is barely documented."
+  },
+  {
+   "id": "f-regel-24",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Bargeld vorher einzahlen",
+   "name_en": "Deposit cash first",
+   "text_de": "Bei „Busted“ oder „Wasted“ verlierst du Bargeld, eine kleine BuckMe-Gebühr, nicht gekaufte Waffen und meist die Beutetaschen. Zahl Geld vorher am Automaten ein. Gekaufte Waffen holst du aus dem Kofferraum oder dem Waffenspind bei Ammu-Nation zurück.",
+   "text_en": "On “Busted” or “Wasted” you lose your cash, a small BuckMe fee, weapons you have not bought and usually the loot bags. Deposit money at an ATM beforehand. Weapons you bought can be recovered from the trunk or the weapon locker at Ammu-Nation."
+  },
+  {
+   "id": "f-regel-25",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Cheats",
+   "text_de": "Einen Cheat zum Senken der Fahndung gibt es nicht. „Raise Wanted Level“ schaltest du nach der Story frei, wenn du 50 Mal eine 3-Sterne-Fahndung abgeschüttelt hast; laut Red Bull gibt es nach 25 Mal zusätzlich einen Heat-Cheat. Cheats gibst du am Handy ein; sie sperren Trophäen und Speichern für die Sitzung.",
+   "text_en": "There is no cheat to lower your wanted level. “Raise Wanted Level” unlocks after the story once you have escaped a 3-star wanted level 50 times; according to Red Bull there is also a heat cheat after 25 times. Cheats are entered on the phone; they lock trophies and saving for the session."
+  },
+  {
+   "id": "f-regel-26",
+   "bereich": "flucht",
+   "gruppe": "f-regeln",
+   "name": "Trophäen fürs Entkommen",
+   "name_en": "Escape trophies",
+   "text_de": "„Hot Together“ (4 Sterne mit dem Partner abschütteln), „A Classic Blitz Play“ (Geldtransporter ausrauben) und „Maximum Withdrawal“ (5 Tresore) zählen erst, wenn du auch aus dem roten Heat-Gebiet raus bist; nur das blinkende Suchgebiet reicht nicht. Tresor-Raube geben sofort 4 Sterne, gut für „Hot Together“.",
+   "text_en": "“Hot Together” (escape 4 stars with your partner), “A Classic Blitz Play” (rob an armored truck) and “Maximum Withdrawal” (5 vaults) only count once you are also out of the red heat area; the flashing search area alone is not enough. Vault robberies give 4 stars instantly, good for “Hot Together”."
+  },
+  {
+   "id": "f-versteck-parkhaus",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Überdachtes Parkhaus",
+   "name_en": "Covered parking structure",
+   "text_de": "Dach und Wände schützen vor Blicken vom Boden und vom Hubschrauber, dort stehen Autos zum Wechseln (Fahrzeug-Symbol) und du kannst ungestört Maske aufsetzen oder das alte Auto loswerden. Am besten eines mit mehr als einer Ausfahrt. Belegt nur durch Rockstars Vorab-Szene, nicht durch einen Test im fertigen Spiel.",
+   "text_en": "Roof and walls block the view from the ground and from the helicopter; there are cars to switch into (vehicle icon), and you can put on a mask or get rid of the old car undisturbed. Ideally pick one with more than one exit. Based only on Rockstar’s pre-release scene, not on a test in the finished game.",
+   "versteck": "parkhaus"
+  },
+  {
+   "id": "f-versteck-unterfuehrung",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Tunnel, Unterführung, Brücke",
+   "name_en": "Tunnel, underpass, bridge",
+   "text_de": "Tunnel, Unterführungen und überdachte Strecken nehmen dem Hubschrauber die Sicht. Das ist ein Tipp aus mehreren Guides, genau getestet hat es niemand. Danach musst du trotzdem noch aus dem Suchgebiet raus.",
+   "text_en": "Tunnels, underpasses and covered routes block the helicopter’s view. This is advice from several guides, nobody has tested it exactly. Afterwards you still have to get out of the search area.",
+   "versteck": "unterfuehrung"
+  },
+  {
+   "id": "f-versteck-gasse",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Enge Gasse, Seitenstraße",
+   "name_en": "Narrow alley, side street",
+   "text_de": "Bricht die Sichtlinie am Boden, gut zu Fuß über Zäune. Gegen den Hubschrauber nur mit Dach darüber.",
+   "text_en": "Breaks the line of sight on the ground; good on foot over fences. Against the helicopter only with a roof overhead.",
+   "versteck": "gasse"
+  },
+  {
+   "id": "f-versteck-dach-zaun",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Dächer, Zäune, Leitern, offene Türen",
+   "name_en": "Rooftops, fences, ladders, unlocked doors",
+   "text_de": "Fluchtwege zu Fuß, die Streifenwagen nicht nehmen können. Nutzlos, wenn die Polizei dir dabei zusieht.",
+   "text_en": "Escape routes on foot that patrol cars cannot take. Useless if the police watch you do it.",
+   "versteck": "dach-zaun"
+  },
+  {
+   "id": "f-versteck-buesche-wald",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Wald und Büsche (Land)",
+   "name_en": "Woods and bushes (countryside)",
+   "text_de": "Auf dem Land verdecken dich Wald und Büsche vor Polizisten, die dich sonst sehen würden. Gegen Polizeihunde hilft Verstecken nicht.",
+   "text_en": "In the countryside woods and bushes hide you from officers who would otherwise see you. Hiding does not help against police dogs.",
+   "versteck": "buesche-wald"
+  },
+  {
+   "id": "f-versteck-geparktes-auto",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Geparktes Auto (ducken)",
+   "name_en": "Parked car (duck)",
+   "text_de": "Im stehenden Auto Kreis/B halten, dann duckst du dich weg. Hilft nur, solange dich die Polizei noch nicht sieht oder das Auto umstellt hat, und nie gegen einen Tracker.",
+   "text_en": "Hold Circle/B in a stationary car to duck out of sight. Only works while the police cannot see you or have not surrounded the car, and never against a tracker.",
+   "versteck": "geparktes-auto"
+  },
+  {
+   "id": "f-versteck-pay-n-spray",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Pay ’n’ Spray",
+   "text_de": "Umlackieren nimmt das Fahrzeug-Symbol weg, dazu Reparatur. Das Tor öffnet nur, wenn dich die Polizei nicht sieht; Autos mit Tracker können abgelehnt werden. 19 Werkstätten in fünf Countys, Kartenfilter unter Vehicles.",
+   "text_en": "A respray removes the vehicle icon and repairs the car too. The gate only opens when the police cannot see you; cars with a tracker may be refused. 19 shops in five counties, map filter under Vehicles.",
+   "versteck": "pay-n-spray"
+  },
+  {
+   "id": "f-versteck-kleiderladen",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Kleiderladen",
+   "name_en": "Clothing store",
+   "text_de": "Neues Outfit nimmt das Kleiderbügel-Symbol weg; Hut oder Brille helfen beim Personen-Symbol. In manchen Läden kannst du Kleidung klauen.",
+   "text_en": "A new outfit removes the hanger icon; a hat or glasses help with the person icon. In some stores you can steal clothes.",
+   "versteck": "kleiderladen"
+  },
+  {
+   "id": "f-versteck-friseur",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Friseur",
+   "name_en": "Barber / salon",
+   "text_de": "Neue Frisur nimmt das Personen-Symbol weg.",
+   "text_en": "A new hairstyle clears the person icon.",
+   "versteck": "friseur"
+  },
+  {
+   "id": "f-versteck-ammu-nation",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Ammu-Nation",
+   "text_de": "Verkauft Arbeitskleidung, die das Outfit-Symbol entfernt, dazu Halstücher als Maske. Bisher nur aus einer Quelle belegt.",
+   "text_en": "Sells work clothes that remove the outfit icon, plus bandanas as a mask. So far documented by one source only.",
+   "versteck": "ammu-nation"
+  },
+  {
+   "id": "f-versteck-kofferraum",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Kofferraum des eigenen Autos",
+   "name_en": "Your own car’s trunk",
+   "text_de": "Ersatzoutfit (Kleiderbügel), Accessoires (Person) und Langwaffen (Waffe) unterwegs wechseln oder verstauen.",
+   "text_en": "Change or stow a spare outfit (hanger), accessories (person) and long guns (weapon) on the go.",
+   "versteck": "kofferraum"
+  },
+  {
+   "id": "f-versteck-unterschlupf",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Unterschlupf (Safehouse)",
+   "name_en": "Safehouse",
+   "text_de": "Kleiderschrank gegen das Outfit-Symbol, Dusche gegen Blut und Farbe. Ob das Betreten selbst Sterne einfriert oder löscht, ist nicht belegt.",
+   "text_en": "Wardrobe against the outfit icon, shower against blood and dye. Whether entering it freezes or clears your stars is not documented.",
+   "versteck": "unterschlupf"
+  },
+  {
+   "id": "f-versteck-unbelegt",
+   "bereich": "flucht",
+   "gruppe": "f-verstecke",
+   "name": "Nicht belegt",
+   "name_en": "Not confirmed",
+   "text_de": "Für GTA VI nicht belegt sind: Eigene Garage, Wasser, Tauchen, Sumpf. Tipps dazu stammen aus GTA V.",
+   "text_en": "Not confirmed for GTA VI: Owned garage, Water, diving, Swamp. Such tips come from GTA V."
+  }
+ ]
+}
