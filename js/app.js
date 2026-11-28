@@ -10,6 +10,7 @@ import { alleProvider } from './provider.js';
 import { t, feld, zahl, sprache, setzeSprache, uebersetzeSeite, sprachen, pinArten, FEHLER_EN } from './i18n.js';
 import { karteAnlegen, strassenZeichnen, pinsZeichnen, punkteZeichnen, punktOeffnen, positionZeigen, popupZeigen, hinfliegen, ganzeKarte, pinOeffnen, stelleMarkieren, markierungWeg, ausschnittZeigen } from './karte.js';
 import { suchen, gruppieren } from './suche.js';
+import { FZ_BEREICHE, fahrzeugListe, fahrzeugKlassen, kapitelText } from './fahrzeuge.js';
 import { ARTWORTE, KATWORTE, BEREICHWORTE, VERSTECKWORTE } from './suchworte.js';
 import { ARTEN, ART_GRUPPEN, ARTEN_ZU, artenVon, artenAus, artMit, artFarbe, zeichenSvg } from './arten.js';
 import * as sehhilfe from './sehhilfe.js';
@@ -40,6 +41,8 @@ const zustand = {
   filter: { countys: new Set(), kategorien: new Set(), arten: new Set(), versteck: false }, offeneKapitel: null, offeneZeile: null,
   setzmodus: false, nachBereich: 'herausforderungen', nachOffen: new Set(), nachMarkiert: null,
   artOffen: null,      // aufgeklappte Gruppen der Arten im Filter
+  fz: { bereich: 'alle', klasse: '', sortierung: 'name' },   // Bereich Fahrzeuge in Nachschlagen
+  radioOffen: new Set(),
   gesucht: new Set()   // IDs der Orte, die die Suche zuletzt gezeigt hat: bleiben sichtbar, auch wenn ein Filter sie ausblendet
 };
 let k;
@@ -112,7 +115,9 @@ async function start() {
   zustand.spoilerfrei = (await speicher.einstellungLesen('spoilerfrei')) !== false;   // Standard: spoilerfrei
   zustand.tab = (await speicher.einstellungLesen('tab')) || 'karte';
   const nb = await speicher.einstellungLesen('nachBereich');
-  if (zustand.daten.nachschlagen.bereiche.some((b) => b.id === nb)) zustand.nachBereich = nb;
+  if (nachBereiche().some((b) => b.id === nb)) zustand.nachBereich = nb;
+  const fz = await speicher.einstellungLesen('fz');
+  if (fz) zustand.fz = { ...zustand.fz, ...fz };
 
   await zeichenLaden();
   k = await karteAnlegen($('#karte'), zustand.daten.karte, { onKlick: kartenKlick });
@@ -287,13 +292,20 @@ function zeileZeichnen(z, p) {
 // ---------- Nachschlagen ----------
 // Bereiche wie im Ingame-Menü Fortschritt (Ausrüstung, Sammlung, Aktivitäten, Herausforderungen), dazu Fluchtwissen.
 // Abhaken je Durchgang; Spoilerfrei verbirgt Einträge, die erst nach dem eigenen Kapitel kommen.
+// Fahrzeuge und Radio sind eigene Bereiche ohne Haken; ihre Daten stehen in data/fahrzeuge.json und data/radio.json
+const ZUSATZ_BEREICHE = [{ id: 'fahrzeuge', name_de: 'Fahrzeuge', name_en: 'Vehicles' }, { id: 'radio', name_de: 'Radio', name_en: 'Radio' }];
+const nachBereiche = () => [...zustand.daten.nachschlagen.bereiche, ...ZUSATZ_BEREICHE];
 function nachschlagenZeichnen() {
   const n = zustand.daten.nachschlagen; const p = aktiv(); const st = stand();
-  const bereich = n.bereiche.find((b) => b.id === zustand.nachBereich) ?? n.bereiche[0];
-  $('#nach-bereiche').replaceChildren(...n.bereiche.map((b) => {
+  const bereich = nachBereiche().find((b) => b.id === zustand.nachBereich) ?? n.bereiche[0];
+  const zusatzZahl = { fahrzeuge: sichtbareFahrzeuge().length, radio: zustand.daten.radio.sender.length };
+  $('#nach-bereiche').replaceChildren(...nachBereiche().map((b) => {
     const s = nachschlagenStand(n, b.id, p);
-    return chip({ text: feld(b, 'name'), an: b.id === bereich.id, anzahl: s.gesamt ? `${s.fertig}/${s.gesamt}` : null, fokus: `nach-${b.id}`, onKlick: () => bereichZeigen(b.id) });
+    const anzahl = s.gesamt ? `${s.fertig}/${s.gesamt}` : zusatzZahl[b.id] ? zahl(zusatzZahl[b.id]) : null;
+    return chip({ text: feld(b, 'name'), an: b.id === bereich.id, anzahl, fokus: `nach-${b.id}`, onKlick: () => bereichZeigen(b.id) });
   }));
+  if (bereich.id === 'fahrzeuge') { $('#nach-inhalt').replaceChildren(...fahrzeugeTeile()); return; }
+  if (bereich.id === 'radio') { $('#nach-inhalt').replaceChildren(...radioTeile()); return; }
   const s = nachschlagenStand(n, bereich.id, p); const sicht = nachschlagenSicht(n, bereich.id, zustand.spoilerfrei, st);
   const ohneHaken = new Set(n.gruppen.filter((g) => g.abhaken === false).map((g) => g.id));
   const abhakbar = (e) => bereich.abhaken !== false && e.abhaken !== false && !ohneHaken.has(e.gruppe);
@@ -343,6 +355,158 @@ function nachschlagenZeichnen() {
 async function bereichZeigen(id) {
   zustand.nachBereich = id; zustand.nachMarkiert = null;
   await speicher.einstellungSchreiben('nachBereich', id); allesZeichnen();
+}
+
+// ---------- Fahrzeuge ----------
+// Klassen heißen im Spiel englisch; die deutsche Fassung des Spiels nennt sie so (fehlt eine, bleibt der englische Name)
+const KLASSE_DE = {
+  Super: 'Supersportwagen', Sports: 'Sportwagen', 'Sports Classics': 'Sportklassiker', Muscle: 'Muscle-Cars', Coupes: 'Coupés', Sedans: 'Limousinen',
+  SUVs: 'SUVs', Compacts: 'Kompaktwagen', 'Off-Road': 'Geländewagen', Motorcycles: 'Motorräder', Cycles: 'Fahrräder', Vans: 'Transporter',
+  Utility: 'Nutzfahrzeuge', Industrial: 'Industriefahrzeuge', Commercial: 'Gewerbliche Fahrzeuge', Service: 'Dienstfahrzeuge', Emergency: 'Einsatzfahrzeuge',
+  Military: 'Militär', Boats: 'Boote', Planes: 'Flugzeuge', Helicopters: 'Hubschrauber', Trains: 'Züge', Lowriders: 'Lowrider'
+};
+const klasseName = (k) => (sprache === 'de' ? KLASSE_DE[k] ?? k : k) || '?';
+const fzNameKurz = (f) => (sprache === 'en' && f.name_en ? f.name_en : f.name);
+const fzName = (f) => (f.hersteller ? `${f.hersteller} ${fzNameKurz(f)}` : fzNameKurz(f));
+const sichtbareFahrzeuge = () => zustand.daten.fahrzeuge.fahrzeuge.filter((f) => !(zustand.spoilerfrei && f.geheim));
+// Tempo in beiden Einheiten, die gewohnte zuerst
+function tempoTeile(f) {
+  if (f.vmax_kmh == null && f.vmax_mph == null) return ['?', null];
+  const kmh = `${zahl(f.vmax_kmh)} km/h`; const mph = `${zahl(f.vmax_mph)} mph`;
+  return sprache === 'en' ? [mph, kmh] : [kmh, mph];
+}
+const hoeheTeile = (f) => (f.hoehe_max_m == null ? ['?', null] : [`${zahl(f.hoehe_max_m)} m`, `${zahl(Math.round(f.hoehe_max_m * 3.28084))} ft`]);
+// Spielwerte immer mit einer Nachkommastelle wie im Spiel (6,0 statt 6)
+const wert1 = (v) => Number(v).toLocaleString(sprache === 'de' ? 'de-DE' : 'en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const zahlZelle = ([haupt, neben]) => el('td', { class: 'zahlspalte' }, el('span', { text: haupt }), neben ? el('span', { class: 'treffer-zusatz', text: neben }) : null);
+
+function fahrzeugeTeile() {
+  const d = { ...zustand.daten.fahrzeuge, fahrzeuge: sichtbareFahrzeuge() }; const fz = zustand.fz;
+  const setze = async (neu) => {
+    const fokus = document.activeElement?.dataset?.fokus;
+    Object.assign(zustand.fz, neu); await speicher.einstellungSchreiben('fz', { ...zustand.fz }); nachschlagenZeichnen();
+    if (fokus) document.querySelector(`[data-fokus="${CSS.escape(fokus)}"]`)?.focus();
+  };
+  const klassen = fahrzeugKlassen(d.fahrzeuge, fz.bereich);
+  if (fz.klasse && !klassen.some((x) => x.klasse === fz.klasse)) fz.klasse = '';
+  // Spalten und Sortierungen nur, wo es Werte gibt: Spielwerte haben bisher nur Landfahrzeuge, km/h und Flughöhe noch keines
+  const imBereich = d.fahrzeuge.filter((f) => fz.bereich === 'alle' || f.bereich === fz.bereich);
+  const mitWerten = imBereich.some((f) => f.werte?.tempo != null);
+  const mitVmax = imBereich.some((f) => f.vmax_kmh != null);
+  const mitHoehe = imBereich.some((f) => f.hoehe_max_m != null);
+  const sortierungen = ['name', 'hersteller', ...(mitWerten ? ['tempo', 'beschleunigung', 'handling', 'offroad'] : []), ...(mitVmax ? ['vmax'] : []), ...(mitHoehe ? ['hoehe'] : [])];
+  if (!sortierungen.includes(fz.sortierung)) fz.sortierung = 'name';
+  const liste = fahrzeugListe(d.fahrzeuge, fz);
+  const wertZelle = (v) => el('td', { class: 'zahlspalte' }, v == null ? '?' : el('span', { class: 'fz-wert', style: `--anteil:${v * 10}%`, text: wert1(v) }));
+  const option = (text, wert, an) => { const o = new Option(text, wert); o.selected = an; return o; };
+  const bereiche = el('div', { class: 'chips', role: 'group', 'aria-label': t('fzBereich') },
+    chip({ text: t('fzAlle'), an: fz.bereich === 'alle', anzahl: zahl(d.fahrzeuge.length), fokus: 'fz-alle', onKlick: () => setze({ bereich: 'alle', klasse: '' }) }),
+    ...FZ_BEREICHE.map((b) => chip({ text: t('fz_' + b), an: fz.bereich === b, anzahl: zahl(d.fahrzeuge.filter((f) => f.bereich === b).length), fokus: `fz-${b}`, onKlick: () => setze({ bereich: b, klasse: '' }) })));
+  const wahl = el('div', { class: 'reihe fz-wahl' },
+    el('label', {}, el('span', { class: 'unterkopf', text: t('fzKlasse') }),
+      el('select', { 'data-fokus': 'fz-klasse', onchange: (e) => setze({ klasse: e.target.value }) },
+        option(t('fzAlleKlassen'), '', !fz.klasse), ...klassen.map((x) => option(`${klasseName(x.klasse)} (${zahl(x.anzahl)})`, x.klasse, x.klasse === fz.klasse)))),
+    el('label', {}, el('span', { class: 'unterkopf', text: t('fzSortierung') }),
+      el('select', { 'data-fokus': 'fz-sort', onchange: (e) => setze({ sortierung: e.target.value }) }, ...sortierungen.map((s) => option(t('fzSort_' + s), s, s === fz.sortierung)))));
+  const kopfZelle = (text, klasse) => el('th', { scope: 'col', class: klasse, text });
+  const tabelle = el('div', { class: 'fz-rahmen' }, el('table', { class: 'fz-tabelle' },
+    el('thead', {}, el('tr', {}, kopfZelle(t('fzName')), kopfZelle(t('fzKlasse'), 'fz-klasse'),
+      mitWerten ? kopfZelle(t('fzWert_tempo'), 'zahlspalte') : null, mitWerten ? kopfZelle(t('fzWertKurz_beschleunigung'), 'zahlspalte fz-neben') : null,
+      mitVmax ? kopfZelle(t('fzTempo'), 'zahlspalte') : null, mitHoehe ? kopfZelle(t('fzHoehe'), 'zahlspalte') : null, kopfZelle(t('fzSitze'), 'zahlspalte fz-sitze'))),
+    el('tbody', {}, liste.map((f) => el('tr', {},
+      el('td', {}, el('button', { type: 'button', class: 'fz-name', 'data-fokus': `fz-${f.id}`, onclick: () => fahrzeugZeigen(f) },
+        el('span', { class: 'treffer-name', text: fzNameKurz(f) }), el('span', { class: 'treffer-zusatz', text: [f.hersteller, f.standout ? t('fzStandout') : null].filter(Boolean).join(' · ') || ' ' }))),
+      el('td', { class: 'fz-klasse', text: klasseName(f.klasse) }),
+      mitWerten ? wertZelle(f.werte?.tempo) : null,
+      mitWerten ? el('td', { class: 'zahlspalte fz-neben', text: f.werte?.beschleunigung != null ? wert1(f.werte.beschleunigung) : '?' }) : null,
+      mitVmax ? zahlZelle(tempoTeile(f)) : null,
+      mitHoehe ? zahlZelle(hoeheTeile(f)) : null,
+      el('td', { class: 'zahlspalte fz-sitze', text: f.sitze ?? '?' }))))));
+  return [
+    el('p', { class: 'leise-text', text: t('fzEinleitung', { n: zahl(d.fahrzeuge.length) }) }),
+    el('p', { class: 'leise-text', text: t('fzOhneKmh') }),
+    bereiche, wahl,
+    el('p', { class: 'leise-text', text: t('fzZahl', { n: zahl(liste.length) }) }),
+    tabelle,
+    feld(d, 'hinweise') ? el('p', { class: 'leise-text', text: feld(d, 'hinweise') }) : null,
+    el('p', { class: 'leise-text quelle' }, t('fzQuellen', { stand: datum(d.stand) }) + ' ',
+      quellenLink(t('fzWikiAutoren'), 'https://gta.wiki/w/Vehicles_in_GTA_VI'), ' (', quellenLink('CC BY-NC-SA 3.0', 'https://creativecommons.org/licenses/by-nc-sa/3.0/'), '). ' + t('fzLizenz'))
+  ].filter(Boolean);
+}
+
+function fahrzeugZeigen(f) {
+  const d = zustand.daten.fahrzeuge;
+  const erhalt = kapitelText(f, 'erhalt', sprache, zustand.spoilerfrei, stand());
+  const besonderheit = kapitelText(f, 'besonderheit', sprache, zustand.spoilerfrei, stand()).text;
+  const zeile = (name, wert) => (wert == null || wert === '' ? null : el('div', { class: 'fz-zeile' }, el('dt', { text: name }), el('dd', { text: wert })));
+  const [tHaupt, tNeben] = tempoTeile(f); const [hHaupt, hNeben] = hoeheTeile(f);
+  const werte = Object.entries(f.werte ?? {}).filter(([, v]) => v != null);
+  const quellen = (f.quellen ?? []).map((id) => d.quellen.find((q) => q.id === id)).filter(Boolean);
+  fensterZeigen(
+    el('h2', { id: 'fenster-titel', text: fzName(f) }),
+    el('p', { class: 'leise-text', text: [t('fz_' + f.bereich), klasseName(f.klasse), f.standout ? t('fzStandout') : null].filter(Boolean).join(' · ') }),
+    el('dl', { class: 'fz-daten' },
+      zeile(t('fzTempo'), f.vmax_kmh == null && f.vmax_mph == null ? t('fzNichtGemessen') : `${tHaupt} (${tNeben})${f.vmax_art ? ` · ${t('fzArt_' + f.vmax_art)}` : ''}`),
+      f.bereich === 'luft' ? zeile(t('fzHoehe'), f.hoehe_max_m == null ? t('fzHoeheUnbekannt') : `${hHaupt} (${hNeben})`) : null,
+      zeile(t('fzVorbild'), f.vorbild),
+      zeile(t('fzSitze'), f.sitze != null ? zahl(f.sitze) : null),
+      zeile(t('fzAntrieb'), f.antrieb),
+      zeile(t('fzBewaffnet'), f.bewaffnet == null ? null : t(f.bewaffnet ? 'ja' : 'nein')),
+      zeile(t('fzErhalt'), erhalt.text ?? (erhalt.ab ? t('fzErhaltSpaeter', { n: erhalt.ab }) : null)),
+      zeile(t('fzSicherheit'), f.sicherheit ? t('sicher_' + f.sicherheit) : null)),
+    werte.length ? el('div', { class: 'fz-werte' }, el('h3', { class: 'unterkopf', text: t('fzWerte') }), ...werte.map(([k, v]) => gurt(`${t('fzWert_' + k)} ${wert1(v)}`, v / 10)),
+      f.wertung ? el('p', { class: 'leise-text', text: t('fzWertung', { s: f.wertung.strasse ?? '?', o: f.wertung.offroad ?? '?' }) }) : null) : null,
+    besonderheit ? el('p', { text: besonderheit }) : null,
+    quellen.length ? el('p', { class: 'leise-text quelle' }, t('quellenKurz') + ': ', ...quellen.flatMap((q, i) => [i ? ', ' : '', quellenLink(q.titel, q.url)])) : null);
+}
+
+// ---------- Radio ----------
+function radioTeile() {
+  const { radio } = zustand.daten;
+  const titelZahl = radio.sender.reduce((n, s) => n + s.titel.length, 0);
+  return [
+    el('p', { class: 'leise-text' }, t('radioHinweis', { n: zahl(radio.sender.length), m: zahl(titelZahl) }) + ' ',
+      quellenLink('Rockstar Games', radio.link), ', ' + t('radioAbgleich', { stand: datum(radio.stand) })),
+    feld(radio, 'hinweise') ? el('details', { class: 'unterliste' }, el('summary', { text: t('radioMehr') }), el('p', { class: 'leise-text', text: feld(radio, 'hinweise') })) : null,
+    ...radio.sender.map((s) => el('details', { class: 'kapitel radio-sender', open: zustand.radioOffen.has(s.id), ontoggle: (ev) => { if (ev.target.open) zustand.radioOffen.add(s.id); else zustand.radioOffen.delete(s.id); } },
+      el('summary', {}, el('span', { class: 'kapitel-name' }, el('span', { class: 'treffer-name', text: s.name }), el('span', { class: 'treffer-zusatz', text: ` · ${feld(s, 'genre')}` })),
+        el('span', { class: 'zahl', text: s.titel.length ? zahl(s.titel.length) : 'Talk' })),
+      feld(s, 'beschreibung') ? el('p', { text: feld(s, 'beschreibung') }) : null,
+      el('p', { class: 'leise-text', text: `${t('radioHosts')}: ${feld(s, 'hosts')}` }),
+      feld(s, 'hinweis') ? el('p', { class: 'leise-text', text: feld(s, 'hinweis') }) : null,
+      s.titel.length
+        ? el('ol', { class: 'radio-titel' }, s.titel.map((ti) => el('li', {}, el('span', { class: 'treffer-name', text: ti[1] }), el('span', { class: 'treffer-zusatz', text: ti[0] }))))
+        : el('p', { class: 'leise-text', text: t('radioOhneTitel') })))
+  ];
+}
+
+// ---------- Cheats ----------
+// Fenster mit allen Cheats, nach Gruppen. Freischaltungen, die eine spätere Mission nennen, bleiben spoilerfrei verborgen.
+function cheatsZeigen(markiert) {
+  const c = zustand.daten.cheats; const st = stand();
+  const mitCode = c.cheats.filter((x) => x.code).length;
+  fensterZeigen(
+    el('h2', { id: 'fenster-titel', text: 'Cheats' }),
+    el('p', { class: 'leise-text', text: t('cheatsZahl', { n: zahl(c.cheats.length), m: zahl(mitCode) }) }),
+    feld(c, 'eingabe') ? el('p', { text: feld(c, 'eingabe') }) : null,
+    feld(c, 'regeln') ? el('p', { class: 'leise-text', text: feld(c, 'regeln') }) : null,
+    ...c.gruppen.map((g) => {
+      const liste = c.cheats.filter((x) => x.gruppe === g.id);
+      if (!liste.length) return null;
+      return el('section', { class: 'cheat-gruppe' },
+        el('h3', { class: 'unterkopf', text: `${feld(g, 'name')} (${zahl(liste.length)})` }),
+        el('ul', { class: 'cheat-liste' }, liste.map((x) => {
+          const frei = kapitelText(x, 'freischaltung', sprache, zustand.spoilerfrei, st);
+          return el('li', { class: x.id === markiert ? 'gefunden' : null, 'data-cheat': x.id },
+            el('div', { class: 'cheat-kopf' }, el('span', { class: 'treffer-name', text: x.name }),
+              x.code ? el('code', { class: 'cheat-code', text: x.code }) : el('span', { class: 'leise-text', text: t('cheatOhneCode') })),
+            feld(x, 'wirkung') ? el('p', { text: feld(x, 'wirkung') }) : null,
+            frei.text || frei.ab ? el('p', { class: 'leise-text', text: frei.text ? `${t('cheatFrei')}: ${frei.text}` : t('cheatFreiSpaeter', { n: frei.ab }) }) : null);
+        })));
+    }),
+    el('p', { class: 'leise-text quelle' }, t('cheatsStand', { stand: datum(c.stand) }) + ' ' + t('quellenKurz') + ': ',
+      ...(c.quellen ?? []).flatMap((q, i) => [i ? ', ' : '', quellenLink(q.titel, q.url)])));
+  if (markiert) document.querySelector(`[data-cheat="${CSS.escape(markiert)}"]`)?.scrollIntoView({ block: 'center' });
 }
 
 // Einen Eintrag aufschlagen (aus der Suche oder aus einem Karten-Fenster): Reiter, Bereich und Gruppe öffnen, hinrollen, markieren
@@ -654,7 +818,13 @@ function suchEintraege() {
       zusatz: `${e.name} ${e.name_en ?? ''} ${e.stichworte ?? ''} ${feld(e, 'text')} ${feld(e, 'zusatz') ?? ''} ${b.name_de} ${b.name_en} ${g ? `${g.name_de} ${g.name_en}` : ''} ${BEREICHWORTE[b.id] ?? ''}`
     };
   }));
-  suchIndex = [...pins, ...namen, ...wege, ...gtadb, ...zeilen, ...funk, ...wissen, ...nach];
+  // Fahrzeuge (Name, Hersteller, Klasse, Vorbild) und Cheats (Name, Wirkung); beide öffnen ein Fenster
+  const fahrzeuge = sichtbareFahrzeuge().map((f) => ({
+    gruppe: 'fahrzeug', art: 'fahrzeug', id: f.id, name: fzName(f), gewicht: 0, fahrzeug: f,
+    zusatz: `${f.name} ${f.name_en ?? ''} ${f.klasse} ${KLASSE_DE[f.klasse] ?? ''} ${f.vorbild ?? ''} ${t('fz_' + f.bereich)} fahrzeug fahrzeuge vehicle vehicles`
+  }));
+  const cheats = zustand.daten.cheats.cheats.map((x) => ({ gruppe: 'cheat', art: 'cheat', id: x.id, name: x.name, gewicht: 1, cheat: x, zusatz: `${x.wirkung_de ?? ''} ${x.wirkung_en ?? ''} cheat cheats code` }));
+  suchIndex = [...pins, ...namen, ...wege, ...gtadb, ...zeilen, ...funk, ...wissen, ...nach, ...fahrzeuge, ...cheats];
   return suchIndex;
 }
 
@@ -670,6 +840,11 @@ function trefferText(e) {
   if (e.art === 'wissen') return [e.name, feld(e.wissen, 'text').slice(0, 90).replace(/\s+\S*$/, '') + ' …'];
   if (e.art === 'nach') return [e.name, [e.bereich, e.in, feld(e.eintrag, 'text').slice(0, 70).replace(/\s+\S*$/, '') + ' …'].filter(Boolean).join(' · ')];
   if (e.art === 'sender') return [e.name, `${t('radioSender')} · ${feld(e.sender, 'genre')}`];
+  if (e.art === 'fahrzeug') {
+    const f = e.fahrzeug; const tempo = f.vmax_kmh != null ? tempoTeile(f)[0] : f.werte?.tempo != null ? `${t('fzWert_tempo')} ${wert1(f.werte.tempo)}` : null;
+    return [e.name, [t('fz_' + f.bereich), klasseName(f.klasse), tempo].filter(Boolean).join(' · ')];
+  }
+  if (e.art === 'cheat') return [e.name, `Cheat · ${e.cheat.code ?? t('cheatOhneCode')}`];
   if (e.art === 'titel') return [e.sender.titel[e.nr][1], `${e.sender.titel[e.nr][0]} · ${e.sender.name}`];
   if (e.art === 'gtadb') return [e.name, `${e.namenlos ? feld(kategorie(e.kat), 'name') : (e.artText || feld(kategorie(e.kat), 'name'))} · ${e.lage || county(e.county)?.name || t('ohneCounty')} · ${planquadrat(e.x, e.y, gitter)}`];
   return [e.name, `${e.kat === 'eigen' ? t('t_pin') : feld(kategorie(e.kat), 'name')} · ${wo()}`];
@@ -741,6 +916,8 @@ function trefferAnfliegen(e) {
   }
   if (e.art === 'sender' || e.art === 'titel') { sucheLoesen(); radioZeigen(e.sender, e.nr); return; }
   if (e.art === 'wissen') { sucheLoesen(); wissenZeigen(e.wissen); return; }
+  if (e.art === 'fahrzeug') { sucheLoesen(); fahrzeugZeigen(e.fahrzeug); return; }
+  if (e.art === 'cheat') { sucheLoesen(); cheatsZeigen(e.id); return; }
   karteInsBild();
   if (e.art === 'gtadb' || e.art === 'pin') {
     const oeffnen = e.art === 'gtadb' ? punktOeffnen : pinOeffnen;
@@ -807,6 +984,41 @@ function sucheVerdrahten() {
   });
 }
 
+// Vollbild der Karte: .voll legt die Karte über den ganzen Schirm (geht überall, auch auf dem iPhone),
+// das echte Vollbild des Browsers blendet zusätzlich Leisten aus, wo es das gibt. Esc oder der Knopf beenden beides.
+function vollbildVerdrahten() {
+  const rahmen = $('.karte-rahmen'); const knopf = $('#vollbild');
+  const nativ = () => document.fullscreenElement ?? document.webkitFullscreenElement ?? null;
+  const setzen = (an) => {
+    rahmen.classList.toggle('voll', an); document.documentElement.classList.toggle('karte-voll', an);
+    knopf.setAttribute('aria-pressed', String(an));            // fester Name „Karte im Vollbild“, Zustand über aria-pressed
+    knopf.dataset.tTitel = an ? 'vollbildAus' : 'vollbild'; knopf.title = t(knopf.dataset.tTitel);
+    // Der Rest der Seite liegt unter der Karte: für Tastatur und Vorlesen stumm schalten
+    for (const e of document.querySelectorAll('.seite-kopf, .seitenleiste, .seite-fuss')) e.inert = an;
+    requestAnimationFrame(() => k.karte.invalidateSize());
+  };
+  knopf.addEventListener('click', async () => {
+    if (rahmen.classList.contains('voll')) {
+      if (nativ()) { try { await (document.exitFullscreen ?? document.webkitExitFullscreen).call(document); } catch { /* schon beendet */ } }
+      setzen(false);
+      return;
+    }
+    setzen(true);
+    const anfordern = rahmen.requestFullscreen ?? rahmen.webkitRequestFullscreen;
+    if (anfordern) { try { await anfordern.call(rahmen, { navigationUI: 'hide' }); } catch { /* bleibt bei .voll */ } }
+  });
+  // Beendet der Browser das Vollbild selbst (Esc, Wischgeste), geht auch .voll weg
+  const wechsel = () => { if (!nativ() && rahmen.classList.contains('voll')) setzen(false); };
+  document.addEventListener('fullscreenchange', wechsel); document.addEventListener('webkitfullscreenchange', wechsel);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !nativ() && rahmen.classList.contains('voll') && !zustand.setzmodus && !$('#fenster').open) setzen(false); });
+  // Höhe des Kopfes für das Tablet-Layout (Karte bis zum unteren Rand)
+  const kopf = $('.seite-kopf');
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--kopf-h', `${Math.ceil(kopf.getBoundingClientRect().height)}px`);
+    requestAnimationFrame(() => k.karte.invalidateSize());   // die Karte wächst mit, Leaflet muss es wissen
+  }).observe(kopf);
+}
+
 function steuerungVerdrahten() {
   sucheVerdrahten();
   $('#profil-wahl').addEventListener('change', async (e) => {
@@ -833,6 +1045,8 @@ function steuerungVerdrahten() {
   }
   $('#filter-alle').addEventListener('click', () => { filterLeeren(); filterGeaendert(); });
   $('#ganze-karte').addEventListener('click', () => ganzeKarte(k));
+  vollbildVerdrahten();
+  $('#cheats-knopf').addEventListener('click', () => cheatsZeigen());
   $('#pin-modus').addEventListener('click', () => setzmodus(!zustand.setzmodus));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && zustand.setzmodus) setzmodus(false); });
   $('#pins-teilen').addEventListener('click', pinsTeilen);

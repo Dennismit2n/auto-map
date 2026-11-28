@@ -95,10 +95,65 @@ h1, h2, .schild { font-family: var(--vc-schrift-schild); font-weight: 600; }
 #pin-modus[aria-pressed="true"]::before { content: "✓ "; }
 #karte.setzmodus, #karte.setzmodus .leaflet-interactive { cursor: crosshair; }
 .setz-hinweis { position: absolute; left: 50%; top: 66px; transform: translateX(-50%); z-index: 600; margin: 0; max-width: calc(100% - 48px); padding: 6px 12px; font-size: .88rem; text-align: center; background: rgba(28, 0, 44, .92); border: 1px solid var(--vc-akzent-neon); border-radius: var(--vc-radius-knopf); box-shadow: var(--vc-schatten-klein); }
-.seitenleiste, .tabfeld { display: grid; gap: 18px; min-width: 0; }
+.seitenleiste, .tabfeld { display: grid; gap: 18px; min-width: 0; grid-template-columns: minmax(0, 1fr); }
 @media (max-width: 860px) {
   .buehne { grid-template-columns: minmax(0, 1fr); }
   .karte-rahmen { height: 64vh; min-height: 340px; position: relative; top: 0; }
+}
+
+/* Vollbild der Karte: Knopf oben links. Die Klasse .voll trägt die Darstellung, das echte Vollbild des Browsers kommt dazu, wo es geht. */
+.vollbild-knopf { position: absolute; left: 24px; top: 24px; z-index: 600; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; }
+.vollbild-knopf .vb-aus, .vollbild-knopf[aria-pressed="true"] .vb-an { display: none; }
+.vollbild-knopf[aria-pressed="true"] .vb-aus { display: block; }
+.karte-rahmen.voll {
+  position: fixed; inset: 0; z-index: 3000; width: 100%; height: 100% !important; min-height: 0; margin: 0; border: 0; border-radius: 0;
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  background: var(--vc-grund-nacht);
+}
+.karte-rahmen.voll::before, .karte-rahmen.voll::after { display: none; }
+.karte-rahmen.voll #karte { border-radius: 0; }
+.karte-rahmen.voll .vollbild-knopf { left: calc(12px + env(safe-area-inset-left, 0px)); top: calc(12px + env(safe-area-inset-top, 0px)); }
+.karte-rahmen.voll .karte-knoepfe { right: calc(12px + env(safe-area-inset-right, 0px)); top: calc(12px + env(safe-area-inset-top, 0px)); }
+.karte-rahmen.voll .legende { right: calc(12px + env(safe-area-inset-right, 0px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); }
+.karte-rahmen.voll .setz-hinweis { top: calc(60px + env(safe-area-inset-top, 0px)); }
+html.karte-voll { overflow: hidden; }
+html.karte-voll .buehne { z-index: 3000; }
+
+/* Tablet (Touch, ab 700 Punkten breit und 600 hoch, quer und hoch): Titel in einer Zeile, darunter Steuerung und Suche
+   in einer Zeile, darunter die Karte bis zum unteren Rand des Schirms, darunter die Bereiche. Das Handy bleibt, wie es ist.
+   --kopf-h setzt js/app.js aus der echten Höhe des Kopfes. */
+@media (pointer: coarse) and (min-width: 700px) and (min-height: 600px) {
+  .seite-kopf { display: grid; grid-template-columns: auto minmax(180px, 1fr); gap: 10px 12px; margin: 10px 16px 0; padding: 12px 18px 12px; }
+  .marke { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 16px; min-width: 0; }
+  .logo { flex: none; white-space: nowrap; font-size: 1.4rem; overflow-wrap: normal; }
+  .marke p { margin: 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kopf-steuer { flex-wrap: nowrap; min-width: 0; }
+  .kopf-steuer select { min-width: 0; max-width: 11rem; text-overflow: ellipsis; }
+  .suche { max-width: none; }
+  .suche input { padding-top: 9px; padding-bottom: 9px; }
+  .buehne { grid-template-columns: minmax(0, 1fr); gap: 16px; margin: 12px 16px 16px; }
+  .karte-rahmen { position: relative; top: 0; height: calc(100vh - var(--kopf-h, 120px) - 38px); height: calc(100dvh - var(--kopf-h, 120px) - 38px); min-height: 360px; }
+  .tabfeld { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); align-items: start; }
+}
+/* Tablet bis 1199 Punkte: Die Suche ist in der Zeile schmal und legt sich beim Tippen deckend über die ganze Zeile */
+@media (pointer: coarse) and (min-width: 700px) and (min-height: 600px) and (max-width: 1199px) {
+  .seite-kopf { grid-template-columns: auto minmax(48px, 1fr); }
+  .kopf-steuer { grid-row: 2; grid-column: 1; }
+  .suche { grid-row: 2; grid-column: 2; }
+  .suche:focus-within, .suche:has(#suche-liste:not([hidden])) { grid-column: 1 / -1; z-index: 2; }
+  .suche:focus-within input { background-color: var(--vc-grund-nacht); }
+  .kopf-steuer select { max-width: 9rem; }
+}
+/* Tablet hochkant: Felder enger, Kapitel und Sprache bleiben lesbar */
+@media (pointer: coarse) and (min-width: 700px) and (min-height: 600px) and (max-width: 1000px) {
+  .kopf-steuer { gap: 6px; }
+  .kopf-steuer select { padding: 6px 4px; }
+  #profil-wahl { max-width: 6.5rem; }
+  #darstellung { max-width: 5.5rem; }
+  #kapitel-wahl { min-width: 6.6rem; }
+  #sprache { min-width: 3.6rem; }
+  .kopf-steuer .knopf { padding: 7px 9px; }
+  .spoiler { padding: 8px 9px; letter-spacing: .03em; font-size: .76rem; gap: 6px; }
 }
 
 /* Spoiler-Schalter: grün = spoilerfrei, rot = nicht spoilerfrei. Zustand steht auch als Text und Zeichen da. */
@@ -382,3 +437,38 @@ textarea { width: 100%; resize: vertical; }
 .legende b.lz.punkt { width: 10px; height: 10px; margin: 0 4px; border-radius: 50%; }
 .legende b.lz.ichpunkt { width: 12px; height: 12px; margin: 0 3px; border-radius: 50%; background: var(--vc-akzent-himmel); border: 2px solid #fff; }
 .teilen-link { font-size: .78rem; word-break: break-all; }
+
+/* Nachschlagen: Fahrzeuge als Tabelle, ein Klick öffnet das Fenster mit allen Daten */
+.fz-wahl { align-items: flex-end; margin: 0 0 6px; }
+.fz-wahl label { display: grid; gap: 2px; }
+.fz-wahl .unterkopf { margin: 0; }
+.fz-rahmen { overflow: auto; max-height: min(70vh, 720px); margin: 8px 0; overscroll-behavior: contain; }
+.fz-tabelle { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.fz-tabelle th { position: sticky; top: 0; text-align: left; font: 700 .72rem/1.4 var(--vc-schrift-text); letter-spacing: .06em; text-transform: uppercase; color: var(--vc-text-leise); padding: 6px 8px; border-bottom: 1px solid var(--vc-glas-rand); background: var(--vc-grund-flaeche); }
+.fz-tabelle td { padding: 4px 8px; border-top: 1px dashed var(--vc-glas-rand); vertical-align: top; }
+.fz-tabelle .zahlspalte { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fz-tabelle td.zahlspalte span { display: block; }
+.fz-name { display: grid; gap: 0; width: 100%; padding: 2px 0; text-align: left; font: inherit; color: var(--vc-text-haupt); background: none; border: 0; cursor: pointer; }
+.fz-name:hover .treffer-name { color: var(--vc-akzent-sonne); }
+.fz-tabelle .fz-klasse { color: var(--vc-text-leise); }
+@media (max-width: 520px) { .fz-tabelle .fz-sitze, .fz-tabelle .fz-klasse, .fz-tabelle .fz-neben { display: none; } }
+/* Spielwert 0 bis 10 mit kleinem Balken darunter */
+.fz-wert { display: inline-block; min-width: 2.6em; padding-bottom: 3px; background: linear-gradient(90deg, var(--vc-verlauf-koralle), var(--vc-akzent-sonne)) left bottom / var(--anteil) 2px no-repeat, linear-gradient(var(--vc-glas-rand), var(--vc-glas-rand)) left bottom / 100% 2px no-repeat; }
+.fz-daten { display: grid; gap: 4px; margin: 4px 0; }
+.fz-zeile { display: grid; grid-template-columns: minmax(110px, 38%) 1fr; gap: 10px; padding: 4px 0; border-top: 1px dashed var(--vc-glas-rand); }
+.fz-zeile dt { color: var(--vc-text-leise); font-size: .88rem; }
+.fz-zeile dd { margin: 0; }
+.fz-werte { display: grid; gap: 6px; }
+.radio-sender summary .treffer-zusatz { font-size: .82rem; }
+.radio-sender > p { margin: 6px 0 0 18px; }
+.radio-sender > .radio-titel { margin-top: 8px; }
+
+/* Cheats im Fenster: Code groß und gut lesbar, damit du ihn beim Spielen abtippen kannst */
+.fenster:has(.cheat-gruppe) { width: min(720px, calc(100vw - 24px)); }
+.cheat-gruppe { margin-top: 6px; }
+.cheat-liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.cheat-liste li { padding: 8px 6px; border-top: 1px dashed var(--vc-glas-rand); border-radius: 3px; }
+.cheat-liste li.gefunden { background: var(--vc-glas-gurt); box-shadow: inset 3px 0 0 var(--vc-akzent-neon); }
+.cheat-liste p { margin: 3px 0 0; }
+.cheat-kopf { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+.cheat-code { font: 700 1.15rem/1.3 var(--vc-schrift-text); letter-spacing: .12em; color: var(--vc-akzent-sonne); background: rgba(28, 0, 44, .6); border: 1px solid var(--vc-glas-rand); border-radius: var(--vc-radius-knopf); padding: 2px 8px; white-space: normal; word-spacing: .1em; }

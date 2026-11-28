@@ -126,9 +126,9 @@ export async function ladeDaten(basis = './data/') {
     if (!antwort.ok) throw new Error(`${pfad}: ${antwort.status}`);
     return antwort.json();
   };
-  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json'), holen('radio.json'), holen('nachschlagen.json')]);
+  const [karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen, fahrzeuge, cheats] = await Promise.all([holen('karte.json'), holen('orte.json'), holen('checkliste.json'), holen('missionen.json'), holen('gtadb.json'), holen('mapheist.json'), holen('strassen.json'), holen('radio.json'), holen('nachschlagen.json'), holen('fahrzeuge.json'), holen('cheats.json')]);
   orte.kategorien = [...orte.kategorien.filter((k) => k.id !== 'eigen'), ...GTADB_KATEGORIEN, ...orte.kategorien.filter((k) => k.id === 'eigen')];
-  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen, community: [...ohneDoppelte(gtadb.orte, orte.orte).map((o) => ({ ...o, quelle: 'gtadb' })), ...ohneDoppelte(mapheist.orte, orte.orte)] };
+  const daten = { karte, orte, checkliste, missionen, gtadb, mapheist, strassen, radio, nachschlagen, fahrzeuge, cheats, community: [...ohneDoppelte(gtadb.orte, orte.orte).map((o) => ({ ...o, quelle: 'gtadb' })), ...ohneDoppelte(mapheist.orte, orte.orte)] };
   const fehler = pruefeDaten(daten);
   if (fehler.length) console.warn('Datenfehler:', fehler);
   return daten;

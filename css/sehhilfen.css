@@ -57,7 +57,9 @@
 :root[data-vision="contrast"] .chip[aria-pressed="true"] { border-width: 2px; padding: 3px 8px; }
 :root[data-vision="contrast"] .art-gruppe { background: none; }
 :root[data-vision="contrast"] :is(.suche li[aria-selected="true"], .suche li[role="option"]:hover) { color: #fff; }
-:root[data-vision="contrast"] :is(.zeile.gefunden, .radio-titel li.gefunden, .eintrag.gefunden) { border-left: 4px solid var(--vc-akzent-neon); }
+:root[data-vision="contrast"] :is(.zeile.gefunden, .radio-titel li.gefunden, .eintrag.gefunden, .cheat-liste li.gefunden) { border-left: 4px solid var(--vc-akzent-neon); }
+:root[data-vision="contrast"] .cheat-code { background: var(--vc-grund-nacht); color: var(--vc-text-haupt); border-color: var(--vc-text-haupt); }
+:root[data-vision="contrast"] .fz-wert { background: linear-gradient(var(--vc-text-haupt), var(--vc-text-haupt)) left bottom / var(--anteil) 2px no-repeat; }
 :root[data-vision="contrast"] .fenster::backdrop { background: rgba(0, 0, 0, .85); }
 /* Lupe im Suchfeld: im Hellen dunkel */
 :root[data-vision="contrast"][data-hc="light"] .suche input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232B2B2B' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5 21 21'/%3E%3C/svg%3E"); }
@@ -84,6 +86,8 @@
 :root[data-vision="invert"] .county-chip .name { color: inherit; }
 /* Das Fenster liegt in der obersten Ebene des Browsers, dorthin reicht der Filter der Seite nicht */
 :root[data-vision="invert"] .fenster, :root[data-vision="invert"] .fenster::backdrop { filter: invert(1); }
+/* Ebenso die Karte im echten Vollbild: der Rahmen dreht wie die Seite, die Karte darin wieder zurück */
+:root[data-vision="invert"] .karte-rahmen:fullscreen { filter: invert(1); }
 @media print {
   :root[data-vision="invert"], :root[data-vision="invert"] .fenster,
   :root[data-vision="invert"] :is(#karte, .legende, .zeichen:not(#karte *, .legende *), .chip .farbe),
